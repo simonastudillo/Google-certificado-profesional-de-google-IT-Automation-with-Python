@@ -12,3 +12,14 @@
 
 > No tengas miedo de cometer errores, te dará ventajas.
 
+---
+
+## Course Introduction
+- El trabajo más gratificante suele ser el más desafiante.
+- Un administrador de sistema varía de empresa a empresa, pero hay habilidades que son universales.
+- Este rol tiene muchas funciones diversas
+  - Jugar con diferentes sistemas operativos
+  - Trabajar con diferentes equipos
+- Poder escribir un programa es una herramienta escencial para un administrador de sistemas.
+- Al final del curso podrás escribir programas en Python que solucionan problemas reales y automatizan tareas.
+- Practica todo lo que quieras, no hay límite de tiempo para completar el curso.
