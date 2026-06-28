@@ -23,3 +23,12 @@
 - Poder escribir un programa es una herramienta escencial para un administrador de sistemas.
 - Al final del curso podrás escribir programas en Python que solucionan problemas reales y automatizan tareas.
 - Practica todo lo que quieras, no hay límite de tiempo para completar el curso.
+
+---
+
+## Get started with your Google IT Automation with Python Certificate
+- Una vez graduado podrás unirte a un grupo de profesionales certificados en Google IT Automation with Python.
+- Mantente al día de los plazos
+- Entra en la comunidad de alumnos de inmediato.
+- No te desanimes si te enfrentas a desafíos, es parte del proceso de aprendizaje.
+- Para recibir consejos de google, sigue a [grow.google/updates](https://grow.google/updates).
