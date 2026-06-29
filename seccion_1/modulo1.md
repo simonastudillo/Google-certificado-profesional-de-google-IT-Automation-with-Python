@@ -110,3 +110,12 @@ R: Una tarea repetitiva sería descargar respaldos de 10 servidores diferentes c
 - En programación, la semántica es: Los efectos que tiene cada instrucción cuando se ejecuta
 - ¿Cual es la diferencia entre Script y Programa? : En general, puede pensar en los scripts como programas con ​un ciclo de desarrollo corto que se pueden ​crear e implementar rápidamente
 - Script: Un programa con ​un ciclo de desarrollo corto que se pueden ​crear e implementar rápidamente.
+
+---
+
+### ¿Qué es la automatización?
+- La automatización es el proceso de reemplazar un paso manual por uno que ocurre automáticamente.
+- Esto ayuda a concentrarse en tareas más complejas, creativas o difíciles
+- Otro beneficio: La coherencia.
+- Un humano realizando la misma tarea de forma repetitiva nunca será tan consistente como un programa que realiza la misma tarea una y otra vez.
+- Puede ahorrar tiempo, reducir los errores, aumentar la coherencia ​y proporcionar una forma de centralizar las soluciones y ​los errores, lo que facilita su corrección.
