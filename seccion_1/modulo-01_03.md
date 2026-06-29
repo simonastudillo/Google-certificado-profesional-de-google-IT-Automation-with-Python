@@ -28,3 +28,22 @@
     - Python lanza versiones nuevas cada año, con mejoras y nuevas funcionalidades.
     - Durante esas actualizaciones pueden hacer que el código existente necesite ajustes para seguir funcionando.
     - En este curso usaremos Python 3.7
+
+---
+
+## Una nota sobre Sintaxis y Bloques de código
+- Escribir la sintaxis correcta es crítico, incluso en Script pequeños.
+- Si tu código presenta errores, pon atención a los mensajes de error y a la sintaxis que estás usando.
+- Un simple caracter malo puede tomar horas en identificarse en script grandes.
+
+- Errores de sintaxis comunes
+    - Identación incorrecta
+    - Olvidar o usar un caracter incorrecto en una palabra clave
+        - Llaves `{}`, paréntesis `()`, corchetes `[]`, comillas `'` o `"`
+        - Caracteres de introdocción a un bloque de código como `:` o `;`
+    - Difertes tipos de datos
+    - Olvidar, usar incorrecto o mal usar palabras reservadas
+    - Usar el `case`incorrecto, Python es case-sensitive, lo que significa que `Variable` y `variable` son diferentes.
+- Errores semanticos comunes
+    - Crear código funcional, pero obtener un resultado inesperado.
+    - Estructura lógica pobre en el diseño del código.
