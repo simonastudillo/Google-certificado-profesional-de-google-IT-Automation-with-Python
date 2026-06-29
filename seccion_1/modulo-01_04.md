@@ -160,3 +160,13 @@ sudo apt install python3
 - Idle es un Entorno de desarrollo integrado y aprendizaje ​para el lenguaje de programación Python.
 - Python Idle es un intérprete interactivo, ​o editor de archivos, que le permite ​escribir fácilmente scripts y programas Python. ​Idle proporciona resaltado de sintaxis, completado de código, ​y sangría automática
 - ​Para ejecutar el código Python en el archivo que has guardado, haz clic en ejecutar, ​ejecutar módulo desde el menú, o pulsa intro.
+
+--- 
+
+## Revisión: Usa JupyterLab y Jupyter Notebook
+- JupyterLab es una interfaz web que permite el uso de Jupyter Notebook, un entorno interactivo para escribir y ejecutar código en Python.
+- Jupyter Notebook es una aplicación web que permite crear y compartir documentos que contienen código en vivo, ecuaciones, visualizaciones y texto narrativo.
+- Lo puedes descargar desde [JupyterLab](https://jupyter.org/install)
+- Como usar Jupyter Notebook:
+    - Abre la siguiente [URL](https://jupyter.org/try-jupyter/lab/?path=notebooks%2FIntro.ipynb) en tu navegador web
+    - Esto creará un nuevo entorno de Jupyter Notebook en tu navegador web
