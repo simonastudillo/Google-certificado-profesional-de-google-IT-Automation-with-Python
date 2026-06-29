@@ -159,3 +159,4 @@ sudo apt install python3
 ```
 - Idle es un Entorno de desarrollo integrado y aprendizaje ​para el lenguaje de programación Python.
 - Python Idle es un intérprete interactivo, ​o editor de archivos, que le permite ​escribir fácilmente scripts y programas Python. ​Idle proporciona resaltado de sintaxis, completado de código, ​y sangría automática
+- ​Para ejecutar el código Python en el archivo que has guardado, haz clic en ejecutar, ​ejecutar módulo desde el menú, o pulsa intro.
