@@ -171,3 +171,20 @@ R: Una tarea repetitiva sería descargar respaldos de 10 servidores diferentes c
 ### Conseguir que los ordenadores trabajen para usted
 - Las tareas realizadas por una computadora que deben realizarse varias veces con poca variación ​son muy adecuadas para la automatización. 
 - cuando automatizas una tarea, evitas la posibilidad de errores humanos ​y reduces el tiempo que lleva realizarla
+- La ​automatización de tareas te permite concentrarte en proyectos ​que suponen un mejor uso de tu tiempo
+
+---
+
+### Guía de estudio: Introducción a la programación
+- Términos clave
+  - Código de programación: El código de programación es un conjunto de instrucciones informáticas escritas, guiadas por reglas, que utilizan un lenguaje de programación informática. El código de programación también puede denominarse código fuente o scripts.
+  - Lenguajes de programación: Los lenguajes de programación se utilizan para escribir programas informáticos. Algunos lenguajes de programación comunes son Python, Java, C, C++, C# y R.
+  - Sintaxis: La sintaxis de programación incluye reglas para el orden de los elementos en las instrucciones de programación, así como el uso de caracteres especiales y su colocación en las sentencias
+  - Semántica: La semántica se refiere al significado o efecto previsto de las sentencias, o conjuntos de palabras, tanto en el lenguaje humano como en el informático. Los errores semánticos también se denominan errores lógicos.
+  - Programa informático: Un programa informático es una lista de instrucciones paso a paso que sigue un ordenador para alcanzar un objetivo previsto. Es importante ser claro y preciso sobre las acciones que debe realizar un programa informático porque los ordenadores harán exactamente lo que se les indique. Los programas informáticos pueden ser largos, complejos y realizar una gran variedad de tareas. A menudo son desarrollados por programadores informáticos e ingenieros de software, pero cualquiera puede aprender a crearlos. Los programas informáticos pueden implicar un ciclo de desarrollo estructurado.
+  - Script: Los scripts suelen ser más cortos y menos complejos que los programas informáticos. Los scripts suelen utilizarse para automatizar tareas específicas. Sin embargo, pueden utilizarse para tareas complejas si es necesario. 
+  - Automatización: La automatización se utiliza para sustituir un paso manual repetitivo por otro que se realiza automáticamente.
+  - Salida: La salida es el resultado final de una tarea realizada por una función o programa informático. La salida puede incluir un valor único, un informe, entradas en una base de datos, etc.
+  - Entrada: La entrada es la información que el usuario final proporciona a un programa. La entrada puede ser texto, voz, imágenes, datos biométricos, etc.
+  - Funciones: Una función es un bloque de código reutilizable que realiza una tarea específica.
+  - Variables: Las variables se utilizan para almacenar temporalmente valores modificables en el código de programación.
