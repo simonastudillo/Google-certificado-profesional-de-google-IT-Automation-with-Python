@@ -1,87 +1,6 @@
-# Introducción al curso
+# Introducción a la programación
 
-## Hola Python
-
-### Introducción a las especializaciones
-- TI es una trajectoria profesional.
-- En Google aquellos que se desarrollaron en Python lograron aumentar salario y puestos.
-- Saber escribir código para resolver problema y automatizar tareas es una habilidad muy valiosa.
-- Este curso utiliza 3 métodos prácticos para enseñar:
-  - Codeblock
-  - Jupyter Notebooks
-  - Quiklabs
-- Usaremos Git y GitHub para versionar y compartir código.
-
-> No tengas miedo de cometer errores, te dará ventajas.
-
----
-
-### Course Introduction
-- El trabajo más gratificante suele ser el más desafiante.
-- Un administrador de sistema varía de empresa a empresa, pero hay habilidades que son universales.
-- Este rol tiene muchas funciones diversas
-  - Jugar con diferentes sistemas operativos
-  - Trabajar con diferentes equipos
-- Poder escribir un programa es una herramienta escencial para un administrador de sistemas.
-- Al final del curso podrás escribir programas en Python que solucionan problemas reales y automatizan tareas.
-- Practica todo lo que quieras, no hay límite de tiempo para completar el curso.
-
----
-
-### Get started with your Google IT Automation with Python Certificate
-- Una vez graduado podrás unirte a un grupo de profesionales certificados en Google IT Automation with Python.
-- Mantente al día de los plazos
-- Entra en la comunidad de alumnos de inmediato.
-- No te desanimes si te enfrentas a desafíos, es parte del proceso de aprendizaje.
-- Para recibir consejos de google, sigue a [grow.google/updates](https://grow.google/updates).
-
----
-
-### Google Cert Participant Entry Survey
-
---
-
-### Welcome to the program
-- El programa de Certificación en Automatización de TI de Google con Python está diseñado para enseñarte los fundamentos de la programación en Python
-- Este programa de certificación no requiere conocimientos previos de programación
-- Resumen del programa
-1. Curso intensivo de Python (este curso)
-2. Uso de Python para interactuar con el sistema operativo
-3. Introducción a Git y GitHub
-4. Técnicas de resolución de problemas y depuración
-5. Gestión de la configuración y la nube
-6. Automatización de tareas del mundo real con Python
-7. Acelera tu búsqueda de empleo con IA 
-
-
-#### Hábitos saludables para completar el curso
-- Planifique su tiempo: Establecer horarios de estudio regulares y seguirlos cada semana puede ayudarle a convertir el aprendizaje en parte de su rutina.
-- Trabaja a tu propio ritmo: Cada persona aprende de forma diferente, por lo que este programa ha sido diseñado para que puedas trabajar a tu propio ritmo. 
-- Sea curioso: si encuentra una idea que le entusiasma, ¡póngase manos a la obra! Enriquezca su experiencia de aprendizaje con la función de aprendizaje guiado de Gemini. 
-- Tome notas: Tomar notas le ayudará a recordar información importante en el futuro, especialmente cuando se esté preparando para entrar en un nuevo campo laboral.
-- Revisar ejemplos: Los ejemplos son tareas completadas que cumplen plenamente los criterios de una actividad.
-- Construye tu identidad profesional: Tu identidad profesional es el valor único que aportas al mundo laboral [video](https://www.youtube.com/watch?v=_xbT4qMrot4)
-  - Piensa en esto como tu estrella del norte.
-  - Quien eres y que tienes que ofrecer profesionalmente
-  - Que eso te guíe en tu búsqueda de empleo y en tu carrera profesional.
-  - Es importante que sepas hacia a donde quieres ir y que quieres lograr, para que puedas tomar decisiones informadas sobre tu carrera profesional.
-  - Todos tienen valor que entregar.
-- Conéctate con otros estudiantes:
-- Asistencia al alumno de Coursera: Actualiza tu perfil: Considera actualizar tu perfil en Coursera para incluir tu foto, objetivos profesionales y más. Cuando otros alumnos te encuentren en la Comunidad, podrán hacer clic en tu nombre para acceder a tu perfil y conocerte mejor.
-
-Encontrar más información: 
-- [Tutorial Python](https://docs.python.org/3/tutorial/index.html)
-- [Libre Think Python](https://greenteapress.com/wp/think-python-2e/)
-- [Referencia de Python](https://docs.python.org/3/reference/index.html)
-
-> [!NOTE]
-> A medida que avances en este curso, es posible que veas contenido actualizado o repetido debido a la revisión periódica del programa por parte de Google para ofrecer las habilidades y herramientas más actualizadas del sector. Estos cambios incluyen la adición de nuevo material de prácticas y contenido de apoyo. Además, las actualizaciones de Google a veces incluyen cambios en elementos calificados como cuestionarios y laboratorios. Si ya has completado un elemento calificado en este curso, es posible que tengas que realizar una nueva evaluación para completar este curso. Esperamos que el nuevo contenido te ayude en tu viaje de aprendizaje
-
----
-
-## Introducción a la programación
-
-### El comienzo de su viaje por la programación
+## El comienzo de su viaje por la programación
 - Que son las secuencias de comandos
 - Que lenguajes existen además de Python
 - Ejercicios prácticos para aprender a escribir código en Python
@@ -90,7 +9,7 @@ Encontrar más información:
 
 ---
 
-### Reflexión: Su viaje por la automatización con Python
+## Reflexión: Su viaje por la automatización con Python
 - Describe una tarea repetitiva o tediosa que hayas tenido que hacer más de una vez.
 - Explica una forma específica en la que Python podría hacer esa tarea más eficiente o más fácil de realizar.
 - Comparte algo nuevo que hayas aprendido sobre cómo funciona Python (por ejemplo, una función, una operación, un tipo de datos).
@@ -100,7 +19,7 @@ R: Una tarea repetitiva sería descargar respaldos de 10 servidores diferentes c
 
 ---
 
-### ¿Qué es la programación?
+## ¿Qué es la programación?
 - Cuando escribe un programa, ​crea una receta paso a paso de lo que ​debe hacerse para completar una tarea
 - La receta está escrita en ​un código llamado lenguaje de programación
 - Los lenguajes de programación son en realidad similares a los ​lenguajes hablados por humanos, ya que tienen una sintaxis y semántica.
@@ -113,7 +32,7 @@ R: Una tarea repetitiva sería descargar respaldos de 10 servidores diferentes c
 
 ---
 
-### ¿Qué es la automatización?
+## ¿Qué es la automatización?
 - La automatización es el proceso de reemplazar un paso manual por uno que ocurre automáticamente.
 - Esto ayuda a concentrarse en tareas más complejas, creativas o difíciles
 - Otro beneficio: La coherencia.
@@ -122,7 +41,7 @@ R: Una tarea repetitiva sería descargar respaldos de 10 servidores diferentes c
 
 ---
 
-### Usos de la automatización
+## Usos de la automatización
 - Los scripts pueden utilizarse para automatizar tareas específicas
 - La automatización se utiliza para sustituir un paso manual repetitivo por otro que se realiza automáticamente
 - Los humanos son falibles. Pueden cansarse, cometer errores, no seguir las instrucciones, ser incoherentes en el desempeño de su trabajo y mucho más
@@ -168,14 +87,14 @@ R: Una tarea repetitiva sería descargar respaldos de 10 servidores diferentes c
 
 ---
 
-### Conseguir que los ordenadores trabajen para usted
+## Conseguir que los ordenadores trabajen para usted
 - Las tareas realizadas por una computadora que deben realizarse varias veces con poca variación ​son muy adecuadas para la automatización. 
 - cuando automatizas una tarea, evitas la posibilidad de errores humanos ​y reduces el tiempo que lleva realizarla
 - La ​automatización de tareas te permite concentrarte en proyectos ​que suponen un mejor uso de tu tiempo
 
 ---
 
-### Guía de estudio: Introducción a la programación
+## Guía de estudio: Introducción a la programación
 - Términos clave
   - Código de programación: El código de programación es un conjunto de instrucciones informáticas escritas, guiadas por reglas, que utilizan un lenguaje de programación informática. El código de programación también puede denominarse código fuente o scripts.
   - Lenguajes de programación: Los lenguajes de programación se utilizan para escribir programas informáticos. Algunos lenguajes de programación comunes son Python, Java, C, C++, C# y R.
@@ -191,7 +110,7 @@ R: Una tarea repetitiva sería descargar respaldos de 10 servidores diferentes c
 
 ---
 
-### Test your knowledge: Introduction to programming
+## Test your knowledge: Introduction to programming
 - What’s a computer program?
   - A list of instructions that the computer has to follow to reach a goal
 - What’s the syntax of a language?
