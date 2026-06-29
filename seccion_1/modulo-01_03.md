@@ -68,3 +68,14 @@
 
 >[!NOTE]
 > Recuerda: Los mejores programadores superan los desafíos buscando ayuda o utilizando otros recursos.
+
+---
+
+## Otros lenguajes
+- Cada lenguaje tiene su conjunto único de ventajas y desventajas.
+- Algunos son más rápidos que otros.
+- Algunos son mejores para aplicaciones empresariales
+- Otros buenos en calculos numéricos
+- Hay lenguajes de uso general similar a Python, como Ruby, Perl y JavaScript.
+- Por lo general, puedes aplicar los mismos conceptos que aprendes a otros lenguajes de programación.
+- Hay más similitudes que diferencias entre lenguajes de programación.
