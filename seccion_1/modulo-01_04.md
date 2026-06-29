@@ -39,3 +39,8 @@ name = "Alex"
 print("Hello " + name)
 #Hello Alex
 ```
+
+---
+
+## Obtener información del usuario
+- En general para que un programa se útil, necesita obtener información del usuario.
