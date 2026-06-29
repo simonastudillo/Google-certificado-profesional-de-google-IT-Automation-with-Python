@@ -220,3 +220,10 @@ pip install jupyterlab
 - Instala la extensión de Python desde el marketplace de VS Code para habilitar soporte completo para Python.
 - Crea un archivo Python con la extensión `.py` y comienza a escribir tu código.
 - Luego pruebalo con el botón de "Run & Debug" o presionando `F5` para ejecutar tu código.
+
+---
+
+## Usa VS Code
+- VS Code proporciona soporte integrado ​con el completado de código IntelliSense, un depurador interactivo, ​y otras herramientas de compilación y scripting
+- VS Code tiene un diseño sencillo ​que lo hace fácil de aprender y usar
+- Para ver las extensiones en VS Code, teclearemos ctrl mayús X. ​Esto nos mostrará una lista ​de las extensiones más populares de VS Code ​en el marketplace de VS Code. 
