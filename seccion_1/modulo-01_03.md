@@ -79,3 +79,19 @@
 - Hay lenguajes de uso general similar a Python, como Ruby, Perl y JavaScript.
 - Por lo general, puedes aplicar los mismos conceptos que aprendes a otros lenguajes de programación.
 - Hay más similitudes que diferencias entre lenguajes de programación.
+
+--- 
+
+## Guía de estudio: Introducción a Python
+- Python es compatible con la mayoría de los sistemas operativos, incluyendo Windows, Mac y Linux.
+- Puede correr en una variedad de maquinas: servidores, workstations, computadoras portátiles y dispositivos móviles.
+- Python es:
+    - Lenguaje de proposito general
+    - Se usa para una variedad de aplicaciones
+    - Se usa frecuentemente en automatización
+    - Lenguaje compatiple multiplataforma (Lenguaje compatible en más de 1 plataforma para su ejecución)
+    - Lenguaje amigable para principiantes
+- Python no es:
+    - Un lenguaje especifico para una plataforma o sistema operativo (Se refiere a PowerShell en Windows, Bash en Linux, etc.)
+    - Un lenguaje de ejecución en el cliente (como JavaScript que se ejecuta en el navegador)
+    - Un lenguaje basado en objetos (aunque tiene soporte para programación orientada a objetos)
