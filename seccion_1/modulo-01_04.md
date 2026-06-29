@@ -21,7 +21,7 @@ main () {
 print("Hello, World!")
 ```
 - print: Es una función que muestra en pantalla lo que le indicamos entre paréntesis.
-- Funciones_ Son fragmentos de código que realizan una unidad de trabajo.
+- Funciones: Son fragmentos de código que realizan una unidad de trabajo.
 - Keyworkd (palabra clave): Son palabras reservadas que se utilizan para crear instrucciones
     - if, while, for
 - String: Es un tipo de dato que representa texto. Se define entre comillas simples o dobles.
@@ -75,3 +75,33 @@ print(2**10)
 - Recuerda usar paréntesis, tal como lo hacemos en matemáticas, para indicar el orden de las operaciones.
 - Pyhton se puede usar para obtener cuadrados, cubos o cualquier potencia de un número usando el operador `**`.
 - Experimenta para familiarizarte con las operaciones matemáticas en Python.
+
+---
+
+## Guía de estudio: Primeros conceptos de programación
+- Functions: Son fragmentos de código que realizan una unidad de trabajo.
+    - print(): Muestra en pantalla lo que le indicamos entre paréntesis.
+- Keywords: Son palabras reservadas que se utilizan para crear instrucciones
+    - Values: True, False, None
+    - Conditions: if, elif, else
+    - Logical operators: and, or, not
+    - Loops: for, in, while, break, continue
+    - Functions: def, return  
+- Operaciones aritméticas:
+    - Suma: `+`
+    - Resta: `-`
+    - Multiplicación: `*`
+    - División: `/`
+    - Potenciación: `**`
+    - Potenciación con fracciones: `**(1/n)` donde n es el índice de la raíz.
+    - División entera: `//`
+    - Módulo: `%` (devuelve el residuo de la división)
+- Orden de operaciones:
+    - Paréntesis: `()`, `{}`, `[]`
+    - Exponentes: `**`
+    - Multiplicación y división: `*`, `/`, `//`, `%`
+    - Suma y resta: `+`, `-`
+- Recursos:
+    - [Funciones](https://docs.python.org/3/library/functions.html)
+    - [Keywords](https://www.w3schools.com/python/python_ref_keywords.asp)
+    - [Operadores aritméticos](https://flexiple.com/python/arithmetic-operators-in-python/)
