@@ -124,3 +124,14 @@ print("Programming in Python is fun!")
 ratio = 9**(1/2)
 print(ratio)
 ```
+
+---
+
+## Editores de código y IDEs
+- Las herramientas de codificación pueden ayudarte a desarrollar, escribir, depurar ​y visualizar tu código.
+- Con un editor de código, ​puedes escribir, depurar y ejecutar programas en Python
+- Los editores de código proporcionan características, incluyendo resaltado de sintaxis, ​indentación automática, comprobación de errores, ​y autocompletado
+- Esto permite escribir código de forma más eficiente. ​También facilitan la comprensión de variables, ​comandos, funciones y bucles.
+- Un IDE es una herramienta de software que simplifica el proceso ​de creación de una nueva aplicación de software
+- Un IDE es una aplicación de software ​que proporciona completas facilidades ​para el desarrollo de software
+- IDLE es un IDE que viene con Python automáticamente. ​Es un excelente IDE para principiantes ​porque es muy sencillo de usar
