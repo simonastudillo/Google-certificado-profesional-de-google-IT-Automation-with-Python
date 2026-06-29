@@ -1,6 +1,8 @@
 # Introducción al curso
 
-## Introducción a las especializaciones
+## Hola Python
+
+### Introducción a las especializaciones
 - TI es una trajectoria profesional.
 - En Google aquellos que se desarrollaron en Python lograron aumentar salario y puestos.
 - Saber escribir código para resolver problema y automatizar tareas es una habilidad muy valiosa.
@@ -14,7 +16,7 @@
 
 ---
 
-## Course Introduction
+### Course Introduction
 - El trabajo más gratificante suele ser el más desafiante.
 - Un administrador de sistema varía de empresa a empresa, pero hay habilidades que son universales.
 - Este rol tiene muchas funciones diversas
@@ -26,7 +28,7 @@
 
 ---
 
-## Get started with your Google IT Automation with Python Certificate
+### Get started with your Google IT Automation with Python Certificate
 - Una vez graduado podrás unirte a un grupo de profesionales certificados en Google IT Automation with Python.
 - Mantente al día de los plazos
 - Entra en la comunidad de alumnos de inmediato.
@@ -35,11 +37,11 @@
 
 ---
 
-## Google Cert Participant Entry Survey
+### Google Cert Participant Entry Survey
 
 --
 
-## Welcome to the program
+### Welcome to the program
 - El programa de Certificación en Automatización de TI de Google con Python está diseñado para enseñarte los fundamentos de la programación en Python
 - Este programa de certificación no requiere conocimientos previos de programación
 - Resumen del programa
@@ -52,7 +54,7 @@
 7. Acelera tu búsqueda de empleo con IA 
 
 
-### Hábitos saludables para completar el curso
+#### Hábitos saludables para completar el curso
 - Planifique su tiempo: Establecer horarios de estudio regulares y seguirlos cada semana puede ayudarle a convertir el aprendizaje en parte de su rutina.
 - Trabaja a tu propio ritmo: Cada persona aprende de forma diferente, por lo que este programa ha sido diseñado para que puedas trabajar a tu propio ritmo. 
 - Sea curioso: si encuentra una idea que le entusiasma, ¡póngase manos a la obra! Enriquezca su experiencia de aprendizaje con la función de aprendizaje guiado de Gemini. 
@@ -74,3 +76,37 @@ Encontrar más información:
 
 > [!NOTE]
 > A medida que avances en este curso, es posible que veas contenido actualizado o repetido debido a la revisión periódica del programa por parte de Google para ofrecer las habilidades y herramientas más actualizadas del sector. Estos cambios incluyen la adición de nuevo material de prácticas y contenido de apoyo. Además, las actualizaciones de Google a veces incluyen cambios en elementos calificados como cuestionarios y laboratorios. Si ya has completado un elemento calificado en este curso, es posible que tengas que realizar una nueva evaluación para completar este curso. Esperamos que el nuevo contenido te ayude en tu viaje de aprendizaje
+
+---
+
+## Introducción a la programación
+
+### El comienzo de su viaje por la programación
+- Que son las secuencias de comandos
+- Que lenguajes existen además de Python
+- Ejercicios prácticos para aprender a escribir código en Python
+- Nunca funciona la primera vez, aprende a tu propio ritmo y no te desanimes.
+- Recuerda que: incluso los programadores más avanzados comenzaron a pensar
+
+---
+
+### Reflexión: Su viaje por la automatización con Python
+- Describe una tarea repetitiva o tediosa que hayas tenido que hacer más de una vez.
+- Explica una forma específica en la que Python podría hacer esa tarea más eficiente o más fácil de realizar.
+- Comparte algo nuevo que hayas aprendido sobre cómo funciona Python (por ejemplo, una función, una operación, un tipo de datos).
+- Describe un beneficio general que este tipo de automatización tendría para el rol de un profesional de TI. 
+
+R: Una tarea repetitiva sería descargar respaldos de 10 servidores diferentes cada viernes. Podría automatizar con Python un script que se conecte y descargue el respaldo de cada servidor y lo guarde en una carpeta específica, ahorrando tiempo y esfuerzo. Sobre Python he aprendido cosas como la importancia de la identación, el uso de if, else, foreach, los tipos de datos y el uso de snake_case para nombrar variables. Un beneficio general de la automatización con Python sería la eficiencia y la reducción de errores humanos en tareas repetitivas, permitiendo a los profesionales de TI enfocarse en tareas más estratégicas y complejas.
+
+---
+
+### ¿Qué es la programación?
+- Cuando escribe un programa, ​crea una receta paso a paso de lo que ​debe hacerse para completar una tarea
+- La receta está escrita en ​un código llamado lenguaje de programación
+- Los lenguajes de programación son en realidad similares a los ​lenguajes hablados por humanos, ya que tienen una sintaxis y semántica.
+- Sintaxis: las reglas de cómo se ​construye una oración
+- Semantica: el significado de la oración
+- En progrmación, la sintaxis es: Son las reglas de cómo se escribe cada instrucción
+- En programación, la semántica es: Los efectos que tiene cada instrucción cuando se ejecuta
+- ¿Cual es la diferencia entre Script y Programa? : En general, puede pensar en los scripts como programas con ​un ciclo de desarrollo corto que se pueden ​crear e implementar rápidamente
+- Script: Un programa con ​un ciclo de desarrollo corto que se pueden ​crear e implementar rápidamente.
