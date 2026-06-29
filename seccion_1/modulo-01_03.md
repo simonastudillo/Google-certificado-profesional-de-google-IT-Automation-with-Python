@@ -95,3 +95,26 @@
     - Un lenguaje especifico para una plataforma o sistema operativo (Se refiere a PowerShell en Windows, Bash en Linux, etc.)
     - Un lenguaje de ejecución en el cliente (como JavaScript que se ejecuta en el navegador)
     - Un lenguaje basado en objetos (aunque tiene soporte para programación orientada a objetos)
+
+---
+
+## Test your knowledge: Introduction to Python
+- In the code block below, replace ___ with the Python command to display “My first Python program” on the screen after the command is run.
+```Python
+print("My first Python program")
+``` 
+- Python is an example of what type of programming language?
+R: General purpose scripting language 
+- The code block below contains a Bash command to display “Have a nice day” on the screen. Convert this Bash command to a Python command.
+```Python
+print("Have a nice day");
+``` 
+- In the code block below, replace ___ with the Python command that will display “This is fun!” on the screen 5 times.
+```Python
+for i in range(5):
+  print("This is fun!")
+``` 
+- Why is Python relevant to IT? Select all that apply.
+R:  - Python is used in fast-growing areas of IT, like machine learning and data analytics.
+    - Python works well as a scripting language for IT automation.
+    - Python can be used to calculate statistics, run e-commerce sites, process images, interact with web services, and more.
