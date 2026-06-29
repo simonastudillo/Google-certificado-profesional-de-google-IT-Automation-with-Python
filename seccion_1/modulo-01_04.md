@@ -135,3 +135,17 @@ print(ratio)
 - Un IDE es una herramienta de software que simplifica el proceso ​de creación de una nueva aplicación de software
 - Un IDE es una aplicación de software ​que proporciona completas facilidades ​para el desarrollo de software
 - IDLE es un IDE que viene con Python automáticamente. ​Es un excelente IDE para principiantes ​porque es muy sencillo de usar
+
+---
+
+## Revisión: Uso de la línea de comandos
+- Se usa para decirle a la computadora qué hacer
+- Puedes acceder a servidores, mover archivos, cambiar directorios y escribir scripts.
+- En MacOS usa `spotlight` para buscar la aplicación Terminal.
+    - Escribe en la consola `python --version` o `python3 --version` para verificar la versión de Python.
+- En Windows usa `cmd` para buscar la aplicación Command Prompt.
+    - Escribe en la consola `python --version` para verificar la versión de Python.
+- En Linux usa `Ctrl+Alt+T` para abrir la terminal.
+    - Escribe en la consola `python3 --version` para verificar la versión de Python.
+- Uso de IDLE: IDLE viene con Python y es un IDE que permite escribir código, depurarlo y ejecutarlo.
+- En MacOS, Linux y Windows puedes abrir IDLE desde el menú de aplicaciones.
