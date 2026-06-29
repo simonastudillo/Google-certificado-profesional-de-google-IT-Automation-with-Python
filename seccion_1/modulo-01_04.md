@@ -68,3 +68,10 @@ print(((2050/5)-32)/9)
 print(2**10)
 #1024
 ```
+
+---
+
+## Python puede ser una calculadora
+- Recuerda usar paréntesis, tal como lo hacemos en matemáticas, para indicar el orden de las operaciones.
+- Pyhton se puede usar para obtener cuadrados, cubos o cualquier potencia de un número usando el operador `**`.
+- Experimenta para familiarizarte con las operaciones matemáticas en Python.
