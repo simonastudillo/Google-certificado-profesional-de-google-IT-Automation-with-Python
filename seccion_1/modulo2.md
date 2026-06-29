@@ -6,3 +6,7 @@
 - Ejercicios prácticos para aprender a escribir código en Python
 - Nunca funciona la primera vez, aprende a tu propio ritmo y no te desanimes.
 - Recuerda que: incluso los programadores más avanzados comenzaron a pensar
+
+---
+
+## Reflexión: Su viaje por la automatización con Python
