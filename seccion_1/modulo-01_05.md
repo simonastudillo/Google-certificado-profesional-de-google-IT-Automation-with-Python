@@ -39,3 +39,82 @@
 - Semantics (Semántica): Significado o efecto que se pretende dar a las frases o conjuntos de palabras, tanto en el lenguaje humano como en el informático
 - Syntax (Sintaxis): Las reglas que rigen la construcción de los enunciados, tanto en el lenguaje humano como en el informático
 - Variables (Variables): Se utilizan para almacenar temporalmente valores cambiantes en el código de programación
+
+---
+
+## Guía de estudio: Quiz calificado del Módulo 1
+- Conocimientos
+    - Beneficios del lenguaje de programción Python
+    - Cómo es Python comparado con otros lenguajes de programación
+    - Cómo el conocimiento de un lenguaje de programación puede ayudar a aprender otros lenguajes
+    - Cómo los scripts pueden ayudar a automatizar tareas
+    - Sintaxis correcta para operaciones aritméticas y lógicas en Python
+    - Funciones y Keywords de Python usados para mostrar información en la pantalla
+    - Por qué la precisión es importante en la programación
+- Terminos
+    - Programas informáticos
+    - Lenguajes de programación
+    - Sintaxis
+    - Semántica
+    - Errores lógicos
+    - Script
+    - Automatización
+    - Funciones
+- Habilidades de codificación
+    - Usa la función `print()`para mostrar un `string`
+```Python
+# Syntax for printing a string of text
+print("I love Python!")
+
+# Syntax for printing numeric values
+print(360)
+print(32*45)
+
+# Syntax for printing the value of a variable
+value = 8*6
+print(value)
+```
+    - Usa operadores aritméticos, enfocado en exponentes
+```Python
+# Multiplication, division, addition, and subtraction
+print(3*8/2+5-1)
+ 
+# Exponents
+print(4**6) # Syntax means 4 to the power of 6
+print(4**2) # To square a number
+print(4**3) # To cube a number
+print(4**0.5) # To find the square root of a number
+
+# To calculate how many different possible combinations can be
+# formed using a set of "x" characters with each character in "x"
+# having "y" number of possible values, you will need to use an 
+# exponent for the calculation:
+x = 4
+y = 26
+print(y**x)
+``` 
+    - Uso de variables con valores asignados y operaciones aritméticas
+```Python
+# Assignment of values to the variables:
+years = 10
+weeks_in_a_year = 52
+# This variable is assigned an arithmetic calculation:
+weeks_in_a_decade = years * weeks_in_a_year
+# Prints the calculation stored in the "weeks_in_a_decade" variable:
+print(weeks_in_a_decade)
+``` 
+
+>[!NOTE]
+> Recuerda: El uso correcto de la sintaxis es critico.
+
+- Incluso un pequeño error tipográfico puede causar un error de sintaxis y el corrector automático de cuestionarios codificado en Python marcará tu código como incorrecto
+- Problemas de codificación causados por sintaxis incorrecta son normales mientras aprendes a programar.
+- Por eso es importante comenzar el habito de ser preciso y exacto con la sintaxis desde el principio.
+- Errores comunes de sintaxis
+    - Identación incorrecta
+    - Olvidar o usar un caracter incorrecto en una palabra clave
+        - Llaves `{}`, paréntesis `()`, corchetes `[]`, comillas `'` o `"`
+        - Caracteres de introdocción a un bloque de código como `:` o `;`
+    - Difertes tipos de datos
+    - Olvidar, usar incorrecto o mal usar palabras reservadas
+    - Usar el `case`incorrecto, Python es case-sensitive, lo que significa que `Variable` y `variable` son diferentes.
