@@ -149,3 +149,13 @@ print(ratio)
     - Escribe en la consola `python3 --version` para verificar la versión de Python.
 - Uso de IDLE: IDLE viene con Python y es un IDE que permite escribir código, depurarlo y ejecutarlo.
 - En MacOS, Linux y Windows puedes abrir IDLE desde el menú de aplicaciones.
+
+---
+
+## Usa la línea de comandos
+- Para instalar Python en linux usa: 
+```bash
+sudo apt install python3
+```
+- Idle es un Entorno de desarrollo integrado y aprendizaje ​para el lenguaje de programación Python.
+- Python Idle es un intérprete interactivo, ​o editor de archivos, que le permite ​escribir fácilmente scripts y programas Python. ​Idle proporciona resaltado de sintaxis, completado de código, ​y sangría automática
