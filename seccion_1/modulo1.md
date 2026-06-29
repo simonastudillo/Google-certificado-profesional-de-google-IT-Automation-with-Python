@@ -188,3 +188,18 @@ R: Una tarea repetitiva sería descargar respaldos de 10 servidores diferentes c
   - Entrada: La entrada es la información que el usuario final proporciona a un programa. La entrada puede ser texto, voz, imágenes, datos biométricos, etc.
   - Funciones: Una función es un bloque de código reutilizable que realiza una tarea específica.
   - Variables: Las variables se utilizan para almacenar temporalmente valores modificables en el código de programación.
+
+---
+
+### Test your knowledge: Introduction to programming
+- What’s a computer program?
+  - A list of instructions that the computer has to follow to reach a goal
+- What’s the syntax of a language?
+  - The rules of how to express things in that language
+- What’s the difference between a program and a script?
+  - There’s not much difference, but scripts are usually simpler and shorter.
+- Which of these scenarios are good candidates for automation? Select all that apply
+  - Generating a sales report, split by region and product type
+  - Copying a file to all computers in a company
+- What are semantics when applied to programming code?
+  - The intended meaning or logic of coded statements
