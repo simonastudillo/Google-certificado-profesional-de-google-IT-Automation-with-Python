@@ -170,3 +170,21 @@ sudo apt install python3
 - Como usar Jupyter Notebook:
     - Abre la siguiente [URL](https://jupyter.org/try-jupyter/lab/?path=notebooks%2FIntro.ipynb) en tu navegador web
     - Esto creará un nuevo entorno de Jupyter Notebook en tu navegador web
+
+---
+
+## Usa JupyterLab y Jupyter Notebook
+- Jupyter Lab y Jupyter Notebooks ​forman parte de un proyecto de código abierto llamado Project Jupyter ​y son de uso gratuito
+- Jupyter Lab proporciona un entorno en línea ​que te permite ejecutar tu código en la nube
+- Notebook de Jupyter se puede utilizar en la interfaz basada en web ​a través de Jupyter Lab o en tu máquina local.
+- Notebook de Jupyter te permite crear documentos basados en texto ​que contienen bloques de código en vivo
+- Puedes escribir programas y scripts de Python ​usando Notebooks de Jupyter ​y ver cómo se ejecutan todo en un mismo lugar
+- Para ejecutar el código en en Notebook de Jupyter, haz clic en el bloque de código y presiona `Shift + Enter` o haz clic en el botón de ejecutar en la barra de herramientas.
+- Para instalar Jupyter Notebook en tu máquina local, puedes usar el siguiente comando en la terminal:
+```bash
+pip install notebook
+```
+- Para instalar Jupyter Lab en tu máquina local, puedes usar el siguiente comando en la terminal:
+```bash
+pip install jupyterlab
+```
