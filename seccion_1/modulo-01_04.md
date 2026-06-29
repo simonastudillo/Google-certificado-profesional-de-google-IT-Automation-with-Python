@@ -105,3 +105,22 @@ print(2**10)
     - [Funciones](https://docs.python.org/3/library/functions.html)
     - [Keywords](https://www.w3schools.com/python/python_ref_keywords.asp)
     - [Operadores aritméticos](https://flexiple.com/python/arithmetic-operators-in-python/)
+
+---
+
+## Test your knowledge: Hello World
+- What are functions in Python?
+R: Functions are pieces of code that perform a unit of work
+- What are keywords in Python?
+R: Keywords are reserved words that are used to construct instructions.
+- What does the print function do in Python?
+R: The print function outputs messages to the screen
+- Output a message that says "Programming in Python is fun!" to the screen.
+```Python
+print("Programming in Python is fun!")
+```
+- Replace the ___ placeholder to calculate the square root of 9. (Tip: to calculate the square root of a number x, you can use x**(1/2).)
+```Python
+ratio = 9**(1/2)
+print(ratio)
+```
