@@ -227,3 +227,12 @@ pip install jupyterlab
 - VS Code proporciona soporte integrado ​con el completado de código IntelliSense, un depurador interactivo, ​y otras herramientas de compilación y scripting
 - VS Code tiene un diseño sencillo ​que lo hace fácil de aprender y usar
 - Para ver las extensiones en VS Code, teclearemos ctrl mayús X. ​Esto nos mostrará una lista ​de las extensiones más populares de VS Code ​en el marketplace de VS Code. 
+
+---
+
+## Más IDEs y editores de código
+- PyCharm: Open Source que te ayuda a escribir código más rápido. Es un editor de código inteligente.
+- PyDev: Un IDE de Python que es fácil de usar y tiene muchas características útiles. Está muy integrado con Eclipse, un IDE de código abierto muy popular.
+- Notepad++: Un editor de código fuente gratuito y de código abierto que soporta varios lenguajes de programación, incluyendo Python. Es ligero y fácil de usar.
+- Gemini Code Assist: Hay herramientas que se integran directo en tus IDE o ambientes de desarrollo.
+    - Esta herrmienta funciona como un asistente que puede analizar tu código y sugerir mejoras, detectar errores y optimizar el rendimiento.
