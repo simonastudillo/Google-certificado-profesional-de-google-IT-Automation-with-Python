@@ -47,3 +47,24 @@
 - Errores semanticos comunes
     - Crear código funcional, pero obtener un resultado inesperado.
     - Estructura lógica pobre en el diseño del código.
+
+---
+
+## ¿Por qué es Python relevante para TI?
+- Python facilita la expresión de conceptos fundamentales
+    - Estructuras de datos, algoritmos
+    - Sintaxis fácil de leer y escribir
+    - Popular en la industria.
+- Siempre que hay un cambio significativo en la semántica o la sintaxis del lenguaje se publica una nueva versión principal.
+- Puedes usar Python para
+    - Calcular estadísticas
+    - ejecutar tu sitio comercial
+    - procesar imagenes
+    - interactuar con servicios web
+    - facil de automatizar tareas repetitivas
+    - Analisis de datos
+- Una gran parte de la programación es prueba y error
+- Ve el error como una oportunidad de aprender y mejorar tu código.
+
+>[!NOTE]
+> Recuerda: Los mejores programadores superan los desafíos buscando ayuda o utilizando otros recursos.
