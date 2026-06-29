@@ -7,3 +7,24 @@
   - [ejericio de ejemplo](../ejercicios/example_m-01-03.py)
 - ¿Qué es un intérprete de Python en ​programación?
   - El programa que lee que hay en la receta y lo traduce a instrucciones para que siga tu computadora.
+
+---
+
+## Recursos Python
+- Usa Python por ti mismo
+    - La mejora manera de aprender cualquier lenguaje de programación es escribiendo código.
+    - Verifica si tienes Python ejecutando lo siguiente en tu computadora:
+      - En Windows: `python --version`
+      - En Mac/Linux: `python3 --version`
+- Recursos para practicar Python
+    - Puedes usar un intérprete de Python en línea para practicar sin necesidad de instalar nada en tu computadora.
+    - [https://www.python.org/shell/](https://www.python.org/shell/)
+    - [https://www.onlinegdb.com/online_python_interpreter](https://www.onlinegdb.com/online_python_interpreter)
+    - [https://trinket.io/python3](https://trinket.io/python3)
+- Recursos adicionales Python
+    - [Documentación oficial de Python](https://docs.python.org/3/)
+- Historia de Python y estado actual
+    - Python fue lanzado hace unos 30 años
+    - Python lanza versiones nuevas cada año, con mejoras y nuevas funcionalidades.
+    - Durante esas actualizaciones pueden hacer que el código existente necesite ajustes para seguir funcionando.
+    - En este curso usaremos Python 3.7
