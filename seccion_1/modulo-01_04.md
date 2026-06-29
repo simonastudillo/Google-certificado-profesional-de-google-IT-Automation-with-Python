@@ -44,3 +44,25 @@ print("Hello " + name)
 
 ## Obtener información del usuario
 - En general para que un programa se útil, necesita obtener información del usuario.
+- Formas de obtener información
+    - Campos de textos
+    - Clic en botones
+    - Solicitar datos en la terminal
+    - Uso de parámetros o variables
+
+---
+
+## Revisión: Python puede ser una calculadora
+- Ejemplos de operaciones matemáticas en Python
+```Python
+print(4+5)
+#9
+print(9*7)
+#63
+print(-1/4)
+#-0.25
+print(1/3)
+#0.3333333333333333
+print(((2050/5)-32)/9)
+#42.0
+```
