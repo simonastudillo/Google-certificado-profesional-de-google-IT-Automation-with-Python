@@ -165,3 +165,9 @@ R: Una tarea repetitiva sería descargar respaldos de 10 servidores diferentes c
   - Es importante entender que la automatización básica no es lo mismo que la inteligencia artificial
   - La automatización se utiliza para instruir explícitamente a una máquina sobre cómo realizar una tarea
   - La inteligencia artificial (IA) consiste en entrenar a una máquina informática para que realice tareas más complejas mediante un proceso denominado aprendizaje automático
+
+---
+
+### Conseguir que los ordenadores trabajen para usted
+- Las tareas realizadas por una computadora que deben realizarse varias veces con poca variación ​son muy adecuadas para la automatización. 
+- cuando automatizas una tarea, evitas la posibilidad de errores humanos ​y reduces el tiempo que lleva realizarla
