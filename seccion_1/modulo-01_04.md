@@ -25,3 +25,17 @@ print("Hello, World!")
 - Keyworkd (palabra clave): Son palabras reservadas que se utilizan para crear instrucciones
     - if, while, for
 - String: Es un tipo de dato que representa texto. Se define entre comillas simples o dobles.
+
+---
+
+## Revisión: Obtener información del usuario
+- El siguiente bloque de código muestra como usar variables e mostrarlas en pantalla
+```Python
+name = "Brook"
+print("Hello " + name)
+#Hello Brook
+
+name = "Alex"
+print("Hello " + name)
+#Hello Alex
+```
