@@ -118,3 +118,96 @@ print(weeks_in_a_decade)
     - Difertes tipos de datos
     - Olvidar, usar incorrecto o mal usar palabras reservadas
     - Usar el `case`incorrecto, Python es case-sensitive, lo que significa que `Variable` y `variable` son diferentes.
+
+---
+
+## Module 1 challenge: Hello Python!
+- Why is it important to be very precise about what a computer program is supposed to do?
+    - Computers do exactly what they are told.
+- Which of the following are true about programming languages? Select all that apply.
+    - Some common programming languages include Python, Java, C, C++, C#, and R.
+    - Programming languages are used to write computer programs and scripts.
+    - Similar to human language, programming languages use syntax and semantics.
+- What are some tasks that might be a good fit for full automation? Select all that apply.
+    - Detecting and removing duplicate data
+    - Updating specific files on multiple computers
+- What is the term for the set of rules for how statements are constructed in a programming language?
+    - Syntax
+- What is a property of Python that makes it easier to understand than some other programming languages?
+    - Code is similar to the English language.
+- Write a Python script that outputs "Automating with Python is fun!" to the screen. Remember that syntax precision is important in programming languages. A missing capital letter, spelling error, or punctuation mark can produce errors.
+```Python
+print("Automating with Python is fun!")
+```
+- What should be the output of the expression below? 
+    - 8
+- Assuming there are 60 minutes in an hour, write a program that calculates the number of minutes in a 24 hour day. Print the result on the screen. Note: Your result should be in the format of just a number, not a sentence.
+```Python
+# Enter code here:
+hours:int = 24
+minutes_per_hour:int = 60
+print(hours*minutes_per_hour)
+# Should print 1440
+```
+- The market is six miles away from your home. The school is two miles away from your home. Use Python to calculate how much further the market is from your home than the school (in miles). Note: Your result should be in the format of a number, not a sentence.
+```Python
+# Should print 4
+market_distance:int = 6
+school_distance:int = 2
+print(market_distance-school_distance)
+```
+- Fill in the blank to calculate how many sectors a given 16 GB (gigabyte) hard disk drive has. The given hard drive is divided into sectors of 512 bytes each. Divide the total bytes on the drive by the number of bytes in a sector to calculate how many sectors this drive has.  Your result should be a number. Note: To calculate the total bytes on the disk drive, multiply by multiples of 1024. In the code below,  you can calculate the "disk_size" of 16 GB by multiplying 16 by 1024 three times to go from bytes, to kilobytes, to megabytes, and finally to gigabytes.
+```Python
+disk_size = 16*1024*1024*1024
+sector_size = 512
+sector_amount = disk_size/sector_size
+
+print(sector_amount) # Should print 33554432.0
+```
+- Once you have learned the basics of a programming language, how does this affect your ability to learn and use a second programming language?"
+    - It’s easier to learn and use a second language.
+- What is automation?
+    - The process of replacing a manual step with an automated step
+- Which of the following are characteristics of the Python language? Select all that apply.
+    - Python is cross-platform compatible
+    - Python is used in a wide variety of applications
+- Complete the code so that the string "I am writing Python code!" will print to the screen. Remember that syntax precision is important in programming languages. A missing capital letter, spelling error, or punctuation mark can produce errors.
+```Python
+# Replace the blanks with the correct code and syntax:
+print("I am writing Python code!")
+
+# Should print: I am writing Python code!
+```
+- What should be the output of the expression below? 
+```Python
+print((9-3)/(2*(1+2)))
+# 1.0
+```
+- Keeping in mind there are 60 seconds per minute , write a program that calculates how many seconds there are in an hour .Print the result to the screen. Note: Your result should be in the format of just a number, not a sentence.
+```Python
+# Enter code here:
+seconds_per_minute:int = 60
+minutes_per_hour:int = 60
+print(seconds_per_minute*minutes_per_hour)
+# Should print 3600
+```
+- What is the program that reads and executes Python code by translating it to computer instructions called?
+    - Interpreter
+- In one year, if there are 365 days, with 24 hours in a day, , write a program to calculate the number of hours in a year. Print the result on the screen. Note: Your result should be in the format of just a number, not a sentence.
+```Python
+# Enter code here:
+days_per_year:int = 365
+hours_per_day:int = 24
+print(days_per_year*hours_per_day)
+# Should print 8760
+```
+- Consider this scenario about using Python to make calculations:
+In a managed computing environment, there are 200 remote computers that must download 200 MB (megabytes) of updates each month. There are 1024 KB (kilobytes) in each MB.
+Fill in the blank in the code below to compute the number of total kilobytes downloaded by all computers from the remote update server each month. Multiply the total number of computers by the download size in KB to calculate. 
+```Python
+download_size_kb = 200*1024
+total_computers = 200
+total_kbs = download_size_kb * total_computers
+
+print(total_kbs) # Should print 40960000.0
+```
