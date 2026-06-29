@@ -188,3 +188,15 @@ pip install notebook
 ```bash
 pip install jupyterlab
 ```
+
+---
+
+## Revisión: Usa Colab
+- Colab Notebooks es Jupyter Notebook que es hosteado en colaboración con Google.
+- En Colab puedes ejecutar código en Python en la nube sin necesidad de instalar nada en tu computadora.
+- Funciones de Colab:
+    - Ejecutar código en Python en la nube
+    - Guardar y compartir notebooks con otros usuarios
+- Crea un notebook en Colab:
+    - Abre la siguiente [URL](https://colab.research.google.com/notebooks/welcome.ipynb) en tu navegador web
+    - Esto creará un nuevo notebook en Colab en tu navegador web
