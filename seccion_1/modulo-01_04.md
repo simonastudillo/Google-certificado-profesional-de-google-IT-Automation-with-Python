@@ -209,3 +209,14 @@ pip install jupyterlab
 - Simplemente puede visitar colab.sandbox.google.com ​o buscar en Google Colab para empezar
 - Abre la siguiente [URL](https://colab.research.google.com/notebooks/welcome.ipynb) en tu navegador web
 - Ve al archivo y haz clic en Nueva libreta
+
+---
+
+## Revisión Usa VS Code
+- VS Code es un editor de código fuente desarrollado por Microsoft para Windows, Linux y macOS.
+- Es de código abierto y gratuito, y es compatible con una amplia variedad de lenguajes de programación, incluyendo Python.
+- VS Code soporta [Intellisense](https://code.visualstudio.com/docs/editing/intellisense#:~:text=IntelliSense%20is%20a%20general%20term,%2C%20and%20%22code%20hinting.%22) que proporciona autocompletado de código, resaltado de sintaxis y sugerencias de código.
+- Descargalo desde [VS Code](https://code.visualstudio.com/Download)
+- Instala la extensión de Python desde el marketplace de VS Code para habilitar soporte completo para Python.
+- Crea un archivo Python con la extensión `.py` y comienza a escribir tu código.
+- Luego pruebalo con el botón de "Run & Debug" o presionando `F5` para ejecutar tu código.
