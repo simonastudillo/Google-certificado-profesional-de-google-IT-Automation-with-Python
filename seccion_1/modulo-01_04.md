@@ -200,3 +200,12 @@ pip install jupyterlab
 - Crea un notebook en Colab:
     - Abre la siguiente [URL](https://colab.research.google.com/notebooks/welcome.ipynb) en tu navegador web
     - Esto creará un nuevo notebook en Colab en tu navegador web
+
+---
+
+## Usa Colab
+- Colab es una plataforma basada en la web que le permite escribir ​y ejecutar código Python muy rápido en Google Drive
+- ​Es gratuito y está listo para usar sin necesidad de configuración. 
+- Simplemente puede visitar colab.sandbox.google.com ​o buscar en Google Colab para empezar
+- Abre la siguiente [URL](https://colab.research.google.com/notebooks/welcome.ipynb) en tu navegador web
+- Ve al archivo y haz clic en Nueva libreta
