@@ -148,3 +148,9 @@ def lucky_number(name):
 lucky_number("Kay")
 lucky_number("Cameron")
 ```
+
+---
+
+## Los principios de la reutilización de código
+- Las funciones son potentes porque puedes crear las tuyas propias
+- Puedes usarlas para organizar el código de tus scripts en bloques lógicos, ​lo que hace que el código que escribas sea más fácil de usar y reutilizar
