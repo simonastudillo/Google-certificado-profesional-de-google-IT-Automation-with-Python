@@ -112,3 +112,14 @@ def greeting(name):
 result = greeting("Christine")
 print(result)
 ```
+
+---
+
+## Retornar valores
+- El trabajo que realizan las funciones puede producir nuevos resultados.
+- Usamos la palabra clave return para decirle a ​Python que este es el valor devuelto por una función
+- Cuando llamamos a la función, ​almacenamos ese valor en una variable. 
+- Nos permite combinar llamadas a ​funciones y operaciones más complejas, ​lo que hace que el código sea más reutilizable
+- Las sentencias de retorno en Python son aún más ​interesantes porque podemos ​usarlas para devolver más de un valor (return valor1, valor2, valor3)
+- Una función puede devolver `None` si no se especifica un valor de retorno. Esto es útil para funciones que realizan una acción pero no necesitan devolver un valor.
+- `None`: Es un tipo especial de dato en Python usado para indicar que no hay valor.
