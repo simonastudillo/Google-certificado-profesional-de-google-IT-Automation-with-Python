@@ -185,3 +185,17 @@ caption = "Picard" # type: str
 
 >[!TIP]
 > Se estrategico con las anotaciones de tipo. Esto puede añadir complejidad innecesaria.
+
+---
+
+## Reseña: Expresiones, números y conversiones de tipo
+```Python
+print(7+8.5) # 15.5 - Python convierte automáticamente el entero 7 a un float para realizar la operación.
+print("a"+"b"+"c") # abc - Python concatena los strings.
+print("This " + "is " + "pretty " + "neat!") # This is pretty neat! - Python concatena los strings.
+
+base = 6
+height = 3
+area = (base*height)/2
+print("The area of the triangle is: " + str(area))  # The area of the triangle is: 9.0 - Python convierte el float area a un string para poder concatenarlo con el resto del mensaje.
+```
