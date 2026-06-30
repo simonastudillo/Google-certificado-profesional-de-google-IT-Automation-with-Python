@@ -339,3 +339,11 @@ def hint_username(username):
     if len(username) < 3:
         print("Invalid username. Must be at least 3 characters long")
 ```
+
+---
+
+## Ramificación con sentencias if
+- Branching (ramificación): La habilidad de un programa para alternar la secuencia de ejecución de instrucciones dependiendo de una condición.
+- Escribimos la palabra clave `if` seguida de ​la condición que queremos comprobar y, a continuación, seguida de dos puntos.
+- Después viene el cuerpo del bloque if, ​que tiene una sangría más a la derecha
+- El cuerpo del bloque if solo se ​ejecutará cuando la condición se evalúe como verdadera
