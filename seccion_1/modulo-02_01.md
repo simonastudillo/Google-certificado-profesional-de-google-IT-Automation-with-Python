@@ -128,3 +128,20 @@ print("hello "+ "world")
 print(7+"8")
 #this will throw an error
 ```
+- Obtener el tipo de dato de una variable usando la función type()
+```Python
+print(type("a")) # <class 'str'> - Indica que es un string
+print(type(2)) # <class 'int'> - Indica que es un número entero
+print(type(2.5)) # <class 'float'> - Indica que es un número decimal
+``` 
+
+---
+
+## Tipos de datos
+- String: Texto encerrado entre comillas simples o dobles.
+- Integer: Números enteros, positivos o negativos, sin decimales.
+- Float: Números decimales, positivos o negativos.
+- Por lo general, el equipo no sabe cómo mezclar diferentes tipos de datos. 
+    - Por ejemplo, no podemos sumar un número entero con un string, ya que son tipos de datos diferentes.
+- Lea los errores detenidamente, comprenda lo que le dicen y, a ​continuación, utilice ese nuevo conocimiento para ayudarlo a corregir el error
+- Si no estás seguro del tipo de dato de una variable, puedes usar la función type() para averiguarlo.
