@@ -391,3 +391,15 @@ def is_even(number):
     - Ejemplo: `5 % 2` devuelve `1` porque 5 dividido entre 2 es 2 con un resto de 1
     - Ejemplo: `4 % 2` devuelve `0` porque 4 dividido entre 2 es 2 con un resto de 0
 - Recuerda que si haces un return dentro de un bloque if o else, el resto del código no se ejecutará. Por ejemplo, en la función `is_even`, si el número es par, se ejecutará el return True y el resto del código no se ejecutará.
+
+---
+
+## Sentencia else y el operador módulo
+- La instrucción `else` sigue a un bloque `if` y se compone de la palabra clave `else` seguida de dos puntos.
+- El cuerpo de la instrucción `else` se indenta a la derecha y se ejecutará si la instrucción `if` anterior no se ejecuta.
+
+- operador módulo, representado por el signo de porcentaje: %.
+- Este operador realiza la división entera, pero solo devuelve el resto de la operación
+- Si dividimos 5 entre 2, el cociente es 2 y el resto es 1
+- Dividir 10 entre 5 nos daría un cociente de 2 sin resto, ya que 5 cabe en 10 dos veces sin que sobre nada
+- En este caso, 10%5 daría como resultado 0, puesto que no hay resto
