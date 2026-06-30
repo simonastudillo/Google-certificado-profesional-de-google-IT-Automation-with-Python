@@ -329,3 +329,13 @@ print(not today == "Tuesday")
 # True."
 
 ```
+
+---
+
+## Reseña: Ramificación con sentencias if
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+```
