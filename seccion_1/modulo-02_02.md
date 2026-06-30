@@ -178,3 +178,21 @@ def circle_area(radius):
 circle_area(5)
 #Output is 78.5
 ```
+
+---
+
+## Estilo de código
+- Tener un estilo bueno o malo al escribir código no hace ​mucha diferencia entre que un script tenga éxito o se bloquee
+- pero puede marcar una gran diferencia para las personas que lo usan y contribuyen a é
+- Un ​estilo de programación deficiente puede dificultar la vida de los especialistas en TI o ​los administradores de sistemas
+- Un mal estilo puede incluso causar dolor de cabeza al autor del guion si ha pasado un tiempo ​desde que lo escribió
+- Un buen estilo facilita la vida a las personas que tienen que mantener el código y ​les ayuda a entender qué hace y cómo lo hace
+- También puede reducir los errores, ya que hace que la actualización del código sea ​más fácil y directa
+- Código auto documentado: Escribir de una forma que sea legible y no oculte su intención.
+    - Nombre de variables
+    - Expresiones
+    - Funciones
+    - etc.
+- En la jerga de programación, cuando reescribimos el código para que sea más autodocumentado, ​llamamos refactorización a este proceso
+- Puedes añadir comentarios en caso de que el fragmento de código se más complejo y no se pueda refactorizar para que sea más legible
+- En Python los comentarios se escriben con el símbolo #. Todo lo que esté a la derecha de este símbolo se ignora al ejecutar el código.
