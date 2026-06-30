@@ -159,3 +159,11 @@ print(return_nonnegative(0, 5)) # Should print 5
 
 10. Code that is written so that it is readable and doesn’t conceal its intent is called what?
 > Self-documenting code
+
+---
+
+## Resumen de la sintaxis básica
+- Diferentes tipos de datos: cadena, entero, flotante, booleano
+- Operadores de comparación: `==`, `!=`, `<`, `>`, `<=`, `>=`
+- Operadores lógicos: `and`, `or`, `not`
+- Sentencias condicionales: `if`, `elif`, `else`
