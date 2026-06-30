@@ -123,3 +123,28 @@ print(result)
 - Las sentencias de retorno en Python son aún más ​interesantes porque podemos ​usarlas para devolver más de un valor (return valor1, valor2, valor3)
 - Una función puede devolver `None` si no se especifica un valor de retorno. Esto es útil para funciones que realizan una acción pero no necesitan devolver un valor.
 - `None`: Es un tipo especial de dato en Python usado para indicar que no hay valor.
+
+---
+
+## Reseña: Los principios de la reutilización de código
+- Las siguientes funciones se usarán de ejemplo en el siguiente video.
+```Python
+name = "Kay"
+number = len(name) * 9
+
+print("Hello " + name + ". Your lucky number is " + str(number))
+
+name = "Cameron"
+number = len(name) * 9
+
+print("Hello " + name + ". Your lucky number is " + str(number))
+```
+
+```Python
+def lucky_number(name):
+    number = len(name) * 9
+    print("Hello " + name + ". Your lucky number is " + str(number))
+
+lucky_number("Kay")
+lucky_number("Cameron")
+```
