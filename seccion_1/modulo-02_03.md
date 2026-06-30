@@ -347,3 +347,34 @@ def hint_username(username):
 - Escribimos la palabra clave `if` seguida de ​la condición que queremos comprobar y, a continuación, seguida de dos puntos.
 - Después viene el cuerpo del bloque if, ​que tiene una sangría más a la derecha
 - El cuerpo del bloque if solo se ​ejecutará cuando la condición se evalúe como verdadera
+
+---
+
+## Reseña: Ramificación con sentencias else
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+    else:
+        print("Valid username")
+#This code will not have an output. 
+```
+- Este fragmento de código define una función llamada hint_username.
+- La instrucción if len(username) < 3: comprueba la longitud de la cadena username.
+- Si la longitud de la cadena es menor a 3 caracteres, se ejecuta el código dentro de la instrucción if.
+- La instrucción print("Nombre de usuario no válido. Debe tener al menos 3 caracteres") imprime el mensaje "Nombre de usuario no válido.
+- Debe tener al menos 3 caracteres".
+- La instrucción else: se ejecuta si la longitud de la cadena username no es menor a 3 caracteres.
+- En este caso, se ejecuta el código dentro de la instrucción else, que es la instrucción print("Nombre de usuario válido").
+```Python
+def is_even(number):
+    if number % 2 == 0:
+        return True
+    return False
+#This code has no output
+```
+- Este fragmento de código define una función llamada `is_even`.
+- Esta función comprueba si un número es par.
+- La parte del código que verifica si el número es par es `if number % 2 == 0:`.
+- Si el número es impar, la función devuelve `False`.
