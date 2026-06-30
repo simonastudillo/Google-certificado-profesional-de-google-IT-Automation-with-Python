@@ -149,3 +149,39 @@ print(type(2.5)) # <class 'float'> - Indica que es un número decimal
 ---
 
 ## Categorizar: Nombrar variables
+
+---
+
+## Anotando variables por tipo
+- Las anotaciones de tipo son una forma de indicar el tipo de dato que se espera que tenga una variable.
+- Reduce las posibilidades de errores y ayuda a documentar el código para otros usuarios.
+- Como hacerlo: Debes usar el símbolo de dos puntos (:) seguido del tipo de dato esperado después del nombre de la variable.
+```Python
+name: str = "Betty"
+age: int = 34
+```
+
+>[!TIP]
+> Si una función espera una lista de números, anotala como `List[int]`, no solo `List`. Ser específico con tus tipos ayuda a encontrar posibles errores antes de que ocurran.
+
+- Tipos dinámicos
+    - Muchos lenguajes requieres declarar el tipo, en Python no es obligatorio.
+    - Una de las ventajas de Python es que las variables pueden cambiar de tipo.
+```Python
+x = 5 # x es un entero
+x = "Hello" # x ahora es un string
+```
+- Tipado dinámico puede ayudar a acelerar el desarrollo, pero también puede llevar a errores si no se tiene cuidado.
+- Python infiere el tipo de dato de una variable en tiempo de ejecución, lo que significa que no es necesario declarar el tipo de dato al crear la variable.
+- Comentarios del tipo: Otra forma de documentar el tipo de dato esperado de una variable es usar comentarios.
+```Python
+caption = "Picard" # type: str
+```
+
+### Cómo afectan al rendimiento
+- Cada vez que una librería es importada, se necesita más capacidad computacional.
+- Tipo de dato es poco común en usuarios de Python en ciencia de datos, pero es muy útil para desarrolladores de software.
+- En programación orientada a objetos, las anotaciones de tipo son útiles para definir la interfaz de una clase y sus métodos.
+
+>[!TIP]
+> Se estrategico con las anotaciones de tipo. Esto puede añadir complejidad innecesaria.
