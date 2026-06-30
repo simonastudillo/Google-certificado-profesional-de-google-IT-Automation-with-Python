@@ -436,3 +436,8 @@ def hint_username(username):
 - ​Python nos proporciona la palabra clave `elif` que nos permite gestionar más de dos casos de comparación.
 - ​La principal diferencia entre las sentencias `elif` y `if` ​es que solo podemos escribir un bloque `elif` ​como complemento de un bloque `if`.
 - El uso de la bifurcación para determinar el flujo de su programa ​abre un nuevo abanico ​de posibilidades en sus scripts
+
+---
+
+## Ramificación compleja con sentencias elif
+- La instrucción `elif` nos permite realizar aún más comparaciones para lograr ramificaciones más complejas
