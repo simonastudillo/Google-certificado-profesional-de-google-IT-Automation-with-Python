@@ -378,3 +378,16 @@ def is_even(number):
 - Esta función comprueba si un número es par.
 - La parte del código que verifica si el número es par es `if number % 2 == 0:`.
 - Si el número es impar, la función devuelve `False`.
+
+---
+
+## Ramificación con sentencias else
+- Podemos extender la ramificación con la sentencia `else` para ejecutar un bloque de código alternativo si la condición del `if` no se cumple.
+- Utiliza la palabra clave else seguida de dos puntos para indicar ​el comienzo del bloque else
+- el cuerpo del bloque tiene una sangría adicional a la derecha
+- recuerda que puedes elegir utilizar tantos o tan pocos espacios como quieras para ​la sangría, pero siempre necesitas sangrar, y ​siempre necesitas utilizar el mismo número de espacios
+- Operador módulo: `%`
+    - Este operador devuelve el resto de la división de un número por otro
+    - Ejemplo: `5 % 2` devuelve `1` porque 5 dividido entre 2 es 2 con un resto de 1
+    - Ejemplo: `4 % 2` devuelve `0` porque 4 dividido entre 2 es 2 con un resto de 0
+- Recuerda que si haces un return dentro de un bloque if o else, el resto del código no se ejecutará. Por ejemplo, en la función `is_even`, si el número es par, se ejecutará el return True y el resto del código no se ejecutará.
