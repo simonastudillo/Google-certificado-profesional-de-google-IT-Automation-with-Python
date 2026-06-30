@@ -196,3 +196,62 @@ circle_area(5)
 - En la jerga de programación, cuando reescribimos el código para que sea más autodocumentado, ​llamamos refactorización a este proceso
 - Puedes añadir comentarios en caso de que el fragmento de código se más complejo y no se pueda refactorizar para que sea más legible
 - En Python los comentarios se escriben con el símbolo #. Todo lo que esté a la derecha de este símbolo se ignora al ejecutar el código.
+
+---
+
+## Guía de estudio: Funciones
+- Términos
+    - return value (retorno de valor): El valor que una función devuelve a la persona que la llama.
+    - parameter (parámetro): Una variable que se pasa a una función para que la use.
+    - refactoring code (refactorización de código): Reescribir el código para que sea más legible y no oculte su intención.
+- Conocimientos
+    - El proposito de `def` es definir una nueva función.
+    - Mejores prácticas para escribir código
+        - Crea una función reusable: Si un bloque de código se repite, considera convertirlo en una función.
+        - Refactoriza tu código: Si un bloque de código es difícil de leer, considera reescribirlo para que sea más legible.
+        - Agrega comentarios: Agregar comentarios es parte de un código auto documentado. Usar comentarios permite dejar notas para ti o para otros desarrolladores que puedan leer tu código en el futuro.
+- Habilidades de codificación
+    - Usa una función que acepte múltiples parámetros.
+    - Retorna un valor
+```Python
+# This function calculates the number of days in a variable number of 
+# years, months, and days. These variables are provided by the user and
+# are passed to the function through the function’s parameters.
+def find_total_days(years, months, days):
+# Assign a variable to hold the calculations for the number of days in
+# a year (years*365) plus the number of days in a month (months*30) plus
+# the number of days provided through the "days" parameter variable.
+    my_days = (years*365) + (months*30) + days
+# Use the "return" keyword to send the result of the "my_days"  
+# calculation to the function call. 
+    return my_days
+ 
+# Function call with user provided parameter values. 
+print(find_total_days(2,5,23))
+```
+    - Utilice una función para devolver el resultado de una conversión de medida.
+    - Usa operadores matemáticos dentro de una función para realizar cálculos.
+    - Combina texto con el llamado a un función en print() para mostrar un mensaje en la consola.
+    - Convierte el valor retornado a string
+    - Llama a la función y realiza un cálculo sobre el valor de retorno dentro de una instrucción print().
+```Python
+# This function converts fluid ounces to milliliters and returns the 
+# result of the conversion.
+def convert_volume(fluid_ounce):
+# Calculate value of the "ml" variable using the parameter variable 
+# "fluid_ounce". There are approximately 29.5 milliliters in 1 fluid
+# ounce.
+    ml = fluid_ounce * 29.5  
+# Return the result of the calculation.  
+    return ml
+ 
+# Call the conversion from within the print() function using 2 fluid 
+# ounces. Convert the return value from a float to a string.  
+print("The volume in milliliters is " + str(convert_volume(2)))
+ 
+# Call the function again and double the 2 fluid ounces from within
+# the print function.
+print("The volume in milliliters is " + str(convert_volume(2)*2))
+# Alternative calculation:
+# print("The volume in milliliters is " + str(convert_volume(4)))
+```
