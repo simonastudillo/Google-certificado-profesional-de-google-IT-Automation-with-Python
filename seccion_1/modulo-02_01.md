@@ -110,3 +110,21 @@ If the implementation is easy to explain, it may be a good idea.
 
 Namespaces are one honking great idea -- let's do more of those!
 ```
+
+---
+
+## Revisión: Tipos de datos
+- Int: Representa números enteros, positivos o negativos, sin decimales.
+```Python
+print(7+8)
+```
+- String: Representa texto, que puede incluir letras, números y símbolos.
+```Python
+print("hello "+ "world")
+```
+- Errores: Representa errores en el código, que pueden ser de sintaxis o de ejecución.
+    - Este ejemplo falla porque estamos intentando sumar un número entero con un string, lo cual no es permitido en Python.
+```Python
+print(7+"8")
+#this will throw an error
+```
