@@ -323,3 +323,51 @@ print(result)
 # numerator value can be preserved by reassigning the denominator with 
 # the integer value of 1. The result would then equal the numerator.
 ```
+
+---
+
+## Obtén ayuda para aprender con Google AI Pro sin costo
+- Con Gemini pro puedes:
+1. Sintetiza información: Pide resúmenes de lecturas o conexiones entre conceptos vistos en varios módulos o cursos.
+2. Integra la IA en tu flujo de trabajo: Trabaja con Gemini directamente en Google Docs, Gmail, Slides y Sheets para redactar, organizar y visualizar tu trabajo donde realmente ocurre.
+3. Prepárate para la práctica: Usa la IA para simular escenarios del mundo real o recibir comentarios sobre tus habilidades de comunicación profesional.
+4. Mantente organizado: Usa la IA para ayudarte a elaborar horarios de estudio, generar diagramas de flujo para temas complejos o agregar automatizaciones en tu bandeja de entrada.
+5. Refuerza conceptos: Crea tarjetas de memoria, cuestionarios, mapas mentales y podcasts personalizados para profundizar tu comprensión del material del curso.
+
+---
+
+## Test your knowledge: Expressions and variables
+- This code is supposed to display the equation 2 + 2 = 4 on the screen, but there is an error. Find the error in the code and fix it, so that the output displays the equation.Note: Make sure the spaces between the components in your equation are identical to the spaces in the equation provided in the question. 
+```Python
+print("2 + 2 = " + str(2 + 2))
+```
+- In this scenario, two friends are eating dinner at a restaurant. The bill comes in the amount of 47.28 dollars. The friends decide to split the bill evenly between them, after adding 15% tip for the service. Calculate the tip, the total amount to pay, and each friend's share, then output a message saying "Each person needs to pay: " followed by the resulting number.
+```Python
+bill = 47.28 # Assign "bill" variable with bill amount
+tip = bill * 0.15 # Multiply by stated tip rate 
+total = bill + tip # Sum the "total" of the "bill" and "tip"
+share = total / 2 # Divide "total" by number of friends dining
+print("Each person needs to pay: " + str(share)) # Enter the required string and "share" 
+# Hint: Remember to convert incompatible data types
+```
+- This code is supposed to take two numbers, divide one by another so that the result is equal to 1, and display the result on the screen. Unfortunately, there is an error in the code. Find the error and fix it, so that the output is correct.
+```Python
+numerator = 10
+denominator = 1
+result = numerator / denominator
+print(str(result))
+``` 
+- Combine the variables to display the sentence "How do you like Python so far?" 
+```Python
+word1 = "How"
+word2 = "do"
+word3 = "you"
+word4 = "like"
+word5 = "Python"
+word6 = "so"
+word7 = "far?"
+
+print(word1 + " " + word2 + " " + word3 + " " + word4 + " " + word5 + " " + word6 + " " + word7)
+```
+- What do you call a combination of numbers, symbols, or other values that produce a result when evaluated?
+> An expression
