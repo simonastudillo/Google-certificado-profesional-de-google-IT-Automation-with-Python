@@ -441,3 +441,7 @@ def hint_username(username):
 
 ## Ramificación compleja con sentencias elif
 - La instrucción `elif` nos permite realizar aún más comparaciones para lograr ramificaciones más complejas
+- comienza con la palabra clave `elif`, seguida de la comparación que se va a evaluar.
+- A continuación, se colocan dos puntos y, en la siguiente línea, se introduce el bloque de código con sangría a la derecha
+- Una instrucción `elif` debe ir después de una instrucción `if` y solo se evaluará si la instrucción `if` se evaluó como falsa
+
