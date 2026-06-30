@@ -199,3 +199,19 @@ height = 3
 area = (base*height)/2
 print("The area of the triangle is: " + str(area))  # The area of the triangle is: 9.0 - Python convierte el float area a un string para poder concatenarlo con el resto del mensaje.
 ```
+
+--- 
+
+## Expresiones, números y conversiones de tipo
+- Python puede transformar automáticamente un tipo de dato en otro cuando es necesario, esto se llama conversión de tipo implícita.
+- Es por esto que podemos sumar un número entero con un número decimal y obtener un resultado decimal.
+- Conversión Explícita: Podemos convertir un tipo de dato en otro usando funciones como int(), float() y str().
+
+### Practica escribiendo expresiones y conversiones de tipo.
+- En este escenario, tenemos un directorio con 5 archivos. Cada archivo tiene un tamaño diferente: 2048, 4357, 97658, 125 y 8. Completa los espacios para calcular el tamaño promedio de los archivos haciendo que Python sume todos los valores por ti, y luego asigna la variable files al número de archivos. Finalmente, muestra un mensaje que diga "El tamaño promedio es: " seguido del número resultante. Recuerda usar la función str() para convertir el número en una cadena.
+```Python
+total:int = 2048 + 4357 + 97658 + 125 + 8
+files:int = 5
+average:float = total / files
+print("The average size is:" + str(average))
+```
