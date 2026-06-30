@@ -445,3 +445,6 @@ def hint_username(username):
 - A continuación, se colocan dos puntos y, en la siguiente línea, se introduce el bloque de código con sangría a la derecha
 - Una instrucción `elif` debe ir después de una instrucción `if` y solo se evaluará si la instrucción `if` se evaluó como falsa
 
+---
+
+## Explore: If, elif, and else statements
