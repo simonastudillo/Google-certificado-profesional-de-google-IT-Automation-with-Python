@@ -254,3 +254,78 @@ print("Is \"my computer\" greater than or equal to \"my chair\"? Result: ", var1
 print("Is \"Spring\" less than or equal to \"Winter\"? Result: ", var2)
 print("Is \"pineapple\" less than or equal to \"pineapple\"? Result: ", var3)
 ```
+
+---
+
+## Operadores lógicos
+- Los operadores lógicos  son usados para expresiones más complejas.
+- Puedes hacer más compleja una comparación uniendo varias comparaciones con los operadores lógicos `and`, `or` y `not`.
+    - `and` devuelve True si toda la operación es True
+    - `or` devuelve True si al menos una de las operaciones es True
+    - `not` devuelve True si la operación es False y viceversa
+- Ejemplos:
+1. `and`:
+```Python
+# Example 1
+
+print((6*3 >= 18) and (9+9 <= 36/2))
+
+# Example 2 - Python resuelve los valores de las expresiones antes de compararlos
+(6*3 >= 18) and (9+9 <= 36/2)
+# becomes
+(18 >= 18) and (18 <= 18)
+
+# Example 3
+
+print("Nairobi" < "Milan" and "Nairobi" > "Hanoi")
+```
+2. `or`:
+```Python
+# Expression1 or Expression2
+# Define country and city variables
+country = "United States"
+city = "New York City"
+
+# True or True returns True
+print((15/3 < 2+4) or (0 >= 6-7))  # True or True = True
+
+# False or True returns True
+print(country == "New York City" or city == "New York City")  # False or True = True
+
+# True or False returns True
+print(16 <= 4**2 or 9**(0.5) != 3)  # True or False = True
+
+# False or False returns False
+print("B_name" > "C_name" or "B_name" < "A_name") # False or False = False
+```
+3. `not`:
+```Python
+# Si la expresión condicional es True, el operador not cambiará el resultado a False.
+# Si la expresión condicional es False, el operador not cambiará el resultado a True.
+# not expression
+# Test Example 1:
+
+x = 2*3 > 6
+print("The value of x is:")
+print(x)
+
+print("")  # Prints a blank line
+
+print("The inverse value of x is:")
+print(not x)
+
+# What happens when you negate a False statement? 
+# Click Run when you are ready to check your answer.
+
+
+today = "Monday"
+print(not today == "Tuesday") 
+
+
+# The "today" variable states today is Monday. This makes the comparison
+# "today == Tuesday" False. The logical operator "not" inverts the False
+# result to become True. In other words, this expression asks if it is
+# false that today is not Tuesday. More succinctly, "not False" means 
+# True."
+
+```
