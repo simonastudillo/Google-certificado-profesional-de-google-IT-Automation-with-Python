@@ -145,3 +145,7 @@ print(type(2.5)) # <class 'float'> - Indica que es un número decimal
     - Por ejemplo, no podemos sumar un número entero con un string, ya que son tipos de datos diferentes.
 - Lea los errores detenidamente, comprenda lo que le dicen y, a ​continuación, utilice ese nuevo conocimiento para ayudarlo a corregir el error
 - Si no estás seguro del tipo de dato de una variable, puedes usar la función type() para averiguarlo.
+
+---
+
+## Categorizar: Nombrar variables
