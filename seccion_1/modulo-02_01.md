@@ -215,3 +215,9 @@ files:int = 5
 average:float = total / files
 print("The average size is:" + str(average))
 ```
+
+---
+
+## Conversión de tipo implícita y explícita
+- Conversión de tipo implícita: Python convierte automáticamente un tipo de dato en otro cuando es necesario.
+- Conversión de tipo explícita: Podemos convertir un tipo de dato en otro usando funciones como int(), float() y str().
