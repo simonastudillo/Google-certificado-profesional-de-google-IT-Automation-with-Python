@@ -20,3 +20,29 @@
 - Parameter (argumento): Valor que se pasa a una función para su uso dentro de ella, controlando el comportamiento del lector y escritor de CSV.
 - Refactoring (Refactorización): Proceso de actualización de código para que sea más autoexplicativo y aclare su propósito.
 - Return value (Valor de retorno): Valor o variable que devuelve la función como resultado final.
+
+---
+
+## Guía de estudio: Cuestionario calificado del módulo 2
+- Conocimientos:
+    - Cómo asignar valores a variables y usarlas en el código
+    - Cómo construir una función y usar sus parámetros
+    - Cómo se pueden usar los operadores de comparación y lógicos
+    - Cómo se comportan los operadores de comparación y lógicos con diferentes tipos de datos
+    - Qué tipo de resultados producen las comparaciones simples y complejas
+    - Cómo ordenar alfabéticamente las cadenas usando operadores de comparación
+    - Qué debe aparecer después de las palabras clave `if` y `elif`
+    - Qué hace la palabra clave `elif`
+    - Cuándo se ejecuta una sentencia `if`, `elif` o `else`
+    - Cómo usar los operadores de división entera (`/`) y módulo (`%`), y por qué
+    - Cómo usar operadores lógicos con operadores de comparación para desarrollar sentencias condicionales complejas dentro de un bloque `if-elif-else`
+    - Mejores prácticas de programación y sus beneficios
+    - Qué significa "código autodocumentado"
+
+>[!NOTE]
+> Recuerda: Una sintaxis correcta es crítica.
+
+- Utilizar una sintaxis precisa es fundamental al escribir código en cualquier lenguaje de programación.
+- Incluso un pequeño error tipográfico puede provocar un error de sintaxis.
+- Esto refleja los errores de programación reales, ya que un solo error de ortografía, mayúsculas/minúsculas, puntuación, etc., puede hacer que tu código falle.
+- Los problemas de codificación causados ​​por una sintaxis imprecisa siempre serán un inconveniente, tanto si estás aprendiendo un lenguaje de programación como si utilizas tus habilidades de programación en el trabajo.
