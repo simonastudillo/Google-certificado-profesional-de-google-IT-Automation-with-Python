@@ -407,7 +407,6 @@ def is_even(number):
 ---
 
 ## Reseña: Sentencia elif
-- La instrucción `elif` es una abreviatura de "else if" y permite comprobar múltiples condiciones en una estructura de control de flujo.
 - Los siguientes bloques de código se usarán en el próximo video:
 ```Python
 def hint_username(username):
@@ -429,3 +428,11 @@ def hint_username(username):
     else:
         print("Valid username")
 ```
+
+---
+
+## Sentencia elif
+- La instrucción `elif` es una abreviatura de "else if" y permite comprobar múltiples condiciones en una estructura de control de flujo.
+- ​Python nos proporciona la palabra clave `elif` que nos permite gestionar más de dos casos de comparación.
+- ​La principal diferencia entre las sentencias `elif` y `if` ​es que solo podemos escribir un bloque `elif` ​como complemento de un bloque `if`.
+- El uso de la bifurcación para determinar el flujo de su programa ​abre un nuevo abanico ​de posibilidades en sus scripts
