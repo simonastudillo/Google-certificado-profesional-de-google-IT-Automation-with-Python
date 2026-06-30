@@ -403,3 +403,29 @@ def is_even(number):
 - Si dividimos 5 entre 2, el cociente es 2 y el resto es 1
 - Dividir 10 entre 5 nos daría un cociente de 2 sin resto, ya que 5 cabe en 10 dos veces sin que sobre nada
 - En este caso, 10%5 daría como resultado 0, puesto que no hay resto
+
+---
+
+## Reseña: Sentencia elif
+- La instrucción `elif` es una abreviatura de "else if" y permite comprobar múltiples condiciones en una estructura de control de flujo.
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+    else:
+        if len(username) > 15:
+            print("Invalid username. Must be at most 15 characters long")
+        else:
+            print("Valid username")
+```
+- Podemo refactorizar el código anterior utilizando `elif` para simplificar la estructura de control de flujo:
+```Python
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+    elif len(username) > 15:
+        print("Invalid username. Must be at most 15 characters long")
+    else:
+        print("Valid username")
+```
