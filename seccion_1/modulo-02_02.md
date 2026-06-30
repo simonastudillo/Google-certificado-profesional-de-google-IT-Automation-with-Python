@@ -154,3 +154,27 @@ lucky_number("Cameron")
 ## Los principios de la reutilización de código
 - Las funciones son potentes porque puedes crear las tuyas propias
 - Puedes usarlas para organizar el código de tus scripts en bloques lógicos, ​lo que hace que el código que escribas sea más fácil de usar y reutilizar
+
+---
+
+## Reseña: Estilo de código
+- Las siguientes funciones se usarán de ejemplo en el siguiente video.
+```Python
+def calculate(d):
+    q = 3.14
+    z = q * (d ** 2)
+    print(z)
+
+calculate(5)
+#Output is 78.5
+```
+
+```Python
+def circle_area(radius):
+    pi = 3.14
+    area = pi * (radius ** 2)
+    print(area)
+
+circle_area(5)
+#Output is 78.5
+```
