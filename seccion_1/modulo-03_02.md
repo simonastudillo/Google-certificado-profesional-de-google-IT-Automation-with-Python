@@ -82,3 +82,68 @@ for x in range(0,101,10):
 
 >[!TIP]
 > Se utiliza 101 como el segundo parámetro en la función `range` para incluir 100 en la secuencia, ya que el segundo parámetro es exclusivo y no se incluye en la secuencia generada.
+
+---
+
+## Un análisis más detallado de la función Range()
+- La `keyword` `in` cuando es usada con la función `range()` genera una secuencia de números, los cuales pueden ser usados en el bucle `for` para controlar el punto de partida, el punto final y el incremento de la secuencia.
+```Python
+ for n in range(x, y, z):
+    print(n)
+```
+- La función `range()` usa una lista de indices que apuntan a valores `integer`, que comienzan con 0.
+- Los valores númericos 0, 1, 2, 3, 4 se correlacionar con las posiciones del índice ordinal 1.º, 2.º, 3.º, 4.º, 5.º
+- Entonces cuando un llamado al rango de la quinta posición usando `range(5)` apunta al valor númerico 4, que es el último valor de la secuencia generada.
+
+- La función `range()`puede tener hasta 3 parámetros: `range(start, stop, step)`, donde:
+    - `start` es el valor inicial de la secuencia (inclusive)
+    - `stop` es el valor final de la secuencia (exclusive)
+    - `step` es el incremento entre cada número en la secuencia
+- Ejemplos
+```Python
+# This loop iterates on the value of the "n" variable in a range
+# of 0 to 10 (the value of the end-of-range index 11 is excluded).
+# The incremental value for the loop is 2. The print() function will 
+# output the resulting value of "n" as the loop counts from 0 to 10 
+# (end-of-range index 11) in incremental steps of 2. This is one 
+# method that can be used in Python to print a list of even numbers.
+
+
+for n in range(0,11,2):
+    print(n)
+
+
+# The loop should print 0, 2, 4, 6, 8, 10
+```
+
+```Python
+# This loop iterates on the value of the "number" variable in a range
+# of 2 to 7+1 (the value of the end-of-range index 7 is excluded, so 
+# +1 has been added to the parameter to include the numeric value 7 in 
+# the range). The incremental value for the loop is the default of +1.
+# The print() function will output the resulting value of "number" 
+# multiplied by 3.
+
+
+for number in range(2,7+1):
+    print(number*3)
+
+
+# The loop should print 6, 9, 12, 15, 18, 21
+```
+
+
+```Python
+# This loop iterates on the value of the "x" variable in a range
+# of 2 to -1 (the end-of-range index -2 is excluded). The third 
+# parameter is also a negative number, making it a decremental value
+# of -1. The print() function will output the resulting value of
+# "x" as it starts at 2 and counts down to -1 (index -2).
+
+
+for x in range(2, -2, -1):
+    print(x)
+
+
+# The loop should print 2, 1, 0, -1
+```
