@@ -111,3 +111,15 @@ while x < 10:
 print(sum, product)
 #Ouput 45 1
 ```
+
+---
+
+## Por qué inicializar variables importa?
+- Uno de los errores más comunes es olvidar ​inicializar las variables con el valor correcto.
+- Qué ocurre cuando no inicializamos una variables
+    - El primer resultado posible y el más fácil de ​detectar es que Python podría generar un error ​que nos diga que estamos usando una variable que no hemos definido.
+        - Posiblemente genere un error de tipo NameError, que nos dice que la variable no está definida.
+    - si reutilizamos ​una variable sin establecer el valor correcto desde el principio, ​seguirá teniendo el valor de antes
+        - Esto puede causar que el bucle while nunca se ejecute, o que se ejecute más veces de lo esperado.
+        - En este caso, puede ser más difícil ​detectar el problema porque Python no genera ningún error.
+        - Si tienes un bucle que no funciona correctamente y no se comporta como se esperaba, ​es una buena idea comprobar si todas las variables están inicializadas correctamente.
