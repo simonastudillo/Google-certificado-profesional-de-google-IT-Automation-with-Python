@@ -64,3 +64,15 @@ factorial(1000)
 
 >[!NOTE]
 > Es importante señalar que en algunos lenguajes, ​hay una cantidad máxima de llamadas recursivas que se pueden utilizar
+
+---
+
+## Recursos adicionales sobre recursión
+```Python
+def recursive_function(parameters):
+    if base_case_condition(parameters):
+        return base_case_value
+    recursive_function(modified_parameters)
+```
+- [wikipedia: Recursion](https://en.wikipedia.org/wiki/Recursion)
+- [Search Google for recursion](https://www.google.com/search?q=recursion)
