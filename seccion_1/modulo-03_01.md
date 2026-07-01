@@ -154,3 +154,13 @@ while True:
         break
 #This code will give an error because do_something_cool is not defined
 ```
+
+---
+
+## Loops infinitos y como romperlos
+- El cuerpo del bucle while debe ​asegurarse de que la condición que se está comprobando cambiará
+- Si no cambia, es posible que el `loop` nunca termine, ​y obtenemos lo que se llama un `loop` infinito, ​un ciclo que sigue ejecutándose y ​nunca se detiene.
+- Podemos usar un condicional `if` previo al bucle para asegurarnos de que la condición se cumpla antes de entrar en el bucle.
+- También podemos anidar la condición dentro del bucle con un operador `and` para asegurarnos de que la condición se cumpla antes de entrar en el bucle.
+- A veces queremos que un bucle sea infinito, por ejemplo al hacer un `ping` a un servidor, normalmente se puede romper con las teclas `Ctrl + C` o `Cmd + C` en la terminal.
+- En Python podemos usar la `keyword` `break` para romper un bucle infinito, normalmente dentro de un condicional `if`.
