@@ -38,3 +38,34 @@ print("Total sum: " + str(sum) + " - Average: " + str(sum/length))
 - Por ejemplo, puede ​usarlos para copiar archivos a máquinas, ​procesar el contenido de los archivos, ​instalar software automáticamente y mucho más. 
 - Utiliza bucles `for` cuando haya ​una secuencia de elementos que quieras repetir.
 - Utilice bucles while cuando desee ​repetir una acción hasta que cambie una condición
+
+---
+
+# Reseña: Más ejemplos de bucles for
+- Los siguientes bloques de código se usarán en el próximo video:
+
+- Ejemplo 1:
+    - Define la variable `product` como 1
+    - Usa el `loop` para iterar sobre los números del 1 al 9
+    - Multiplica `product` por cada número en el rango
+    - Esto significa que en la primera iteración, `product` es 1 * 1 = 1, en la segunda iteración, `product` es 1 * 2 = 2, y así sucesivamente
+```Python
+product = 1
+for n in range(1,10):
+  product = product * n
+
+print(product)
+```
+
+- Ejemplo 2:
+    - Define la función `to_celsius` que convierte grados Fahrenheit a Celsius
+    - Usa un bucle for para iterar sobre los números del 0 al 100
+    - En cada iteración, imprime el valor de `x` y su conversión a Celsius usando la función `to_celsius`
+    - Esto significa que en la primera iteración, `x` es 0 y su conversión a Celsius es -17.77777777777778, en la segunda iteración, `x` es 10 y su conversión a Celsius es -12.222222222222221, y así sucesivamente
+```Python
+def to_celsius(x):
+  return (x-32)*5/9
+
+for x in range(0,101,10):
+  print(x, to_celsius(x))
+```
