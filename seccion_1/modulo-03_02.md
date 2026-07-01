@@ -378,3 +378,39 @@ def format_phone(phonenum):
 format_phone('2025551212')
 # Prints “(202) 555-1212”
 ```
+
+---
+
+## Reseña: Errores comunes en bucles for
+- Los siguientes bloques de código se usarán en el próximo video:
+
+```Python
+for x in 25:
+    print(x)
+
+#this will produce an error
+```
+
+```Python
+for x in range(25):
+    print(x)
+
+#this will make the error go away
+```
+
+```Python
+def greet_friends(friends):
+    for friend in friends:
+        print("Hi " + friend)
+
+greet_friends(['Taylor', 'Luisa', 'Jamaal', 'Eli'])
+```
+
+```Python
+def greet_friends(friends):
+    for friend in friends:
+        print("Hi " + friend)
+
+greet_friends("Barry")
+```
+
