@@ -35,3 +35,36 @@ print("x=" + str(x))
 - El bloque de código que sigue al `while` debe estar indentado (sangrado) para indicar que es parte del bucle.
 - Este bloque de código se ejecutará una y otra vez mientras la condición sea verdadera.
 - Una vez sea falsa la condición, el bucle se detendrá y el programa continuará con la siguiente línea de código después del bucle.
+
+---
+
+## Reseña: Más ejemplos de While loops
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+def attempts(n):
+    x = 1
+    while x <= n:
+        print("Attempt " + str(x))
+        x += 1
+    print("Done")
+
+attempts(5)
+```
+
+```Python
+def attempts(n):
+    x = 1
+    while x <= n:
+        print("Attempt " + str(x))
+        x += 1
+    print("Done")
+attempts(5)
+```
+
+```Python
+username = get_username()
+while not valid_username(username):
+    print("Invalid username")
+    username = get_username()
+#This code will give an error because get_username is not defined
+```
