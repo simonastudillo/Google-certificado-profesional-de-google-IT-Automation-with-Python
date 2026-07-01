@@ -147,3 +147,47 @@ for x in range(2, -2, -1):
 
 # The loop should print 2, 1, 0, -1
 ```
+
+---
+
+## Identificar: Seleccionar la instrucción iterativa correcta
+1. You want to print 3 numbers from a list.
+```Python
+for i in [8,9,10]:
+    print(i)
+```
+
+2. You want to print the message “Access denied” 5 times.
+```Python
+for i in range(5):
+    print("Access denied")
+```
+
+3. You want to print out a sequence of numbers starting at 10 and ending at 30.
+```Python
+for i in range(10, 31):
+    print(i)
+```
+
+4. You want to print a message that tells the user to “try again” as long as the value of the attempt variable is 5 or less, and you want to increase the value of this variable by 1 each time it passes through the loop.
+```Python
+attempt = 1
+while attempt <= 5:
+    print("Try again")
+    attempt += 1
+```
+
+5. You want to print out the numbers 20, 19, 18, 17, and 16.
+```Python
+i = 20
+while i >= 15:
+    print(i)
+    i -= 1
+```
+
+6. You want to welcome 3 users from a list by their name (for example, “Welcome, Emerick Larson”).
+```Python
+users = ["Emerick Larson", "Taylor Smith", "Alex Johnson"]
+for user in users:
+    print("Welcome, " + user)
+```
