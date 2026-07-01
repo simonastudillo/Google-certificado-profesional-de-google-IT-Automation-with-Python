@@ -220,3 +220,13 @@ for element1 in long_list:
   for element2 in long_list:
     do_something(element1, element2)
 ```
+
+---
+
+## Bucles for anidados
+- Bucles anidados son bucles dentro de bucles.
+- En el ejemplo, se usa un parámetro especial de la función `print()` llamado `end` para evitar que se agregue un salto de línea después de cada impresión. Esto permite que los resultados se impriman en la misma línea.
+    - `end=" "` agrega un espacio después de cada impresión en lugar de un salto de línea.
+- En el ejemplo tambien se utiliza `print()` sin argumentos para agregar un salto de línea después de cada iteración del bucle externo. Esto asegura que cada conjunto de resultados se imprima en una nueva línea.
+- Tener en consideración que los bucles anidados pueden aumentar significativamente la complejidad del código y el tiempo de ejecución, especialmente si se trabaja con listas largas o grandes cantidades de datos. Por lo tanto, es importante usarlos con cuidado y considerar alternativas si es posible.
+- Esto no significa que los bucles anidados sean malos, sino que hay que tener cuidado al usarlos y considerar alternativas si es posible.
