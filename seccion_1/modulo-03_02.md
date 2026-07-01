@@ -420,3 +420,89 @@ greet_friends("Barry")
 - El intérprete de Python genera un error cuando se intenta iterar sobre un objeto que no es iterable, como un número entero.
 - Puedes poner el número entero entre corchetes para convertirlo en una lista de un solo elemento, o usar la función `range()` para generar una secuencia de números.
 - Recuerda que los string son considerados secuencias de caracteres, por lo que puedes iterar sobre ellos usando un bucle for.
+
+---
+
+## Guía de estudio: Bucle for
+- For loops vs while loops
+    - Ambos `loops` se pueden usar con diversos tipos de datos, ambos se pueden anidar y ambos se pueden usar con las `keywords` `break` y `continue`.
+    - Los bucles `while` son usados cuando un bloque de código necesita ejecutarse mientras una condición sea verdadera.
+    - Los bucles `for` son usados cuando un bloque de código necesita ejecutarse un número determinado de veces.
+    - Una forma fácil de distinguirlos es que los bucles `for` iteran sobre una secuencia de valores (lists, strings, ranges of integers, etc.), mientras que los bucles `while` se ejecutan mientras una condición sea verdadera.
+- Estructura de un bucle for
+    - `for` loop sobre `range()`: 
+        - Range se usa para generar una secuencia de números, que puede ser usada para controlar el número de iteraciones del bucle.
+        - La función range tiene 3 parámetros (`range(x, y, z)`):
+            - x: el valor inicial de la secuencia (inclusive), posición por defecto es 0.
+            - y: el valor final de la secuencia (exclusive), posición por defecto es el valor de x.
+            - z: el incremento entre cada número en la secuencia, posición por defecto es 1.
+        - Fallas comunes al usar range():
+            - Olvidar que el segundo parámetro es exclusivo y no se incluye en la secuencia generada.
+            - iterar sobre un objeto que no es iterable, como un número entero.
+```Python
+# This loop iterates on the value of the "number" variable in a range
+# of 1 to 6+1 (the upper range limit of 6 is excluded, so +1 has
+# been added to it to include 6 in the range). The incremental value
+# for the loop is 2 (number+2). The print() function will output the
+# resulting value of "number" multiplied by 3.
+
+for number in range(1, 6+1, 2):
+    print(number * 3)
+
+# The loop should print 3, 9, 15
+```
+
+```Python
+# This loop iterates on the value of the "number" variable in a range
+# of 2 to 7 (the upper range limit of 8 is excluded). The print() 
+# function will output the resulting value of "number" squared.
+
+for number in range(2,8):
+    print(number**2)
+
+# The loop should print 4, 9, 16, 25, 36, 49
+```
+
+```Python
+# This code demonstrates the outer and inner loop iterations of a pair 
+# of nested for loops. Click "Run" to see the results. The outer loop
+# will run twice for the range pointer positions [0, 1] in range(2).
+# The inner loop will run 4 times for the range pointer positions 
+# [0, 1, 2, 3] in range(3+1) or range(4) each time the outer loop runs.
+# So, the inner loop will execute 8 times in total.
+
+for x in range(2):
+    print("This is the outer loop iteration number " + str(x))
+    for y in range(3+1):
+        print("Inner loop iteration number " + str(y))
+    print("Exit inner loop")
+```
+
+```Python
+for x in sequence:
+    # start of body of for loop
+    if condition is true:
+        # start of body of if-statement
+        # end of body of if-statement
+    # continue body of for loop
+    # end of body of for loop
+
+# As a list comprehension:
+[x for x in sequence if condition]
+```
+
+- Comprensión de listas
+    - Es importante saber que a veces se pueden evitar los bucles; con la práctica, desarrollarás la intuición para saber cuándo y cómo hacerlo.
+    - Los conceptos de bucles son similares en otros lenguajes, pero en Python, las comprensiones de listas ofrecen una forma concisa de crear listas a partir de listas o secuencias existentes.
+```Python
+# Forma tradicional de crear una lista de cuadrados
+sequence = range(10)
+new_list = []
+for x in sequence:
+    if x % 2 == 0:
+        new_list.append(x)
+
+# Usando listas
+sequence = range(10)
+new_list = [x for x in sequence if x % 2 == 0]
+```
