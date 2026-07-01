@@ -414,3 +414,9 @@ def greet_friends(friends):
 greet_friends("Barry")
 ```
 
+---
+
+## Errores comunes en bucles for
+- El intérprete de Python genera un error cuando se intenta iterar sobre un objeto que no es iterable, como un número entero.
+- Puedes poner el número entero entre corchetes para convertirlo en una lista de un solo elemento, o usar la función `range()` para generar una secuencia de números.
+- Recuerda que los string son considerados secuencias de caracteres, por lo que puedes iterar sobre ellos usando un bucle for.
