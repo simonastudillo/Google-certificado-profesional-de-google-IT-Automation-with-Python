@@ -68,3 +68,11 @@ while not valid_username(username):
     username = get_username()
 #This code will give an error because get_username is not defined
 ```
+
+---
+
+## Más ejemplos de While loops
+- Los ejemplos son de bucles while dentro de una función
+- Estamos utilizando una expresión ligeramente diferente a la anterior ​x + = 1 es una versión abreviada de x es igual a x +1. 
+- Lo importante a recordar es que la condición usada por el bucle while ​necesita evaluarse a verdadero o falso
+- No importa si esto se hace utilizando operadores de comparación o ​llamando a funciones adicionales. 
