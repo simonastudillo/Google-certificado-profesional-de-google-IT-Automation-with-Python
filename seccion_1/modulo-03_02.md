@@ -191,3 +191,32 @@ users = ["Emerick Larson", "Taylor Smith", "Alex Johnson"]
 for user in users:
     print("Welcome, " + user)
 ```
+
+---
+
+## Reseña: Bucles for anidados
+- Los siguientes bloques de código se usarán en el próximo video:
+
+```Python
+for left in range(7):
+  for right in range(left, 7):
+    print("[" + str(left) + "|" + str(right) + "]", end=" ")
+  print()
+```
+
+```Python
+teams = [ 'Dragons', 'Wolves', 'Pandas', 'Unicorns']
+for home_team in teams:
+  for away_team in teams:
+    if home_team != away_team:
+      print(home_team + " vs " + away_team)
+```
+
+```Python
+for element in long_list:
+  do_something(element)
+
+for element1 in long_list:
+  for element2 in long_list:
+    do_something(element1, element2)
+```
