@@ -1,6 +1,6 @@
 # Recursión (opcional)
 
-## Reseña: Que es la recursión
+## Reseña: Qué es la recursión
 - Los siguientes bloques de código se usarán en el próximo video:
 ```Python
 def factorial(n):
@@ -21,3 +21,12 @@ def factorial(n):
 
 factorial(4)
 ```
+
+---
+
+## Qué es la recursión
+- Además de `for` y `while`, Python tiene otra forma de repetir código: la recursión.
+- La ​recursión es la aplicación repetida ​del mismo procedimiento a un problema más pequeño. 
+- La recursión nos permite abordar ​problemas complejos al reducir ​el problema a uno más simple.
+- En programación, la recursión es una forma de realizar ​una tarea repetitiva haciendo que una función se llame a sí misma
+- Una función recursiva se llama a sí misma normalmente con ​un parámetro modificado hasta ​que alcanza una condición específica. ​Esta afección se denomina caso base. 
