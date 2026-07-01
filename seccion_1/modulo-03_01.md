@@ -7,3 +7,15 @@
     - While loops
     - For loops
     - Recursion
+
+---
+
+## Reseña: Que es un bucle loop?
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+x =   0
+while x < 5:
+    print("Not there yet, x=" + str(x))
+    x = x + 1
+print("x=" + str(x))
+```
