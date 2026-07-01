@@ -305,3 +305,76 @@ print(squared_numbers)
 - Funciones avanzadas:
     - `map`: Puedes encontrar más información [aquí](https://www.tutorialsteacher.com/python/python-map-function)
     - `zip`: Puedes encontrar más información [aquí](https://pythonprogramming.net/zip-intermediate-python-tutorial/)
+
+---
+
+## Slice y Join strings
+- `Slice`: Es una técnica que permite extraer una parte de un string. Se puede usar para obtener subcadenas, caracteres específicos o incluso invertir un string.
+- `Join`: Es un método que permite unir una lista de strings en un solo string, utilizando un separador especificado. Esto es útil para combinar palabras, frases o cualquier conjunto de strings en una sola cadena de texto.
+- Cómo hacer un `slice` de un string:
+    - Tenemos que usar la sintaxis `string[start:end]`, donde `start` es el índice del primer carácter que queremos incluir en el slice, y `end` es el índice del primer carácter que NO queremos incluir en el slice.
+```Python
+string1 = "Greetings, Earthlings"
+print(string1[0])   # Prints “G”
+print(string1[4:8]) # Prints “ting”
+print(string1[11:]) # Prints “Earthlings”
+print(string1[:5])  # Prints “Greet”
+```
+- Tambien podemos usar índices negativos para hacer un slice desde el final del string:
+    - Recuerda considerar que el índice -1 representa el último carácter del string, -2 representa el penúltimo carácter, y así sucesivamente.
+```Python
+# Prints “Earthlings” again
+print(string1[-10:])
+```
+- Los `slice` tambien permiten usar algo llamado `stride` o `step`, que es un valor que indica cuántos caracteres saltar entre cada carácter incluido en el slice. Esto se hace agregando un tercer parámetro a la sintaxis del slice: `string[start:end:step]`.
+    - `0::2` significa que queremos empezar desde el índice 0, ir hasta el final del string, y tomar cada segundo carácter.
+    - `::-1` invierte el string, ya que el `step` es -1, lo que significa que se recorre el string de derecha a izquierda.
+    - Al no indicar el valor de `start` o `end`, se asume que queremos empezar desde el principio o ir hasta el final del string, respectivamente.
+```Python
+string1 = "Greetings, Earthlings"
+# Prints “Getns atlns”
+print(string1[0::2])
+
+# Prints “sgnilhtraE ,sgniteerG”
+print(string1[::-1])
+```
+- Join strings: 
+- Podemos hacer un `join` de string utilizando el operado `+`, que concatena dos o más strings en uno solo. Esto es útil para combinar palabras, frases o cualquier conjunto de strings en una sola cadena de texto.
+- El método `join()` se utiliza para unir una lista de strings en un solo string, utilizando un separador especificado.
+    - La sintaxis es: `separator.join(iterable)`, donde `separator` es el string que se utilizará como separador entre los elementos de la lista, y `iterable` es la lista de strings que queremos unir.
+```Python
+# Prints “Hello world”
+print("Hello" + " " + "world")
+
+greetings = ["Hello", "world"]
+print(" ".join(greetings))  # Prints "Hello world"
+
+# You can also concatenate a combination of strings and variables like in the following example.
+name = "Alice"
+print("Hello, " + name + "!")  # Prints "Hello, Alice!"
+```
+- Combinar `slice` y `join` strings:
+    - utilizemos un ejemplo de formatear el número de teléfono `2025551212` para usar el formato de U.S.
+```Python
+phonenum = '2025551212'
+
+# The first 3 digits are the area code:
+area_code = "(" + phonenum[:3] + ")"
+# The next 3 digits are called the “exchange”:
+exchange = phonenum[3:6]
+# The last 4 digits are the line number:
+line = phonenum[-4:]
+# Put the pieces back together into a nicely formatted string:
+area_code + " " + exchange + "-" + line
+```
+- Hagamos lo mismo en una función
+```Python
+def format_phone(phonenum):
+    area_code = "(" + phonenum[:3] + ")"
+    exchange = phonenum[3:6]
+    line = phonenum[-4:]
+    return area_code + " " + exchange + "-" + line
+
+format_phone('2025551212')
+# Prints “(202) 555-1212”
+```
