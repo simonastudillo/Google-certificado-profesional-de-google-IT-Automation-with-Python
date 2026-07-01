@@ -123,3 +123,34 @@ print(sum, product)
         - Esto puede causar que el bucle while nunca se ejecute, o que se ejecute más veces de lo esperado.
         - En este caso, puede ser más difícil ​detectar el problema porque Python no genera ningún error.
         - Si tienes un bucle que no funciona correctamente y no se comporta como se esperaba, ​es una buena idea comprobar si todas las variables están inicializadas correctamente.
+
+---
+
+## Reseña: Loops infinitos y como romperlos
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+while x % 2 == 0:
+    x = x / 2
+#No output
+```
+
+```Python
+if x != 0:
+    while x % 2 == 0:
+        x = x / 2
+#No output
+```
+
+```Python
+while x != 0 and x % 2 == 0:
+    x = x / 2
+#No output
+```
+
+```Python
+while True:
+    do_something_cool()
+    if user_requested_to_stop():
+        break
+#This code will give an error because do_something_cool is not defined
+```
