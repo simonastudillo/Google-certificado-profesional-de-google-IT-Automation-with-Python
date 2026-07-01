@@ -69,3 +69,16 @@ def to_celsius(x):
 for x in range(0,101,10):
   print(x, to_celsius(x))
 ```
+
+---
+
+## Más ejemplos de bucles for
+- La función de rango genera una secuencia ​de números que comienzan por cero
+- Para comenzar con un número diferente a 0, la función range también ​nos permite especificar ​el primer elemento de la lista que se va a generar
+- Lo hacemos indicando 2 parámetros: el primer parámetro es el número inicial y el segundo parámetro es el número final
+- De haber comenzado con 0 todo el producto sería 0, ya que cualquier número multiplicado por 0 es 0
+- A la función `range` también se le puede pasar un tercer parámetro, que es el paso, es decir, el incremento entre cada número en la secuencia
+- ejemplo `range(0, 101, 10)` genera la secuencia 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+
+>[!TIP]
+> Se utiliza 101 como el segundo parámetro en la función `range` para incluir 100 en la secuencia, ya que el segundo parámetro es exclusivo y no se incluye en la secuencia generada.
