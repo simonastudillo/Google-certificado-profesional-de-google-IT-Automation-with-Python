@@ -76,3 +76,38 @@ while not valid_username(username):
 - Estamos utilizando una expresión ligeramente diferente a la anterior ​x + = 1 es una versión abreviada de x es igual a x +1. 
 - Lo importante a recordar es que la condición usada por el bucle while ​necesita evaluarse a verdadero o falso
 - No importa si esto se hace utilizando operadores de comparación o ​llamando a funciones adicionales. 
+
+---
+
+## Reseña: Por qué inicializar variables importa?
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+while my_variable < 10:
+    print("Hello")
+    my_variable += 1
+#This code will give a NameError
+#Variable is not defined 
+```
+
+```Python
+my_variable = 5
+while my_variable < 10:
+    print("Hello")
+    my_variable += 1
+```
+
+```Python
+x = 1
+sum = 0
+while x < 10:
+    sum = sum + x
+    x = x + 1
+
+product = 1
+while x < 10:
+    product = product * x
+    x = x + 1
+
+print(sum, product)
+#Ouput 45 1
+```
