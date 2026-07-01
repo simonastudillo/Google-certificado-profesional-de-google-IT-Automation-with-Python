@@ -230,3 +230,18 @@ for element1 in long_list:
 - En el ejemplo tambien se utiliza `print()` sin argumentos para agregar un salto de línea después de cada iteración del bucle externo. Esto asegura que cada conjunto de resultados se imprima en una nueva línea.
 - Tener en consideración que los bucles anidados pueden aumentar significativamente la complejidad del código y el tiempo de ejecución, especialmente si se trabaja con listas largas o grandes cantidades de datos. Por lo tanto, es importante usarlos con cuidado y considerar alternativas si es posible.
 - Esto no significa que los bucles anidados sean malos, sino que hay que tener cuidado al usarlos y considerar alternativas si es posible.
+
+---
+
+## Strings y bucles for
+- `Bucles for`: Te permiten iterar sobre una secuencia de valores, como números, nombres, o lineas en un archivo. Tambien puedes usar bucles for para iterar sobre los caracteres de un string.
+- `String`: Es una secuencia de caracteres, como letras, números y símbolos. En Python, los strings se representan entre comillas simples o dobles, por ejemplo `"Hello World"` o `'Python'`.
+
+>[!TIP]
+> Recuerda: no puedes mezclar los tipos de comillas en un string. Por ejemplo, `"Hello World'` o `'Python"` no son válidos. Debes usar comillas simples o dobles de manera consistente.
+
+>[!NOTE]
+> Si un número está entre comillas, se considera un string. Por ejemplo, `"123"` es un string, mientras que `123` es un número entero.
+
+>[!TIP]
+> Todos los bucles for se pueden escribir como bucles while, pero los bucles for son más concisos y fáciles de leer. Por lo tanto, se recomienda usar bucles for cuando sea posible.
