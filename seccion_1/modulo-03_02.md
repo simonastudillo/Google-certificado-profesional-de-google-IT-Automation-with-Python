@@ -245,3 +245,63 @@ for element1 in long_list:
 
 >[!TIP]
 > Todos los bucles for se pueden escribir como bucles while, pero los bucles for son más concisos y fáciles de leer. Por lo tanto, se recomienda usar bucles for cuando sea posible.
+
+---
+
+## Looping sobre un string
+- Hacer u loop sobre un string permite al programador examinar cada carácter individualmente.
+- Hay muchas manera de hacer un loop sobre un string y el uso de cada una de ella depende del contexto y de lo que se quiera lograr.
+- Hacer un loop sobre un string signica iterar sobre cada carácter del string, uno a la vez, y realizar alguna acción con cada carácter.
+- For loop
+```Python
+greeting = 'Hello'
+for char in greeting:
+	print(char)
+# H
+# e
+# l
+# l
+# o
+```
+- Iterar sobre la posición de cada carácter en un string usando `range()` y `len()`
+    - `len()` devuelve la longitud del string, es decir, el número de caracteres que contiene.
+```Python
+for i in range(len(greeting)):
+	print(i)
+```
+- While loop con indices:  El índice es un número que representa la posición de un carácter en un string. Los índices comienzan en 0, por lo que el primer carácter tiene índice 0, el segundo carácter tiene índice 1, y así sucesivamente.
+    - `greeting[index]` accede al carácter en la posición `index` del string `greeting`.
+    - `greeting[0]` devuelve el primer carácter del string, que es 'H'.
+```Python
+greeting = 'Hello'
+index = 0
+while index < len(greeting):
+	print(greeting[index])
+	index += 1
+```
+
+>[!TIP]
+> Recuerda: Puedes detener la ejecución de un bucle en cualquier momento usando la instrucción `break`. Esto es útil si quieres salir del bucle antes de que termine todas las iteraciones.
+
+- while loop con segmentación
+    - `greeting[index:index+1]` devuelve una subcadena del string `greeting`, que contiene solo el carácter en la posición `index`. Esto es útil si quieres trabajar con subcadenas en lugar de caracteres individuales.
+    - Ejemplo: `greeting[0:0+1]`: devuelve 'H', que es el primer carácter del string.
+```Python
+greeting = 'Hello'
+index = 0
+while index < len(greeting):
+    print(greeting[index:index+1])
+    index += 1
+```
+- Comprensión de listas
+    - La comprensión de listas es una forma concisa de crear listas en Python. Permite generar una nueva lista aplicando una expresión a cada elemento de una secuencia existente.
+    - Se itera sobre cada elemento de la variable `numbers`, cada iteración se asigna a la variable `x`, y se calcula el cuadrado de `x` usando la expresión `x ** 2`. El resultado se agrega a la nueva lista `squared_numbers`.
+```Python
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = [x ** 2 for x in numbers]
+print(squared_numbers)
+# [1, 4, 9, 16, 25]
+```
+- Funciones avanzadas:
+    - `map`: Puedes encontrar más información [aquí](https://www.tutorialsteacher.com/python/python-map-function)
+    - `zip`: Puedes encontrar más información [aquí](https://pythonprogramming.net/zip-intermediate-python-tutorial/)
