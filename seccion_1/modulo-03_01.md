@@ -10,7 +10,7 @@
 
 ---
 
-## Reseña: Que es un bucle loop?
+## Reseña: Que es un While loop?
 - Los siguientes bloques de código se usarán en el próximo video:
 ```Python
 x =   0
@@ -19,3 +19,10 @@ while x < 5:
     x = x + 1
 print("x=" + str(x))
 ```
+
+---
+
+## Que es un While loop?
+- Los bucles while ordenan a tu ordenador que ​ejecute continuamente tu código ​basándose en el valor de una condición
+- El cuerpo del bloque se puede ​ejecutar varias veces en lugar de sólo una
+- Initializing (inicialización): Es dar un valor inicial a un variable.
