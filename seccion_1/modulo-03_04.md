@@ -324,3 +324,227 @@ print(elevator_floor(6,2)) # Should print Going down: 6 | 5 | 4 | 3 | 2
 
 >[!NOTE]
 > Recuerda: La sintaxis correcta es crítica
+
+---
+
+## Modulo 3: Cuestionario calificado
+1. Fill in the blanks to print the numbers 1 through 7.
+```Python
+number = 1 # Initialize the variable
+while number < 8: # Complete the while loop condition
+    print(number, end=" ")
+    number = number + 1 # Increment the variable
+
+# Should print 1 2 3 4 5 6 7 
+```
+
+1.2 Fill in the blanks to print the numbers from 15 to 5, counting down by fives.
+```Python
+number = 15 # Initialize the variable
+while number > 0: # Complete the while loop condition
+    print(number, end=" ")
+    number -= 5 # Increment the variable
+
+# Should print 15 10 5 
+```
+
+2. Find and correct the error in the for loop below.  The loop should print every even number from 2 to 12.
+```Python
+for number in range(2,13,2):
+    print(number)
+
+# Should print:
+# 2
+# 4
+# 6
+# 8
+# 10
+# 12
+```
+
+2.2 Find and correct the error in the for loop.  The loop should print every number from 5 to 0 in descending order.
+```Python
+for number in range(5,-1, -1):
+    print(number)
+
+# Should print:
+# 5
+# 4
+# 3
+# 2
+# 1
+# 0
+```
+
+3. Fill in the blanks to complete the function “even_numbers(n)”. This function should count how many even numbers exist in a sequence from 0 to the given “n”number, where 0 counts as an even number.  For example, even_numbers(25) should return 13, and even_numbers(6) should return 4.
+```Python
+def even_numbers(n):
+    count = 0
+    current_number = 0
+    while current_number <= n: # Complete the while loop condition
+        if current_number % 2 == 0:
+            count += 1 # Increment the appropriate variable
+        current_number = current_number + 1 # Increment the appropriate variable
+    return count
+    
+print(even_numbers(25))   # Should print 13
+print(even_numbers(144))  # Should print 73
+print(even_numbers(1000)) # Should print 501
+print(even_numbers(0))    # Should print 1
+```
+
+4. Fill in the blanks to complete the “sequence” function. This function should print a sequence of numbers in descending order, from the given "high" variable to the given "low" variable.  The range should make the loop run two times. Complete the range sequences in the nested loops so that the “sequence(1, 3)” function call prints the following:
+
+3, 2, 1
+
+3, 2, 1
+```Python
+def sequence(low, high):
+    # Complete the outer loop range to make the loop run twice
+    # to create two rows
+    for x in range(2): 
+        # Complete the inner loop range to print the given variable
+        # numbers starting from "high" to "low" 
+        # Hint: To decrement a range parameter, use negative numbers
+        for y in range(high, low - 1, -1): 
+            if y == low:
+                # Don’t print a comma after the last item
+                print(str(y)) 
+            else:
+                # Print a comma and a space between numbers
+                print(str(y), end=", ") 
+
+sequence(1, 3)
+# Should print the sequence 3, 2, 1 two times, as shown above.
+```
+
+4.2 Fill in the blanks to complete the “rows_asterisks” function. This function should print rows of asterisks (*), where the number of rows is equal to the “rows” variable. The number of asterisks per row should correspond to the row number (row 1 should have 1 asterisk, row 2 should have 2 asterisks, etc.). Complete the code so that “row_asterisks(5)” will print:
+*
+* * 
+* * *
+* * * *
+* * * * *
+```Python
+def rows_asterisks(rows):
+    # Complete the outer loop range to control the number of rows
+    for x in range(1, rows + 1): 
+        # Complete the inner loop range to control the number of 
+        # asterisks per row
+        for y in range(x): 
+            # Prints one asterisk and one space
+            print("*", end=" ")
+        # An empty print() function inserts a line break at the 
+        # end of the row 
+        print()
+
+
+rows_asterisks(5)
+# Should print the asterisk rows shown above
+```
+
+5. Fill in the blanks to complete the “countdown” function. This function should begin at the “start” variable, which is an integer that is passed to the function,  and count down to 0. Complete the code so that a function call like “countdown(2)” will return the numbers “2,1,0”.
+```Python
+def countdown(start):
+    x = start
+    if x > 0:
+        return_string = "Counting down to 0: "
+        while x >= 0: # Complete the while loop
+            return_string += str(x) # Add the numbers to the "return_string"
+            if x > 0:
+                return_string += ","
+            x -= 1 # Decrement the appropriate variable
+    else:
+        return_string = "Cannot count down to 0"
+    return return_string
+
+
+print(countdown(10)) # Should be "Counting down to 0: 10,9,8,7,6,5,4,3,2,1,0"
+print(countdown(2)) # Should be "Counting down to 0: 2,1,0"
+print(countdown(0)) # Should be "Cannot count down to 0"
+```
+
+6. Fill in the blanks to complete the “even_numbers” function. This function should return a space-separated string of all positive even numbers, excluding 0, up to and including the “maximum” variable that's passed into the function. Complete the for loop so that a function call like “even_numbers(6)” will return the numbers “2 4 6”.  
+```Python
+def even_numbers(maximum):
+
+    return_string = "" # Initializes variable as a string
+
+    # Complete the for loop with a range that includes all even numbers
+    # up to and including the "maximum" value, but excluding 0.
+    for i in range(2, maximum + 1, 2): 
+
+        # Complete the body of the loop by appending the even number
+        # followed by a space to the "return_string" variable.
+        return_string += str(i) + " "
+
+    # This .strip command will remove the final " " space at the end of
+    # the "return_string".
+    return return_string.strip() 
+
+print(even_numbers(6))  # Should be 2 4 6
+print(even_numbers(10)) # Should be 2 4 6 8 10
+print(even_numbers(1))  # No numbers displayed
+print(even_numbers(3))  # Should be 2
+print(even_numbers(0))  # No numbers displayed
+```
+
+7. What happens when the Python interpreter executes a loop where a variable used inside the loop is not initialized?
+> Will produce a NameError stating the variable is not defined
+
+7.2 The following code is supposed to add together all numbers from x to 10.  The code is returning an incorrect answer, what is the reason for this?
+```Python
+x = 1
+sum = 5
+while x <= 10:
+    sum += x
+    x += 1
+print(sum)
+# Should print 55
+# The "sum" variable is initialized with the wrong value
+```
+
+8. How many numbers will this loop print?  Your answer should be only one number.
+```Python
+for sum in range(5):
+    sum += sum
+    print(sum)
+# Should print 5 numbers
+```
+
+9. What is the final value of "y" at the end of the following nested loop code? Your answer should be only one number.
+```Python
+for x in range(10):
+    for y in range(x):
+        print(y)
+# Should print 8
+```
+
+10. The following code causes an infinite loop. Can you figure out what is incorrect?
+```Python
+def test_code(num):
+  x = num
+  while x % 2 == 0:
+    x = x / 2
+
+test_code(0)
+# When called with 0, it triggers an infinite loop
+```
+
+10.2 The following code causes an infinite loop. Can you figure out what’s missing and how to fix it?
+```Python
+def count_numbers(first, last):
+  # Loop through the numbers from first to last 
+  x = first
+  while x <= last:
+    print(x)
+
+
+count_numbers(2, 6) 
+# Should print:
+# 2
+# 3
+# 4 
+# 5
+# 6
+```
+> Variable x is not incremented
