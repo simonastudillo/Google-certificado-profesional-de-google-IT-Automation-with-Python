@@ -12,7 +12,7 @@
 
 ---
 
-## Reseña: Que es un string?
+## Reseña: Qué es un string?
 - Los siguientes bloques de código se usarán en el próximo video:
 ```Python
 name = "Sasha"
@@ -32,3 +32,13 @@ print("Name: " + name + ", Favorite color: " + color)
 pet = "loooooooooooooooooooooooooooooooong cat"
 len(pet)
 ```
+
+---
+
+## Qué es un string?
+- String: es un tipo de dato que representa una secuencia de caracteres.
+- Un string se puede definir usando comillas simples ('), comillas dobles (") nunca se deben mezclar.
+- Los strings pueden contener letras, números, símbolos y espacios.
+- Los strings se pueden concatenar usando el operador +.
+- Los strings se pueden repetir usando el operador *.
+- Los strings tienen una longitud que se puede obtener usando la función len().
