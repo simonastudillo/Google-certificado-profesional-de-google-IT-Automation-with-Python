@@ -166,3 +166,26 @@ def replace_domain(email, old_domain, new_domain):
 - Si el substring no se encuentra, se produce un error de valor (ValueError).
 - El operador `in` se puede usar para verificar si un substring está presente dentro de un string.
 - Devuelve True si el substring está presente, y False si no lo está.
+
+---
+
+## Métodos basicos de strings
+- `index()` es un método de string que devuelve el índice de la primera aparición de un substring dentro del string.
+- Ejemplo:
+```Python
+animals = "lions tigers and bears"
+animals.index("g")
+
+animals = "lions tigers and bears"
+animals.index("bears")
+```
+
+- `in()` es un operador que se puede usar para verificar si un substring está presente dentro de un string.
+- Ejemplo:
+```Python
+animals = "lions tigers and bears"
+"horses" in animals
+
+animals = "lions tigers and bears"
+"tigers" in animals
+```
