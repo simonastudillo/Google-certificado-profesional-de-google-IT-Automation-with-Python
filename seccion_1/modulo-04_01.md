@@ -69,3 +69,14 @@ fruit = "Pineapple"
 print(fruit[:4])
 print(fruit[4:])
 ```
+
+---
+
+## Las partes de un string
+- Indexación de strings: cada carácter en un string tiene un índice, que es un número entero que indica la posición del carácter en el string. El primer carácter tiene un índice de 0, el segundo carácter tiene un índice de 1, y así sucesivamente.
+- Los índices negativos se pueden usar para acceder a los caracteres desde el final del string. El último carácter tiene un índice de -1, el penúltimo carácter tiene un índice de -2, y así sucesivamente.
+- Intentar acceder a un índice que no existe en el string producirá un error llamado IndexError.
+- Slice: Un porción de un string se puede obtener usando la sintaxis de slice.
+- La sintaxis de slice es: string[inicio:fin], donde inicio es el índice del primer carácter que se desea incluir en el slice, y fin es el índice del primer carácter que se desea excluir del slice.
+- Si inicio se omite, se asume que es 0. Si fin se omite, se asume que es la longitud del string.
+- Si fin se omite, se asume que es la longitud del string.
