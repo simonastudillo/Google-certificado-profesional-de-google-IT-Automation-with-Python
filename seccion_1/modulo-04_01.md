@@ -8,7 +8,7 @@
     - cómo hacer que realice operaciones ​repetidamente usando while y para bucles y recursión
     - aprenderemos un montón de ​nuevas habilidades muy útiles ​para añadir a tu caja de herramientas de programación. 
     - Revisaremos algunos tipos de datos que proporciona ​el lenguaje Python para ayudarnos a ​resolver problemas comunes con nuestros scripts.
-    - En particular, ​profundizaremos en las cadenas, las listas y los diccionarios
+    - En particular, ​profundizaremos en los strings, las listas y los diccionarios
 
 ---
 
@@ -84,14 +84,14 @@ print(fruit[4:])
 ---
 
 ## Indexación de strings y slicing
-- La indexación de cadenas permite acceder a caracteres individuales dentro de una cadena.
+- La indexación de strings permite acceder a caracteres individuales dentro de un string.
 - Esto se logra utilizando corchetes y la posición, o índice, del carácter deseado.
 - Es importante recordar que Python comienza los índices en 0.
-- Por lo tanto, para acceder al primer carácter de una cadena, se utiliza el índice [0].
-- Si se intenta acceder a un índice mayor que la longitud de la cadena, se produce un error de índice (IndexError).
+- Por lo tanto, para acceder al primer carácter de un string, se utiliza el índice [0].
+- Si se intenta acceder a un índice mayor que la longitud del string, se produce un error de índice (IndexError).
 - Esto se debe a que se intenta acceder a un elemento inexistente.
-- También se puede acceder a los índices desde el final de la cadena hacia el principio utilizando valores negativos.
-- El índice [-1] permite acceder al último carácter de la cadena, y el índice [-2] al penúltimo.
+- También se puede acceder a los índices desde el final del string hacia el principio utilizando valores negativos.
+- El índice [-1] permite acceder al último carácter del string, y el índice [-2] al penúltimo.
 
 ---
 
@@ -226,13 +226,45 @@ int("12345") + int("54321")
 ---
 
 ## Más métodos de strings
-- `upper()` es un método de string que devuelve una nueva cadena con todos los caracteres en mayúsculas.
-- `lower()` es un método de string que devuelve una nueva cadena con todos los caracteres en minúsculas.
-- `strip()` es un método de string que devuelve una nueva cadena con los espacios en blanco al principio y al final eliminados. Tambien elimina las tabulaciones y saltos de línea al principio y al final de la cadena.
-- `lstrip()` es un método de string que devuelve una nueva cadena con los espacios en blanco al principio eliminados.
-- `rstrip()` es un método de string que devuelve una nueva cadena con los espacios en blanco al final eliminados.
+- `upper()` es un método de string que devuelve un nuevo string con todos los caracteres en mayúsculas.
+- `lower()` es un método de string que devuelve un nuevo string con todos los caracteres en minúsculas.
+- `strip()` es un método de string que devuelve un nuevo string con los espacios en blanco al principio y al final eliminados. Tambien elimina las tabulaciones y saltos de línea al principio y al final del string.
+- `lstrip()` es un método de string que devuelve un nuevo string con los espacios en blanco al principio eliminados.
+- `rstrip()` es un método de string que devuelve un nuevo string con los espacios en blanco al final eliminados.
 - `count()` es un método de string que devuelve el número de veces que un substring aparece en el string.
 - `endswith()` es un método de string que devuelve True si el string termina con el substring especificado, y False si no lo hace.
 - `isnumeric()` es un método de string que devuelve True si todos los caracteres en el string son dígitos, y False si no lo son.
-- `join()` es un método de string que toma una lista de cadenas y las une en una sola cadena, separadas por el string que llama al método.
-- `split()` es un método de string que toma una cadena y la divide en una lista de subcadenas, utilizando el string que llama al método como delimitador. Si no se especifica un delimitador, se utiliza cualquier espacio en blanco como delimitador.
+- `join()` es un método de string que toma una lista de strings y las une en un solo string, separadas por el string que llama al método.
+- `split()` es un método de string que toma un string y lo divide en una lista de strings, utilizando el string que llama al método como delimitador. Si no se especifica un delimitador, se utiliza cualquier espacio en blanco como delimitador.
+
+---
+
+## Métodos avanzados de strings
+- El método `lower` devuelve un string con todos los caracteres convertidos a minúsculas. 
+- El método `upper` devuelve un string en mayúsculas. 
+- Estos se aplican a un string usando la notación de punto, como por ejemplo: `"this is a string".upper()`. Esto devolvería el string "THIS IS A STRING". 
+- Esto puede ser muy útil al verificar la entrada del usuario, ya que podría escribir todo en minúsculas, todo en mayúsculas o incluso una combinación de ambas.
+
+- Puedes usar el método `strip` para eliminar los espacios en blanco que rodean un string.
+- Los espacios en blanco incluyen espacios, tabulaciones y saltos de línea.
+- También puedes usar los métodos `lstrip` y `rstrip` para eliminar los espacios en blanco solo del lado izquierdo o derecho del string, respectivamente.
+
+- El método `count` se puede usar para obtener la cantidad de veces que aparece una substring en un string.
+- Esto puede ser útil para saber cuántos caracteres tiene un string o para contar cuántas veces aparece una palabra determinada en una oración o párrafo.
+
+- Si desea comprobar si un string termina con una substring dada, puede usar el método `endswith`.
+- Este devolverá `True` si la substring se encuentra al final del string y `False` en caso contrario.
+
+- El método `isnumeric` permite comprobar si un string está compuesto únicamente por números.
+- Si el string contiene solo números, este método devolverá `True`.
+- Podemos usarlo para comprobar si un string contiene números antes de pasarla a la función `int()` para convertirla a un entero, evitando así un error.
+
+- También podemos usar el método `join` para concatenar strings.
+- Este método se aplica a un string que se utilizará para unir una lista de strings.
+- Este método recibe como parámetro una lista de strings que se van a unir y devuelve un nuevo string compuesto por cada uno de los strings de la lista unidos mediante el string inicial.
+- Por ejemplo, `join(["This","is","a","sentence"])` devolvería el string "This is a sentence".
+
+- El método `split` es el inverso del método `join`.
+- Este método nos permite dividir un string en una lista de strings.
+- Por defecto, divide por cualquier carácter de espacio en blanco.
+- También se puede dividir por cualquier otro carácter pasando un parámetro.
