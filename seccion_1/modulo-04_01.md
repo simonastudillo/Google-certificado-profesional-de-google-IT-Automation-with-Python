@@ -222,3 +222,17 @@ int("12345") + int("54321")
 
 "This is another example".split()
 ```
+
+---
+
+## Más métodos de strings
+- `upper()` es un método de string que devuelve una nueva cadena con todos los caracteres en mayúsculas.
+- `lower()` es un método de string que devuelve una nueva cadena con todos los caracteres en minúsculas.
+- `strip()` es un método de string que devuelve una nueva cadena con los espacios en blanco al principio y al final eliminados. Tambien elimina las tabulaciones y saltos de línea al principio y al final de la cadena.
+- `lstrip()` es un método de string que devuelve una nueva cadena con los espacios en blanco al principio eliminados.
+- `rstrip()` es un método de string que devuelve una nueva cadena con los espacios en blanco al final eliminados.
+- `count()` es un método de string que devuelve el número de veces que un substring aparece en el string.
+- `endswith()` es un método de string que devuelve True si el string termina con el substring especificado, y False si no lo hace.
+- `isnumeric()` es un método de string que devuelve True si todos los caracteres en el string son dígitos, y False si no lo son.
+- `join()` es un método de string que toma una lista de cadenas y las une en una sola cadena, separadas por el string que llama al método.
+- `split()` es un método de string que toma una cadena y la divide en una lista de subcadenas, utilizando el string que llama al método como delimitador. Si no se especifica un delimitador, se utiliza cualquier espacio en blanco como delimitador.
