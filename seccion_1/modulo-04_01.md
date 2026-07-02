@@ -80,3 +80,15 @@ print(fruit[4:])
 - La sintaxis de slice es: string[inicio:fin], donde inicio es el índice del primer carácter que se desea incluir en el slice, y fin es el índice del primer carácter que se desea excluir del slice.
 - Si inicio se omite, se asume que es 0. Si fin se omite, se asume que es la longitud del string.
 - Si fin se omite, se asume que es la longitud del string.
+
+---
+
+## Indexación de strings y slicing
+- La indexación de cadenas permite acceder a caracteres individuales dentro de una cadena.
+- Esto se logra utilizando corchetes y la posición, o índice, del carácter deseado.
+- Es importante recordar que Python comienza los índices en 0.
+- Por lo tanto, para acceder al primer carácter de una cadena, se utiliza el índice [0].
+- Si se intenta acceder a un índice mayor que la longitud de la cadena, se produce un error de índice (IndexError).
+- Esto se debe a que se intenta acceder a un elemento inexistente.
+- También se puede acceder a los índices desde el final de la cadena hacia el principio utilizando valores negativos.
+- El índice [-1] permite acceder al último carácter de la cadena, y el índice [-2] al penúltimo.
