@@ -268,3 +268,27 @@ int("12345") + int("54321")
 - Este método nos permite dividir un string en una lista de strings.
 - Por defecto, divide por cualquier carácter de espacio en blanco.
 - También se puede dividir por cualquier otro carácter pasando un parámetro.
+
+---
+
+## Reseña: Formatear strings
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+name = "Manny"
+number = len(name) * 3
+print("Hello {}, your lucky number is {}".format(name, number))
+
+name = "Manny"
+print("Your lucky number is {number}, {name}.".format(name=name, number=len(name)*3))
+
+price = 7.5
+with_tax = price * 1.09
+print(price, with_tax)
+print("Base price: ${:.2f}. With Tax: ${:.2f}".format(price, with_tax))
+
+def to_celsius(x):
+  return (x-32)*5/9
+
+for x in range(0,101,10):
+  print("{:>3} F | {:>6.2f} C".format(x, to_celsius(x)))
+```
