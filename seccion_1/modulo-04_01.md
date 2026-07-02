@@ -42,3 +42,30 @@ len(pet)
 - Los strings se pueden concatenar usando el operador +.
 - Los strings se pueden repetir usando el operador *.
 - Los strings tienen una longitud que se puede obtener usando la función len().
+
+---
+
+## Reseña: Las partes de un string
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+name = "Jaylen"
+print(name[1])
+
+name = "Jaylen"
+print(name[0])
+
+name = "Jaylen"
+print(name[5])
+print(name[6])
+
+text = "Random string with a lot of characters"
+print(text[-1])
+print(text[-2])
+
+color = "Orange"
+color[1:4]
+
+fruit = "Pineapple"
+print(fruit[:4])
+print(fruit[4:])
+```
