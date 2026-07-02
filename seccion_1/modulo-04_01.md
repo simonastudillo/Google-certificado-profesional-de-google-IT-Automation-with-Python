@@ -292,3 +292,26 @@ def to_celsius(x):
 for x in range(0,101,10):
   print("{:>3} F | {:>6.2f} C".format(x, to_celsius(x)))
 ```
+
+---
+
+## Formatear strings
+- Hay una mejor forma de unir strings que la concatenación usando el operador +.
+- Podemos usar el método `format` para insertar valores en un string.
+- La función `format` toma los valores que se pasan como argumentos y los inserta en el string en las posiciones indicadas por llaves `{}`.
+- No importa si el valor es un string, un número o cualquier otro tipo de dato, `format` lo convertirá a string automáticamente.
+- Podemos usar llaves con nombres para indicar qué valor se debe insertar en cada posición.
+- También podemos usar llaves con números para indicar qué valor se debe insertar en cada posición.
+Ejemplo:
+```Python
+def student_grade(name, grade):
+	return "{} received {}% on the exam".format(name, grade)
+
+print(student_grade("Reed", 80))
+print(student_grade("Paige", 92))
+print(student_grade("Jesse", 85))
+```
+- La función `format` también nos permite formatear números de diferentes maneras.
+- Podemos usar `:.2f` para formatear un número como un float con dos decimales (`.2f` significa "float con 2 decimales").
+- Podemos usar `:>3` para alinear un número a la derecha con un ancho de 3 caracteres (`>3` significa "alinear a la derecha con un ancho de 3 caracteres").
+- Podemos usar `:<3` para alinear un número a la izquierda con un ancho de 3 caracteres (`<3` significa "alinear a la izquierda con un ancho de 3 caracteres").
