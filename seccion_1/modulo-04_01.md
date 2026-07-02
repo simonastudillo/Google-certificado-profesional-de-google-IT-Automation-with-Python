@@ -92,3 +92,24 @@ print(fruit[4:])
 - Esto se debe a que se intenta acceder a un elemento inexistente.
 - También se puede acceder a los índices desde el final de la cadena hacia el principio utilizando valores negativos.
 - El índice [-1] permite acceder al último carácter de la cadena, y el índice [-2] al penúltimo.
+
+---
+
+## Practice: Work with index values
+1. Tap to match each code example to the characters it extracts: 
+> "Security"[2:4] - "cu"
+> "Security"[0] - "S"
+> "Security"[1] - "e"
+> "Security"[2:5] - "cur"
+
+2. Tap to match each code example to the characters it extracts:
+> str_var = “ip address“ str_var[0] - "i"
+> str_var = “ip address“ str_var[1] - "p"
+> str_var = “ip address“ str_var[5:7] - "dr"
+> str_var = “ip address“ str_var[3:6] - "add"
+
+3. Tap to match each code example to the characters it extracts:
+> "system".index("e") - 4
+> "system".index("y") - 2
+> "system".index("s") - 0
+> "system".index("t") - 3
