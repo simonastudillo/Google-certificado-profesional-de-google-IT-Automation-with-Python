@@ -153,3 +153,16 @@ def replace_domain(email, old_domain, new_domain):
     return new_email
   return email
   ```
+
+  ---
+
+## Crear nuevos strings
+- Los strings son inmutables, lo que significa que no se pueden cambiar después de haber sido creados.
+- Para modificar un string debemos crear un nuevo string que contenga los cambios deseados.
+- podemos usar la indexación y el slicing para crear un nuevo string a partir de un string existente.
+- Luego de crear un nuevo string, podemos asignarlo a la misma variable para reemplazar el string original.
+- `index()` es un método de string que devuelve el índice de la primera aparición de un substring dentro del string.
+- Es decir busca un substring dentro de un string y devuelve la primera posición donde se encuentra. 
+- Si el substring no se encuentra, se produce un error de valor (ValueError).
+- El operador `in` se puede usar para verificar si un substring está presente dentro de un string.
+- Devuelve True si el substring está presente, y False si no lo está.
