@@ -408,3 +408,125 @@ print(test.replace("wood", "plastic"))  # prints "How much plastic would a plas
 ```Python
 print("-".join(test.split()))           # prints "How-much-wood-would-a-woodchuck-chuck"
 ```
+
+---
+
+## Guía de referencia para formatear strings
+- La mayoría de los programas necesitan, tarde o temprano, proporcionar algún tipo de resultado o información al usuario.
+- Dar formato al resultado facilita su lectura.
+- Por ejemplo, imagina que trabajas en un mercado de agricultores y necesitas generar recibos para tus clientes.
+- Debes pesar los productos, calcular el precio total de cada uno (peso por precio por libra) y luego añadir el impuesto sobre las ventas al subtotal.
+- Tu primer intento podría verse así:
+```Python
+# Here are the items in the customer's basket. Each item is a tuple
+# of (item name, weight, price per pound).
+#
+basket = [
+    ("Peaches", 3.0, 2.99),
+    ("Pears", 5.0, 1.66),
+    ("Plums", 2.5, 3.99)
+]
+
+
+# Calculate the total price for each item (weight times price per pound)
+# and add them up to get a subtotal.
+#
+subtotal = 0.00
+for item in basket:
+  fruit, weight, unit_price = item
+  subtotal += (weight * unit_price)
+
+
+# Now calculate the sales tax and total bill.
+#
+tax_rate = 0.06625  # 6.625% sales tax in New Jersey
+tax_amt = subtotal * tax_rate
+total = subtotal + tax_amt
+
+
+# Print the receipt for the customer.
+#
+print("Subtotal:", subtotal)
+print("Sales Tax:", tax_amt)
+print("Total:", total)
+```
+- Si ejecutamos el código veremos algo como
+> Subtotal: 27.245
+> Sales Tax: 1.8049812500000002
+> Total: 29.049981250000002
+
+- Sin embargo sería mejor que luzca como un recibo real.
+> Subtotal: $27.25
+> Sales Tax: $1.80
+> Total: $29.05
+
+- Para lograr esto, usamos el método `format`.
+```Python
+fruit = "peaches"
+weight = 3.0
+per_pound = 2.99
+
+
+output = "You are buying {} pounds of {} at {} per pound.".format(weight, fruit, per_pound)
+print(output)
+
+output = "{1} are {2} per pound, and you have {0} pounds of {1}.".format(weight, fruit, per_pound)
+print(output)
+
+output = "{fruit} are {price} per pound, and you have {weight} pounds of {fruit}.".format(weight=weight, fruit=fruit, price=per_pound)
+print(output)
+```
+> You are buying 3.0 pounds of peaches at 2.99 per pound
+> Peaches are 2.99 per pound, and you have 3.0 pounds of peaches
+> Peaches are 2.99 per pound, and you have 3.0 pounds of peaches
+
+- Para el prime ejemplo podríamos modificar la salida de esta forma
+```Python
+# Print the receipt for the customer. The format string ":10,.2f" 
+# works as follows:
+#   - ":10" makes the output 10 characters wide.
+#   - "," inserts thousands separators between groups of digits.
+#   - ".2" limits the output to two digits after the decimal.
+#   - "f" tells Python to expect a floating-point number.
+#
+print("Subtotal:     ${:10,.2f}".format(subtotal))
+print("Sales Tax:    ${:10,.2f}".format(tax_amt))
+print("Total:        ${:10,.2f}".format(total))
+```
+> Subtotal:      $     27.25
+> Sales Tax:     $      1.80
+> Total:         $     29.05
+
+- Formatear strings usando literales de cadena (f-strings)
+- La función de literales de cadena formateados, añadida en Python 3.6, aún no se usa mucho.
+- Una cadena literal formateada o f-string es una cadena que comienza con 'f' o 'F' antes de las comillas.
+- Estas cadenas pueden contener marcadores de posición {} mediante expresiones similares a las que se usan para las cadenas del método format().
+- La diferencia importante entre las f-strings y el método format() es que las f-strings toman el valor de las variables del contexto actual, en lugar de tomar los valores de los parámetros.
+```Python
+name = "Micah"
+print(f'Hello {name}')
+# Hello Micah
+
+item = "Purple Cup"
+amount = 5
+price = amount * 3.25
+print(f'Item: {item} - Amount: {amount} - Price: {price:.2f}')
+# Item: Purple Cup - Amount: 5 - Price: 16.25
+```
+
+- Para más información visita la documentación oficial de Python sobre [f-strings](https://docs.python.org/3/reference/lexical_analysis.html#f-strings).
+
+- Antigua forma de formatear strings
+- El método format() se introdujo en Python 2.6.
+- Antes de eso, se podía usar el operador % (módulo) para obtener un resultado similar.
+- Aunque este método ya no se recomienda para código nuevo, es posible que lo encuentres en el código de otra persona.
+- Así es como se ve:
+```Python
+"base string with %s placeholder" % variable
+```
+- El operador % (módulo) devuelve una copia de la cadena donde los marcadores de posición indicados por % seguidos de una expresión de formato se reemplazan por las variables que aparecen después del operador.
+- Para reemplazar más de un valor, debe proporcionarlos como una tupla.
+- La expresión de formato debe coincidir con el tipo de valor.
+```Python
+"base string with %d and %d placeholders" % (value1, value2)
+```
