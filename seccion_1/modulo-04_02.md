@@ -142,3 +142,16 @@ def convert_seconds(seconds):
 hours, minutes, seconds = convert_seconds(1000)
 print(hours, minutes, seconds)
 ```
+
+---
+
+## Listas y tuplas
+- `string`: son una secuencia de caracteres, y son inmutables.
+- `list`: son una secuencia de elementos, y son mutables.
+- `tuple`: son una secuencia de elementos, y son inmutables.
+- Para definir una tupla, usamos paréntesis `()` en lugar de corchetes `[]`.
+- Ejemplo: `my_tuple = ("This", "is", "a", "tuple")`
+- Cuando usas tuplas, la posición de los elementos suelen tener un significado, por eso son inmutables.
+- Las tuplas se puedes descomponer en variables individuales, lo que se conoce como "unpacking". 
+- Esto es útil cuando una función devuelve múltiples valores, ya que podemos asignar cada valor a una variable diferente.
+- ejemplo: `hours, minutes, seconds = convert_seconds(5000)` asigna los valores devueltos por la función a las variables `hours`, `minutes` y `seconds`.
