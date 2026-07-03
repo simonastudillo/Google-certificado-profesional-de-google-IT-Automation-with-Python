@@ -530,3 +530,90 @@ print(f'Item: {item} - Amount: {amount} - Price: {price:.2f}')
 ```Python
 "base string with %d and %d placeholders" % (value1, value2)
 ```
+
+---
+
+## Guía de estudio: strings
+- Operadores y métodos de strings
+    - `len(string)`: devuelve la longitud del string.
+    - `format`: permite insertar valores en un string.
+    - `{:.2f}`: formatea un número como un float con dos decimales.
+    - `string[index]`: devuelve el carácter en la posición `index` del string.
+    - `string[start:end]`: devuelve un slice del string desde `start` hasta `end` (excluyendo `end`).
+    - `string.replace(old, new)`: devuelve un nuevo string con todas las apariciones de `old` reemplazadas por `new`.
+    - `string.lower()`: devuelve un nuevo string con todos los caracteres en minúsculas
+- habilidades
+    - Utiliza un bucle `for` para recorrer cada letra de una cadena.
+    - Añade un carácter al principio de una cadena.
+    - Añade un carácter al final de una cadena.
+    - Utiliza el método `.lower()` para convertir las mayúsculas y minúsculas de las letras dentro de una variable de cadena. Este método se usa a menudo para eliminar las mayúsculas y minúsculas al comparar dos cadenas. Por ejemplo, "cat" en minúsculas no es igual a "Cat" porque "Cat" contiene una mayúscula. Para comparar dos cadenas y ver si son la misma palabra, puedes usar el método `.lower()` para eliminar las mayúsculas y minúsculas como factor en la comparación.
+```Python
+# This function accepts a given string and checks each character of 
+# the string to see if it is a letter or not. If the character is a
+# letter, that letter is added to the end of the string variable
+# "forwards" and to the beginning of the string variable "backwards".
+def mirrored_string(my_string):
+
+    # Two variables are initialized as string data types using empty 
+    # quotes. The variable "forwards" will hold the "my_string"
+    # minus any character that is not a letter. The "backwards" 
+    # variable will hold the same letters as "forwards", but in  
+    # in reverse order.
+    forwards = ""
+    backwards = ""
+
+    # The for loop iterates through each character of the "my_string"
+    for character in my_string:
+
+        # The if-statement checks if the character is not a space.
+        if character.isalpha():
+
+            # If True, the body of the loop adds the character to the
+            # to the end of "forwards" and to the front of
+            # "backwards". 
+            forwards += character
+            backwards = character + backwards
+
+        # If False (meaning the character is not a letter), no action
+        # is needed. This coding approach results prevents any 
+        # non-alphabetical characters from being written to the
+        # "forwards" and "backwards" variables. The for loop will 
+        # restart until all characters in "my_string" have been
+        # processed.
+        
+    # The final if-statement compares the "forwards" and "backwards"
+    # strings to see if the letters are the same both forwards and
+    # backwards. Since Python is case sensitive, the two strings will 
+    # need to be converted to use the same case for this comparison. 
+    if forwards.lower() == backwards.lower():
+        return True
+    return False
+ 
+print(mirrored_string("12 Noon")) # Should be True
+print(mirrored_string("Was it a car or cat I saw")) # Should be False
+print(mirrored_string("'eve, Madam Eve")) # Should be True
+```
+
+    - Utilice el método `format()`, con llaves `{}` para los datos de las variables, para crear una nueva cadena.
+    - Utilice una expresión de formato, como `{:.2f}`, para formatear una variable de tipo float y configurar el número de decimales que se mostrarán.
+```Python
+# This function converts measurement equivalents. Output is formatted 
+# as, "x ounces equals y pounds", with y limited to 2 decimal places. 
+def convert_weight(ounces):
+
+    # Conversion formula: 1 pound = 16 ounces
+    pounds = ounces/16 
+    
+    # The result is composed using the .format() method. There are two
+    # placeholders in the string: the first is for the "ounces" 
+    # variable and the second is for the "pounds" variable. The second
+    # placeholder formats the float result of the conversion 
+    # calculation to be limited to 2 decimal places.
+    result = "{} ounces equals {:.2f} pounds".format(ounces,pounds)
+    return result
+
+
+print(convert_weight(12)) # Should be: 12 ounces equals 0.75 pounds
+print(convert_weight(50.5)) # Should be: 50.5 ounces equals 3.16 pounds
+print(convert_weight(16)) # Should be: 16 ounces equals 1.00 pounds
+```
