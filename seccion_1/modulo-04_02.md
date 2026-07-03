@@ -32,3 +32,18 @@ x[2:]
 - Podemos usar funciones como `len()` para obtener el número de elementos en la lista
 - al igual que con las cadenas, podemos usar el operador `in` para verificar si un elemento está en la lista.
 - tambien, como en las cdenas podemos usar indices para acceder a los elementos de la lista, y podemos usar slicing para obtener sublistas.
+
+---
+
+## Listas definidas
+- Las listas se definen usando corchetes, con los elementos separados por comas: `my_list = ["This", "is", "a", "list"].`
+- Puedes usar la palabra clave `in` para comprobar si una lista contiene un elemento determinado. Si el elemento está presente, devolverá `True`. Si no se encuentra en la lista, devolverá `False`. - Por ejemplo, `"This"` en `my_list` devolvería `True` en nuestro ejemplo.
+- También puedes usar índices para acceder a elementos específicos según su posición.
+- Puedes acceder al primer elemento de una lista con `my_list[0]`, lo que te permitiría acceder a la cadena "This".
+- En Python, las listas y las cadenas son bastante similares.
+- Ambas son ejemplos de secuencias de datos. Las secuencias tienen propiedades similares, como:
+1. Poder iterar sobre ellas usando bucles `for`. 
+2. Admitir la indexación;
+3. Utilizar la función `len` para hallar la longitud de la secuencia;
+4. Utilizar el operador de suma (+) para concatenar; y
+5. Utilizar la palabra clave `in` para comprobar si la secuencia contiene un valor. Comprender estos conceptos permite aplicarlos también a otros tipos de secuencias.
