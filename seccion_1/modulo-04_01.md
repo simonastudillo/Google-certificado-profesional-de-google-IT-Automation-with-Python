@@ -325,3 +325,86 @@ print(student_grade("Jesse", 85))
 - Recuerda que usas este método debes nombrar los parámetros que pasas a la función `format` con los mismos nombres que usas en las llaves.
 - También puedes usar llaves con números para indicar qué valor se debe insertar en cada posición, algo como `{0}` y `{1}`.
 - Además para los números puedes usar `:.2f` para formatear un número como un float con dos decimales, `:>3` para alinear un número a la derecha con un ancho de 3 caracteres, y `:<3` para alinear un número a la izquierda con un ancho de 3 caracteres. 
+
+---
+
+## Guía de referencia para strings
+- `len(string)`: devuelve la longitud del string.
+```Python
+print(len("abcde"))         # prints 5
+```
+
+- `for character in string`: itera sobre cada carácter en el string.
+```Python
+for c in "abcde":  print(c)                  # prints "a", then "b", then "c", etc.
+```
+
+- `if substring in string`: verifica si un substring está presente en el string.
+```Python
+print("abc" in "abcde")     # prints True
+print("def" in "abcde")     # prints False
+```
+
+- `string[index]`: devuelve el carácter en la posición `index` del string.
+```Python
+print("abcde"[2])           # prints "c"
+print("abcde"[-1])          # prints "e"
+```
+
+- `string[start:end]`: devuelve un slice del string desde `start` hasta `end` (excluyendo `end`).
+```Python
+print("abcde"[0:2])         # prints "ab"
+print("abcde"[2:])          # prints "cde"
+```
+
+- `string.lower()`: devuelve un nuevo string con todos los caracteres en minúsculas.
+```Python
+print("AaBbCcDdEe".lower())             # prints "aabbccddee"
+```
+
+- `string.upper()`: devuelve un nuevo string con todos los caracteres en mayúsculas.
+```Python
+print("AaBbCcDdEe".upper())             # prints "AABBCCDDEE"
+```
+
+- `string.lstrip()`: devuelve un nuevo string con los espacios en blanco al principio eliminados.
+```Python
+print("   Hello   ".lstrip())           # prints "Hello   "
+```
+
+- `string.rstrip()`: devuelve un nuevo string con los espacios en blanco al final eliminados.
+```Python
+print("   Hello   ".rstrip())           # prints "   Hello"
+```
+
+- `string.strip()`: devuelve un nuevo string con los espacios en blanco al principio y al final eliminados.
+```Python
+test = "How much wood would a woodchuck chuck"
+print(test.count("wood"))               # prints 2
+```
+
+- `string.isnumeric()`: devuelve True si todos los caracteres en el string son dígitos, y False si no lo son.
+```Python
+print("12345".isnumeric())              # prints True
+print("-123.45".isnumeric())            # prints False
+```
+
+- `string.isalpha()`: devuelve True si todos los caracteres en el string son letras, y False si no lo son.
+```Python
+print("xyzzy".isalpha())                # prints True
+```
+
+- `string.split(delimiter)`: divide el string en una lista de strings usando el delimitador especificado, por defecto divide por cualquier espacio en blanco.
+```Python
+print(test.split())    # prints ['How', 'much', 'wood', 'would', 'a', 'woodchuck', 'chuck']
+```
+
+- `string.replace(old, new)`: devuelve un nuevo string con todas las apariciones de `old` reemplazadas por `new`.
+```Python
+print(test.replace("wood", "plastic"))  # prints "How much plastic would a plasticchuck chuck"
+```
+
+- `delimiter.join(list_of_strings)`: une una lista de strings en un solo string, separadas por el delimitador especificado.
+```Python
+print("-".join(test.split()))           # prints "How-much-wood-would-a-woodchuck-chuck"
+```
