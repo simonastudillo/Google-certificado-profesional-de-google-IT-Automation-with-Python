@@ -315,3 +315,13 @@ print(student_grade("Jesse", 85))
 - Podemos usar `:.2f` para formatear un número como un float con dos decimales (`.2f` significa "float con 2 decimales").
 - Podemos usar `:>3` para alinear un número a la derecha con un ancho de 3 caracteres (`>3` significa "alinear a la derecha con un ancho de 3 caracteres").
 - Podemos usar `:<3` para alinear un número a la izquierda con un ancho de 3 caracteres (`<3` significa "alinear a la izquierda con un ancho de 3 caracteres").
+
+---
+
+## String formateados
+- Puedes usar el método `format` para concatenar strings de formas diferentes y poderosas
+- Puedes simplmente usar las llaves `{}` para indicar dónde quieres que se inserten los valores.
+- También puedes usar llaves con nombres para indicar qué valor se debe insertar en cada posición, algo como `{name}` y `{number}`.
+- Recuerda que usas este método debes nombrar los parámetros que pasas a la función `format` con los mismos nombres que usas en las llaves.
+- También puedes usar llaves con números para indicar qué valor se debe insertar en cada posición, algo como `{0}` y `{1}`.
+- Además para los números puedes usar `:.2f` para formatear un número como un float con dos decimales, `:>3` para alinear un número a la derecha con un ancho de 3 caracteres, y `:<3` para alinear un número a la izquierda con un ancho de 3 caracteres. 
