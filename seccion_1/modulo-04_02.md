@@ -91,3 +91,13 @@ fruits.pop(3)
 fruits[2] = "Strawberry"
 print(fruits)
 ```
+
+---
+
+## Modificar el contenido de una lista
+- La diferencia entre string y listas es que las listas son mutables, lo que significa que podemos cambiar sus elementos después de haberlas creado.
+- `append()` agrega un elemento al final de la lista.
+- `insert()` agrega un elemento en una posición específica de la lista.
+- `remove()` elimina un elemento de la lista.
+- `pop()` elimina un elemento de la lista en una posición específica y devuelve el elemento eliminado.
+- La diferencia entre `remove()` y `pop()` es que `remove()` elimina un elemento por su valor, mientras que `pop()` elimina un elemento por su índice.
