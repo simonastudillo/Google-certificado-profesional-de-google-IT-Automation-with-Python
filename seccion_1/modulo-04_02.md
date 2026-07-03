@@ -101,3 +101,44 @@ print(fruits)
 - `remove()` elimina un elemento de la lista.
 - `pop()` elimina un elemento de la lista en una posición específica y devuelve el elemento eliminado.
 - La diferencia entre `remove()` y `pop()` es que `remove()` elimina un elemento por su valor, mientras que `pop()` elimina un elemento por su índice.
+
+---
+
+## Reseña: Listas y tuplas
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+fullname = ('Grace', 'M', 'Hopper')
+
+def convert_seconds(seconds):
+  hours = seconds // 3600
+  minutes = (seconds - hours * 3600) // 60
+  remaining_seconds = seconds - hours * 3600 - minutes * 60
+  return hours, minutes, remaining_seconds
+result = convert_seconds(5000)
+type(result)
+
+def convert_seconds(seconds):
+  hours = seconds // 3600
+  minutes = (seconds - hours * 3600) // 60
+  remaining_seconds = seconds - hours * 3600 - minutes * 60
+  return hours, minutes, remaining_seconds
+result = convert_seconds(5000)
+print(result)
+
+def convert_seconds(seconds):
+  hours = seconds // 3600
+  minutes = (seconds - hours * 3600) // 60
+  remaining_seconds = seconds - hours * 3600 - minutes * 60
+  return hours, minutes, remaining_seconds
+result = convert_seconds(5000)
+hours, minutes, seconds = result
+print(hours, minutes, seconds)
+
+def convert_seconds(seconds):
+  hours = seconds // 3600
+  minutes = (seconds - hours * 3600) // 60
+  remaining_seconds = seconds - hours * 3600 - minutes * 60
+  return hours, minutes, remaining_seconds
+hours, minutes, seconds = convert_seconds(1000)
+print(hours, minutes, seconds)
+```
