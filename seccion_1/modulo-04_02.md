@@ -47,3 +47,47 @@ x[2:]
 3. Utilizar la función `len` para hallar la longitud de la secuencia;
 4. Utilizar el operador de suma (+) para concatenar; y
 5. Utilizar la palabra clave `in` para comprobar si la secuencia contiene un valor. Comprender estos conceptos permite aplicarlos también a otros tipos de secuencias.
+
+---
+
+## Reseña: Modificar el contenido de una lista
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.append("Kiwi")
+print(fruits)
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+print(fruits)
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+print(fruits)
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+fruits.remove("Melon")
+print(fruits)
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.remove("Pear")
+#This will throw an error
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+fruits.remove("Melon")
+fruits.pop(3)
+print(fruits)
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+fruits.remove("Melon")
+fruits.pop(3)
+fruits[2] = "Strawberry"
+print(fruits)
+```
