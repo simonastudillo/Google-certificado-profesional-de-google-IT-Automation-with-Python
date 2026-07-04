@@ -27,3 +27,18 @@
 - Luego queremos que esta información se imprima en la pantalla
 - es mejor centrarse primero en hacer que el programa funcione. ​Siempre puedes dedicar tiempo a hacer que el informe se vea bien más adelante
 - Por ahora, simplifiquémoslo y optaremos por el enfoque de imprimir el ​nombre de la máquina seguido de todos los usuarios actuales separados por comas
+
+---
+
+## Reseña:  Investigación
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+numbers = [ 4, 6, 2, 7, 1 ]
+numbers.sort()
+print(numbers)
+
+names = ["Carlos", "Ray", "Alex", "Kelly"]
+print(sorted(names))
+print(names)
+print(sorted(names, key=len))
+```
