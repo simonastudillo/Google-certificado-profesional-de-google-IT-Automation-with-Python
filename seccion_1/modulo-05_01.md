@@ -83,3 +83,26 @@ def generate_report(machines):
       user_list = ", ".join(users)
       print("{}: {}".format(machine, user_list))
 ```
+
+---
+
+## Planificación
+- Sabemos que nuestra entrada será una lista ​de eventos y los ordenaremos por tiempo. ​Cada evento de esa lista incluirá un nombre de máquina y ​un nombre de usuario y ​nos indicará si el evento es un inicio de sesión o un cierre de sesión
+- Queremos que nuestro script haga un seguimiento de los usuarios cuando ​inician y cierran sesión en las máquinas.
+- Pensemos en lo que haremos para ​cada evento y veamos si ​podemos encontrar la mejor estrategia
+- Cuando procesemos un evento, ​veremos que alguien ha interactuado con una máquina.
+- Si se trata de un cierre de sesión, ​queremos eliminarlo del grupo ​de usuarios que han iniciado sesión en la máquina
+- En ese escenario tiene sentido usar un conjunto de tipo `Set`
+- Para saber a que máquina pertenece usaremos `dictionary`
+- El `key` será el nombre de la máquina y el `value` será un conjunto de usuarios que han iniciado sesión actualmente en esa máquina
+- Para cada evento que ​procesemos, revisaremos primero en el diccionario ​si la máquina ya está allí.
+- Tenemos que comprobarlo porque podría ser ​la primera vez que ​procesemos un evento para esa máquina
+- Si no está ahí, crearemos una nueva entrada. 
+- Si es así, actualizaremos ​la entrada existente con ​la acción correspondiente al evento, ​lo que significa que agregaremos el usuario si ​el evento es un inicio de sesión o lo eliminaremos si es un cierre de sesión. 
+- Una vez que hayamos terminado de procesar los eventos ​, queremos imprimir un informe con ​la información que generamos. 
+- Esta es una tarea completamente independiente, ​por lo que debería ser una función independiente.
+- Esta función recibirá ​el diccionario que generamos e imprimirá el informe.
+- Es importante tener funciones independientes para ​procesar los datos e imprimirlos en la pantalla
+- Esto se debe a que si queremos ​modificar la forma en que se imprime el informe, ​sabemos que solo necesitamos cambiar ​la función encargada de la impresión.
+- ​O si encontramos un error en la forma en que procesamos los datos, ​solo necesitamos cambiar la función de procesamiento
+- También nos permitiría usar ​la misma función de procesamiento de datos ​para generar un tipo diferente de informe, ​como generar un archivo PDF
