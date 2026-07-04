@@ -42,3 +42,20 @@ print(sorted(names))
 print(names)
 print(sorted(names, key=len))
 ```
+
+---
+
+## Investigación
+- Para averiguar qué usuarios han iniciado sesión actualmente en las máquinas, ​necesitamos comprobar cuándo iniciaron sesión y cuándo la cerraron
+- ​Si un usuario ha entrado en una máquina y luego ha salido, ​ya no está conectado a ella. ​Pero si aún no ha salido, sigue conectado. 
+- saber esto nos dice que para resolver esto correctamente, ​es vital que procesemos los eventos en orden cronológico
+- Si no lo están, ​podemos obtener el evento de cierre de sesión antes que el evento de inicio de sesión correspondiente
+- Y nuestro código puede hacer cosas impredecibles
+- Investiga como ordenar listas en Python
+    - sort(): Modifica la lista original y la ordena en su lugar
+    - sorted(): Devuelve una nueva lista ordenada y deja la lista original sin cambios
+- Se define usar la función sort()
+- Debemos investigar como ordenar una lista basados en un atributo de los objetos que contiene
+- La función sort() tiene un parámetro llamado key que nos permite especificar una función que se aplicará a cada elemento de la lista antes de compararlos
+- Adicionalmente el parámetro key nos permite enviar una función como criterio, por ejemplo `len`
+- Escribiremos una función llamada get_event_date que tomará un objeto de evento y devolverá su atributo Date
