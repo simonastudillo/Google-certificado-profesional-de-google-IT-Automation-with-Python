@@ -242,3 +242,13 @@ print(z)
 - En el ejemplo, `multiples = [x*7 for x in range(1,11)]` crea una lista de los primeros 10 múltiplos de 7.
 - Donde `x*7` es la `expresión` a evaluar y el valor a añadir a la lista
 - `x` es la variable que representa cada elemento de la secuencia `range(1,11)`, que es el `iterable` que se va a iterar. 
+
+---
+
+## Comprensión de listas vs bucles `for`
+- La comprensión de la lista tiene el bucle for, la compilación ​y construye la lista en una sola línea de código. 
+- ¿Cuando usar cada uno? NO hay un regla estricta, puedes usar el que te acomode más.
+- Sin embargo se aconseja usar la comprensión de listas cuando se trata de una operación simple, ya que es más concisa y legible.
+- Para saber cual va mejor con lo que quieres hacer preguntate:
+    - ¿Cual hace mi código más legible y conciso?
+    - ¿Cual hace mi código más facil de leer y entender para mi y para otros?
