@@ -163,3 +163,27 @@ print(hours, minutes, seconds)
 - Esto quiere decir que una vez que se crea una tupla, no se puede cambiar su contenido, ni agregar, ni eliminar elementos.
 - Son útiles cuando queremos preservar la integridad de los datos, ya que no se pueden modificar accidentalmente.
 - Son usados generalmente como valores de retorno de funciones, para devolver múltiples valores a la vez.
+
+---
+
+## Reseña: Iterando sobre listas y tuplas
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+animals = ["Lion", "Zebra", "Dolphin", "Monkey"]
+chars = 0
+for animal in animals:
+  chars += len(animal)
+
+print("Total characters: {}, Average length: {}".format(chars, chars/len(animals)))
+
+winners = ["Ashley", "Dylan", "Reese"]
+for index, person in enumerate(winners):
+  print("{} - {}".format(index + 1, person))
+
+def full_emails(people):
+  result = []
+  for email, name in people:
+    result.append("{} <{}>".format(name, email))
+  return result
+print(full_emails([("alex@example.com", "Alex Diego"), ("shay@example.com", "Shay Brandt")]))
+```
