@@ -155,3 +155,11 @@ print(hours, minutes, seconds)
 - Las tuplas se puedes descomponer en variables individuales, lo que se conoce como "unpacking". 
 - Esto es útil cuando una función devuelve múltiples valores, ya que podemos asignar cada valor a una variable diferente.
 - ejemplo: `hours, minutes, seconds = convert_seconds(5000)` asigna los valores devueltos por la función a las variables `hours`, `minutes` y `seconds`.
+
+---
+
+## Tuplas
+- Las tuplas son como las listas, en el sentido que pueden contener múltiples elementos de diferentes tipos, pero son inmutables.
+- Esto quiere decir que una vez que se crea una tupla, no se puede cambiar su contenido, ni agregar, ni eliminar elementos.
+- Son útiles cuando queremos preservar la integridad de los datos, ya que no se pueden modificar accidentalmente.
+- Son usados generalmente como valores de retorno de funciones, para devolver múltiples valores a la vez.
