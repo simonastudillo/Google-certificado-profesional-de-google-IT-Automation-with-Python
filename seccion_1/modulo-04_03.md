@@ -126,3 +126,9 @@ else:
 - El tipo de dato `Set` es otra estructura de datos que puede usar para almacenar información.
 - Los `Sets` son colecciones desordenadas de elementos únicos, lo que significa que no permiten duplicados.
 - Los `Sets` son útiles cuando desea asegurarse de que no haya elementos duplicados en su colección.
+
+---
+
+## Connect: Tipos de iterables
+
+![alt text](image-1.png)
