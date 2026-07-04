@@ -23,3 +23,62 @@ Los métodos de clase, por otro lado, se invocan para la clase en sí, en lugar 
 - Métodos estáticos
 Por último, los métodos estáticos, marcados con el decorador `@staticmethod`, no aceptan parámetros `self` ni `cls`. Se comportan como funciones normales, con la diferencia de que se pueden llamar directamente desde la clase. Es importante destacar que no es necesario instanciar la clase; los métodos simplemente residen en ella. Esto se debe a que las definiciones de clase son en sí mismas un objeto (es decir, una instancia de la clase base abstracta), lo que reduce la sobrecarga y permite encapsular las funciones de forma sencilla. Los programadores utilizan métodos estáticos cuando el método no necesita acceder a datos específicos de la instancia o la clase.
 
+---
+
+## Constructores y otros métodos especiales
+
+- Creando la instancia de una clase:
+    - En Python cuando se crea una instancia de una clase, se llama automáticamente al método especial constructor.
+    - El constructor es lo que permite inicializar los atributos de la clase y todo lo necesario para que la instancia funcione correctamente.
+    - En Python, el constructor se define mediante el método especial `__init__()`.
+```Python
+class Apple:
+    def __init__(self):
+        self.color = "red"
+        self.flavor = "sweet"
+
+honeycrisp = Apple()
+print(honeycrisp.color)
+
+# prints "red"
+```
+
+- Modificar variables
+    - Si queremos dar más flexibilidad a nuestro constructor, podemos pasarle parámetros para modificar los valores de las variables de instancia.
+```Python
+class Apple:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+
+honeycrisp = Apple("red", "sweet")
+fuji = Apple("red", "tart")
+print(honeycrisp.flavor)
+print(fuji.flavor)
+
+# prints "sweet" and "tart"
+```
+
+- Otros métodos especiales
+    - Al igual que el constructor `__init__`, los métodos especiales comienzan y terminan con un doble guion bajo, y esto se denomina método `dunder`.
+    - La palabra "dunder" combina la "d" de double y la "under" de underscore.
+    - Estos métodos se pueden "sobreescribir" para cambiar el comportamiento predeterminado de los objetos en Python.
+    - Ejemplos:
+        - `__str__`: Controla cómo se convierte un objeto a una representación de cadena para su salida. Cuando imprimes algo con print(), Python llama al método __str__() del objeto y muestra lo que este devuelve. En la mayoría de los casos, la salida predeterminada es simplemente el nombre de la clase y una ubicación de memoria.
+        - `__len__`: Permite que la función len() devuelva un valor específico para un objeto. Por ejemplo, si tienes una clase que representa una colección de elementos, puedes definir el método `__len__()` para devolver el número de elementos en esa colección.
+        - `__contains__`: Permite que la palabra clave `in` funcione con objetos de tu clase. Por ejemplo, si tienes una clase que representa un conjunto de elementos, puedes definir el método `__contains__()` para verificar si un elemento está presente en ese conjunto.
+        - `__eq__`: Permite que los operadores de comparación, como `==`, funcionen con objetos de tu clase. Por ejemplo, si tienes una clase que representa un punto en un espacio bidimensional, puedes definir el método `__eq__()` para comparar dos puntos y determinar si son iguales.
+```Python
+class Apple:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+
+    def __str__(self):
+        return "an apple which is {} and {}".format(self.color, self.flavor)
+
+honeycrisp = Apple("red", "sweet")
+print(honeycrisp)
+
+# prints "an apple which is red and sweet"
+```
