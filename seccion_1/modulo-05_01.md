@@ -59,3 +59,27 @@ print(sorted(names, key=len))
 - La función sort() tiene un parámetro llamado key que nos permite especificar una función que se aplicará a cada elemento de la lista antes de compararlos
 - Adicionalmente el parámetro key nos permite enviar una función como criterio, por ejemplo `len`
 - Escribiremos una función llamada get_event_date que tomará un objeto de evento y devolverá su atributo Date
+
+---
+
+## Reseña: Planificación
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+def current_users(events):
+  events.sort(key=get_event_date)
+  machines = {}
+  for event in events:
+    if event.machine not in machines:
+      machines[event.machine] = set()
+    if event.type == "login":
+      machines[event.machine].add(event.user)
+    elif event.type == "logout":
+      machines[event.machine].remove(event.user)
+  return machines
+
+def generate_report(machines):
+  for machine, users in machines.items():
+    if len(users) > 0:
+      user_list = ", ".join(users)
+      print("{}: {}".format(machine, user_list))
+```
