@@ -114,3 +114,15 @@ if key in myDictionary:
 else:
 	print(f"{key} is not found in the dictionary")
 ```
+
+---
+
+## Diccionarios vs listas
+- Si tiene una lista de información ​que le gustaría recopilar y usar en su script, ​probablemente una lista sea el enfoque correcto
+- Por ejemplo, si desea ​almacenar una serie de direcciones IP para Ping, ​puede ponerlas todas en una lista e iterar sobre ellas. ​O si tiene una lista de ​nombres de host y sus direcciones IP correspondientes, ​es posible que desee emparejarlos ​como valores clave en un diccionario.
+- En general, querrá usar diccionarios ​cuando planee buscar un elemento específico. 
+- Puede utilizar los diccionarios para representar ​estructuras de datos más complejas, ​como árboles de directorios en un sistema de archivos. 
+
+- El tipo de dato `Set` es otra estructura de datos que puede usar para almacenar información.
+- Los `Sets` son colecciones desordenadas de elementos únicos, lo que significa que no permiten duplicados.
+- Los `Sets` son útiles cuando desea asegurarse de que no haya elementos duplicados en su colección.
