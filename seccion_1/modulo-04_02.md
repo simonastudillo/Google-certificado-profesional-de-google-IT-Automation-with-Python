@@ -286,3 +286,33 @@ print(squares(2, 3))    # Should print [4, 9]
 print(squares(1, 5))    # Should print [1, 4, 9, 16, 25]
 print(squares(0, 10))   # Should print [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 ```
+
+---
+
+## Guía de estudio: Métodos y operaciones con listas
+- Conocimientos:
+    - `len(secuencia)` - Devuelve la longitud de la secuencia.
+    - `for element in sequence` - Itera sobre cada elemento de la secuencia.
+    - `if element in sequence` - Comprueba si el elemento forma parte de la secuencia.
+    - `secuencia[x]` - Accede al elemento en el índice [x] de la secuencia, comenzando en cero.
+    - `secuencia[x:y]` - Accede a una porción que comienza en el índice [x] y termina en el índice [y-1]. Si se omite [x], el índice comenzará en 0 por defecto. Si se omite [y], `len(secuencia)` establecerá la posición del índice final por defecto.
+    - `for index, element in enumerate(secuencia)` - Itera sobre los índices y los elementos de la secuencia simultáneamente.
+```Python
+for x in range(len(someList)):
+    print(x)
+# this will print out a numerical value up to the length of the original string
+```
+
+- Métodos y operadores especificos de listas:
+    - `lista[índice]` = x - Reemplaza el elemento en el índice [n] con x.
+    - `lista.append(x)` - Agrega x al final de la lista.
+    - `lista.insert(índice, x)` - Inserta x en la posición [índice].
+    - `lista.pop(índice)` - Devuelve el elemento en [índice] y lo elimina de la lista. Si [índice] no está en la lista, se devuelve y elimina el último elemento.
+    - `lista.remove(x)` - Elimina la primera aparición de x en la lista.
+    - `lista.sort()` - Ordena los elementos de la lista.
+    - `lista.reverse()` - Invierte el orden de los elementos de la lista.
+    - `lista.clear()` - Elimina todos los elementos de la lista.
+    - `lista.copy()` - Crea una copia de la lista.
+    - `lista.extend(other_list)` - Agrega todos los elementos de `other_list` al final de `lista`.
+    - `map(function, iterable)` - Aplica una función dada a cada elemento de un iterable (como una lista) y devuelve un objeto `map` con los resultados.
+    - `zip(*iterables)` - Recibe iterables como argumentos y devuelve un iterador que genera tuplas, donde la i-ésima tupla contiene el i-ésimo elemento de cada uno de los iterables proporcionados.
