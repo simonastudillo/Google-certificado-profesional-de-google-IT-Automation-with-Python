@@ -228,3 +228,17 @@ print(lengths)
 z = [x for x in range(0,101) if x % 3 == 0]
 print(z)
 ```
+
+---
+
+## Comprensión de listas
+- Si queremos crear una lista de forma rápida, podemos usar la comprensión de listas.
+- La comprensión de listas es una forma concisa de crear listas a partir de otras listas o secuencias.
+- La sintaxis básica es: `[expression for item in iterable]`:
+- `expression` es la expresión que se evaluará para cada elemento de la secuencia.
+- `item` es la variable que representa cada elemento de la secuencia.
+- `iterable` es la secuencia que se va a iterar.
+- Además podemos agregar una condición opcional al final de la comprensión de listas, usando la sintaxis: `[expression for item in iterable if condition]`.
+- En el ejemplo, `multiples = [x*7 for x in range(1,11)]` crea una lista de los primeros 10 múltiplos de 7.
+- Donde `x*7` es la `expresión` a evaluar y el valor a añadir a la lista
+- `x` es la variable que representa cada elemento de la secuencia `range(1,11)`, que es el `iterable` que se va a iterar. 
