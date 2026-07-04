@@ -106,3 +106,30 @@ def generate_report(machines):
 - Esto se debe a que si queremos ​modificar la forma en que se imprime el informe, ​sabemos que solo necesitamos cambiar ​la función encargada de la impresión.
 - ​O si encontramos un error en la forma en que procesamos los datos, ​solo necesitamos cambiar la función de procesamiento
 - También nos permitiría usar ​la misma función de procesamiento de datos ​para generar un tipo diferente de informe, ​como generar un archivo PDF
+
+---
+
+## Reseña: Escribir el Script
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+def get_event_date(event):
+	return event.date
+
+def current_users(events):
+    events.sort(key=get_event_date)
+    machines = {}
+    for event in events:
+        if event.machine not in machines:
+            machines[event.machine] = set()
+        if event.type == "login":
+            machines[event.machine].add(event.user)
+        elif event.type == "logout":
+            machines[event.machine].remove(event.user)
+    return machines
+
+def generate_report(machines):
+    for machine, users in machines.items()
+    if len (users) > 0
+        user_list = ",".join(users)
+        print("{}: {}".format(machine, user_list))
+```
