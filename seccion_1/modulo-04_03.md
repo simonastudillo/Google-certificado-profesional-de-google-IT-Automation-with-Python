@@ -57,3 +57,36 @@ print(file_counts)
 - Puedes añadir un nuevo par clave-valor a un diccionario: `animales["cebras"] = 2`.
 - Puedes modificar el valor de una clave: `animals["bears"] = 11` cambiaría el valor almacenado en la clave `bears` de 10 a 11.
 - Puedes eliminar elementos de un diccionario usando la palabra clave `del`: `del animals["lions"]`, eliminarías el par clave-valor del diccionario `animals`.
+
+---
+
+## Reseña: Iterando sobre el contenido de un diccionario
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+for extension in file_counts:
+  print(extension)
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+for ext, amount in file_counts.items():
+  print("There are {} files with the .{} extension".format(amount, ext))
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+file_counts.keys()
+file_counts.values()
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+for value in file_counts.values():
+  print(value)
+
+def count_letters(text):
+  result = {}
+  for letter in text:
+    if letter not in result:
+      result[letter] = 0
+    result[letter] += 1
+  return result
+count_letters("aaaaa")
+count_letters("tenant")
+count_letters("a long string with a lot of letters")
+```
