@@ -187,3 +187,13 @@ def full_emails(people):
   return result
 print(full_emails([("alex@example.com", "Alex Diego"), ("shay@example.com", "Shay Brandt")]))
 ```
+
+---
+
+## Iterando sobre listas y tuplas
+- Podemos usar bucles `for` para iterar sobre listas y tuplas.
+- Esto se hace usando la sintaxis `for item in sequence:`, donde `sequence` puede ser una lista o una tupla.
+- Podemos usar la función `enumerate()` para obtener tanto el índice como el valor de cada elemento en la secuencia.
+- También podemos usar la técnica de "unpacking" para descomponer los elementos de una tupla en variables individuales dentro del bucle `for`.
+- Para descomponer una tupla en variables individuales, podemos usar la sintaxis `for var1, var2 in sequence:`, donde `sequence` es una lista de tuplas.
+- Error común: Querer acceder a un elemento de una lista o tupla usando un índice, aunque es común en otros lenguajes, en Python es posible pero no es recomendado, ya que es más eficiente iterar directamente sobre los elementos de la secuencia.
