@@ -197,3 +197,12 @@ print(full_emails([("alex@example.com", "Alex Diego"), ("shay@example.com", "Sha
 - También podemos usar la técnica de "unpacking" para descomponer los elementos de una tupla en variables individuales dentro del bucle `for`.
 - Para descomponer una tupla en variables individuales, podemos usar la sintaxis `for var1, var2 in sequence:`, donde `sequence` es una lista de tuplas.
 - Error común: Querer acceder a un elemento de una lista o tupla usando un índice, aunque es común en otros lenguajes, en Python es posible pero no es recomendado, ya que es más eficiente iterar directamente sobre los elementos de la secuencia.
+
+---
+
+## Iterar sobre listas usando `enumerate()`
+- Los bucles `for` permiten recorrer cada elemento de la lista, pasando el elemento al bucle `for` como una variable.
+- ¿qué ocurre si queremos acceder a los elementos de una lista, junto con el índice del elemento en cuestión?
+- Esto se puede hacer usando la función `enumerate()`.
+- La función `enumerate()` recibe una lista como parámetro y devuelve una tupla para cada elemento de la lista.
+- El primer valor de la tupla es el índice y el segundo valor es el elemento en sí.
