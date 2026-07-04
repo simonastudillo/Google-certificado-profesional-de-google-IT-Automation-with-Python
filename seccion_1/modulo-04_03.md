@@ -98,3 +98,19 @@ count_letters("a long string with a lot of letters")
 - Por defecto, el bucle `for` iterará sobre las claves del diccionario.
 - Para obtener tanto la clave como el valor, puedes hacer un `unpacking` de los elementos del diccionario usando el método `items()`.
 - Para obtener solo las claves o los valores, puedes usar los métodos `keys()` y `values()`, respectivamente.
+
+---
+
+## Usando bucles `while` y `if-else` con diccionarios
+- Puedes usar el diccionario en un bucle `while` para iterar sobre sus elementos.
+- Iterará hasta pasar por cada elemento del diccionario, una vez no hayan más elementos, el bucle se detendrá.
+- Para la condición `if-else`, puedes usar el diccionario para verificar si una clave está presente en él.
+- Esto se hace usando la palabra clave `in`, que devolverá `True` si la clave está presente y `False` si no lo está.
+```Python
+# Check if a key exists in the dictionary and perform different actions based on the result
+key = 'banana'
+if key in myDictionary:
+	print(f"The value of {key} is {myDictionary[key]}")
+else:
+	print(f"{key} is not found in the dictionary")
+```
