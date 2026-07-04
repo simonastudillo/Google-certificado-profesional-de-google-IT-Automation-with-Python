@@ -105,3 +105,14 @@ class Apple:
     def __str__(self):
         return "This apple is {} and its flavor is {}".format(self.color, self.flavor)
 ```
+
+---
+
+## Instance Methods
+- Los métodos son funciones que operan ​en los atributos de una instancia específica de una clase. 
+- Para llamar parámetros propios de la clase en los diferentes métodos, se utiliza el parámetro `self`. Este parámetro hace referencia a la instancia de la clase y permite acceder a sus atributos y métodos.
+- Ejemplo: `self.name` accede al atributo `name` de esa instancia específica del objeto de la clase.
+- Para setear un atributo podemos hacerlo de 2 formas:
+    1. Definiendo el atributo en el constructor `__init__` y luego modificándolo mediante un método de instancia.
+    2. Definiendo el atributo directamente en un método de instancia, sin necesidad de declararlo en el constructor. Esto permite crear atributos de manera dinámica según las necesidades de la instancia.
+- Las variables que tienen valores diferentes para distintas instancias ​de la misma clase se denominan variables de instancia
