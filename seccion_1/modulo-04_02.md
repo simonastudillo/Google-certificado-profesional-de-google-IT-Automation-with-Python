@@ -252,3 +252,37 @@ print(z)
 - Para saber cual va mejor con lo que quieres hacer preguntate:
     - ¿Cual hace mi código más legible y conciso?
     - ¿Cual hace mi código más facil de leer y entender para mi y para otros?
+
+---
+
+## Ejemplos de comprensión de listas
+- Crear una lista desde un iterable usando un `for loop`
+```Python
+# for loop
+new_list = []
+for thing in list_of_things:
+    new_list.append(do_something(thing))
+
+# comprehension
+new_list = [do_something(thing) for thing in list_of_things]
+```
+
+- Ejercicio práctico: 
+- Este ejercicio te guía paso a paso para escribir una comprensión de lista que cree una lista de números al cuadrado (n*n o n**2).
+- Debe devolver una lista de cuadrados de números consecutivos entre "inicio" y "fin", ambos inclusive. Por ejemplo, `squares(2, 3)` debería devolver una lista que contenga [4, 9].
+- La función recibe las variables "inicio" y "fin" a través de sus parámetros.
+- En la línea de retorno, comienza ingresando los corchetes [ ] que contendrán la comprensión de lista.
+- Entre los corchetes [ ]:
+- Ingresa la expresión aritmética para elevar al cuadrado la variable "n".
+- A la derecha de la expresión, escribe un bucle `for` que itere sobre "n" en un rango (`range()`) desde la variable "inicio" hasta la variable "fin".
+- Asegúrate de que el valor del rango "fin" esté incluido en el rango sumándole 1.
+- ¡Ejecuta tu código para comprobar si funciona! Si es necesario, la solución a este código se incluye en la lectura "Guía de estudio: Operaciones y métodos con listas" en el apartado "Grupo de habilidades 2" (comprensión de listas).
+```Python
+def squares(start, end):
+    return [n**2 for n in range(start, end+1)]
+
+
+print(squares(2, 3))    # Should print [4, 9]
+print(squares(1, 5))    # Should print [1, 4, 9, 16, 25]
+print(squares(0, 10))   # Should print [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```
