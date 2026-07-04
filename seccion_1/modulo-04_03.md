@@ -132,3 +132,25 @@ else:
 ## Connect: Tipos de iterables
 
 ![alt text](image-1.png)
+
+---
+
+## Guía de estudio: Métodos de diccionarios
+- Operadores:
+    - `len(diccionario)` - Devuelve el número de elementos en un diccionario.
+    - `for key in dictionary` - Itera sobre cada clave en un diccionario.
+    - `for key, value in dictionary.items()` - Itera sobre cada par clave-valor en un diccionario.
+    - `if key in dictionary` - Comprueba si una clave está en un diccionario.
+    - `diccionario[clave]` - Accede a un valor usando la clave asociada en un diccionario.
+    - `diccionario[clave] = valor` - Establece un valor asociado a una clave.
+    - `del diccionario[clave]` - Elimina un valor usando la clave asociada en un diccionario.
+    - `merged_dict = dict1 | dict2` - Crea un nuevo diccionario con los elementos combinados de ambos (por ejemplo, operador merge). Si ambos diccionarios comparten una clave, el valor de dict2 (el de la derecha) prevalece y sobrescribe el primero. (Python 3.9+)
+    - `dict1 |= dict2` - Operador de actualización: Actualiza el diccionario original con elementos de otro diccionario (por ejemplo, mediante el operador de actualización). (Python 3.9+)
+- Métodos:
+    - `diccionario.get(clave, valor_predeterminado)` - Devuelve el valor correspondiente a una clave, o el valor predeterminado si la clave especificada no está presente.
+    - `diccionario.claves()` - Devuelve una vista en tiempo real de las claves. Es iterable (se puede usar en bucles for), pero no indexable (no se puede usar [0]).
+    - `diccionario.valores()` - Devuelve un objeto de vista de los valores. Al igual que las claves, se actualiza automáticamente si el diccionario cambia.
+    - `diccionario[clave].append(valor)` - Agrega un nuevo valor a una clave existente solo si el valor es una secuencia mutable (por ejemplo, una lista).
+    - `diccionario.actualizar(otro_diccionario)` - Actualiza un diccionario con los elementos de otro diccionario. Se actualizan las entradas existentes y se agregan las nuevas.
+    - `diccionario.limpiar()` - Elimina todos los elementos de un diccionario.
+    - `diccionario.copiar()` - Crea una copia de un diccionario.
