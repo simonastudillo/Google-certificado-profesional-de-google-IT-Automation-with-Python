@@ -152,3 +152,50 @@ print("The area of both triangles is", triangle1 + triangle2)
 # The area of triangle 2 is 24.0 
 # The area of both triangles is 49.0
 ```
+
+---
+
+## Guía de estudio: Clases y métodos
+- Definir clases y métodos:
+```Python
+class ClassName:
+    def method_name(self, other_parameters):
+        body_of_method
+```
+- Clases e instancias
+    - Las clases definen el comportamiento de todas las instancias de una clase específica. En Python, el código que define una clase es, en sí mismo, un objeto; las clases se pueden usar sin instanciar un solo objeto, como cuando se utilizan métodos estáticos.
+    - Recuerda que cada variable de una clase específica es una instancia u objeto.
+    - En Python, los métodos `getter` y `setter` se utilizan para controlar el acceso a los atributos de un objeto. El método `getter` recupera el valor de un atributo, mientras que el método `setter` establece o cambia el valor del atributo, a menudo incluyendo algún tipo de validación o modificación de los datos antes de establecer el valor.
+    - Puedes acceder a un atributo de una instancia, como `name`, llamando a `self.name` dentro de los métodos de la clase, o a `<instance>.name` fuera de la clase, donde `<instance>` es la instancia específica de la clase con la que estás trabajando. Los objetos pueden tener atributos, que almacenan información sobre el objeto.
+    - Puedes hacer que los objetos realicen tareas llamando a sus métodos.
+    - El primer parámetro de los métodos, `self`, representa la instancia actual.
+    - Los métodos son similares a las funciones, pero solo se pueden usar dentro de una clase.
+    - Puedes usar métodos de clase junto con una variable de clase para llevar un registro del número de instancias de una clase, incrementando la variable de clase cada vez que se crea una instancia en el método `__init__` de la clase.
+- Métodos especiales
+    - Los métodos especiales comienzan y terminan con __.
+    - Los métodos especiales tienen nombres específicos, como __init__ para el constructor o __str__ para la conversión a cadena.
+    - Los métodos __str__ y __repr__ permiten definir representaciones de cadena legibles y sin ambigüedades de los objetos, respectivamente.
+    - Al definir métodos como __eq__, __ne__, __lt__, __gt__, __le__ y __ge__, se puede controlar cómo se comparan los objetos de la clase.
+
+```Python
+class ClassName:
+    """Documentation for the class."""
+    def method_name(self, other_parameters):
+        """Documentation for the method."""
+        body_of_method
+        
+def function_name(parameters):
+    """Documentation for the function."""
+    body_of_function
+
+
+def my_function(x):
+    """
+    Sample usage:
+    >>> my_function(“example input”)
+    "example output"
+    """
+    
+
+help(some_function)
+```
