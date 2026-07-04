@@ -206,3 +206,25 @@ print(full_emails([("alex@example.com", "Alex Diego"), ("shay@example.com", "Sha
 - Esto se puede hacer usando la función `enumerate()`.
 - La función `enumerate()` recibe una lista como parámetro y devuelve una tupla para cada elemento de la lista.
 - El primer valor de la tupla es el índice y el segundo valor es el elemento en sí.
+
+---
+
+## Reseña: Comprensión de listas
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+multiples = []
+for x in range(1,11):
+  multiples.append(x*7)
+
+print(multiples)
+
+multiples = [x*7 for x in range(1,11)]
+print(multiples)
+
+languages = ["Python", "Perl", "Ruby", "Go", "Java", "C"]
+lengths = [len(language) for language in languages]
+print(lengths)
+
+z = [x for x in range(0,101) if x % 3 == 0]
+print(z)
+```
