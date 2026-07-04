@@ -90,3 +90,11 @@ count_letters("aaaaa")
 count_letters("tenant")
 count_letters("a long string with a lot of letters")
 ```
+
+---
+
+## Iterando sobre el contenido de un diccionario
+- Puedes iterar sobre un diccionario usando un bucle `for`.
+- Por defecto, el bucle `for` iterará sobre las claves del diccionario.
+- Para obtener tanto la clave como el valor, puedes hacer un `unpacking` de los elementos del diccionario usando el método `items()`.
+- Para obtener solo las claves o los valores, puedes usar los métodos `keys()` y `values()`, respectivamente.
