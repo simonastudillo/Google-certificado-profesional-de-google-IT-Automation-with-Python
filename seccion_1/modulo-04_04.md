@@ -82,3 +82,26 @@ print(honeycrisp)
 
 # prints "an apple which is red and sweet"
 ```
+
+---
+
+## Métodos especiales
+- En lugar de crear clases con valores vacíos o predeterminados, podemos establecer estos valores al crear la instancia. Esto garantiza que no se omita ningún valor importante y evita muchas líneas de código innecesarias. Para ello, utilizamos un método especial llamado constructor. A continuación, se muestra un ejemplo de una clase Apple con un método constructor definido.
+```Python
+class Apple:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+
+jonagold = Apple("red", "sweet")
+print(jonagold.color)
+```
+- Además del método especial del constructor `__init__`, también existe el método especial `__str__`. Este método nos permite definir cómo se imprimirá una instancia de un objeto cuando se pase a la función `print()`. Si un objeto no tiene definido este método especial, utilizará la representación predeterminada, que imprimirá la posición del objeto en la memoria. No es muy útil. Aquí está nuestra clase `Apple`, con el método `__str__` añadido:
+```Python
+class Apple:
+    def __init__(self, color, flavor):
+        self.color = color
+        self.flavor = flavor
+    def __str__(self):
+        return "This apple is {} and its flavor is {}".format(self.color, self.flavor)
+```
