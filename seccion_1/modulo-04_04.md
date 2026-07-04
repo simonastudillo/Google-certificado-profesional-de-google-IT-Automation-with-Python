@@ -116,3 +116,39 @@ class Apple:
     1. Definiendo el atributo en el constructor `__init__` y luego modificándolo mediante un método de instancia.
     2. Definiendo el atributo directamente en un método de instancia, sin necesidad de declararlo en el constructor. Esto permite crear atributos de manera dinámica según las necesidades de la instancia.
 - Las variables que tienen valores diferentes para distintas instancias ​de la misma clase se denominan variables de instancia
+
+---
+
+## Métodos como operadores especiales
+- Los operadores especiales son símbolos o palabras clave específicos integrados que proporcionan un comportamiento especial al usarse con ciertos tipos de datos u objetos
+- En tu clase, puedes definir métodos para implementar o sobrescribir el comportamiento estándar de los operadores de Python, creando así métodos como operadores especiales
+
+- Diferentes tipos de operadores especiales:
+    - Operadores aritméticos. Incluyen + (suma), - (resta), * (multiplicación), / (división) y ** (exponenciación).
+    - Operadores de comparación. Incluyen == (igualdad), != (desigualdad), < (menor que) y >= (mayor o igual que).
+    - Operadores lógicos. Incluyen and, or y not.
+    - Operadores de asignación. Incluyen = (asignación simple), += (asignación de suma) y %= (asignación de módulo).
+- Realizar operaciones especiales
+    - Cada operador especial tiene un método `dunder` correspondiente que implementa la operación.
+```Python
+class Triangle:
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    def area(self):
+        return 0.5 * self.base * self.height
+
+    def __add__(self, other):
+        return self.area() + other.area()
+
+triangle1 = Triangle(10, 5)
+triangle2 = Triangle(6, 8)
+print("The area of triangle 1 is", triangle1.area())
+print("The area of triangle 2 is", triangle2.area())
+print("The area of both triangles is", triangle1 + triangle2)
+
+# The area of triangle 1 is 25.0 
+# The area of triangle 2 is 24.0 
+# The area of both triangles is 49.0
+```
