@@ -45,3 +45,49 @@
 - Algunas grandes empresas ofrecen cafeterías, gimnasios y guarderías en sus instalaciones, además de paquetes de beneficios para empleados completos y oportunidades de desarrollo profesional.
 - O tal vez prefieras trabajar en una empresa más pequeña donde puedas establecer relaciones laborales más cercanas con equipos reducidos.
 - Quizás te interese trabajar para una empresa que ofrezca horarios flexibles y opciones que te permitan trabajar desde casa, en la oficina o una combinación de ambos.
+
+---
+
+## Explorando carreras técnicas
+- Este Certificado Profesional de Google forma parte de un proyecto más amplio llamado [Crece con Google (GWG)](https://grow.google/).
+- GWG ofrece otras certificaciones que te ayudarán a seguir creciendo y a acceder a mejores oportunidades laborales.
+- Entre los certificados profesionales que se ofrecen se incluyen:
+
+1. Certificado Profesional de Análisis de Datos de Google
+- Lleva tus habilidades de programación al siguiente nivel con el lenguaje R en el Certificado Profesional de Análisis de Datos de Google, donde aprenderás:
+- Tipos y estructuras de datos
+- Cómo usar los datos para resolver problemas
+- Cómo analizar datos
+- Cómo contar historias con datos mediante visualizaciones
+- Cómo usar la programación en R para potenciar tu análisis
+- Para obtener más información sobre esta certificación, visita:
+- [Certificado Profesional de Análisis de Datos de Google](https://www.coursera.org/professional-certificates/google-data-analytics?utm_source=google&utm_medium=institutions&utm_campaign=gwgsite&_ga=2.162463295.2090059014.1666639119-999957063.1665442478)
+
+2. Certificado Profesional de Ingeniero de Redes en la Nube de Google
+- Amplía tus habilidades de automatización para gestionar máquinas virtuales en la nube. Descubre el Certificado Profesional de Ingeniero de Redes en la Nube, donde te prepararás para el examen de certificación de Ingeniero de Redes en la Nube de Google Cloud y aprenderás sobre:
+- Habilidades de ingeniería de redes en la nube
+- Implementación de VPC
+- Conectividad híbrida
+- Servicios de red
+- Seguridad para arquitecturas de red establecidas en Google Cloud
+- Para obtener más información sobre esta certificación, visita:
+- [Certificado Profesional de Ingeniero de Redes en la Nube](https://www.coursera.org/professional-certificates/google-cloud-networking#courses)
+
+- También puedes impulsar tu carrera profesional obteniendo cualquiera de estas certificaciones profesionales de Google Cloud:
+- [Certificado Profesional de Ingeniero de Redes en la Nube](https://www.coursera.org/professional-certificates/google-cloud-networking#courses)
+- [Especialización en Redes en Google Cloud](https://www.coursera.org/specializations/networking-google-cloud-platform)
+- [Especialización en Seguridad en Google Cloud](https://www.coursera.org/specializations/security-google-cloud-platform)
+- [Gestión de Proyectos de Google: Certificado Profesional](https://www.coursera.org/professional-certificates/google-project-management?utm_source=google&utm_medium=institutions&utm_campaign=gwgsite-gDigital-paidha-sem-bk-gen-exa-glp-br-null&_ga=2.188375912.1961931751.1662579108-93933645.1661442239&_gac=1.53335386.1662581105.Cj0KCQjwguGYBhDRARIsAHgRm4_ThGr6fU1Y69wQRJqSe4hRoAyagufS1Gxs5_2mKay1uQyK6qU_Hs4aAqT_EALw_wcB)
+- [Diseño UX de Google: Certificado Profesional](https://www.coursera.org/professional-certificates/google-ux-design?utm_source=google&utm_medium=institutions&utm_campaign=gwgsite-gDigital-paidha-sem-bk-gen-exa-glp-br-null&_ga=2.150176886.1961931751.1662579108-93933645.1661442239&_gac=1.83696996.1662579831.Cj0KCQjwguGYBhDRARIsAHgRm4_ThGr6fU1Y69wQRJqSe4hRoAyagufS1Gxs5_2mKay1uQyK6qU_Hs4aAqT_EALw_wcB#courses)
+
+3. Certificado de Soporte de TI de Google
+- Este programa lleva tus conocimientos básicos de TI al siguiente nivel, enseñándote a programar con Python y a automatizar tareas comunes de administración de sistemas.
+- A lo largo de 5 cursos, aprenderás:
+- Fundamentos de soporte técnico
+- Resolución de problemas y atención al cliente
+- Redes informáticas
+- Sistemas operativos
+- Administración de sistemas
+- Seguridad
+- Para obtener más información sobre esta certificación, visita:
+- [Certificado Profesional de Soporte de TI de Google](https://www.coursera.org/professional-certificates/google-it-support?utm_source=google&utm_medium=institutions&utm_campaign=gwgsite&_ga=2.262561167.2090059014.1666639119-999957063.1665442478)
