@@ -31,6 +31,6 @@ Repositorio de apuntes del Certificado Profesional de Google IT Automation with 
 
 ---
 
-## Cursos
+## Secciones
 
-### Curso 1: Crash Course on Python
+- Sección 1: [Curso intensivo de Python](./seccion_1/README.md)

@@ -1,0 +1,418 @@
+# List (listas)
+
+## Reseña: Qué es una lista?
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+x = ["Now", "we", "are", "cooking!"]
+
+type(x)
+print(x)
+len(x)
+"are" in x
+"Today" in x
+print(x[0])
+print(x[3])
+print(x[4])
+
+#This last line will throw an error
+
+x[1:3]
+x[:2]
+x[2:]
+```
+
+---
+
+## Qué es una lista?
+- Las listas están hechas para almacenar múltiples elementos en una sola variable.
+- Piensa en ellas como cajas largas con el espacio adentro del caja dividido en diferentes ranuras
+- cada una de ella contiene un valor asociado.
+- usamos los corchetes `[]` para crear una lista y separar los elementos con comas `,`.
+- Es del tipo `<class 'list'>` y puede contener cualquier tipo de dato, incluso otras listas.
+- Podemos usar funciones como `len()` para obtener el número de elementos en la lista
+- al igual que con las cadenas, podemos usar el operador `in` para verificar si un elemento está en la lista.
+- tambien, como en las cdenas podemos usar indices para acceder a los elementos de la lista, y podemos usar slicing para obtener sublistas.
+
+---
+
+## Listas definidas
+- Las listas se definen usando corchetes, con los elementos separados por comas: `my_list = ["This", "is", "a", "list"].`
+- Puedes usar la palabra clave `in` para comprobar si una lista contiene un elemento determinado. Si el elemento está presente, devolverá `True`. Si no se encuentra en la lista, devolverá `False`. - Por ejemplo, `"This"` en `my_list` devolvería `True` en nuestro ejemplo.
+- También puedes usar índices para acceder a elementos específicos según su posición.
+- Puedes acceder al primer elemento de una lista con `my_list[0]`, lo que te permitiría acceder a la cadena "This".
+- En Python, las listas y las cadenas son bastante similares.
+- Ambas son ejemplos de secuencias de datos. Las secuencias tienen propiedades similares, como:
+1. Poder iterar sobre ellas usando bucles `for`. 
+2. Admitir la indexación;
+3. Utilizar la función `len` para hallar la longitud de la secuencia;
+4. Utilizar el operador de suma (+) para concatenar; y
+5. Utilizar la palabra clave `in` para comprobar si la secuencia contiene un valor. Comprender estos conceptos permite aplicarlos también a otros tipos de secuencias.
+
+---
+
+## Reseña: Modificar el contenido de una lista
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.append("Kiwi")
+print(fruits)
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+print(fruits)
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+print(fruits)
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+fruits.remove("Melon")
+print(fruits)
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.remove("Pear")
+#This will throw an error
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+fruits.remove("Melon")
+fruits.pop(3)
+print(fruits)
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+fruits.remove("Melon")
+fruits.pop(3)
+fruits[2] = "Strawberry"
+print(fruits)
+```
+
+---
+
+## Modificar el contenido de una lista
+- La diferencia entre string y listas es que las listas son mutables, lo que significa que podemos cambiar sus elementos después de haberlas creado.
+- `append()` agrega un elemento al final de la lista.
+- `insert()` agrega un elemento en una posición específica de la lista.
+- `remove()` elimina un elemento de la lista.
+- `pop()` elimina un elemento de la lista en una posición específica y devuelve el elemento eliminado.
+- La diferencia entre `remove()` y `pop()` es que `remove()` elimina un elemento por su valor, mientras que `pop()` elimina un elemento por su índice.
+
+---
+
+## Reseña: Listas y tuplas
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+fullname = ('Grace', 'M', 'Hopper')
+
+def convert_seconds(seconds):
+  hours = seconds // 3600
+  minutes = (seconds - hours * 3600) // 60
+  remaining_seconds = seconds - hours * 3600 - minutes * 60
+  return hours, minutes, remaining_seconds
+result = convert_seconds(5000)
+type(result)
+
+def convert_seconds(seconds):
+  hours = seconds // 3600
+  minutes = (seconds - hours * 3600) // 60
+  remaining_seconds = seconds - hours * 3600 - minutes * 60
+  return hours, minutes, remaining_seconds
+result = convert_seconds(5000)
+print(result)
+
+def convert_seconds(seconds):
+  hours = seconds // 3600
+  minutes = (seconds - hours * 3600) // 60
+  remaining_seconds = seconds - hours * 3600 - minutes * 60
+  return hours, minutes, remaining_seconds
+result = convert_seconds(5000)
+hours, minutes, seconds = result
+print(hours, minutes, seconds)
+
+def convert_seconds(seconds):
+  hours = seconds // 3600
+  minutes = (seconds - hours * 3600) // 60
+  remaining_seconds = seconds - hours * 3600 - minutes * 60
+  return hours, minutes, remaining_seconds
+hours, minutes, seconds = convert_seconds(1000)
+print(hours, minutes, seconds)
+```
+
+---
+
+## Listas y tuplas
+- `string`: son una secuencia de caracteres, y son inmutables.
+- `list`: son una secuencia de elementos, y son mutables.
+- `tuple`: son una secuencia de elementos, y son inmutables.
+- Para definir una tupla, usamos paréntesis `()` en lugar de corchetes `[]`.
+- Ejemplo: `my_tuple = ("This", "is", "a", "tuple")`
+- Cuando usas tuplas, la posición de los elementos suelen tener un significado, por eso son inmutables.
+- Las tuplas se puedes descomponer en variables individuales, lo que se conoce como "unpacking". 
+- Esto es útil cuando una función devuelve múltiples valores, ya que podemos asignar cada valor a una variable diferente.
+- ejemplo: `hours, minutes, seconds = convert_seconds(5000)` asigna los valores devueltos por la función a las variables `hours`, `minutes` y `seconds`.
+
+---
+
+## Tuplas
+- Las tuplas son como las listas, en el sentido que pueden contener múltiples elementos de diferentes tipos, pero son inmutables.
+- Esto quiere decir que una vez que se crea una tupla, no se puede cambiar su contenido, ni agregar, ni eliminar elementos.
+- Son útiles cuando queremos preservar la integridad de los datos, ya que no se pueden modificar accidentalmente.
+- Son usados generalmente como valores de retorno de funciones, para devolver múltiples valores a la vez.
+
+---
+
+## Reseña: Iterando sobre listas y tuplas
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+animals = ["Lion", "Zebra", "Dolphin", "Monkey"]
+chars = 0
+for animal in animals:
+  chars += len(animal)
+
+print("Total characters: {}, Average length: {}".format(chars, chars/len(animals)))
+
+winners = ["Ashley", "Dylan", "Reese"]
+for index, person in enumerate(winners):
+  print("{} - {}".format(index + 1, person))
+
+def full_emails(people):
+  result = []
+  for email, name in people:
+    result.append("{} <{}>".format(name, email))
+  return result
+print(full_emails([("alex@example.com", "Alex Diego"), ("shay@example.com", "Shay Brandt")]))
+```
+
+---
+
+## Iterando sobre listas y tuplas
+- Podemos usar bucles `for` para iterar sobre listas y tuplas.
+- Esto se hace usando la sintaxis `for item in sequence:`, donde `sequence` puede ser una lista o una tupla.
+- Podemos usar la función `enumerate()` para obtener tanto el índice como el valor de cada elemento en la secuencia.
+- También podemos usar la técnica de "unpacking" para descomponer los elementos de una tupla en variables individuales dentro del bucle `for`.
+- Para descomponer una tupla en variables individuales, podemos usar la sintaxis `for var1, var2 in sequence:`, donde `sequence` es una lista de tuplas.
+- Error común: Querer acceder a un elemento de una lista o tupla usando un índice, aunque es común en otros lenguajes, en Python es posible pero no es recomendado, ya que es más eficiente iterar directamente sobre los elementos de la secuencia.
+
+---
+
+## Iterar sobre listas usando `enumerate()`
+- Los bucles `for` permiten recorrer cada elemento de la lista, pasando el elemento al bucle `for` como una variable.
+- ¿qué ocurre si queremos acceder a los elementos de una lista, junto con el índice del elemento en cuestión?
+- Esto se puede hacer usando la función `enumerate()`.
+- La función `enumerate()` recibe una lista como parámetro y devuelve una tupla para cada elemento de la lista.
+- El primer valor de la tupla es el índice y el segundo valor es el elemento en sí.
+
+---
+
+## Reseña: Comprensión de listas
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+multiples = []
+for x in range(1,11):
+  multiples.append(x*7)
+
+print(multiples)
+
+multiples = [x*7 for x in range(1,11)]
+print(multiples)
+
+languages = ["Python", "Perl", "Ruby", "Go", "Java", "C"]
+lengths = [len(language) for language in languages]
+print(lengths)
+
+z = [x for x in range(0,101) if x % 3 == 0]
+print(z)
+```
+
+---
+
+## Comprensión de listas
+- Si queremos crear una lista de forma rápida, podemos usar la comprensión de listas.
+- La comprensión de listas es una forma concisa de crear listas a partir de otras listas o secuencias.
+- La sintaxis básica es: `[expression for item in iterable]`:
+- `expression` es la expresión que se evaluará para cada elemento de la secuencia.
+- `item` es la variable que representa cada elemento de la secuencia.
+- `iterable` es la secuencia que se va a iterar.
+- Además podemos agregar una condición opcional al final de la comprensión de listas, usando la sintaxis: `[expression for item in iterable if condition]`.
+- En el ejemplo, `multiples = [x*7 for x in range(1,11)]` crea una lista de los primeros 10 múltiplos de 7.
+- Donde `x*7` es la `expresión` a evaluar y el valor a añadir a la lista
+- `x` es la variable que representa cada elemento de la secuencia `range(1,11)`, que es el `iterable` que se va a iterar. 
+
+---
+
+## Comprensión de listas vs bucles `for`
+- La comprensión de la lista tiene el bucle for, la compilación ​y construye la lista en una sola línea de código. 
+- ¿Cuando usar cada uno? NO hay un regla estricta, puedes usar el que te acomode más.
+- Sin embargo se aconseja usar la comprensión de listas cuando se trata de una operación simple, ya que es más concisa y legible.
+- Para saber cual va mejor con lo que quieres hacer preguntate:
+    - ¿Cual hace mi código más legible y conciso?
+    - ¿Cual hace mi código más facil de leer y entender para mi y para otros?
+
+---
+
+## Ejemplos de comprensión de listas
+- Crear una lista desde un iterable usando un `for loop`
+```Python
+# for loop
+new_list = []
+for thing in list_of_things:
+    new_list.append(do_something(thing))
+
+# comprehension
+new_list = [do_something(thing) for thing in list_of_things]
+```
+
+- Ejercicio práctico: 
+- Este ejercicio te guía paso a paso para escribir una comprensión de lista que cree una lista de números al cuadrado (n*n o n**2).
+- Debe devolver una lista de cuadrados de números consecutivos entre "inicio" y "fin", ambos inclusive. Por ejemplo, `squares(2, 3)` debería devolver una lista que contenga [4, 9].
+- La función recibe las variables "inicio" y "fin" a través de sus parámetros.
+- En la línea de retorno, comienza ingresando los corchetes [ ] que contendrán la comprensión de lista.
+- Entre los corchetes [ ]:
+- Ingresa la expresión aritmética para elevar al cuadrado la variable "n".
+- A la derecha de la expresión, escribe un bucle `for` que itere sobre "n" en un rango (`range()`) desde la variable "inicio" hasta la variable "fin".
+- Asegúrate de que el valor del rango "fin" esté incluido en el rango sumándole 1.
+- ¡Ejecuta tu código para comprobar si funciona! Si es necesario, la solución a este código se incluye en la lectura "Guía de estudio: Operaciones y métodos con listas" en el apartado "Grupo de habilidades 2" (comprensión de listas).
+```Python
+def squares(start, end):
+    return [n**2 for n in range(start, end+1)]
+
+
+print(squares(2, 3))    # Should print [4, 9]
+print(squares(1, 5))    # Should print [1, 4, 9, 16, 25]
+print(squares(0, 10))   # Should print [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+```
+
+---
+
+## Guía de estudio: Métodos y operaciones con listas
+- Conocimientos:
+    - `len(secuencia)` - Devuelve la longitud de la secuencia.
+    - `for element in sequence` - Itera sobre cada elemento de la secuencia.
+    - `if element in sequence` - Comprueba si el elemento forma parte de la secuencia.
+    - `secuencia[x]` - Accede al elemento en el índice [x] de la secuencia, comenzando en cero.
+    - `secuencia[x:y]` - Accede a una porción que comienza en el índice [x] y termina en el índice [y-1]. Si se omite [x], el índice comenzará en 0 por defecto. Si se omite [y], `len(secuencia)` establecerá la posición del índice final por defecto.
+    - `for index, element in enumerate(secuencia)` - Itera sobre los índices y los elementos de la secuencia simultáneamente.
+```Python
+for x in range(len(someList)):
+    print(x)
+# this will print out a numerical value up to the length of the original string
+```
+
+- Métodos y operadores especificos de listas:
+    - `lista[índice]` = x - Reemplaza el elemento en el índice [n] con x.
+    - `lista.append(x)` - Agrega x al final de la lista.
+    - `lista.insert(índice, x)` - Inserta x en la posición [índice].
+    - `lista.pop(índice)` - Devuelve el elemento en [índice] y lo elimina de la lista. Si [índice] no está en la lista, se devuelve y elimina el último elemento.
+    - `lista.remove(x)` - Elimina la primera aparición de x en la lista.
+    - `lista.sort()` - Ordena los elementos de la lista.
+    - `lista.reverse()` - Invierte el orden de los elementos de la lista.
+    - `lista.clear()` - Elimina todos los elementos de la lista.
+    - `lista.copy()` - Crea una copia de la lista.
+    - `lista.extend(other_list)` - Agrega todos los elementos de `other_list` al final de `lista`.
+    - `map(function, iterable)` - Aplica una función dada a cada elemento de un iterable (como una lista) y devuelve un objeto `map` con los resultados.
+    - `zip(*iterables)` - Recibe iterables como argumentos y devuelve un iterador que genera tuplas, donde la i-ésima tupla contiene el i-ésimo elemento de cada uno de los iterables proporcionados.
+
+---
+
+## Test your knowledge: Lists
+1. Fill in the blank using a for loop. With the given list of "filenames", this code should rename all files with the extension .hpp to the extension .h. The code  should then generate a new list called "new_filenames" that contains the file names with the new extension.
+- You are given a list of filenames like this:
+- filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+- Output the list with all of the ".hpp" files renamed to end with ".h". Leave the other filenames alone. For this question, you must use a for loop to create the list. 
+```Python
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+# Generate new_filenames as a list containing the new filenames
+# using as many lines of code as your chosen method requires.
+
+
+new_filenames = []
+for filename in filenames:
+    if filename.endswith("hpp"):
+        new_filenames.append(filename.replace(".hpp", ".h"))
+    else:
+        new_filenames.append(filename)
+
+
+print(new_filenames)
+# Should be ["program.c", "stdio.h", "sample.h", "a.out", "math.h", "hpp.out"]
+```
+
+2. Fill in the blank using a list comprehension. With the given list of "filenames", this code should rename all files with the extension .hpp to the extension .h. The code function should then generate a new list called "new_filenames" that contains the filenames with the new extension.
+- You are given a list of filenames like this:
+- filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+- Output the list with all of the “.hpp” files renamed to “.h”. Leave the other filenames alone. For this question, you must use list comprehension to create the list. 
+```Python
+filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+# Generate new_filenames as a list containing the new filenames
+# using as many lines of code as your chosen method requires.
+new_filenames = [file.replace('.hpp', '.h') for file in filenames]  # Start your code here
+
+
+print(new_filenames) 
+# Should print ["program.c", "stdio.h", "sample.h", "a.out", "math.h", "hpp.out"]
+```
+
+3. Create a function that turns text into pig latin. Pig latin is a simple text transformation that modifies each word by:
+    1. moving the first character to the end of each word;
+    2. then appending the letters "ay" to the end of each word.
+    - For example, "python" ends up as "ythonpay".
+    - Make sure that there is no trailing whitespace at the end of the return output.
+```Python
+def pig_latin(text):
+  say = ""
+  # Separate the text into words
+  words = text.split()
+  for word in words:
+    # Create the pig latin word and add it to the list
+    say += word[1:] + word[0] + "ay "
+    # Turn the list back into a phrase
+  return say.strip()
+    
+print(pig_latin("hello how are you")) # Should be "ellohay owhay reaay ouyay"
+print(pig_latin("programming in python is fun")) # Should be "rogrammingpay niay ythonpay siay unfay"
+```
+
+4. Which list method can be used to add a new element to a list at a specified index position?
+> list.insert(index, x)
+
+5. Tuples and lists are very similar types of sequences. What is the main thing that makes a tuple different from a list?
+> A tuple is immutable
+
+6. Fill in the blanks to complete the biography_list() function. This function reads in a list of tuples people, which contains the name, age, and profession of each person. Then, prints the sentence "__ is _ years old and works as __." 
+- For example, biography_list([("Ira", 30, "a Chef")]) should print: 
+- Ira is 30 years old and works as a Chef.
+```Python
+def biography_list(people):
+    # Iterate over each "person" in the given "people" list of tuples. 
+    for person in people:
+
+
+        # Separate the 3 items in each tuple into 3 variables:
+        # "name", "age", and "profession"   
+        name, age, profession = person
+
+
+        # Format the required sentence and place the 3 variables 
+        # in the correct placeholders using the .format() method.
+        print("{} is {} years old and works as {}.".format(name, age, profession))
+
+
+
+
+# Call to the function:
+biography_list([("Ira", 30, "a Chef"), ("Raj", 35, "a Lawyer"), ("Maria", 25, "an Engineer")])
+
+
+# Click Run to submit code
+
+
+# Output should match:
+# Ira is 30 years old and works as a Chef.
+# Raj is 35 years old and works as a Lawyer.
+# Maria is 25 years old and works as an Engineer.
+```
