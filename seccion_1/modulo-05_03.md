@@ -211,3 +211,37 @@
 Ejemplo de currículum
 ![alt text](image-2.png)
 [Link](https://docs.google.com/document/d/1OuGb1T5GHBF-WpR78AiONP8lijNcDFsbhWEB6-rmFR8/template/preview?usp=sharing)
+
+---
+
+## Diversidad e inclusión
+- La diversidad en el lugar de trabajo representa la forma en que las organizaciones y sus empleados conectan, se comprometen y respetan a las personas con todo tipo de diferencias
+- Las empresas con buenas métricas de DEI tienden a tener mayores tasas de retención de empleados, empleados más satisfechos y una mayor innovación.
+- Examine la dirección de la empresa en la que desea trabajar
+- Las personas que trabajan en el nivel ejecutivo suelen ser un buen indicador del grado de diversidad y representación de sus empleados
+- Si la dirección ejecutiva de una empresa no adopta la diversidad, los empleados tendrán más dificultades para crear y mantener esa cultura. Algunas preguntas que debe hacerse al investigar sobre las empresas
+    - ¿Comparte la empresa abiertamente sus progresos?
+    - ¿Ofrecen oportunidades de educación y formación para aprender más sobre la DEI y cómo afecta a las personas en el lugar de trabajo?
+- Hay varias formas de evaluar si una empresa practica o no la diversidad y la inclusión. He aquí algunos recursos para explorar y conocer mejor la empresa:
+    - La página web de la empresa. Evalúe sus valores fundamentales, su historia, su misión y sus palabras clave. Comprueba si su sitio web incluye fotografías de sus empleados.
+    - Sus redes sociales. ¿Qué tipo de fotos y contenidos publican? Comprueba si hay fotos de sus empleados, salidas a la comunidad, si reconocen o celebran diversos acontecimientos o momentos históricos como el mes del orgullo, el mes de la historia negra o el día mundial de la salud mental, por poner un par de ejemplos.
+    - Entreviste a antiguos empleados. Realice entrevistas informativas para conocer mejor la empresa en general y asegurarse de que la cultura del lugar de trabajo se adapta bien a usted.
+- Sesgo implícito o inconsciente
+    - El sesgo inconsciente o implícito se refiere a las actitudes, estereotipos, juicios o prejuicios que tenemos inconscientemente en nuestro cerebro.
+    - Este sesgo hace que nuestras reacciones, pensamientos y predisposición a la información, acciones o entornos se alteren de una manera determinada, ya sea positiva o negativa, sin que seamos conscientes de ello.
+    - Ocurre fuera de nuestro control y puede afectar a nuestras decisiones, acciones y comprensión.
+    - Los prejuicios inconscientes están asociados a muchas características, como la raza, la etnia, el sexo, la religión, la orientación sexual, el nivel socioeconómico y el nivel educativo
+        - Sesgo de afinidad, que se refiere a las preferencias a la hora de elegir a las personas con las que conectar. Estas personas comparten intereses, experiencias y antecedentes similares a los suyos.
+        - El sesgo de atribución, que se refiere a la forma en que percibes tus acciones en comparación con las de los demás. Este sesgo se asocia sobre todo a la forma de percibir el éxito y el fracaso.
+        - La discriminación por edad, que se refiere a sentimientos negativos o discriminaciones contra alguien por su edad.
+        - El sesgo de belleza, que consiste en relacionar el aspecto físico de una persona con su éxito, competencia o cualificaciones.
+        - Prejuicio de género: preferencia por un género en detrimento de otros.
+        - Sesgo de aptitud, que se refiere a percibir a las personas sin discapacidad como la norma y a las personas con discapacidad como que deben esforzarse por rendir al mismo nivel que las personas sin discapacidad sin las adaptaciones necesarias.
+    - Para identificar nuestros propios sesgos, es importante saber cuáles son algunas de las causas del sesgo inconsciente/implícito. El sesgo se produce porque, como seres humanos, somos susceptibles a las tendencias y somos criaturas de hábitos.
+    - Lo cierto es que, sean cuales sean las causas, somos susceptibles al sesgo implícito, y esto podría afectar a nuestras relaciones en el trabajo, a la forma en que nos comportamos en determinadas ocasiones, a las decisiones que tomamos y a cómo reaccionamos en nuestro entorno laboral.
+- Puntos clave
+    - Todos somos humanos, cada uno con nuestros propios pensamientos y opiniones. Es importante reconocer que no todos pensamos igual.
+    - El sesgo inconsciente/implícito es un resultado inevitable del ser humano y puede influir en las decisiones cotidianas de nuestra vida personal y profesional.
+    - Asegúrate de ser consciente de los sesgos inconscientes/implícitos cuando estés en el lugar de trabajo teniendo una mentalidad abierta.
+    - Una cultura de la diversidad, la equidad y la inclusión comienza con el liderazgo ejecutivo en cualquier organización.
+    - La educación y la formación continuas son muy importantes y eficaces para reducir los prejuicios en el trabajo y promover una cultura de diversidad, equidad e inclusión.
