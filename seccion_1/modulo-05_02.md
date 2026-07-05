@@ -6,3 +6,10 @@
 - Amplía tu red de contactos: Conecta con otros estudiantes de todo el mundo, crea relaciones y expande tu círculo profesional.
 - Descubre oportunidades laborales: Explora trayectorias profesionales, comparte ofertas de empleo y recibe consejos de otros profesionales del sector.
 - [link](https://www.coursera.support/s/group-invite?id=MEY5OFcwMDAwMDB3bWt0U0FB)
+
+---
+
+## Felicidades
+- Sientete orgulloso de tu logro
+- Desarrollar una carrera exitosa en TI requiere perseverancia, curiosidad y ​determinación, tres cualidades que has demostrado tener al llegar tan lejos
+- También requiere habilidades y conocimientos, y ​Python básico es definitivamente una herramienta poderosa en su caja de herramientas de TI
