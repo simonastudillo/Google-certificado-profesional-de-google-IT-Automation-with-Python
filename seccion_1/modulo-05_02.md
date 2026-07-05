@@ -88,3 +88,12 @@ square brackets
 - Variables: These are used to temporarily store changeable values in programming code
 - While loop: This is used when a segment of code needs to execute repeatedly while a
 condition is true
+
+---
+
+## Un adelanto del próximo curso.
+- Aprenderás cómo Python ​interactúa con el sistema operativo
+- Vamos a explicar cómo configurar ​tu propio entorno de desarrollo en Python ​y, en poco tiempo, ​empezarás a sentirte cómodo al usar ​códigos que interactúan con el sistema. 
+- También manipularemos los archivos y ​procesos que se ejecutan en el sistema operativo ​y nos sumergiremos en RegEx
+- Incluso vas a escribir un guion que podría ser ​similar a una tarea que te asignarían en tu trabajo
+- Linux abre todo un mundo ​de personalización y configuración, ​y me parece muy interesante. ​Tenemos muchos conceptos poderosos
