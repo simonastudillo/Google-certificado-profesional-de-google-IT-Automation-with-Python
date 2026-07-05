@@ -331,3 +331,32 @@ with open(cwd / "data/users_in.csv", "r") as file_input, open(cwd / "data/users_
 ```Python
         writer.writerow(user)
 ```
+
+---
+
+## Diálogo con el entrenador: Planificación para soluciones Python eficientes
+- En este diálogo, exploraremos cómo aplicar técnicas de planificación a necesidades comunes de programación.
+- Esto es lo que cubriremos:
+- Comprender la importancia de planificar antes de empezar a programar.
+- Diferenciar entre el método `.sort()` y la función `sorted()` de Python.
+- Mejorar la eficiencia del código planificando la solución de forma eficaz.
+
+> Coach: Great! Imagine you're tasked with organizing a list of computer serial numbers for a new IT project. Before you even write a single line of code, what is the very first critical step in the planning phase, and why is it essential?
+> Me: We need to verify the information we have and how we want the final information to be displayed, so we can plan the next steps.
+> Coach: That's a good start! You've touched on understanding the desired output. To elaborate a bit, why is it so important to thoroughly understand the problem and the information you have before you even think about writing code?
+> Me: It's important to know what data we'll have available to sort, filter, and verify if validations are needed, and what the most efficient way to do it might be. If we write code without knowing what data is coming in, it's very likely to fail and we'll have to modify the code.
+> Coach: Excellent! You've highlighted the crucial point that understanding the input data and potential validations helps prevent errors and rework, leading to more efficient code. Now, let's move on to Linking Planning to Effective Coding. How does identifying the inputs and outputs help you write clearer code?
+> Me: It helps us identify steps; we can do it first on paper or in words. If we need to use a field to filter or if it should have different behavior, knowing what that field will be called is vital.
+> Coach: That's a great way to put it! Planning on paper or in words helps you map out the logic and anticipate how different data fields will be used. This clarity directly contributes to writing code that is easier to understand and maintain. Now, thinking about organizing those serial numbers, how would planning help you choose the right Python sorting method, and what are some differences between .sort() and sorted()?
+> Me: The difference between .sort() and .sorted() is that the former modifies the current list, while the latter generates a new list with the data already sorted. In this case, we could use .sort() unless we need to compare the input data against the sorted data.
+> Coach: Good work! You've accurately described the main difference between .sort() and sorted() and even considered a scenario for when to use .sort(). To expand your knowledge, can you think of a situation where using the key argument with either of these sorting methods would be beneficial?
+> Me: Of course, we can sort them using the key argument and thus sort by category, by type, department or some other data that comes in the entry; it could even be sorted by date of age if it has one
+> Coach: That's a perfect explanation! Using the key argument allows for much more flexible sorting based on specific criteria like category, type, or even a custom function. This shows a solid understanding of how to tailor sorting to your specific needs. Now, let's move on to Summarizing Planning and Efficiency. How does the planning phase, coupled with a solid understanding of Python tools like sorting methods, collectively work towards creating a reliable and efficient script?
+> Me: Planning is fundamental to knowing what we have to do, what we are doing, and what we still need to do; knowing the limits of what a function should handle at a micro level and its importance at a macro level
+> Coach: You're doing a great job! You clearly understand the essential steps for planning an efficient coding solution. Your explanation highlights how planning provides a roadmap, ensuring you're aware of the scope and purpose of your code at both micro and macro levels. This foresight is key to building reliable and efficient scripts. Good job, you have completed all the topics for our session. Up next - view your feedback.
+
+- During today's session covering how to apply planning techniques to common coding needs, we focused on understanding the importance of planning before coding, differentiating between Python's .sort() and sorted() methods, and improving code efficiency through effective planning.
+- Your strengths:
+- You accurately identified the importance of understanding the problem and input data to prevent errors and rework.
+- You clearly articulated the difference between .sort() and sorted() and provided a good example of when to use the key argument for flexible sorting.
+- Keep up the good work!
