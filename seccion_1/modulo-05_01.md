@@ -201,3 +201,12 @@ print(users)
 
 generate_report(users)
 ```
+
+---
+
+## Unir las piezas
+- Se crea un ejemplo de la clase Event y se crea una lista de eventos
+- Se llama a la función current_users con la lista de eventos y se imprime el diccionario resultante
+- Se llama a la función generate_report con el diccionario resultante y se imprime el informe en la pantalla
+- El resultado final: 2 máquinas con usuarios conectados y 1 máquina sin usuarios conectados
+- Luego en el reporte se imprimen las 2 máquinas con usuarios conectados y no se imprime la máquina sin usuarios conectados
