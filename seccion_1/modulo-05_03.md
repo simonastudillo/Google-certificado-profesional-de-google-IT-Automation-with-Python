@@ -91,3 +91,123 @@
 - Seguridad
 - Para obtener más información sobre esta certificación, visita:
 - [Certificado Profesional de Soporte de TI de Google](https://www.coursera.org/professional-certificates/google-it-support?utm_source=google&utm_medium=institutions&utm_campaign=gwgsite&_ga=2.262561167.2090059014.1666639119-999957063.1665442478)
+
+---
+
+## Adapta tu currículum
+- Mientras se prepara para su búsqueda de empleo, necesitará crear o actualizar su currículum para reflejar su experiencia con el fin de solicitar puestos como:
+    - Ingeniero de automatización
+    - Desarrollador de Python de nivel básico
+    - Especialista en Asistencia de TI II
+    - Ingeniero de software principiante
+    - Ingeniero de redes
+    - ...y otros puestos similares
+- Adapta el contenido
+    - Identifica lo que es importante para el empleador potencial.
+        - ¿Qué quiere saber de ti? Asegúrate de leer detenidamente la descripción del puesto y fíjate en qué habilidades se mencionan. 
+        - También puede leer varias descripciones del mismo tipo de puesto para saber qué competencias y requisitos aparecen con frecuencia. 
+        - Por ejemplo, aunque los detalles varían según el puesto y el empleador, muchas funciones relacionadas con la automatización de Python requieren la capacidad de organizar y coordinar eficazmente equipos y proyectos, gestionar varias tareas a la vez y comunicarse con eficacia
+        - Deberías tomar nota de estas habilidades y asegurarte de destacarlas utilizando términos similares en tu currículum.
+    - Crea un currículum principal para editarlo y adaptarlo a cada solicitud de empleo
+        - Asegúrese de que el orden de sus competencias y cualificaciones coincide con la descripción del puesto
+        - De este modo, te aseguras de que lo más importante para el empleador está en primer lugar
+    - Concuerde con el lenguaje utilizado en la descripción del puesto
+        - Algunas empresas utilizan programas de automatización para filtrar los currículos
+        - Si la descripción del puesto utiliza palabras clave como servicios en la nube y Gestión de riesgos, asegúrate de que tu currículum también las utiliza.
+    - Utiliza terminología de automatización de Python
+        - ayudará al responsable de contratación que lea tu currículum a entender por qué tu experiencia anterior es relevante para el puesto al que optas.
+    - Decide qué no incluir en tu currículum
+        - Puede que tengas algunas habilidades que sean importantes para ti, pero esas mismas habilidades pueden confundir o distraer a los responsables de contratación que lean tu currículum.
+    - Destaque cómo su experiencia y sus habilidades son relevantes para el puesto
+        - Si has estado trabajando como Especialista en Asistencia de TI pero quieres convertirte en Ingeniero de Automatización de Python, tus habilidades para solucionar problemas serán esenciales en tu nuevo puesto.
+        - Asegúrate de señalar cómo esas habilidades serán beneficiosas para el empleador. 
+- Elija un formato adecuado
+    - El diseño de tu currículum debe ser sencillo y fácil de entender tanto para los lectores humanos como para los de Inteligencia artificial
+    - No querrás que tu currículum sea descartado antes de que una persona real tenga la oportunidad de leerlo.
+    - Tu currículum debe ser fácil de leer y comunicar toda la información importante en breves viñetas.
+    - Su currículum debe tener entre una y dos páginas y contener sólo los últimos diez o quince años de experiencia relevante.
+    - Es apropiado utilizar dos columnas en un currículum de una página, pero si tu currículum es de dos páginas, asegúrate de utilizar todo el ancho de la página.
+- Actualice las secciones pertinentes
+    - Información de contacto
+    - Resumen profesional
+    - Competencias básicas
+    - Experiencia profesional
+    - Formación y certificaciones
+
+>[!TIP]
+>  Los currículos deben redactarse en tercera persona y no deben contener pronombres personales.
+
+- Información de contacto
+    - El encabezado debe incluir la siguiente información
+        - Tu nombre en un tipo de letra más grande que el resto del currículum
+        - La ciudad y el estado en que vives ( no es necesario que incluyas tu dirección por motivos de privacidad)
+        - Tu número de teléfono y un enlace a tu dirección de correo electrónico
+        - Enlace a la URL de su perfil de LinkedIn
+        - Enlaces a otros sitios web personales o portafolios, si son aplicables al puesto que solicita
+    - El encabezamiento debe ser pertinente, sencillo y fácil de leer
+- Resumen profesional
+    - Utilízalo para establecer el tono
+        - Debe constar de una a tres líneas y explicar claramente por qué es usted el mejor candidato para el puesto.
+        - Debe mostrar las cosas más importantes que quieres que el lector sepa de ti.
+        - Si está solicitando un nuevo puesto, querrá actualizar su especialidad sectorial.
+        - Es probable que tenga experiencia relacionada con el pensamiento crítico y la resolución de problemas complejos. 
+        - Querrá incorporar esa experiencia relevante a su nuevo resumen profesional.
+        - Asegúrese de adaptar la descripción de sí mismo al puesto que solicita.
+    - Combine la descripción del puesto que solicita con su experiencia
+    ```txt
+    Ingeniero de automatización con dos años de éxito demostrado en la resolución de problemas complejos. Hábil en la colaboración interfuncional y la ejecución de proyectos. Comunicador elocuente que se desenvuelve bien en un entorno de colaboración orientado a los resultados.
+
+    Ingeniero de automatización de nivel básico. Dominio de Python y Bash, computación en la nube y depuración de código. Hábil en la colaboración con equipos técnicos para identificar e implementar soluciones para problemas técnicos.
+    ```
+    - Utiliza palabras clave de la descripción del puesto para describirte
+        - Si en la descripción del puesto se indica que la empresa busca un candidato con conocimientos de computación en la nube, Linux o secuencias de comandos Bash, debe añadirlo a su currículum: usted ha adquirido esos conocimientos con esta certificación.
+
+>[!TIP]
+> No olvide utilizar esta sección para destacar algo que le haga sobresalir de los demás candidatos. Utilice un logro de un puesto anterior para mostrar al empleador lo que puede ofrecerle. Echa un vistazo a este ejemplo de sección de resumen profesional:
+
+- Competencias básicas
+    - Tus competencias básicas deben ser una lista con viñetas de las habilidades más relevantes aplicables al puesto al que optas.
+    ```txt
+    Competencias principales
+    - Codificación en Python                            - Git y GitHub
+    - Programación orientada a objetos (POO)            - Computación en la nube con Google Cloud
+    - Automatización de scripts                         - Administración de configuraciones con Puppet
+    - Solución avanzada de problemas y depuración       - Secuencias de comandos Bash
+    ```
+
+>[!TIP]
+> Estudia la descripción del puesto en busca de las competencias básicas que has adquirido durante esta certificación y tu experiencia anterior y, a continuación, utiliza esas habilidades como viñetas en esta sección.
+> Asegúrate de que esta sección sea relativamente corta, con entre cuatro y ocho viñetas.
+
+
+- Experiencia profesional
+    - La sección de experiencia profesional de tu currículum ofrece un resumen de las funciones y puestos que has ocupado a lo largo de tu carrera
+    - Enumere al menos tres puestos en orden cronológico inverso e incluya únicamente lo más relevante para el puesto al que opta.
+    - Tu experiencia profesional no cambiará mucho respecto a currículos anteriores, porque no puedes cambiar las funciones que has desempeñado en el pasado.
+    - Sin embargo, puedes reescribir algunas de tus viñetas para relacionarlas con los requisitos del puesto al que aspiras.
+    - Asegúrate de que relacionas la jerga del sector con tu experiencia previa para mostrar al lector -normalmente un responsable de contratación- cómo se relacionan tus habilidades con el puesto anunciado.
+    - Puedes utilizar términos como resolución de problemas, pensamiento crítico, pruebas, implementación y mantenimiento de software para mostrar al lector que tu experiencia previa se traduce en un puesto de automatización de Python o de ingeniería de software.
+        - **Problema** que había que resolver
+        - **Acción(es)** que emprendí
+        - **Resultado** de la acción
+        - **Impacto** en el proyecto (usuarios, calidad, etc.)
+        - **Justificantes** (premios, bonificaciones, etc.)
+
+>[!TIP]
+>  Asegúrate de que tu currículum transmite cómo tus logros anteriores son valiosos para el puesto al que optas. Muestra al lector cómo puedes marcar la diferencia en su organización. Una forma fácil de recordar esto es a través del marco P.A.R.I.S.:
+
+
+- Formación y certificados
+    - En esta sección de tu currículum, debes incluir todos los títulos posteriores al bachillerato en orden cronológico inverso.
+    - Para cada titulación, indique el título obtenido, la institución, el lugar y la fecha de graduación.
+    - En esta sección también debe enumerar todas las certificaciones, licencias o credenciales profesionales que posea.
+    - Aquí es donde debes incluir tu nuevo certificado profesional de Google.
+
+>[!TIP]
+> Siempre es una buena idea pedir a alguien que revise tu currículum en busca de errores ortográficos o gramaticales.
+> Los responsables de contratación suelen desechar los currículos que contienen errores tipográficos.
+> Una vez que esté seguro de que su currículum no contiene errores, ¡es hora de empezar a buscar trabajo!
+
+Ejemplo de currículum
+![alt text](image-2.png)
+[Link](https://docs.google.com/document/d/1OuGb1T5GHBF-WpR78AiONP8lijNcDFsbhWEB6-rmFR8/template/preview?usp=sharing)
