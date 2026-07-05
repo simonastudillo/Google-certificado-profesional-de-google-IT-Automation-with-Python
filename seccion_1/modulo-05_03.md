@@ -245,3 +245,31 @@ Ejemplo de currículum
     - Asegúrate de ser consciente de los sesgos inconscientes/implícitos cuando estés en el lugar de trabajo teniendo una mentalidad abierta.
     - Una cultura de la diversidad, la equidad y la inclusión comienza con el liderazgo ejecutivo en cualquier organización.
     - La educación y la formación continuas son muy importantes y eficaces para reducir los prejuicios en el trabajo y promover una cultura de diversidad, equidad e inclusión.
+
+---
+
+## Ascender
+- Sabes que tienes las herramientas de Python y automatización para avanzar con éxito en tu carrera
+- Quizá te interese utilizar tus conocimientos de Python para analizar datos o desarrollar software.
+- Puede que estés considerando utilizar tus conocimientos de automatización para agilizar el mantenimiento de una red Linux o un entorno en la nube.
+- ¿Cuáles son las oportunidades de crecimiento en tu organización? ¿Apoyan la formación? ¿Se trata de un trabajo de transición? ¿Es el trabajo de tus sueños?
+- Todas estas preguntas deben tenerse en cuenta a la hora de planificar tus próximos pasos. Después de responder a esas preguntas básicas, tienes que preparar y espaciar tus próximos pasos en consecuencia
+- Lo primero que debe tener en cuenta al planificar un ascenso es rendir por encima de la media en su puesto actual. 
+- Esto significa demostrar a tu jefe que no sólo eres capaz de hacer tu trabajo actual, sino también de asumir mayores responsabilidades. ¿Cómo conseguirlo?
+    - Trabajando en tu desarrollo.
+        - Siempre debes esforzarte al máximo para sobresalir en tu trabajo.
+        - Puedes destacar entre la multitud añadiendo valor a tus contribuciones a la empresa.
+        - ¿Cómo mejoras la eficiencia, ahorras dinero, aportas nuevos ingresos? Para tener la oportunidad de conseguir ese ascenso, tienes que ser el empleado que da más cada día, dispuesto a asumir nuevas responsabilidades.
+    - Demuestra liderazgo y sé un jugador de equipo.
+        - Demostrar que eres un jugador de equipo y que puedes asumir funciones de liderazgo te ayudará a que tu jefe se fije en ti.
+        - Esfuérzate por ser un modelo a seguir, gánate el respeto de tus compañeros y motiva a los miembros de tu equipo.
+        - En otras palabras, muestre y desarrolle cualidades que le conviertan en un buen líder.
+    - Continúe formándose.
+        - Cuando desarrolle su trayectoria profesional, tenga en cuenta y planifique futuras certificaciones y formación.
+        - Por ejemplo, si estás pensando en pasar de programador de Python a Analista de datos, planifica la obtención de un nuevo certificado, como el de Google Analytics.
+        - Consulta los requisitos del puesto de Analista de datos de tu empresa y mejora tus habilidades en consecuencia.
+    - Mantén una ética de trabajo sólida.
+        - Sé siempre puntual en el trabajo, ofrece un excelente servicio al cliente, cumple los plazos, destaca en tu trabajo, sé respetuoso y colabora con tus compañeros.
+    - Comunícate con tu jefe, tus compañeros y tus clientes.
+        - La buena comunicación es una característica clave en cualquier tipo de trabajo, pero cuando buscas un ascenso, necesitas destacar en tu forma de comunicarte.
+        - Es fundamental saber comunicarse. Te ayudará a planificar tu carrera profesional y añadirá algo de formación en comunicación al desarrollo de tus habilidades.
