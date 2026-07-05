@@ -257,3 +257,77 @@ print(users)
 
 generate_report(users)
 ```
+
+---
+
+## Python en acción
+- Felicidades por tu avance, aprendiste a:
+1. Identificar un problema
+2. Investigar las formas de solucionarlo
+3. Planificar la mejor estrategía para llevarlo a cabo, como se hace y como estructurar el código
+4. Escribir el código y resolver el problema
+5. Ejecutar y verificar que el código funciona correctamente
+
+- El problema y solución
+Imagina este escenario: Cada mes, recibes una hoja de cálculo con cientos de nuevos empleados. Se te pide que crees cuentas de usuario para todos ellos en un servidor Linux. El formato de la hoja de cálculo es el siguiente:
+```
+username,password,real_name
+
+amanda,,Amanda Alonso
+
+ian,,Ian Ortega
+
+eugene,,Eugene Konya
+
+[...]
+```
+Observa que el campo de contraseña está vacío en todos los registros. Esto significa que debes generar contraseñas aleatorias para cada usuario y luego crear sus cuentas. También necesitas guardar las contraseñas generadas en un nuevo archivo CSV para poder comunicárselas a los nuevos empleados.
+
+Esta tarea no es difícil, pero consume mucho tiempo si creas las contraseñas y cuentas para los cientos de nuevos empleados una por una. La solución es automatizar esta tarea con Python.
+
+- El script
+Para ayudar a organizar todos los datos, crear cuentas para los nuevos empleados y generar contraseñas para cada nuevo usuario, primero debe importar algunas bibliotecas estándar de Python.
+- `import csv` - Esta biblioteca proporciona funciones para leer y escribir archivos CSV.
+- `import secrets` - Esta biblioteca proporciona funciones para generar contraseñas aleatorias seguras.
+- `import subprocess` - Esta biblioteca proporciona funciones para ejecutar comandos del sistema operativo desde Python, además permite usar el comando `useradd` para crear cuentas de usuario en un sistema Linux.
+- `from pathlib import Path` - Esta biblioteca proporciona funciones para trabajar con rutas de archivos y directorios de manera más sencilla y legible.
+
+- Comencemos
+- Antes de comenzar usemos el comando `cwd = Path.cwd()` para obtener el directorio de trabajo actual
+- Luego usemos a `with` y la `keyword` `as`. El uso de `with` nos ayuda a manejar recursos y `as` crea un alias para el recurso que quieres llamar.
+```Python
+with open(cwd / "data/users_in.csv", "r") as file_input, open(cwd / "data/users_out.csv", "w") as file_output:
+```
+- La librería `csv`se encarga de leer y parsear al entrada desde el fichero.
+- Luego puedes usar un `DictReader`, de esta forma cada fila del archivo CSV se convertirá en un diccionario.
+```Python
+    reader = csv.DictReader(file_input)
+```
+- La entrada para el script esta listo, ahora necesitamos crear la salida.
+- Crea el `DictWriter` y usa los mismo campos de la entrada para crear la salida. Luego escribe el encabezado en el archivo de salida.
+```Python
+    writer = csv.DictWriter(file_output, fieldnames=reader.fieldnames)
+    writer.writeheader()
+```
+- Ahora puedes crear un log para revisar cada fila
+```Python
+    for user in reader:
+        print(user)
+```
+- Despues del loop, usa la librería de `secrets`,  genera una contraseña aleatoria de 8 bits, equivalente a 16 caracteres en total. 
+- Luego ejecuta `/sbin/useradd` para crear cada usuario
+- Usar el parámetro `check=True` para asegurarte de que si el comando falla, se lanzará una excepción y podrás manejarla adecuadamente.
+```Python
+        user["password"] = secrets.token_hex(8)
+        useradd_cmd = ["/sbin/useradd",
+                       "-c", user["real_name"],
+                       "-m",
+                       "-G", "users",
+                       "-p", user["password"],
+                       user["username"]]
+        subprocess.run(useradd_cmd, check=True)
+```
+- Por último , escribe la fila en el archivo de salida
+```Python
+        writer.writerow(user)
+```
