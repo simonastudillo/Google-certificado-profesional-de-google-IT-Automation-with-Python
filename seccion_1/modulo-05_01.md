@@ -133,3 +133,23 @@ def generate_report(machines):
             user_list = ",".join(users)
             print("{}: {}".format(machine, user_list))
 ```
+
+---
+
+## Escribir el Script
+- Empecemos definiendo ​la función de ayuda que usaremos para ordenar la lista.
+- Usaremos la función simple como ​parámetro de la función de ordenación para ordenar la lista
+- Ahora estamos listos para empezar a codificar nuestra función de procesamiento, ​a la que llamaremos `current_users`
+- Dentro de la función, primero ordenaremos nuestros eventos usando ​el método sort y pasando ​la función que acabamos de crear como clave. 
+- antes de empezar a iterar por nuestra lista de eventos, ​necesitamos crear el diccionario donde ​almacenaremos los nombres y usuarios de una máquina
+- A continuación, queremos comprobar si ​la máquina afectada por este evento está en el diccionario. ​Si no lo está, la añadiremos con un conjunto vacío como valor
+- para los eventos de inicio de sesión, ​queremos añadir el usuario a la lista, ​y para los eventos de cierre de sesión, ​queremos eliminar el usuario de la lista
+- Para ello, vamos a utilizar los métodos add y remove, ​que añaden y eliminan elementos de un conjunto
+- Una vez que hayamos terminado de iterar por la lista de eventos, ​el diccionario contendrá todas las máquinas que hemos visto como claves
+- crearemos una nueva función llamada `generate_report`
+- En nuestro informe, queremos iterar ​sobre las claves y valores del diccionario. ​Para ello, utilizaremos el método items que devuelve ​tanto la clave como el valor de cada par del diccionario. 
+- antes de imprimir nada, ​queremos asegurarnos de no imprimir ​ninguna máquina en la que no haya nadie conectado
+- Para evitarlo, le decimos al ordenador que sólo imprima ​cuando el conjunto de usuarios tenga más de cero elementos
+- Ahora, hemos dicho antes que queremos imprimir ​el nombre de la máquina seguido de ​los usuarios conectados a la máquina separados por comas.
+- ​Generemos la cadena de usuarios logueados para ​esa máquina usando el método join.
+- ​Ahora, podemos generar la cadena que queremos usando el método format.
