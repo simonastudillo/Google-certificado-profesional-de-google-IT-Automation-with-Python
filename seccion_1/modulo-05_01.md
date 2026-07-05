@@ -360,3 +360,58 @@ with open(cwd / "data/users_in.csv", "r") as file_input, open(cwd / "data/users_
 - You accurately identified the importance of understanding the problem and input data to prevent errors and rework.
 - You clearly articulated the difference between .sort() and sorted() and provided a good example of when to use the key argument for flexible sorting.
 - Keep up the good work!
+
+---
+
+## Module 5 challenge: Final Project
+1. A software engineer is tasked with developing a new feature for a popular web application. The feature involves a complex algorithm that requires a significant amount of coding. The engineer is tempted to start writing the code from scratch, but their manager suggests taking a different approach. What is the manager’s recommendation based on?
+> The manager believes that the engineer should spend some time researching the problem to identify if a similar problem has been solved before.
+
+2. Based on the following code, what is the correct output?
+```Python
+numbers = [ 3, 5, 4, 8, 1 ]
+
+numbers.sort()
+
+print(numbers)
+```
+> 1, 3, 4, 5, 8
+
+3. Which method is used to sort a list without creating a new list?
+> The sort() method 
+
+4. You want to sort the following list in descending order. What is the correct code to use to do this?
+```Python
+numbers = [ 4, 6, 2, 7, 1 ]
+```
+> numbers.sort(reverse = True)
+
+5. What is the purpose of the argument key=len in a Python script?
+> To sort a list of strings based on their length. 
+
+6. A system administrator is managing a network of computers. Each computer has a set of users who are currently logged in. The administrator wants to be able to quickly look up the current users of a given computer. Which data structure is the most efficient for storing the current users of each computer?
+> A dictionary 
+
+7. A programmer is tasked with developing a program that processes events and prints the associated data to the screen. The programmer is unfamiliar with the most efficient approach to accomplish this task. What should the programmer do?
+> Create 2 separate functions to process the events and print the associated data to the screen.
+
+8. What does the following code snippet do?
+```Python
+if event.type == "login":
+
+ machines[event.machine].add(event.user)
+```
+> It checks if the event type is “login” and if so, adds the user to the list of logged-in users for a specified machine. 
+
+9. A programmer is designing a grading script for a teacher. The teacher needs to assign grades to students based on different student assessment scores. The programmer needs to create a script that will execute code block A if condition 1 is true but will execute code block B if condition 1 is false and condition 2 is true. What type of statement should the programmer use to evaluate condition 2?
+> elif statement
+
+10. Take a look at the code snippet below. What is the purpose of the generate_report function?
+```Python
+def generate_report(machines):
+ for machine, users in machines.items():
+    if len(users) > 0:
+        user_list = ", ".join(users)
+        print("{}: {}".format(machine, user_list))
+```
+> To generate a report that lists all the machines and the users logged into each machine.
