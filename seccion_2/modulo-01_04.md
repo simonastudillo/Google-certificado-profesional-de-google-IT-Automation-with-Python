@@ -45,3 +45,23 @@
 - podemos usar otro módulo llamado psutil: esta función recibe un intervalo de segundos y ​devuelve un porcentaje promedio de uso en ese intervalo
 - Ejemplo: [example-s2-m1-04.py](../ejercicios/example-s2-m1-04.py)
 - Ejemplo 2: [doctor_my_pc.py](../ejercicios/doctor_my_pc.py)
+
+---
+
+## ¿Merece la pena el tiempo invertido?
+- Las empresas investigan si la automatización de procesos o tareas ahorra tiempo de trabajo (y, por tanto, dinero), ofrece un Retorno de la inversión (ROI) suave, o ambas cosas
+- Si merece la pena, el proceso automatizado ahorrará tiempo de trabajo a la empresa, beneficios de ROI blando, o ambos.
+- ROI blando
+    - El ROI blando a través de la automatización es difícil de medir porque, normalmente, no hay cifras o datos concretos que lo respalden. Las métricas de ROI blando incluyen la mejora de:
+        - La colaboración en equipo
+        - La moral del equipo
+        - La motivación de los empleados
+        - La satisfacción de los empleados
+- Time_to_automate < (time_to_perform * amount_of_times_done)
+
+>[!TIP]
+> observe que tiene dos medidas de tiempo. Antes de introducir los valores en la fórmula, convierte 10 horas en minutos.
+> Multiplica 10 por 60 para convertir 10 horas en minutos. Obtendrás 600 minutos.
+> Cuando introduces tus valores en la fórmula anterior, obtienes: 600 < 40x
+> x representa el número de semanas, así que puedes sustituirlo por x en la fórmula.
+> Luego, divide ambos lados por 40 para obtener: 15 semanas.
