@@ -10,3 +10,11 @@
 - Cómo ejecutar Python localmente ​y organizar y usar código en diferentes archivos de Python. 
 - La ​configuración de su entorno de desarrollador es un paso clave ​para poder escribir e implementar potentes herramientas de automatización
 - En este curso, utilizaremos Qwiklabs ​, que es un entorno que le permite ​probar su código en una máquina virtual Linux
+
+---
+
+## Bienvenido al curso
+- Pre requisitos:
+    - La sintaxis básica de Python (if, for, while, definición de funciones, clases y métodos)
+    - Cómo usar las estructuras de datos más comunes (cadenas, listas, tuplas y diccionarios)
+    - Cómo importar y usar módulos adicionales de Python
