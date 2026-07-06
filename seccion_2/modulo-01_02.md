@@ -111,3 +111,16 @@ print(df)
 
 df["errors"].mean()
 ```
+
+---
+
+## Consejos para configurar su entorno
+- Instalar Python y módulos adicionales
+    - Si no tienes Python instalado, recuerda revisar su página web
+    - Revisa la [Guía de Python](https://realpython.com/installing-python/)
+- Instalar módulos adicionales de Python
+    - Siempre puedes usar `pip` para instalar módulos adicionales de Python
+    - Alternativas:
+        - [Chocolatey](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10) (Windows)
+        - [Homebrew](https://programwithus.com/learn/python/install-python3-mac) (MacOS)
+        - [Package Manager](https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg) (Linux)
