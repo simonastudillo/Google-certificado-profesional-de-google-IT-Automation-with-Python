@@ -124,3 +124,22 @@ df["errors"].mean()
         - [Chocolatey](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10) (Windows)
         - [Homebrew](https://programwithus.com/learn/python/install-python3-mac) (MacOS)
         - [Package Manager](https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg) (Linux)
+
+---
+
+## Test your knowledge: Getting ready for Python
+1. Which of the following is the most modern, up-to-date version of Python?
+> Python 3
+
+2. Which of the following operating systems is compatible with Python 3?
+> All of the above
+
+3. Which of the following operating systems does not run on a Linux kernel?
+> Mac OS
+
+4. If we want to check to see  what version of Python is installed, what would we type into the command line? Select all that apply.
+> python --version
+> python -V
+
+5. What is pip an example of?
+> A Python package manager
