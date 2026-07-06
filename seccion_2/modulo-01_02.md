@@ -72,3 +72,42 @@ date = arrow.get('2024-01-01', 'YYYY-MM-DD')
 date = date.shift(weeks=+6)
 print(date.format('DD MM YYYY'))
 ```
+
+---
+
+## Configuración del entorno en Linux (opcional)
+- Por lo general, Linux viene con Python preinstalado, pero puede que no sea la versión más reciente. Para verificar la versión de Python instalada, abre una terminal y ejecuta el comando `python3 --version`.
+- En linux, podemos usar el gestor de paquetes de nuestra distribución para instalar y gestionar paquetes de software. Por ejemplo, en Ubuntu podemos usar `apt`, `yum` o `dnf` dependiendo de la distribución.
+- Para instalar Python en Ubuntu, ejecuta el siguiente comando en la terminal:
+```bash
+sudo apt update
+sudo apt install python3
+```
+- Usarémos el módulo `Pill` para verificar si tenemos el módulo instalado.
+- Para instalarlo ejecutamos el comando `sudo apt install python3-pil`
+- Comprobamos que el módulo se haya instalado correctamente ejecutando el siguiente código en la terminal:
+```Python
+import PIL.Image
+
+image = PIL.Image.open('path/to/image.jpg')
+print(image.size)
+print(image.format)
+```
+- En casos de que una librería no esté disponible en el gestor de paquetes de nuestra distribución, podemos usar `pip` para instalarla.
+- Instalamos `pip` en Ubuntu ejecutando el siguiente comando:
+```bash
+sudo apt update
+sudo apt install python3-pip
+```
+- Usarémos el módulo `pandas` para verificar si tenemos el módulo instalado, ejecuta el siguiente comando `pip3 show pandas`. Si el módulo está instalado, verás información sobre él; si no, no se mostrará nada.
+- Si no lo tienes instalado ejecutamos el comando `pip3 install pandas` para instalarlo.
+- Comprobamos que el módulo se haya instalado correctamente ejecutando el siguiente código en la terminal:
+```Python
+import pandas
+visitors = [1234, 6424, 9345, 8464, 2345]
+errors = [23, 45, 33, 45, 76]
+df = pandas.DataFrame({'visitors': visitors, 'errors': errors}, index=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'])
+print(df)
+
+df["errors"].mean()
+```
