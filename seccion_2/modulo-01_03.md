@@ -38,3 +38,4 @@
 - Tienen funciones diferentes como resaltado de sintaxis, autocompletado de código, depuración paso a paso, integración con sistemas de control de versiones y muchas otras características que facilitan el desarrollo de software.
 - Vim: Es un editor de texto muy potente y flexible, pero puede ser difícil de aprender para los principiantes debido a su interfaz basada en comandos.
 - Atom: Es un editor de texto moderno y personalizable, desarrollado por GitHub. Tiene una interfaz amigable y muchas extensiones disponibles para mejorar la productividad.
+- Es importante que aprendamos a usar un IDE de terminal, podría ser útil para trabajar en servidores remotos donde no tenemos acceso a un entorno gráfico.
