@@ -30,3 +30,11 @@
 - Luego para utilizarlo debemos importarlo en el archivo donde lo necesitamos, para ello usamos la palabra reservada `import` seguida del nombre del archivo sin la extensión `.py`.
 - Para que una carpeta sea reconocida como un paquete de Python, debemos crear un archivo llamado `__init__.py` dentro de la carpeta.
 - Este archivo puede estar vacío, pero su presencia indica a Python que la carpeta debe ser tratada como un paquete.
+
+---
+
+## Que es un IDE?
+- Cada IDE (Integrated Development Environment) es un entorno de desarrollo que nos permite escribir, ejecutar y depurar nuestro código de manera más eficiente.
+- Tienen funciones diferentes como resaltado de sintaxis, autocompletado de código, depuración paso a paso, integración con sistemas de control de versiones y muchas otras características que facilitan el desarrollo de software.
+- Vim: Es un editor de texto muy potente y flexible, pero puede ser difícil de aprender para los principiantes debido a su interfaz basada en comandos.
+- Atom: Es un editor de texto moderno y personalizable, desarrollado por GitHub. Tiene una interfaz amigable y muchas extensiones disponibles para mejorar la productividad.
