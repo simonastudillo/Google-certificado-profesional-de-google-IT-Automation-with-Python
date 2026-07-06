@@ -39,3 +39,12 @@
 - Vim: Es un editor de texto muy potente y flexible, pero puede ser difícil de aprender para los principiantes debido a su interfaz basada en comandos.
 - Atom: Es un editor de texto moderno y personalizable, desarrollado por GitHub. Tiene una interfaz amigable y muchas extensiones disponibles para mejorar la productividad.
 - Es importante que aprendamos a usar un IDE de terminal, podría ser útil para trabajar en servidores remotos donde no tenemos acceso a un entorno gráfico.
+
+---
+
+## Configurando su entorno
+- Editores comúnes para Python
+    - [Eclipse](http://www.eclipse.org/)
+    - [PyCharm](https://www.jetbrains.com/pycharm/)
+    - [Sublime Text](http://www.sublimetext.com/)
+    - [Visual Studio Code](https://code.visualstudio.com/)
