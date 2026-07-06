@@ -36,3 +36,20 @@
 - Podemos usar módulos externos para un montón ​de tareas como generar PDFs, ​servir páginas web, crear archivos comprimidos, ​interactuar con el correo electrónico, y un montón de cosas más
 - Cuando los desarrolladores escriben un módulo de Python ​que creen que otros podrían encontrar útil, ​lo publican en PyPI, ​también conocido como el Python Package Index.
 - ​Podemos navegar por este repositorio de ​módulos Python para encontrar el módulo que necesitamos. 
+
+---
+
+## Configuración del entorno en Windows (opcional)
+- Por lo general, Windows no viene con Python preinstalado, por lo que es posible que tengamos que instalarlo manualmente.
+- Para instalar, se recomienda descargar la última versión de Python desde el sitio web oficial de Python (https://www.python.org/downloads/).
+- Al instalar asegurate de marcar la opción "Add Python to PATH" para que puedas ejecutar Python desde la línea de comandos.
+- Compryeba ejecutando el comando `python --version` en la terminal de Windows (CMD o PowerShell) para verificar que Python se haya instalado correctamente.
+- Para verificar si tienes un módulo instalado, puedes usar el comando `pip show <nombre_del_módulo>`. Si el módulo está instalado, verás información sobre él; si no, no se mostrará nada.
+- En caso de que no lo tengas instalado, puedes instalarlo usando el comando `pip install <nombre_del_módulo>`.
+- Podemos hacer una prueba rápida para verifiar si tenemos el módulo `requests` instalado:
+```Python
+import requests
+
+response = requests.get('https://www.google.com')
+print(len(response.text))
+```
