@@ -19,3 +19,14 @@
 ```
 - Debemos revisar y asegurarnos que el archivo tiene permisos de ejecución, para ello ejecutamos el comando `chmod +x <nombre_del_archivo>.py` en la terminal.
 - Ahora podemos ejecutarlo directamente con el comando `./<nombre_del_archivo>.py` en la terminal.
+
+---
+
+## Tu propio módulo Python
+- Es común reutilizar código que escribimos en otros proyectos, para ello podemos crear nuestros propios módulos de Python.
+- Debemos evitar duplicar código, ya que si el código está repetido 3 veces, cualquier cambio que hagamos en el código, debemos hacerlo en 3 lugares diferentes, lo que aumenta la probabilidad de errores y hace más difícil mantener el código.
+- Para aislar ese código y poder reutilizarlo, podemos crear un módulo de Python.
+- Esto es simple, el código repetido debe quedar en un archivo separado
+- Luego para utilizarlo debemos importarlo en el archivo donde lo necesitamos, para ello usamos la palabra reservada `import` seguida del nombre del archivo sin la extensión `.py`.
+- Para que una carpeta sea reconocida como un paquete de Python, debemos crear un archivo llamado `__init__.py` dentro de la carpeta.
+- Este archivo puede estar vacío, pero su presencia indica a Python que la carpeta debe ser tratada como un paquete.
