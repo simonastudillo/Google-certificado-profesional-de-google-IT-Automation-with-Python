@@ -53,3 +53,22 @@ import requests
 response = requests.get('https://www.google.com')
 print(len(response.text))
 ```
+
+---
+
+## Configuración del entorno en MacOS (opcional)
+- Por lo general, macOS viene con Python preinstalado, pero puede que no sea la versión más reciente. Para verificar la versión de Python instalada, abre una terminal y ejecuta el comando `python3 --version`.
+- En MacOS, podemos usar Homebrew para instalar y gestionar paquetes de software o descargar desde la web
+- Descargalo desde la web oficial de Python (https://www.python.org/downloads/) y sigue las instrucciones de instalación.
+- Sigue las instrucciones de instalación, es posible que necesites permisos de administrador para completar la instalación.
+- Para comprobar ejecuta el comando `python3 --version` en la terminal para verificar que Python se haya instalado correctamente.
+- Usemos el módulo `Arrow` para verificar si tenemos el módulo instalado, ejecuta el siguiente comando `pip3 show arrow`. Si el módulo está instalado, verás información sobre él; si no, no se mostrará nada.
+- Si no lo tienes instalado ejecutamos el comando `pip3 install arrow` para instalarlo.
+- Comprobamos que el módulo se haya instalado correctamente ejecutando el siguiente código en la terminal:
+```Python
+import arrow
+
+date = arrow.get('2024-01-01', 'YYYY-MM-DD')
+date = date.shift(weeks=+6)
+print(date.format('DD MM YYYY'))
+```
