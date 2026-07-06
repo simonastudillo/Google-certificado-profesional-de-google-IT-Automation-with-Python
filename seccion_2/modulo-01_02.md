@@ -25,3 +25,14 @@
     - Unix: Unix es un sistema operativo desarrollado ​en los años 70 por Bell Labs. ​Después de su lanzamiento original, ​el sistema operativo pasó por un montón de ​versiones diferentes y diferentes ​compañías lanzaron variantes del mismo. 
 - Las ideas fundamentales de cómo funciona Linux en la ​actualidad se basan en los principios de Unix
 - Python es un lenguaje de programación que puede funcionar en cualquier sistema operativo.
+
+---
+
+## Preprando tu computador para Python
+- Es recomendable aprender a instalar y desinstalar software en tu computadora, te permite un mayor control, confianza y seguridad sobre tu entorno de desarrollo.
+- Para verificar si tienes instalado Python en tu computadora, abre una terminal y escribe el siguiente comando:
+    - `python3 --version` o `python --version`
+- En este curso trabajaremos con Python 3, que es la versión más reciente y recomendada de Python.
+- Podemos usar módulos externos para un montón ​de tareas como generar PDFs, ​servir páginas web, crear archivos comprimidos, ​interactuar con el correo electrónico, y un montón de cosas más
+- Cuando los desarrolladores escriben un módulo de Python ​que creen que otros podrían encontrar útil, ​lo publican en PyPI, ​también conocido como el Python Package Index.
+- ​Podemos navegar por este repositorio de ​módulos Python para encontrar el módulo que necesitamos. 
