@@ -37,3 +37,11 @@
 - lo peor del fracaso de la automatización ​es cuando la automatización tiene éxito, ​pero realiza una acción incorrecta.
 - Para esta clase de fallos más sutiles, ​podemos utilizar pruebas periódicas para comprobar ​el comportamiento de sus sistemas automatizados.
 - podríamos programar una restauración regular de los datos de ​la base de datos de ventas y, a continuación, comprobar que ​los datos restaurados son los ​que esperaba que se respaldaran
+
+---
+
+## Ejemplo practico de automatización
+- Usemos el módulo shutil y ​la función de uso del disco para comprobar el espacio en disco disponible actualmente.
+- podemos usar otro módulo llamado psutil: esta función recibe un intervalo de segundos y ​devuelve un porcentaje promedio de uso en ese intervalo
+- Ejemplo: [example-s2-m1-04.py](../ejercicios/example-s2-m1-04.py)
+- Ejemplo 2: [doctor_my_pc.py](../ejercicios/doctor_my_pc.py)
