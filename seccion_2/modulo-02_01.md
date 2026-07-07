@@ -32,3 +32,19 @@ with open("spider.txt") as file:
 - Finalmente, la línea que utiliza la instrucción `with` para abrir el archivo spider.txt está en modo de lectura.
 - La palabra clave `as` asigna el objeto de archivo a la variable `file`.
 - El bloque de código dentro de la instrucción `with` se ejecutará y, a continuación, el archivo se cerrará automáticamente.
+
+---
+
+## Leyendo archivos
+- En la programación, trabajamos con archivos todo el tiempo.
+- En el método open, estamos pasando la ruta relativa del archivo spider.txt, que está en el mismo directorio que nuestro script de Python.
+- El sistema operativo busca el archivo y verifica los permisos de lectura.
+- Luego nos da un `file descriptor`, que es un objeto que representa el archivo abierto.
+- Este es un token generado por el sistema operativo ​que permite a los programas realizar más operaciones con el archivo
+- El método readline() lee una línea del archivo y la devuelve como una cadena.
+- A diferencia del método read(), que lee todo el archivo, readline() solo lee una línea a la vez.
+- ​Es una buena idea cerrar los archivos ​después de haberlos abierto por algunas razones.
+- ​En primer lugar, cuando un archivo está abriendo el script, el ​sistema de archivos generalmente lo bloquea y por lo tanto ningún ​otro programa o scripts ​puede usarlo hasta que haya terminado
+- En segundo lugar, hay un número limitado de descriptores de archivos ​que puede crear antes de que el ​sistema de archivos se quede sin ellos
+- En tercer lugar, dejar archivos abiertos colgando ​puede conducir a condiciones de carrera que ocurren ​cuando varios procesos intentan modificar y leer desde ​un recurso al mismo tiempo y pueden ​causar todo tipo de comportamientos inesperados
+- Para no olvidar cerrar un archivo podemos usar la instrucción `with` para abrir un archivo. Esto asegura que el archivo se cierre automáticamente cuando el bloque de código dentro de la instrucción `with` haya terminado de ejecutarse.
