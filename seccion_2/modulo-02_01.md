@@ -112,3 +112,35 @@ with open("novel.txt", "w") as file:
 - El modo `r+` (read and write) es el modo de lectura y escritura, que permite leer y escribir en el archivo.
 - Recuerda siempre revisar el modo en el que estás abriendo un archivo antes de escribir en él, para evitar sobrescribir accidentalmente un archivo existente.
 - La función `write()` devuelve el número de caracteres escritos en el archivo.
+
+---
+
+## Guía de estudio: Leyendo y escribiendo archivos
+- Abrir un archivo o un objeto similar a un archivo para leer o escribir es uno de los pasos fundamentales para un programador de Python.
+- Por ejemplo, es posible que desee leer un archivo .csv y convertirlo a formato JSON. O tal vez desee seleccionar datos de una base de datos y escribirlos en un archivo de salida.
+- Leer un archivo:
+```Python
+# mode rt = read text
+with open("sample_data/declaration.txt", "rt") as textfile:
+ for line in textfile:
+   print(line)
+```
+- Escribir un archivo:
+```Python
+# mode wt = write text
+with open("sample_data/declaration.txt", "wt") as textfile:
+    textfile.write("It was a dark and stormy night")
+```
+- Encoding: 
+    - Python distingue entre el modo binario («b») y el modo texto («t»).
+    - Por defecto, los archivos se abren en modo texto, lo que significa que se leen y escriben cadenas de texto codificadas en una codificación específica.
+    - Si no se especifica la codificación, la predeterminada depende de la plataforma.
+    - Esto implica que se llama a `locale.getencoding()` para obtener la codificación de la configuración regional actual.
+    - Si necesita abrir el texto con una codificación específica, debe especificarla.
+```Python
+f = open('workfile', 'w', encoding="utf-8") 
+```
+
+>[!TIP]
+> Recuerda siempre cerrar un archivo después de abrirlo, para liberar recursos del sistema y evitar errores.
+> El función `with` es una forma conveniente de asegurarse de que un archivo se cierre automáticamente después de que se haya terminado de usar.
