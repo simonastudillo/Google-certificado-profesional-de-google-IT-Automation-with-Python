@@ -37,3 +37,16 @@ f.close()
 - Al aplicar la función `csv.reader()` a un archivo abierto, podemos iterar sobre cada línea del archivo y acceder a los valores de cada registro.
 - Luego podemos descomponer cada línea en variables individuales y procesarlas según sea necesario.
 - Recuerda cerrar el archivo después de leerlo para liberar recursos del sistema.
+
+---
+
+## Reseña: Generando archivos CSV
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+import csv
+
+hosts = [["workstation.local", "192.168.25.46"],["webserver.cloud", "10.2.5.6"]]
+with open('hosts.csv', 'w') as hosts_csv:
+    writer = csv.writer(hosts_csv)
+    writer.writerows(hosts)
+```
