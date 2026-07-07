@@ -39,3 +39,23 @@ outputs['current_directory_before'] = os.getcwd()
     - Piensa en las rutas de archivos como ubicaciones
     - Usa el `/` para separar directorios en rutas de archivo
     - Usa el comando `cwd` para obtener la ruta del directorio de trabajo actual y usar rutas relativas para acceder a archivos externos
+
+---
+
+## Test your knowledge: Writing file paths
+
+1. There are two types of file paths: relative and absolute. What is an absolute file path?
+> A file path that spells out the exact location of the file.
+
+2. As a Python programmer, you will probably choose to use relative file paths more often than absolute file paths. What are the advantages of relative file paths over absolute file paths? Select all that apply. 
+> With relative file paths, it doesn’t matter that the drive names change from computer to computer. 
+> Relative file paths don’t change by operating system.
+
+3. When writing file paths in Python, it’s a best practice to use only forward slashes (/ )to separate the directories. Why is that? 
+> Because back-slashes are a special character in Python. 
+
+4. You can call a file with a relative file path using the file name, provided you also use the CWD: What does CWD stand for?
+> Current Working Directory
+
+5. Many Python programmers use the command os.path to wrap directories. What is that specific command designed to do? 
+> Work around platform differences between Windows and Mac/Linux.
