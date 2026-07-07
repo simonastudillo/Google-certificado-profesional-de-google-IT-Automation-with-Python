@@ -46,3 +46,12 @@ datetime.datetime.fromtimestamp(timestamp)
 os.path.abspath("spider.txt")
 #This code takes the file name and turns it into an absolute path
 ```
+
+---
+
+## Más información de archivos
+- Para obtener información adicional sobre un archivo, se pueden usar las funciones del módulo `os.path`.
+- La función `os.path.getsize()` devuelve el tamaño del archivo en bytes.
+- La función `os.path.getmtime()` devuelve la fecha y hora de la última modificación del archivo en formato de timestamp.
+- Para convertir el timestamp a un formato de fecha y hora legible, se puede usar la función `datetime.datetime.fromtimestamp()`.
+- La función `os.path.abspath()` devuelve la ruta absoluta del archivo.
