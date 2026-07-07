@@ -48,3 +48,33 @@ with open("spider.txt") as file:
 - En segundo lugar, hay un número limitado de descriptores de archivos ​que puede crear antes de que el ​sistema de archivos se quede sin ellos
 - En tercer lugar, dejar archivos abiertos colgando ​puede conducir a condiciones de carrera que ocurren ​cuando varios procesos intentan modificar y leer desde ​un recurso al mismo tiempo y pueden ​causar todo tipo de comportamientos inesperados
 - Para no olvidar cerrar un archivo podemos usar la instrucción `with` para abrir un archivo. Esto asegura que el archivo se cierre automáticamente cuando el bloque de código dentro de la instrucción `with` haya terminado de ejecutarse.
+
+---
+
+## Reseña: Iterando sobre archivos
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+with open("spider.txt") as file:
+    for line in file:
+        print(line.upper())
+
+with open("spider.txt") as file:
+    for line in file:
+        print(line.strip().upper())
+
+# Here strip is used to remove the newline character, and we get the output without empty lines.
+file = open("spider.txt")
+lines = file.readlines()
+file.close()
+lines.sort()
+print(lines)
+
+# output:
+# THE ITSY BITSY SPIDER CLIMBED UP THE WATERSPOUT.
+# DOWN CAME THE RAIN
+# AND WASHED THE SPIDER OUT.
+# OUT CAME THE SUN
+# AND DRIED UP ALL THE RAIN
+# AND THE ITSY BITSY SPIDER CLIMBED UP THE SPOUT AGAIN.
+```
+- 
