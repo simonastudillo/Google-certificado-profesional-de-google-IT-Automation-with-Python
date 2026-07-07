@@ -77,4 +77,13 @@ print(lines)
 # AND DRIED UP ALL THE RAIN
 # AND THE ITSY BITSY SPIDER CLIMBED UP THE SPOUT AGAIN.
 ```
-- 
+
+---
+
+## Iterando sobre archivos
+- Cuando Python lee el archivo línea por línea, ​la variable de línea siempre tendrá ​un nuevo carácter de línea al final.
+- Podemos usar un método de string llamado strip() para eliminar el carácter de nueva línea al final de cada línea.
+- Otra forma en que podemos trabajar con el contenido del archivo ​es leer las líneas del archivo en una lista
+- Para hacer eso, abrimos ​el archivo y usamos el método.readlines
+- En general Python usa el caracter `\` para indicar caracteres no imprimibles, como el carácter de nueva línea (`\n`).
+- Para archivos pequeños es factible usar readlines() para leer todo el archivo en memoria, pero para archivos grandes es mejor iterar sobre el archivo línea por línea.
