@@ -90,3 +90,14 @@ os.listdir("website")
      else:
           print("{} is a file".format(fullname))
 ```
+
+---
+
+## Directorios
+- El módulo `os` de Python también proporciona funciones para interactuar con directorios en el sistema de archivos.
+- La función `os.getcwd()` devuelve la ruta del directorio de trabajo actual.
+- La función `os.mkdir()` crea un nuevo directorio con el nombre especificado.
+- La función `os.chdir()` cambia el directorio de trabajo actual al directorio especificado.
+- La función `os.rmdir()` elimina un directorio vacío con el nombre especificado.
+- La función `os.listdir()` devuelve una lista de todos los archivos y subdirectorios en el directorio especificado.
+- La función `os.isdir()` devuelve `True` si la ruta especificada es un directorio y `False` si no lo es.
