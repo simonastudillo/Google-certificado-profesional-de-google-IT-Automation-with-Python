@@ -15,3 +15,13 @@ os.rename("first_draft.txt", "finished_masterpiece.txt")
  os.path.exists("finished_masterpiece.txt")
  os.path.exists("userlist.txt")
 ```
+
+---
+
+## Trabajando con archivos
+- El módulo `os` de Python proporciona funciones para interactuar con el sistema de archivos, sin importar el sistema operativo que estés utilizando.
+- Para eliminar un archivo, se puede usar la función `os.remove()`, pasando como argumento la ruta del archivo que se desea eliminar.
+- Si tratamos de eliminar un archivo que no existe, Python generará un error `FileNotFoundError`.
+- Para renombrar un archivo, se puede usar la función `os.rename()`, pasando como argumentos la ruta del archivo que se desea renombrar y el nuevo nombre que se le quiere dar.
+- Si tratamos de renombrar un archivo que no existe, Python generará un error `FileNotFoundError`.
+- Para evitar estos errores usamos la función `os.path.exists()`, que devuelve `True` si el archivo existe y `False` si no existe.
