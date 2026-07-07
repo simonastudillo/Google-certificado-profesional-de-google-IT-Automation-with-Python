@@ -116,3 +116,6 @@ os.listdir("website")
     - Crear y eliminar directorios
     - Cambiar el directorio de trabajo actual
     - Listar archivos y subdirectorios en un directorio
+- Permisos: El módulo `os` de Python también proporciona funciones para interactuar con los permisos de archivos y directorios en el sistema de archivos. Algunas de las funciones básicas incluyen:
+    - Cambiar los permisos de un archivo o directorio
+    - Verificar los permisos de un archivo o directorio
