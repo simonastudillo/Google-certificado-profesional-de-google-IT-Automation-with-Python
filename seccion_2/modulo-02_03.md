@@ -101,3 +101,18 @@ os.listdir("website")
 - La función `os.rmdir()` elimina un directorio vacío con el nombre especificado.
 - La función `os.listdir()` devuelve una lista de todos los archivos y subdirectorios en el directorio especificado.
 - La función `os.isdir()` devuelve `True` si la ruta especificada es un directorio y `False` si no lo es.
+
+---
+
+## Guía de estudio: Archivos y directorios
+- El módulo `os` de Python proporciona funciones para interactuar con el sistema de archivos, sin importar el sistema operativo que estés utilizando.
+- Los nombres de archivo pueden considerarse como dos nombres separados por un punto.
+- Por ejemplo, helloworld.txt es el nombre del archivo y la extensión define el tipo de archivo.
+- El sistema operativo proporciona funciones para crear, leer, actualizar y eliminar archivos. Algunas de las funciones básicas incluyen:
+    - Abrir y cerrar archivos
+    - Leer y escribir archivos
+    - Agregar a archivos
+- Directorios: El módulo `os` de Python también proporciona funciones para interactuar con directorios en el sistema de archivos. Algunas de las funciones básicas incluyen:
+    - Crear y eliminar directorios
+    - Cambiar el directorio de trabajo actual
+    - Listar archivos y subdirectorios en un directorio
