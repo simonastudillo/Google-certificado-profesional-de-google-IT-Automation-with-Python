@@ -28,3 +28,12 @@ f.close()
 
 #Name: Charlie Rivera, Phone: 698-746-3357, Role: Web Developer
 ```
+
+---
+
+## Leyendo archivos CSV
+- `CSV` (Comma-Separated Values), cada registros está separado por una coma y cada línea representa un registro.
+- Debemos importar el módulo `csv` para poder leer archivos CSV en Python.
+- Al aplicar la función `csv.reader()` a un archivo abierto, podemos iterar sobre cada línea del archivo y acceder a los valores de cada registro.
+- Luego podemos descomponer cada línea en variables individuales y procesarlas según sea necesario.
+- Recuerda cerrar el archivo después de leerlo para liberar recursos del sistema.
