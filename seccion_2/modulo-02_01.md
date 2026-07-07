@@ -101,3 +101,14 @@ with open("novel.txt", "w") as file:
 - En este caso, el modo es `w`, que significa "escribir".
 - Esto le indica a la función `open()` que cree un archivo nuevo si no existe, o que sobrescriba el archivo existente si ya existe.
 - El método `write()` del objeto de archivo recibe una cadena como argumento y la escribe en el archivo. En este caso, la cadena es "It was a dark and stormy night".
+
+---
+
+## Escribiendo archivos
+- Los archivos pueden abrirse en varios modos, esto es como un permiso sobre archivo
+- El modo `r` (readonly) es el modo de lectura, que es el valor predeterminado si no se especifica ningún modo.
+- El modo `w` (write) es el modo de escritura, que crea un archivo nuevo si no existe, o sobrescribe el archivo existente si ya existe.
+- El modo `a` (append) es el modo de anexado, que agrega contenido al final del archivo si ya existe, o crea un archivo nuevo si no existe.
+- El modo `r+` (read and write) es el modo de lectura y escritura, que permite leer y escribir en el archivo.
+- Recuerda siempre revisar el modo en el que estás abriendo un archivo antes de escribir en él, para evitar sobrescribir accidentalmente un archivo existente.
+- La función `write()` devuelve el número de caracteres escritos en el archivo.
