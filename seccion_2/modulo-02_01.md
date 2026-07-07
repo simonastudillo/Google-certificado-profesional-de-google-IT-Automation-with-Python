@@ -87,3 +87,17 @@ print(lines)
 - Para hacer eso, abrimos ​el archivo y usamos el método.readlines
 - En general Python usa el caracter `\` para indicar caracteres no imprimibles, como el carácter de nueva línea (`\n`).
 - Para archivos pequeños es factible usar readlines() para leer todo el archivo en memoria, pero para archivos grandes es mejor iterar sobre el archivo línea por línea.
+
+---
+
+## Reseña: Escribiendo archivos
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+with open("novel.txt", "w") as file:
+    file.write("It was a dark and stormy night")
+```
+- La instrucción `with open()` crea un objeto de archivo y lo asigna a la variable `file`.
+- La función `open()` recibe dos argumentos: el nombre del archivo y el modo.
+- En este caso, el modo es `w`, que significa "escribir".
+- Esto le indica a la función `open()` que cree un archivo nuevo si no existe, o que sobrescriba el archivo existente si ya existe.
+- El método `write()` del objeto de archivo recibe una cadena como argumento y la escribe en el archivo. En este caso, la cadena es "It was a dark and stormy night".
