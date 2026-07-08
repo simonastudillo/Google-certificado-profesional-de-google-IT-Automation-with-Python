@@ -92,3 +92,9 @@ write_report(dictionary, '/home/student/test_report.txt')
 - `Relative path` (Ruta relativa): Parte de una ruta que indica la ubicación del recurso en relación con el directorio de trabajo actual.
 - `Virtual machine (VM)` (Máquina virtual): Ordenador simulado mediante software.
 - `Writer objects` (Objetos escritores): Capacidad para escribir datos en un archivo CSV.
+
+---
+
+## Resumen del Módulo 2: Gestión de archivos con Python
+- Comprobamos cómo leer y escribir tanto en textos como en ​archivos CSV y cómo administrar ​archivos y directorios con Python
+- Tenga en cuenta que los archivos son una de ​las formas más importantes de almacenar ​y transmitir información en TI
