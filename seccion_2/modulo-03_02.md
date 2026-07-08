@@ -133,3 +133,29 @@ print(re.search(r"p?each", "I like peaches"))
 <_sre.SRE_Match object; span=(7, 12), match='peach'>
 """
 ```
+
+---
+
+## Calificadores de repetición
+- El caracter `*` coincide con cero o más repeticiones del patrón anterior.
+- Ejemplo: `Py.*n` coincide con cualquier cadena que comience con `Py` y termine con `n`, sin importar lo que haya en el medio.
+- Esto búsca hasta la última coincidencia posible, por lo que puede coincidir con más de lo que esperas.
+- Puedes usar `[a-z]*` para coincidir con cero o más letras minúsculas entre `Py` y `n`.
+- El caracter `+` coincide con una o más repeticiones del patrón anterior.
+- La diferencia con `*` es que `+` requiere al menos una coincidencia del patrón anterior.
+- El caracter `?` coincide con cero o una repetición del patrón anterior.
+- La diferencia con `*` es que `?` solo permite una coincidencia del patrón anterior, o ninguna.
+```Python
+"""
+The repeating_letter_a function checks if the text passed includes the letter "a" (lowercase or uppercase) at least twice. For example, repeating_letter_a("banana") is True, while repeating_letter_a("pineapple") is False. Fill in the code to make this work. 
+"""
+import re
+def repeating_letter_a(text):
+  result = re.search(r"[aA].*[aA]", text)
+  return result != None
+
+print(repeating_letter_a("banana")) # True
+print(repeating_letter_a("pineapple")) # False
+print(repeating_letter_a("Animal Kingdom")) # True
+print(repeating_letter_a("A is for apple")) # True
+```
