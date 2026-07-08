@@ -79,3 +79,22 @@ grep cat$ /usr/share/dict/words
 # wildcat
 # tomcat
 ```
+
+---
+
+## Test your knowledge: Regular expressions
+
+1. When using regular expressions, which of the following expressions uses a reserved character that can represent any single character?
+> grep f.n /usr/share/text
+
+2. A programmer is writing a script to help a store manager find the product numbers associated with each product sold in their store. Which of the following methods should they use?
+> Use regex to find the patterns that match the product number. 
+
+3. The circumflex [^] and the dollar sign [$] are anchor characters. What do these anchor characters do in regex?
+> Match the start and end of a line
+
+4. When using regex, some characters represent particular types of characters. Some examples are the dollar sign, the circumflex, and the dot wildcard. What are these characters collectively known as?
+> Reserved characters
+
+5. What is grep?
+> A command-line regex tool
