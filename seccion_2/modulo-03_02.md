@@ -207,3 +207,32 @@ print(check_character_groups("123  Ready Set GO")) # True
 print(check_character_groups("username user_01")) # True
 print(check_character_groups("shopping_list: milk, bread, eggs.")) # False
 ```
+
+---
+
+## Reseña: Expresiones regulares en acción
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+import re
+print(re.search(r"A.*a", "Argentina"))
+print(re.search(r"A.*a", "Azerbaijan"))
+print(re.search(r"^A.*a$", "Australia"))
+"""
+<_sre.SRE_Match object; span=(0, 9), match='Argentina'>
+<_sre.SRE_Match object; span=(0, 9), match='Azerbaija'>
+<_sre.SRE_Match object; span=(0, 9), match='Australia'>
+"""
+
+import re
+pattern = r"^[a-zA-Z_][a-zA-Z0-9_]*$"
+print(re.search(pattern, "_this_is_a_valid_variable_name"))
+print(re.search(pattern, "this isn't a valid variable"))
+print(re.search(pattern, "my_variable1"))
+print(re.search(pattern, "2my_variable1"))
+"""
+<_sre.SRE_Match object; span=(0, 30), match='_this_is_a_valid_variable_name'>
+None
+<_sre.SRE_Match object; span=(0, 12), match='my_variable1'>
+None
+"""
+```
