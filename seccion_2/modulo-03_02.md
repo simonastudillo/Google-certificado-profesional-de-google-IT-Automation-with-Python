@@ -35,3 +35,11 @@ import re
 print(re.search(r"p.ng", "Pangaea", re.IGNORECASE))
 # <_sre.SRE_Match object; span=(0, 4), match='Pang'>
 ```
+
+---
+
+## Emparejamiento simple en Python
+- La función `re.search()` busca un patrón en una cadena de texto y devuelve un objeto de coincidencia si encuentra el patrón, o `None` si no lo encuentra.
+- La `r` al principio del patrón ​indica que se trata de una cadena sin procesar
+- Esto significa que el intérprete de Python no debería ​intentar interpretar ningún carácter especial, ​y en su lugar, simplemente debería pasar ​la cadena a la función tal como está
+- La `r` solo omite el procesamiento de `\` y no afecta a otros caracteres especiales como `.` o `^`.
