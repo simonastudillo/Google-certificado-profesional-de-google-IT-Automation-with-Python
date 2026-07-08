@@ -65,3 +65,16 @@ print(dictionary)
 
 write_report(dictionary, '/home/student/test_report.txt')
 ```
+
+---
+
+## Ejemplo: Manejo de archivos
+- En el laboratorio de Qwiklabs, se creo el usuario `student`
+- Existían 2 directorios: `data` y `scripts`
+- Debemos crear un script llamado `generate_report.py` en el directorio `scripts` que lea un archivo CSV con la lista de empleados de la organización, cuente cuántas personas hay en cada departamento y genere un informe con esta información.
+- Para esto importamos el módulo `csv` y creamos 3 funciones: `read_employees()`, `process_data()` y `write_report()`.
+- `read_employees()` lee el archivo CSV y devuelve una lista de diccionarios, donde cada diccionario representa un empleado.
+- `process_data()` toma la lista de empleados y devuelve un diccionario donde las claves son los nombres de los departamentos y los valores son el número de empleados en cada departamento.
+- `write_report()` toma el diccionario generado por `process_data()` y escribe un informe en un archivo de texto.
+- Se usaron las funciones de dialecto de `csv` para manejar los espacios en blanco y asegurar que el archivo CSV se lea correctamente.
+- Se utilizó el valor de retorno de la función `read_employees()` para obtener la lista de empleados, luego se pasó esa lista a `process_data()` para obtener el conteo de empleados por departamento, y finalmente se pasó ese diccionario a `write_report()` para generar el informe en un archivo de texto.
