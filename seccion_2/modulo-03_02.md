@@ -236,3 +236,14 @@ None
 None
 """
 ```
+
+---
+
+## Expresiones regulares en acción
+- Buscar países que contengan una `A` y hasta tener otra `a` usando `A.*a`.
+- Buscar países que comienzan con `A` y terminan con `a` usando `^A.*a$`.
+- Ejemplo: `^[a-zA-Z_][a-zA-Z0-9_]*$` busca nombres de variables válidos en Python.
+    - `^` indica el inicio de la cadena.
+    - `[a-zA-Z_]` indica que el primer carácter debe ser una letra o un guion bajo.
+    - `[a-zA-Z0-9_]*` indica que los caracteres siguientes pueden ser letras, números o guiones bajos, y pueden repetirse cero o más veces.
+    - `$` indica el final de la cadena.
