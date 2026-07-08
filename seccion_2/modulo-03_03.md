@@ -160,3 +160,10 @@ print(extract_pid("99 elephants in a [cage]"))
 # 12345
 # ""
 ```
+
+---
+
+## Extracción de un PID mediante expresiones regulares en Python
+- En la expresión `r"\[(\d+)\]"`:
+    - `\[` y `\]` coinciden con los corchetes literales.
+    - `(\d+)` es un grupo de captura que coincide con uno o más dígitos. El `+` indica que debe haber al menos un dígito.
