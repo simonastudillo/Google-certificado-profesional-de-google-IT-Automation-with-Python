@@ -47,3 +47,10 @@ def rearrange_name(name):
 rearrange_name("Hopper, Grace M.")
 # Grace M. Hopper
 ```
+
+---
+
+## Capturando grupos
+- Por ejemplo, es posible que deseemos extraer el nombre de host o ​un ID de proceso de una línea de registro y usar ese valor para otra operación. ​Para eso necesitamos usar un concepto de expresiones regulares llamadas ​grupos de captura.
+- `Capturing groups` nos permiten extraer partes de una cadena que coinciden con un patrón de expresión regular. Se definen usando paréntesis `()` alrededor del patrón que queremos capturar.
+- Podemos usar `result.groups()` para obtener una tupla de todos los grupos capturados, o podemos acceder a cada grupo individualmente usando índices, como `result[1]`, `result[2]`, etc.
