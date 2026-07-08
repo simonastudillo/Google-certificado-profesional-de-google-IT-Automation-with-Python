@@ -183,3 +183,27 @@ print(re.search(r"\w*", "And_this_is_another"))
 <_sre.SRE_Match object; span=(0, 19), match='And_this_is_another'>
 """
 ```
+
+---
+
+## Personajes que escapan
+- El caracter `\` se usa para escapar caracteres especiales y darles un significado literal.
+- Ejemplo: `\.com` busca la cadena literal `.com` en lugar de cualquier carácter seguido de `com`.
+- Ejemplo: `\w*` coincide con cero o más caracteres alfanuméricos (letras, números y guiones bajos).
+- Ejemplo: `\d` coincide con cualquier dígito (0-9).
+- Ejemplo: `\s` coincide con cualquier espacio en blanco (espacios, tabulaciones, saltos de línea).
+- Ejemplo: `\b` coincide con un límite de palabra, que es la posición entre un carácter de palabra y un carácter que no es de palabra.
+```Python
+"""
+Fill in the code to check if the text passed has at least 2 groups of alphanumeric characters (including letters, numbers, and underscores) separated by one or more whitespace characters.
+"""
+import re
+def check_character_groups(text):
+  result = re.search(r"\w+\s+\w+", text)
+  return result != None
+
+print(check_character_groups("One")) # False
+print(check_character_groups("123  Ready Set GO")) # True
+print(check_character_groups("username user_01")) # True
+print(check_character_groups("shopping_list: milk, bread, eggs.")) # False
+```
