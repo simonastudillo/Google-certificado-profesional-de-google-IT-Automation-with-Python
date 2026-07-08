@@ -107,3 +107,24 @@ with open('by_department.csv', 'w') as by_department:
     writer.writeheader()
     writer.writerows(users)
 ```
+
+---
+
+## Guía de estudio: archivos CSV
+- El formato más común para importar y exportar datos a hojas de cálculo es el formato .csv.
+- Un archivo de valores separados por comas (.csv) es un archivo de texto plano que utiliza, como su nombre indica, comas para separar cada dato.
+- El módulo `csv` es una funcionalidad integrada de Python que se utiliza para leer y trabajar con archivos .csv.
+    - `csv.reader`: Esta función devuelve un objeto lector que itera sobre las líneas del archivo .csv.
+    - `csv.writer`: Esta función devuelve un objeto escritor que se encarga de convertir los datos del usuario en cadenas delimitadas en el objeto similar a un archivo proporcionado.
+    - `class csv.DictReader`: Esta función crea un objeto que funciona como un lector normal, pero asigna la información de cada fila a un diccionario cuyas claves se definen mediante los parámetros opcionales `fieldname`.
+- Dialectos y parámetros de formato
+    - Los dialectos son reglas que definen la estructura de un archivo .csv, y los parámetros se crean para controlar el comportamiento del lector y escritor de .csv
+    - `Dialect.delimiter`: Este atributo es una cadena de un carácter que se utiliza para separar campos y, por defecto, es una coma.
+    - `Dialect.quotechar`: Este atributo es una cadena de un carácter que se utiliza para entrecomillar campos que contienen caracteres especiales y, por defecto, es `"`.
+    - `Dialect.strict`: Este atributo tiene como valor predeterminado False, pero si es True, se generará la excepción `csv.Error` si se detecta un error
+- Objetos lectores
+    - `csvreader._next_()`: Este método devuelve la siguiente fila del objeto iterable del lector como una lista o un diccionario, analizado correctamente al dialecto actual. Normalmente, se llamaría `next(reader)`.
+    - `csvreader.dialect`: Este atributo es una descripción de solo lectura del dialecto que utiliza el analizador.
+- Objetos de escritura
+    - `csvwriter.writerows(rows)`: Este método escribe todos los elementos de las filas en el objeto de archivo del escritor y los formatea según el dialecto actual.
+    - `csvwriter.dialect`: Este atributo es una descripción de solo lectura del dialecto que utiliza el escritor.
