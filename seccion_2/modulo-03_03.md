@@ -204,3 +204,12 @@ import re
 re.sub(r"^([\w .-]*), ([\w .-]*)$", r"\2 \1", "Lovelace, Ada")
 # 'Ada Lovelace'
 ```
+
+---
+
+## División y reemplazo
+- La función `re.split()` divide una cadena en una lista, usando un patrón de expresión regular como delimitador.
+- Ejemplo: `re.split(r"[.?!]", "One sentence. Another one? And the last one!")` dividirá la cadena en cada punto, signo de interrogación o signo de exclamación.
+- La función `re.sub()` reemplaza todas las ocurrencias de un patrón de expresión regular en una cadena con una cadena de reemplazo.
+- Ejemplo: `re.sub(r"[\w.%+-]+@[\w.-]+", "[REDACTED]", "Received an email for go_nuts95@my.example.com")` reemplazará la dirección de correo electrónico con `[REDACTED]`.
+- `Backreferences` en `re.sub()` permiten referirse a grupos capturados en la cadena de reemplazo. Por ejemplo, `r"\2 \1"` intercambia el orden de los grupos capturados en la expresión regular.
