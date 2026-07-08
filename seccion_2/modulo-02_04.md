@@ -50,3 +50,12 @@ with open('hosts.csv', 'w') as hosts_csv:
     writer = csv.writer(hosts_csv)
     writer.writerows(hosts)
 ```
+
+---
+
+## Generando archivos CSV
+- Para generar un archivo CSV, debemos importar el módulo `csv` y abrir un archivo en modo escritura.
+- Luego, podemos crear un objeto `writer` utilizando la función `csv.writer()`, que nos permitirá escribir filas en el archivo CSV.
+- Podemos utilizar el método `writerows()` para escribir múltiples filas a la vez, pasando una lista de listas que contenga los datos que deseamos escribir.
+- La variable writer es ahora ​una instancia de una clase de escritor CSV
+- Hay dos funciones que podemos usar: `writerow()`, ​que escribiremos una fila a la vez; ​y `writerows()`, que escribiremos todas juntas
