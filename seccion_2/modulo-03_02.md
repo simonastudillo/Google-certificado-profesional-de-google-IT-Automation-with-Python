@@ -159,3 +159,27 @@ print(repeating_letter_a("pineapple")) # False
 print(repeating_letter_a("Animal Kingdom")) # True
 print(repeating_letter_a("A is for apple")) # True
 ```
+
+---
+
+## Reseña: Personajes que escapan
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+import re
+print(re.search(r".com", "welcome"))
+print(re.search(r"\.com", "welcome"))
+print(re.search(r"\.com", "mydomain.com"))
+"""
+<_sre.SRE_Match object; span=(2, 6), match='lcom'>
+None
+<_sre.SRE_Match object; span=(8, 12), match='.com'>
+"""
+
+import re
+print(re.search(r"\w*", "This is an example"))
+print(re.search(r"\w*", "And_this_is_another"))
+"""
+<_sre.SRE_Match object; span=(0, 4), match='This'>
+<_sre.SRE_Match object; span=(0, 19), match='And_this_is_another'>
+"""
+```
