@@ -85,3 +85,25 @@ with open('software.csv') as software:
 - Primero definimos la lista de claves que queremos escribir en el archivo, luego abrimos el archivo para escritura. 
 - A continuación, creamos el DictWriter pasando las claves que habíamos identificado previamente, y luego llamamos a dos métodos diferentes en el escritor.
 - El método writeheader() creará la primera línea del CSV basándose en las claves que le pasamos, y el método writerows() convertirá la lista de diccionarios en líneas en ese archivo.
+
+---
+
+## Leyendo y escribiendo archivos CSV con diccionarios
+- Es común que la primera línea de un archivo CSV contenga los nombres de las columnas, que se pueden usar como claves para acceder a los valores de cada registro.
+- La función `csv.DictReader()` nos permite leer un archivo CSV y acceder a los valores de cada registro utilizando las claves definidas en la primera línea del archivo.
+- Este lector convierte cada fila de los datos de un archivo CSV en un diccionario.
+- Tambien podemos usar la función `csv.DictWriter()` para escribir datos en un archivo CSV utilizando diccionarios.
+- Al crear un objeto `DictWriter`, debemos pasar una lista de claves que representen los nombres de las columnas en el archivo CSV.
+
+```Python
+users = [{"name": "Sol Mansi", "username": "solm", "department": "IT infrastructure"}, 
+{"name": "Eli Jones", "username": "eli", "department": "IT support"}, 
+{"name": "Melody Daniels", "username": "melody", "department": "IT development" }]
+
+keys = ["name", "username", "department"]
+
+with open('by_department.csv', 'w') as by_department:
+    writer = csv.DictWriter(by_department, fieldnames=keys)
+    writer.writeheader()
+    writer.writerows(users)
+```
