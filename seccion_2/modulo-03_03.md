@@ -181,3 +181,26 @@ print(extract_pid("July 31 07:51:48 mycomputer bad_process[12345]: ERROR Perform
 print(extract_pid("99 elephants in a [cage]")) # None
 print(extract_pid("A string that also has numbers [34567] but no uppercase message")) # None
 print(extract_pid("July 31 08:08:08 mycomputer new_process[67890]: RUNNING Performing backup")) # 67890 (RUNNING)
+```
+
+---
+
+## Reseña: División y reemplazo
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+import re
+re.split(r"[.?!]", "One sentence. Another one? And the last one!")
+# ['One sentence', ' Another one', ' And the last one', '']
+
+import re
+re.split(r"([.?!])", "One sentence. Another one? And the last one!")
+# ['One sentence', '.', ' Another one', '?', ' And the last one', '!', '']
+
+import re
+re.sub(r"[\w.%+-]+@[\w.-]+", "[REDACTED]", "Received an email for go_nuts95@my.example.com")
+# 'Received an email for [REDACTED]'
+
+import re
+re.sub(r"^([\w .-]*), ([\w .-]*)$", r"\2 \1", "Lovelace, Ada")
+# 'Ada Lovelace'
+```
