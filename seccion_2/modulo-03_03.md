@@ -87,3 +87,14 @@ print(re.findall(r"\w{5,}", "I really like strawberries"))
 import re
 print(re.search(r"s\w{,20}", "I really like strawberries"))
 # <_sre.SRE_Match object; span=(14, 26), match='strawberries'>
+```
+
+---
+
+## Más información sobre los calificadores de repetición
+- Los calificadores de repetición nos permiten especificar cuántas veces queremos que un patrón coincida. Algunos ejemplos incluyen:
+  - `{n}`: Coincide exactamente n veces.
+  - `{n,}`: Coincide n o más veces.
+  - `{,m}`: Coincide hasta m veces.
+  - `{n,m}`: Coincide entre n y m veces.
+- Para buscar palabras de exactamente 5 letras, podemos usar el patrón `[a-zA-Z]{5}` junto a `\b` para indicar los límites de palabra, como en `\b[a-zA-Z]{5}\b`. Esto nos permitirá encontrar palabras que tengan exactamente 5 letras.
