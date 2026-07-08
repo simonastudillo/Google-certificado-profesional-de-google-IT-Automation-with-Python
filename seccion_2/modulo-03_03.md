@@ -98,3 +98,65 @@ print(re.search(r"s\w{,20}", "I really like strawberries"))
   - `{,m}`: Coincide hasta m veces.
   - `{n,m}`: Coincide entre n y m veces.
 - Para buscar palabras de exactamente 5 letras, podemos usar el patrón `[a-zA-Z]{5}` junto a `\b` para indicar los límites de palabra, como en `\b[a-zA-Z]{5}\b`. Esto nos permitirá encontrar palabras que tengan exactamente 5 letras.
+
+---
+
+## Reseña: Extracción de un PID mediante expresiones regulares en Python
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+import re
+log = "July 31 07:51:48 mycomputer bad_process[12345]: ERROR Performing package upgrade"
+regex = r"\[(\d+)\]"
+result = re.search(regex, log)
+print(result[1])
+# 12345
+
+import re
+log = "July 31 07:51:48 mycomputer bad_process[12345]: ERROR Performing package upgrade"
+regex = r"\[(\d+)\]"
+result = re.search(regex, log)
+result = re.search(regex, "A completely different string that also has numbers [34567]")
+print(result[1])
+# 34567
+
+import re
+log = "July 31 07:51:48 mycomputer bad_process[12345]: ERROR Performing package upgrade"
+regex = r"\[(\d+)\]"
+result = re.search(regex, log)
+result = re.search(regex, "A completely different string that also has numbers [34567]")
+result = re.search(regex, "99 elephants in a [cage]")
+print(result[1])
+#Note that this print command results in an error as shown in the video. 
+
+import re
+log = "July 31 07:51:48 mycomputer bad_process[12345]: ERROR Performing package upgrade"
+regex = r"\[(\d+)\]"
+result = re.search(regex, log)
+result = re.search(regex, "A completely different string that also has numbers [34567]")
+result = re.search(regex, "99 elephants in a [cage]")
+def extract_pid(log_line):
+    regex = r"\[(\d+)\]"
+    result = re.search(regex, log_line)
+    if result is None:
+        return ""
+    return result[1]
+print(extract_pid(log))
+# 12345
+
+import re
+log = "July 31 07:51:48 mycomputer bad_process[12345]: ERROR Performing package upgrade"
+regex = r"\[(\d+)\]"
+result = re.search(regex, log)
+result = re.search(regex, "A completely different string that also has numbers [34567]")
+result = re.search(regex, "99 elephants in a [cage]")
+def extract_pid(log_line):
+    regex = r"\[(\d+)\]"
+    result = re.search(regex, log_line)
+    if result is None:
+        return ""
+    return result[1]
+print(extract_pid(log))
+print(extract_pid("99 elephants in a [cage]"))
+# 12345
+# ""
+```
