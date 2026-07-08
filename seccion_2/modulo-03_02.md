@@ -247,3 +247,14 @@ None
     - `[a-zA-Z_]` indica que el primer carácter debe ser una letra o un guion bajo.
     - `[a-zA-Z0-9_]*` indica que los caracteres siguientes pueden ser letras, números o guiones bajos, y pueden repetirse cero o más veces.
     - `$` indica el final de la cadena.
+
+---
+
+## Guía de estudio: Expresiones regulares
+- Una expresión regular (a veces llamada regex) es una cadena de caracteres que especifica un patrón para buscar coincidencias en un texto.
+- Además de buscar coincidencias, permiten extraer partes específicas del texto, validar datos de entrada y son compatibles con editores de código y entornos de desarrollo integrados (IDE).
+- Ejemplos:
+    - `r"\d{3}-\d{3}-\d{4}"` busca un número de teléfono en el formato de USA: 123-456-7890.
+    - `r"^-?\d*(\.\d+)?$"` busca un número decimal, que puede ser negativo y puede tener una parte fraccionaria.
+    - `r"^/(.+)/([^/]+)/$"` busca una ruta de archivo en un sistema Unix o de una URL, donde el primer grupo captura el directorio y el segundo grupo captura el nombre del archivo.
+- Puedes practicar en la página web [regex101.com](https://regex101.com/)
