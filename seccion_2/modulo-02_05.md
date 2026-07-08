@@ -98,3 +98,36 @@ write_report(dictionary, '/home/student/test_report.txt')
 ## Resumen del Módulo 2: Gestión de archivos con Python
 - Comprobamos cómo leer y escribir tanto en textos como en ​archivos CSV y cómo administrar ​archivos y directorios con Python
 - Tenga en cuenta que los archivos son una de ​las formas más importantes de almacenar ​y transmitir información en TI
+
+---
+
+## Module 2 challenge: Handling Files
+1. What is a characteristic of a CSV file?
+> Data in each row is separated by a special character.
+
+2. You and your colleagues frequently work in a folder containing thousands of automatically generated files. One day you discover that you cannot write to any of the files in the folder. What is a likely cause of this?
+> Someone wrote a script that used open() to write to all the files and forgot to close them.
+
+3. On a Windows file system, C:\Users\Home\Documents\report.docx is an example of what kind of file path?
+> Absolute path
+
+4. Why is the os module useful when working in Python?
+> It allows you to interact with the operating system using Python, regardless of whether that operating system is Windows, Mac, Linux, or something else.
+
+5. What happens if you use the open() function in write mode ('w') on an existing file?
+> The old contents will be deleted as soon as the file is opened.
+
+6. Imagine you're reading a text file line by line in Python. The file contains data like names, but each name has an extra blank line appended after it. Which of the following modifications to the code would most effectively remove these extra blank lines while keeping the names intact?
+> Apply the strip() method on each line before storing it in a list.
+
+7. Imagine you're working in a terminal on a Linux system. You want to create a new directory named project_data within your current working directory. Which command achieves this?
+> mkdir project_data
+
+8. What is the primary function of the line reader = csv.DictReader(software.csv)?
+> It creates a dictionary reader object to iterate over rows in the software.csv file, treating each row as a dictionary.
+
+9. Imagine you're working in a terminal on a Linux or Unix-based system. You have a file named employees.csv and want to display its contents. Which of the following commands would achieve this?
+> cat employees.csv
+
+10. In Python's csv module, what's the primary benefit of registering a dialect like empDialect with csv.register_dialect as shown in the code snippet: csv.register_dialect('empDialect', skipinitialspace=True, strict=True)?
+> It allows you to define custom parsing behavior (like removing leading spaces) for CSV files without explicitly specifying the parameters every time you use the csv module.
