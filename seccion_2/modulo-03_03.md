@@ -213,3 +213,22 @@ re.sub(r"^([\w .-]*), ([\w .-]*)$", r"\2 \1", "Lovelace, Ada")
 - La función `re.sub()` reemplaza todas las ocurrencias de un patrón de expresión regular en una cadena con una cadena de reemplazo.
 - Ejemplo: `re.sub(r"[\w.%+-]+@[\w.-]+", "[REDACTED]", "Received an email for go_nuts95@my.example.com")` reemplazará la dirección de correo electrónico con `[REDACTED]`.
 - `Backreferences` en `re.sub()` permiten referirse a grupos capturados en la cadena de reemplazo. Por ejemplo, `r"\2 \1"` intercambia el orden de los grupos capturados en la expresión regular.
+
+---
+
+## Guía de estudio: Expresiones regulares avanzadas
+- Las expresiones regulares avanzadas —conocidas comúnmente como regex avanzadas— son utilizadas por los desarrolladores para realizar búsquedas de patrones complejos en cadenas de texto.
+- Alteraciones: Una alteración coincide con cualquiera de las alternativas separadas por el símbolo de barra vertical |.
+- Ejemplo: `r"location.*(London|Berlin|Madrid)"`: Esta línea de código coincidirá con la cadena de texto "location is London", "location is Berlin" o "location is Madrid".
+- Coincidencia solo al principio o al final: Si usas el símbolo de circunflejo (^) como primer carácter de tu expresión regular, solo coincidirá si el patrón aparece al inicio de la cadena.
+- De igual manera, si usas el símbolo de dólar ($) al final de una expresión regular, solo coincidirá si el patrón aparece al final.
+- Ejemplo: `r"^Mi nombre es (\w+)"`: Esta línea de código coincidirá con "Mi nombre es Asha", pero no con "Hola. Mi nombre es Asha".
+- Rangos de caracteres: Los rangos de caracteres se pueden usar para comparar un solo carácter con un conjunto de posibilidades.
+- Ejemplos: 
+    - `r"[A-Z]"` Coincidirá con una sola letra mayúscula.
+    - `r"[0-9$-,.]"` Coincidirá con cualquiera de los dígitos del cero al nueve, o con el signo de dólar, el guion, la coma o el punto.
+    - `r"([0-9]{3}-[0-9]{3}-[0-9]{4})"` Coincidirá con un número de teléfono estadounidense como el 888-123-7612.
+- Retroreferencias: Se utiliza al usar `re.sub()` para sustituir el valor de un grupo de captura en la salida.
+- Ejemplo: `re.sub(r"([A-Z])\.\s+(\w+)", r"Ms. \2", "A. Weber y B. Bellmas se han unido al equipo.")` Esta línea de código producirá: «Ms. Weber y Ms. Bellmas se han unido al equipo».
+- Búsqueda anticipada: Coincide con un patrón solo si le sigue otro patrón.
+- Ejemplo: `r"(Test\d)-(?=Passed)"` y la cadena fuera `"Test1-Passed, Test2-Passed, Test3-Failed, Test4-Passed, Test5-Failed"`, el resultado sería: Test1, Test2, Test4
