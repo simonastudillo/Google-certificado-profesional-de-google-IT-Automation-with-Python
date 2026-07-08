@@ -78,3 +78,17 @@ write_report(dictionary, '/home/student/test_report.txt')
 - `write_report()` toma el diccionario generado por `process_data()` y escribe un informe en un archivo de texto.
 - Se usaron las funciones de dialecto de `csv` para manejar los espacios en blanco y asegurar que el archivo CSV se lea correctamente.
 - Se utilizó el valor de retorno de la función `read_employees()` para obtener la lista de empleados, luego se pasó esa lista a `process_data()` para obtener el conteo de empleados por departamento, y finalmente se pasó ese diccionario a `write_report()` para generar el informe en un archivo de texto.
+
+---
+
+## Glosario módulo 2
+- `Absolute path` (Ruta absoluta): Ruta completa al recurso en el sistema de archivos.
+- `Comma separated values (CSV)` (Valores separados por comas): Formato de datos muy común que se utiliza para almacenar datos como segmentos de texto separados por comas.
+- `Dialects` (Dialectos): Reglas que definen la estructura de un archivo CSV.
+- `File systems` (Sistemas de archivos): Métodos y estructuras que se utilizan para organizar y controlar el almacenamiento y el acceso a los datos.
+- `Mode` (Modo): Formato que controla las acciones que se pueden realizar con un archivo recién abierto.
+- `Qwiklabs`: Entorno de aprendizaje en línea o máquina virtual para simular escenarios del mundo real.
+- `Reader objects` (Objetos lectores): Objeto que representa un elemento o entidad dentro de una escena que necesita ser renderizado en pantalla.
+- `Relative path` (Ruta relativa): Parte de una ruta que indica la ubicación del recurso en relación con el directorio de trabajo actual.
+- `Virtual machine (VM)` (Máquina virtual): Ordenador simulado mediante software.
+- `Writer objects` (Objetos escritores): Capacidad para escribir datos en un archivo CSV.
