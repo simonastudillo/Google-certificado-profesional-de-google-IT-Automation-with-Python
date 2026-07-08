@@ -85,3 +85,15 @@ print(re.findall(r"cat|dog", "I like both dogs and cats."))
 # <_sre.SRE_Match object; span=(12, 15), match='dog'>
 # ['dog', 'cat']
 ```
+
+---
+
+## Comodines y clases de personajes
+- Usar un punto es el comodín más amplio posible porque coincide absolutamente con ​cualquier carácter
+- Las clases de caracteres se escriben entre corchetes y ​vamos a enumerar los caracteres que queremos que coincidan dentro de esos corchetes. 
+- Ejemplo: Buscar todas las palabras con `p` y `P` usamos: `[pP]ython`
+- Ejemplo: Buscamos `[a-z]way` para encontrar palabras que terminen con `way` y tengan una letra minúscula antes de `way`.
+- Ejemplo: Buscamos `cloud[a-zA-Z0-9]` para encontrar palabras que comiencen con `cloud` y tengan una letra o un número después de `cloud`.
+- Ejemplo: Si quieres excluir debemos agregar un spacio al final de los corchetes y anteponer un `^` al inicio de la clase de caracteres. Por ejemplo, `[^a-zA-Z ]` busca cualquier carácter que no sea una letra mayúscula o minúscula.
+- Ejemplo: Usamos `|` para buscar coincidencias de varias palabras. Por ejemplo, `cat|dog` busca la palabra `cat` o la palabra `dog`.
+- Podemos usar la función `re.findall()` para encontrar todas las coincidencias de un patrón en una cadena de texto y devolverlas como una lista. Por ejemplo, `re.findall(r"cat|dog", "I like both dogs and cats.")` devuelve `['dog', 'cat']`.
