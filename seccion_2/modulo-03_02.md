@@ -97,3 +97,39 @@ print(re.findall(r"cat|dog", "I like both dogs and cats."))
 - Ejemplo: Si quieres excluir debemos agregar un spacio al final de los corchetes y anteponer un `^` al inicio de la clase de caracteres. Por ejemplo, `[^a-zA-Z ]` busca cualquier carácter que no sea una letra mayúscula o minúscula.
 - Ejemplo: Usamos `|` para buscar coincidencias de varias palabras. Por ejemplo, `cat|dog` busca la palabra `cat` o la palabra `dog`.
 - Podemos usar la función `re.findall()` para encontrar todas las coincidencias de un patrón en una cadena de texto y devolverlas como una lista. Por ejemplo, `re.findall(r"cat|dog", "I like both dogs and cats.")` devuelve `['dog', 'cat']`.
+
+---
+
+## Reseña: Calificadores de repetición
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+import re
+print(re.search(r"Py.*n", "Pygmalion"))
+print(re.search(r"Py.*n", "Python Programming"))
+print(re.search(r"Py[a-z]*n", "Python Programming"))
+print(re.search(r"Py[a-z]*n", "Pyn"))
+"""
+<_sre.SRE_Match object; span=(0, 9), match='Pygmalion'>
+<_sre.SRE_Match object; span=(0, 17), match='Python Programmin'>
+<_sre.SRE_Match object; span=(0, 6), match='Python'>
+<_sre.SRE_Match object; span=(0, 3), match='Pyn'>
+"""
+
+import re
+print(re.search(r"o+l+", "goldfish"))
+print(re.search(r"o+l+", "woolly"))
+print(re.search(r"o+l+", "boil"))
+"""
+<_sre.SRE_Match object; span=(1, 3), match='ol'>
+<_sre.SRE_Match object; span=(1, 5), match='ooll'>
+None
+"""
+
+import re
+print(re.search(r"p?each", "To each their own"))
+print(re.search(r"p?each", "I like peaches"))
+"""
+<_sre.SRE_Match object; span=(3, 7), match='each'>
+<_sre.SRE_Match object; span=(7, 12), match='peach'>
+"""
+```
