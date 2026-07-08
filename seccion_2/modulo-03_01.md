@@ -32,3 +32,12 @@ print(result[1])
 - La expresión regular busca un patrón específico en el texto. En este caso, busca un número dentro de corchetes.
 - `\[` y `\]` indican que estamos buscando los caracteres literales "[" y "]".
 - `(\d+)` es un grupo de captura que busca uno o más dígitos
+
+---
+
+## Por qué usar expresiones regulares
+- Las expresiones regulares son una herramienta poderosa para buscar y manipular texto.
+- En el ejemplo anterior, usamos una expresión regular para extraer un número de un registro de log.
+- Sin expresiones regulares, tendríamos que usar métodos más complicados y menos eficientes para lograr lo mismo como el uso de `index()` y `slice()`.
+- Esto puede ser un problema si el `process id` cambia de longitud, ya que tendríamos que ajustar manualmente los índices de corte.
+- Para mejorar y automatizar la búsqueda de patrones en el texto, las expresiones regulares son la mejor opción. 
