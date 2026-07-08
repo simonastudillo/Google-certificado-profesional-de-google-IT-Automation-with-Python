@@ -59,3 +59,29 @@ with open('hosts.csv', 'w') as hosts_csv:
 - Podemos utilizar el método `writerows()` para escribir múltiples filas a la vez, pasando una lista de listas que contenga los datos que deseamos escribir.
 - La variable writer es ahora ​una instancia de una clase de escritor CSV
 - Hay dos funciones que podemos usar: `writerow()`, ​que escribiremos una fila a la vez; ​y `writerows()`, que escribiremos todas juntas
+
+---
+
+## Reseña: Leyendo y escribiendo archivos CSV con diccionarios
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+#the following command should be used in the terminal
+cat software.csv 
+#Output name,version,status,users
+#MailTree,5.34,production,324
+#CalDoor,1.25.1,beta,22
+#Chatty Chicken,0.34,alpha,4
+
+with open('software.csv') as software:
+    reader = csv.DictReader(software)
+    for row in reader:
+      print(("{} has {} users").format(row["name"], row["users"]))
+# output:
+#MailTree has 324 users
+#CalDoor has 22 users
+#Chatty Chicken has 4 users
+```
+- Aquí el código crea una lista de diccionarios con los datos que queremos almacenar. 
+- Primero definimos la lista de claves que queremos escribir en el archivo, luego abrimos el archivo para escritura. 
+- A continuación, creamos el DictWriter pasando las claves que habíamos identificado previamente, y luego llamamos a dos métodos diferentes en el escritor.
+- El método writeheader() creará la primera línea del CSV basándose en las claves que le pasamos, y el método writerows() convertirá la lista de diccionarios en líneas en ese archivo.
