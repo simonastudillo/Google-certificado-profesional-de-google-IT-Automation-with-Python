@@ -93,3 +93,21 @@ ls -z
   - **STDIN (Standard Input)**: Flujo de entrada estándar, generalmente asociado al teclado.
   - **STDOUT (Standard Output)**: Flujo de salida estándar, generalmente asociado a la pantalla.
   - **STDERR (Standard Error)**: Flujo de error estándar, utilizado para mostrar mensajes de error.
+
+---
+
+## Reseña: Variables de entorno
+- Los siguientes bloques de código se usarán en el próximo video:
+```bash
+echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+cat variables.py
+# #!/usr/bin/env python3
+# import os
+# print("HOME: " + os.environ.get("HOME", ""))
+# print("SHELL: " + os.environ.get("SHELL", ""))
+# print("FRUIT: " + os.environ.get("FRUIT", ""))
+./variables.py 
+export FRUIT=Pineapple
+./variables.py 
+```
