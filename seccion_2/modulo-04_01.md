@@ -185,3 +185,14 @@ Error, the file example already exists!
 echo $?
 1
 ```
+
+---
+
+## Argumentos de la línea de comandos y estado de salida
+- `Command-line arguments` son los parámetros que se pasan a un programa cuando se ejecuta desde la línea de comandos.
+- En Python, los argumentos de la línea de comandos se pueden acceder a través del módulo `sys` y la lista `sys.argv`. 
+- El primer elemento de `sys.argv` es siempre el nombre del script, y los elementos siguientes son los argumentos proporcionados por el usuario.
+- `exit status` es un valor numérico que un programa devuelve al sistema operativo al finalizar su ejecución.
+- Un valor de salida de `0` generalmente indica que el programa se ejecutó correctamente, mientras que un valor distinto de `0` indica que ocurrió un error.
+- Para ver el estado de salida del último comando ejecutado en la terminal, puedes usar el comando `echo $?`.
+- En Python podemos establecer el estado de salida de un programa usando la función `sys.exit()`. Por ejemplo, `sys.exit(0)` indica una ejecución exitosa, mientras que `sys.exit(1)` indica un error.
