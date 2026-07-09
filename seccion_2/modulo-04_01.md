@@ -104,3 +104,29 @@ Bree Campbell, breee@utnisia.net
 ## Ejemplo: Trabajar con expresiones regulares
 - En este laboratorio, encontramos usuarios que utilizaban un dominio de correo electrónico antiguo en una lista extensa mediante expresiones regulares.
 - Escribimos un script que reemplazaba el dominio antiguo (abc.edu) por uno nuevo (xyz.edu) y guardamos todos los dominios, incluidos los actualizados, en un archivo nuevo.
+
+---
+
+## Diálogo con el entrenador: Automatización con expresiones regulares
+" ¡Bienvenidos! En este diálogo, exploraremos cómo usar expresiones regulares (Regex) para la automatización de texto.
+
+Esto es lo que cubriremos:
+
+El papel de las expresiones regulares en el procesamiento de texto.
+
+Funciones clave del módulo `re` para buscar y modificar texto, con casos de uso en automatización informática.
+
+Un enfoque sistemático para usar expresiones regulares en tareas de automatización." 
+```txt
+Durante la sesión de hoy sobre el uso de expresiones regulares (Regex) para la automatización de texto, nos centramos en su función, las funciones clave del módulo `re` para buscar y modificar texto, y el enfoque sistemático para su uso en tareas de automatización.
+
+Sus puntos fuertes:
+
+Definió correctamente las expresiones regulares como secuencias de caracteres que definen un patrón de búsqueda.
+
+Identificó y diferenció correctamente entre `re.sub()` para la sustitución, `re.findall()` para extraer todas las coincidencias y `re.split()` para dividir cadenas en listas.
+
+Áreas de mejora:
+
+Inicialmente, consideró `re.match()` para una tarea que requería una coincidencia de patrones y sustitución más amplia. Recuerde que `re.match()` solo busca un patrón al principio de una cadena. Repasar los casos de uso específicos de cada función del módulo `re` le ayudará a comprender mejor el concepto.
+```
