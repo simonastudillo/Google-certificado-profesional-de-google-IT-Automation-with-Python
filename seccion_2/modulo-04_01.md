@@ -196,3 +196,12 @@ echo $?
 - Un valor de salida de `0` generalmente indica que el programa se ejecutó correctamente, mientras que un valor distinto de `0` indica que ocurrió un error.
 - Para ver el estado de salida del último comando ejecutado en la terminal, puedes usar el comando `echo $?`.
 - En Python podemos establecer el estado de salida de un programa usando la función `sys.exit()`. Por ejemplo, `sys.exit(0)` indica una ejecución exitosa, mientras que `sys.exit(1)` indica un error.
+
+---
+
+## Más información sobre las funciones de entrada
+- `input()` y `raw_input()` funcionan diferente en Python 2 y Python 3. 
+- En Python 2, `input()` evalúa la entrada del usuario como código Python, mientras que `raw_input()` devuelve la entrada como una cadena de texto. 
+- En Python 3, `raw_input()` fue eliminado y `input()` se comporta como `raw_input()` en Python 2, es decir, siempre devuelve una cadena de texto.
+- `eval()` es una función que evalúa una cadena de texto como código Python.
+- Ejemplo: `eval("2 + 2")` devolverá `4`. Sin embargo, usar `eval()` con entradas de usuario puede ser peligroso, ya que permite la ejecución de código arbitrario. Por lo tanto, se recomienda evitar su uso con datos no confiables.
