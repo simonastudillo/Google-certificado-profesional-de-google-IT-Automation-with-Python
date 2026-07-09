@@ -111,3 +111,24 @@ cat variables.py
 export FRUIT=Pineapple
 ./variables.py 
 ```
+
+---
+
+## Variables de entorno
+- `shell` es un programa que proporciona una interfaz de línea de comandos para interactuar con el sistema operativo. Los shells suelen tener variables de entorno que almacenan información sobre el entorno del usuario y del sistema.
+- El más utilizado en linux se llama `bash` (Bourne Again Shell). Otras opciones populares son `zsh`, `fish`, `csh`, entre otros.
+- Para ver las variables de entorno de la terminal ejecuta el comando `env`
+- la variable de entorno `PATH` es una lista de directorios separados por dos puntos (:) que el sistema operativo utiliza para buscar ejecutables cuando se ingresa un comando en la terminal. 
+- Para ver el valor de la variable `PATH`, puedes ejecutar el comando `echo $PATH` en la terminal.
+- Para obtener las variables de entorno desde un programa de Python, puedes usar el módulo `os` y acceder al diccionario `os.environ`. Por ejemplo:
+```Python
+import os
+print("HOME: " + os.environ.get("HOME", ""))
+```
+- Se recomienda poner un segundo parámetro en caso de que la variable de entorno no exista, para evitar errores.
+- Podemos añadir variables de entorno temporalmente en la terminal usando el comando `export`. Por ejemplo:
+```bash
+export FRUIT=Pineapple
+```
+>[!NOTE]
+> Las variables de entorno establecidas con `export` solo duran mientras la terminal esté abierta. Una vez que cierres la terminal, las variables se perderán.
