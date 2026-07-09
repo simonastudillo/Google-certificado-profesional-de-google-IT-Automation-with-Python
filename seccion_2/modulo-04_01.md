@@ -51,3 +51,9 @@ Enter the number of seconds: 1
 
 Do you want to do another conversion? [y to continue] n
 ```
+
+---
+
+## Lectura interactiva de datos
+- Función `input()`: Permite leer datos de forma interactiva desde la entrada estándar (teclado). Esta función detiene la ejecución del programa hasta que el usuario ingresa un valor y presiona Enter.
+- Recuerda que si esperas un número, debes convertir la entrada a un tipo numérico usando `int()` o `float()`, ya que `input()` siempre devuelve una cadena de texto.
