@@ -26,3 +26,40 @@ print(result.returncode)
 - Para enviar argumentos al comando, se pasan como una lista de cadenas de texto. Por ejemplo, para ejecutar `ls -l`, se usaría `subprocess.run(["ls", "-l"])`.
 - El comando `subprocess.run()` devuelve un objeto `CompletedProcess` que contiene información sobre la ejecución del comando.
 - Incluye un atributo `returncode` que indica el estado de salida del comando ejecutado. Un valor de `0` generalmente indica éxito, mientras que un valor distinto de `0` indica un error.
+
+---
+
+## Revisión: Obtención del resultado de un comando del sistema
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+result = subprocess.run(["host", "8.8.8.8"], capture_output=True)
+
+
+
+result = subprocess.run(["host", "8.8.8.8"], capture_output=True)
+print(result.returncode)
+
+
+
+result = subprocess.run(["host", "8.8.8.8"], capture_output=True)
+print(result.stdout)
+
+
+
+result = subprocess.run(["host", "8.8.8.8"], capture_output=True)
+print(result.stdout.decode().split())
+
+import subprocess
+result = subprocess.run(["rm", "does_not_exist"], capture_output=True)
+
+
+import subprocess
+result = subprocess.run(["rm", "does_not_exist"], capture_output=True)
+print(result.returncode)
+
+import subprocess
+result = subprocess.run(["rm", "does_not_exist"], capture_output=True)
+print(result.returncode)
+print(result.stdout)
+print(result.stderr)
+```
