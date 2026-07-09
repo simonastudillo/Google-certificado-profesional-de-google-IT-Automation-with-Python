@@ -98,3 +98,9 @@ Kirk Nixon, kirknixon@xyz.edu
 Bree Campbell, breee@utnisia.net
 """
 ```
+
+---
+
+## Ejemplo: Trabajar con expresiones regulares
+- En este laboratorio, encontramos usuarios que utilizaban un dominio de correo electrónico antiguo en una lista extensa mediante expresiones regulares.
+- Escribimos un script que reemplazaba el dominio antiguo (abc.edu) por uno nuevo (xyz.edu) y guardamos todos los dominios, incluidos los actualizados, en un archivo nuevo.
