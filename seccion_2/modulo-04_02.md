@@ -80,3 +80,17 @@ print(result.stderr)
 
 >[!NOTE]
 > El parámatro `capture_output=True` esta disponible a partir de Python 3.7. 
+
+---
+
+## Revisión: Gestión avanzada de subprocesos
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+import os
+import subprocess
+
+my_env = os.environ.copy()
+my_env["PATH"] = os.pathsep.join(["/opt/myapp/", my_env["PATH"]])
+
+result = subprocess.run(["myapp"], env=my_env)
+```
