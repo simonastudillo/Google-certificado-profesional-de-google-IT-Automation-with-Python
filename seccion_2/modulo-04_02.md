@@ -94,3 +94,13 @@ my_env["PATH"] = os.pathsep.join(["/opt/myapp/", my_env["PATH"]])
 
 result = subprocess.run(["myapp"], env=my_env)
 ```
+
+---
+
+## Gestión avanzada de subprocesos
+- `os.environ.copy()` devuelve una copia del diccionario de variables de entorno del proceso actual. Esto permite modificar el entorno para un subproceso sin afectar al proceso principal.
+- `os.pathsep` es un carácter que se utiliza para separar rutas en la variable de entorno `PATH`. En sistemas Unix, es `:` y en Windows, es `;`.
+- El parámetro `env` de `subprocess.run()` permite especificar un conjunto de variables de entorno para el subproceso.
+- Al modificar la variable `PATH` en el entorno del subproceso, se puede controlar qué directorios se buscan para encontrar ejecutables. Esto es útil cuando se desea ejecutar un programa que no está en los directorios estándar del sistema.
+- Si estamos automatizando una tarea única y bien definida, ​estamos desarrollando una solución ​rápidamente es el mayor requisito, ​entonces el uso de comandos y ​subprocesos del sistema puede ayudar mucho
+- Pero si estamos haciendo algo ​más complejo o de larga duración, ​generalmente es una buena idea usar el cebo ​en o módulos externos que Python proporciona
