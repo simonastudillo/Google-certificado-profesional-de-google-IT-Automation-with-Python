@@ -205,3 +205,22 @@ echo $?
 - En Python 3, `raw_input()` fue eliminado y `input()` se comporta como `raw_input()` en Python 2, es decir, siempre devuelve una cadena de texto.
 - `eval()` es una función que evalúa una cadena de texto como código Python.
 - Ejemplo: `eval("2 + 2")` devolverá `4`. Sin embargo, usar `eval()` con entradas de usuario puede ser peligroso, ya que permite la ejecución de código arbitrario. Por lo tanto, se recomienda evitar su uso con datos no confiables.
+
+---
+
+## Test your knowledge: Data streams
+1. Which command will print out the exit value of a script that just ran successfully?
+> echo $?
+
+2. Which command will create a new environment variable?
+> export
+
+3. Which I/O stream are we using when we use the input function to accept user input in a Python script?
+> STDIN
+
+4. What is the meaning of an exit code of 0?
+> The program ended successfully.
+
+5. Which statements are true about input() and raw_input() in Python 2? (select all that apply)
+> raw_input() gets a string from the user.
+> input() performs basic math operations.
