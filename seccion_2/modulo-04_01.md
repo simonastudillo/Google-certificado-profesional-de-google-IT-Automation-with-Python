@@ -57,3 +57,31 @@ Do you want to do another conversion? [y to continue] n
 ## Lectura interactiva de datos
 - Función `input()`: Permite leer datos de forma interactiva desde la entrada estándar (teclado). Esta función detiene la ejecución del programa hasta que el usuario ingresa un valor y presiona Enter.
 - Recuerda que si esperas un número, debes convertir la entrada a un tipo numérico usando `int()` o `float()`, ya que `input()` siempre devuelve una cadena de texto.
+
+---
+
+## Reseña: Flujos estándar
+- Los siguientes bloques de código se usarán en el próximo video:
+```bash
+cat streams.py
+```
+```Python
+#!/usr/bin/env python3
+
+data = input("This will come from STDIN: ")
+print("Now we write it to STDOUT: " + data)
+print("Now we generate an error to STDERR: " + data + 1)
+```
+```bash
+./streams.py 
+# This will come from STDIN: Python Rocks!
+# Now we write it to STDOUT: Python Rocks!
+
+cat greeting.txt 
+# Well hello there, STDOUT
+
+cat greeting.txt 
+# Well hello there, STDOUT
+
+ls -z
+```
