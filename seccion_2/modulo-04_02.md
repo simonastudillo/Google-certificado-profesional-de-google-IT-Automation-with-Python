@@ -16,3 +16,13 @@ subprocess.run(["sleep", "2"])
 result = subprocess.run(["ls", "this_file_does_not_exist"])
 print(result.returncode)
 ```
+
+---
+
+## Ejecución de comandos del sistema en Python
+- Módulo `subprocess` de Python permite ejecutar comandos del sistema operativo desde un script de Python.
+- La función `subprocess.run()` se utiliza para ejecutar un comando y esperar a que termine.
+- Para ejecutar el comando externo se crea un entorno secundario para ​el proceso o subproceso secundario en el que se ejecuta el comando. ​Mientras que el proceso principal, que es nuestro script, ​está esperando que el subproceso termine, está bloqueado, lo ​que significa que el padre no puede hacer ningún trabajo hasta que el hijo termine.
+- Para enviar argumentos al comando, se pasan como una lista de cadenas de texto. Por ejemplo, para ejecutar `ls -l`, se usaría `subprocess.run(["ls", "-l"])`.
+- El comando `subprocess.run()` devuelve un objeto `CompletedProcess` que contiene información sobre la ejecución del comando.
+- Incluye un atributo `returncode` que indica el estado de salida del comando ejecutado. Un valor de `0` generalmente indica éxito, mientras que un valor distinto de `0` indica un error.
