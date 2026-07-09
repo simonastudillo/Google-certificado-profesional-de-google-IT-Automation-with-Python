@@ -85,3 +85,11 @@ cat greeting.txt
 
 ls -z
 ```
+
+---
+
+# Flujos estándar
+- `I/O streams.` son flujos de datos que permiten la comunicación entre un programa y su entorno, como el sistema operativo o el usuario. Los flujos estándar más comunes son:
+  - **STDIN (Standard Input)**: Flujo de entrada estándar, generalmente asociado al teclado.
+  - **STDOUT (Standard Output)**: Flujo de salida estándar, generalmente asociado a la pantalla.
+  - **STDERR (Standard Error)**: Flujo de error estándar, utilizado para mostrar mensajes de error.
