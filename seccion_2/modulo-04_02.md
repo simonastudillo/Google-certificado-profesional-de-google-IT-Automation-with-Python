@@ -104,3 +104,80 @@ result = subprocess.run(["myapp"], env=my_env)
 - Al modificar la variable `PATH` en el entorno del subproceso, se puede controlar qué directorios se buscan para encontrar ejecutables. Esto es útil cuando se desea ejecutar un programa que no está en los directorios estándar del sistema.
 - Si estamos automatizando una tarea única y bien definida, ​estamos desarrollando una solución ​rápidamente es el mayor requisito, ​entonces el uso de comandos y ​subprocesos del sistema puede ayudar mucho
 - Pero si estamos haciendo algo ​más complejo o de larga duración, ​generalmente es una buena idea usar el cebo ​en o módulos externos que Python proporciona
+
+---
+
+## Guía de estudio: Subprocesos de Python
+- En Python, existen muchas maneras diferentes de realizar una misma tarea.
+- Algunas son más fáciles de escribir, otras se adaptan mejor a una tarea específica y otras requieren menos recursos computacionales.
+- Los subprocesos permiten llamar y ejecutar otras aplicaciones desde Python, incluyendo otros scripts.
+- En Python, el módulo `subprocess` puede ejecutar código y aplicaciones nuevos mediante la creación de nuevos procesos desde el programa.
+- Gracias a esta capacidad, `subprocess` es una forma muy útil de ejecutar varios procesos en paralelo en lugar de secuencialmente.
+- Los subprocesos de Python pueden iniciar procesos para:
+    - Abrir varios archivos de datos en una carpeta simultáneamente.
+    - Ejecutar programas externos.
+    - Conectarse a `input`, `output` y `error`, y obtener códigos de retorno.
+- Comparación entre subprocess, OS y Pathlib
+    - Una vez más, Python ofrece múltiples maneras de realizar la mayoría de las tareas; subprocess es extremadamente potente, ya que permite hacer todo lo que se haría desde Python en la consola y obtener información de vuelta a Python.
+    - Pero el hecho de poder usar subprocess no siempre significa que sea lo más conveniente.
+    - Comparemos subprocess con dos de sus alternativas: 
+        - OS, que ya se ha tratado en otras lecturas, y Pathlib.
+        - Para tareas como obtener el directorio de trabajo actual o crear un directorio, OS y Pathlib son más directas (o "pythónicas", es decir, utilizan el lenguaje tal como fue concebido).
+        - Usar subprocess para estas tareas es como usar una palanca para abrir una tuerca.
+        - Es más complejo y puede resultar excesivo para operaciones sencillas.
+- Ejemplo: obtener el directorio de trabajo actual
+- Sub proceso
+`cwd_subprocess = subprocess.check_output(['pwd'], text=True).strip()`
+- OS:
+`cwd_os = os.getcwd()`
+- Pathlib:
+`cwd_pathlib = Path.cwd()`
+- Ejemplo: Crear un directorio
+- Sub proceso
+`subprocess.run(['mkdir', 'new_directory'])`
+- OS:
+`os.mkdir('new_directory')`
+- Pathlib:
+`test_dir_pathlib2 = Path('test_dir_pathlib2')`
+`test_dir_pathlib2.mkdir(exist_ok=True) #Ensures the directory is created only if it doesn't already exist`
+- Donde Subprocess brilla
+    - Las formas básicas de usar Subprocess son los métodos `.run()` y `.Popen()`.
+    - Existen métodos adicionales: `.call()`, `.check_output()` y `.check_call()`.
+    - Normalmente, bastará con usar `.run()` o uno de los dos métodos de verificación cuando sea apropiado.
+    - Sin embargo, al crear procesos paralelos o comunicarse entre subprocesos, ¡`.Popen()` ofrece mucha más potencia!
+    - `.run()` es la forma más sencilla de ejecutar un comando (su nombre lo indica) y `.Popen()` es la forma más completa de llamar a comandos externos.
+    - Todos los métodos `.run()`, `.call()`, `.check_output()` y `.check_call()` son envoltorios de la clase `.Popen()`.
+- `.run()`
+    - El comando `.run()` es el método recomendado para invocar subprocesos.
+    - Ejecuta el comando, espera a que finalice y luego devuelve una instancia de `CompletedProcess` que contiene información sobre el proceso.
+    - Ejecutar el comando `echo` usando `.run()`:
+        - `result_run = subprocess.run(['echo', '¡Hola, mundo!'], capture_output=True, text=True)`
+        - `result_run.stdout.strip()` # Extrae la salida estándar y elimina los espacios en blanco adicionales.
+        - Salida: `'¡Hola, mundo!'`
+- `.call()`
+    - El comando `call()` ejecuta una instrucción, espera a que finalice y luego devuelve el código de retorno.
+    - `call` es un comando antiguo y ahora se recomienda usar `.run()`, pero es útil ver cómo funciona.
+    - Ejecutando el comando `echo` con `call()`:
+    - `return_code_call = subprocess.call(['echo', '¡Hola desde call!'])`
+    - `return_code_call`
+    - Salida: `0` El valor devuelto 0 indica que el comando se ejecutó correctamente.
+- `.check_call()` y `.check_output()`
+    - Utilice `check_call()` para obtener solo el estado de un comando.
+    - Utilice `check_output()` para obtener también la salida.
+    - Estas opciones son útiles en situaciones como la entrada/salida de archivos, donde un archivo podría no existir o la operación podría fallar.
+    - El comando `check_call()` es similar a `call()`, pero genera una excepción `CalledProcessError` si devuelve un código de salida distinto de cero.
+    - Ejemplo para ejecutar el comando `echo` con `check_call()`:
+    - `return_code_check_call = subprocess.check_call(['echo', '¡Hola desde check_call!'])`
+    - `return_code_check_call`
+    - Salida: `0` El valor devuelto (0) indica que el comando se ejecutó correctamente.
+    - Usando `check_output()` para ejecutar el comando `echo`:
+    - `output_check_output = subprocess.check_output(['echo', '¡Hola desde check_output!'], text=True)`
+    - `output_check_output.strip()` # Extrayendo la salida estándar y eliminando los espacios en blanco adicionales.
+    - Salida: `'¡Hola desde check_output!'`
+- `.Popen()`
+    - La función `Popen()` ofrece características más avanzadas que las funciones mencionadas anteriormente. Permite crear un nuevo proceso, conectarse a sus canales de entrada/salida/error y obtener su código de retorno.
+    - Ejemplo para ejecutar el comando `echo` con `Popen`:
+    - `process_popen = subprocess.Popen(['echo', '¡Hola desde popen!'], stdout=subprocess.PIPE, text=True)`
+    - `output_popen, _ = process_popen.communicate()`
+    - `output_popen.strip()` (Extrae la salida estándar y elimina los espacios en blanco adicionales)
+    - Salida: `¡Hola desde popen!`
