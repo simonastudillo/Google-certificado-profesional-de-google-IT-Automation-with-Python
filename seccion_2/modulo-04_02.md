@@ -63,3 +63,20 @@ print(result.returncode)
 print(result.stdout)
 print(result.stderr)
 ```
+
+---
+
+## Obtención del resultado de un comando del sistema
+- El comando `who` se utiliza para mostrar información sobre los usuarios que están actualmente conectados al sistema.
+- Para capturar la salida de un comando, se puede usar el parámetro `capture_output=True` en la función `subprocess.run()`. Esto permite acceder a la salida estándar y al error estándar del comando ejecutado.
+- El comando `host` se utiliza para realizar consultas de DNS y obtener información sobre nombres de dominio y direcciones IP.
+- El resultado de la ejecución de un comando se puede acceder a través de los atributos `stdout` y `stderr` del objeto `CompletedProcess`. Estos atributos contienen la salida estándar y el error estándar del comando, respectivamente.
+- La respuesta de `stdout` y `stderr` se devuelve como bytes, por eso tiene un `b` al inicio. Para convertirlo a una cadena de texto legible, se puede usar el método `decode()`.
+- Los datos de los equipos se almacenan y transmiten en ​bytes y cada uno puede representar hasta 256 caracteres
+- Pero hay miles de caracteres posibles por ​ahí solían escribir en varios idiomas.
+- El chino, por ejemplo, ​requiere más de 10.000 caracteres diferentes
+- Para poder escribir en esos idiomas, se ​han creado varias especificaciones llamadas codificaciones a lo largo del ​tiempo para indicar qué secuencias ​de bytes representan qué caracteres
+- Hoy en día, la mayoría de las personas usan codificación UTF-8, ​que es parte del estándar Unicode que ​enumera todos los caracteres posibles ​que se pueden representar. 
+
+>[!NOTE]
+> El parámatro `capture_output=True` esta disponible a partir de Python 3.7. 
