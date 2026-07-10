@@ -291,3 +291,24 @@ chmod +x rearrange_test.py
 - Luego usamos el método `assertEqual()` para comparar el resultado de la función con el resultado esperado.
 - Para ejecutar las pruebas, podemos usar `unittest.main()` al final del archivo de prueba.
 - Antes de ejecutar recuerda revisar los permisos, luego ejecuta el archivo de prueba desde la terminal.
+
+---
+
+## Revisión: Casos límite
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+def test_empty(self):
+  testcase = ""
+  expected = ""
+  self.assertEqual(rearrange_name(testcase), expected)
+
+#!/usr/bin/env python3
+
+import re
+
+def rearrange_name(name):
+  result = re.search(r"^([\w .-]*), ([\w .-]*)$", name)
+  if result is None:
+    return ""
+  return "{} {}".format(result[2], result[1])
+```
