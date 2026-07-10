@@ -17,3 +17,14 @@
   - Pruebas unitarias: se centran en probar una unidad de código a la vez, como una función o un método.
   - Pruebas de integración: se centran en probar cómo interactúan diferentes unidades de código entre sí.
   - Pruebas funcionales: se centran en probar el comportamiento del software desde la perspectiva del usuario final.
+
+---
+
+## Test automáticos y Test manuales
+- Tener buenas pruebas para nuestro software ​puede ayudarnos a detectar errores, errores ​y errores antes de implementar nuestros scripts para ​realizar tareas de automatización del mundo real
+- La forma más básica de probar un script es ejecutarlo con ​diferentes parámetros y ver si ​devuelve los valores esperados, esto se conoce como prueba manual
+- Las pruebas formales de software nos llevan a procesar un paso más allá, ​codificando las pruebas en ​su propio software y código que se pueden ​ejecutar para verificar que ​nuestros programas hacen lo que esperamos que hagan
+- Pruebas automáticas significa que escribiremos código para hacer la prueba
+- Debe verificar que se comporta de ​la manera en que espera que tenga ​tantos valores posibles conocidos como casos de prueba. 
+- Cuantos más casos de prueba incluya en su prueba, ​mejor se probará su código y más ​podrá garantizar que ​su código haga lo que espera que haga
+- Cuando por alguna razón ​los resultados no coinciden con las expectativas, ​el código generará un error, ​para que podamos verificar el código y averiguar qué está pasando
