@@ -201,3 +201,21 @@ def test_fruit_salad(fruit_bowl):
 ```
 - En este ejemplo, `test_fruit_salad` solicita `fruit_bowl`.
 - Cuando pytest reconoce esto, ejecuta la función de prueba `fruit_bowl` y toma el objeto que devuelve como argumento `fruit_bowl` en `test_fruit_salad`.
+
+---
+
+## Comparando unittest vs pytest
+- Tanto unittest como pytest proporcionan a los desarrolladores herramientas para crear código robusto y fiable mediante diferentes tipos de pruebas.
+- Ambas se pueden usar al crear programas en Python, y la elección depende de las preferencias del desarrollador.
+- Diferencias clave:
+    - Unittest es una herramienta integrada en Python, mientras que pytest debe importarse desde fuera del script.
+    - La detección de pruebas funciona de manera diferente para cada tipo de prueba.
+    - Unittest tiene la funcionalidad de detectar automáticamente casos de prueba dentro de una aplicación, pero debe ejecutarse desde la línea de comandos.
+    - Las pruebas de pytest se ejecutan automáticamente usando el prefijo `test_`.
+    - Unittest utiliza un enfoque orientado a objetos para escribir pruebas, mientras que pytest utiliza un enfoque funcional.
+    - Pytest utiliza sentencias `assert` integradas, lo que facilita la lectura y escritura de las pruebas.
+    - Por otro lado, unittest proporciona métodos de aserción especiales como `assertEqual()` o `assertTrue()`.
+    - Existe compatibilidad con versiones anteriores entre unittest y pytest.
+    - Dado que unittest está integrado en Python, estos conjuntos de pruebas se ejecutan con mayor facilidad.
+    - Gracias a la compatibilidad con versiones anteriores, el framework unittest se puede ejecutar sin problemas utilizando el framework pytest sin grandes modificaciones.
+    - Esto permite a los desarrolladores adoptar pytest gradualmente e integrarlo en su código.
