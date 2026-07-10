@@ -366,3 +366,11 @@ def rearrange_name(name):
 ```bash
 ./rearrange_test.py 
 ```
+
+---
+
+## Casos de prueba adicionales
+- Al escribir pruebas unitarias, es importante considerar casos de prueba adicionales que puedan surgir.
+- Para el ejemplo que estamos viendo, se hace prueba con nombres dobles y nombres únicos, además de los casos límite que ya se han mencionado.
+- Cuando encontramos un error debemos de solucionar el problema y luego agregar un caso de prueba para asegurarnos de que el error no vuelva a ocurrir en el futuro.
+- Esto se debe hacer en un ciclo constante hasta que estemos seguros de que nuestro código funciona correctamente y de manera confiable.
