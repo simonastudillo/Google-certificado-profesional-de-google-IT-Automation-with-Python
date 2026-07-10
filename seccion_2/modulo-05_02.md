@@ -374,3 +374,177 @@ def rearrange_name(name):
 - Para el ejemplo que estamos viendo, se hace prueba con nombres dobles y nombres únicos, además de los casos límite que ya se han mencionado.
 - Cuando encontramos un error debemos de solucionar el problema y luego agregar un caso de prueba para asegurarnos de que el error no vuelva a ocurrir en el futuro.
 - Esto se debe hacer en un ciclo constante hasta que estemos seguros de que nuestro código funciona correctamente y de manera confiable.
+
+---
+
+# Guía de estudio: Unit tests
+- Las pruebas unitarias están diseñadas para probar pequeñas partes de código, como una sola función o método, para asegurar que cada parte del código funcione correctamente.
+- Las pruebas unitarias ayudan a aislar errores, permitiendo identificarlos y corregirlos en las primeras etapas del desarrollo de software, antes de que se conviertan en problemas mayores y más costosos de solucionar.
+- Casos de pruebas:
+    - Los componentes básicos de las pruebas unitarias dentro del módulo `unittest` son los casos de prueba, que permiten a los desarrolladores ejecutar varias pruebas simultáneamente.
+    - Para escribir casos de prueba, debemos crear subclases de `TestCase` o usar `FunctionTestCase`.
+    - Para realizar una prueba específica, la subclase `TestCase` debe implementar un método de prueba que comience con el nombre `test`.
+    - Este identificador es el que informa al ejecutor de pruebas qué métodos representan las pruebas.
+```Python
+import unittest
+
+
+class TestStringMethods(unittest.TestCase):
+
+
+    def test_upper(self):
+        self.assertEqual('foo'.upper(), 'FOO')
+
+
+    def test_isupper(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+
+    def test_split(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError): 
+            s.split(2)
+
+
+if __name__ == '__main__':
+    unittest.main()
+```
+- El ejemplo incluye tres pruebas individuales: `test_upper()`, `test_isupper()` y `test_split()`, que se encargan de probar diferentes métodos de cadena.
+- Aserciones
+    - La clase TestCase también emplea sus propios métodos de aserción que funcionan de forma similar a la instrucción `assert`:
+    - si una prueba falla, se genera una excepción con un mensaje explicativo y unittest identifica el caso de prueba como fallido.
+    - En el ejemplo anterior, se utilizan varias aserciones:
+        - `assertEqual()` para comprobar el resultado esperado.
+        - `assertTrue()` y `assertFalse()` para verificar una condición.
+        - `assertRaises()` para verificar que se genere una excepción específica.
+    - Cada uno de estos métodos de aserción se utiliza en lugar de la instrucción `assert` estándar para que el ejecutor de pruebas pueda recopilar todos los resultados y generar un informe.
+
+- Lista de los métodos de aserción más utilizados en la clase TestCase.
+- `assertEqual(a, b)` : comprueba que a == b
+- `assertNotEqual(a, b)` : comprueba que a != b
+- `assertTrue(x)` : comprueba que bool(x) es True
+- `assertFalse(x)` : comprueba que bool(x) es False
+- `assertIs(a, b)` : comprueba que a es b
+- `assertIsNot(a, b)` : comprueba que a no es b
+- `assertIsNone(x)` : comprueba que x es None
+- `assertIsNotNone(x)` : comprueba que x no es None
+- `assertIn(a, b)` : comprueba que a pertenece a b
+- `assertNotIn(a, b)` : comprueba que a no pertenece a b
+- `assertIsInstance(a, b)` : comprueba que `a` sea una instancia de `b`
+- `assertNotIsInstance(a, b)` : comprueba que `a` no sea una instancia de `b`
+
+- Patrones de diseño de pruebas unitarias
+- Un patrón que se puede usar para las pruebas unitarias consta de tres fases: preparación, ejecución y verificación.
+- La preparación representa la disposición del entorno para la prueba; la ejecución representa la acción, o el objetivo de la prueba, que se realiza; y la verificación representa si los resultados comprobados son los esperados o no.
+- Imagina que estás creando un sistema para una biblioteca.
+- El objetivo es probar si se puede agregar un nuevo libro a la colección de la biblioteca y luego verificar si el libro está en la colección.
+- Usando la estructura anterior de preparación, ejecución y verificación, considera el siguiente código de ejemplo:
+    - Datos (preparación): Una biblioteca con una colección de libros.
+    - Cuándo probar (ejecución): Se agrega un nuevo libro a la colección.
+    - Luego verificar (verificación): El nuevo libro debería estar presente en la colección de la biblioteca.
+```Python
+class Library:
+	def __init__(self):
+		self.collection = []
+
+	def add_book(self, book_title):
+		self.collection.append(book_title)
+
+	def has_book(self, book_title):
+		return book_title in self.collection
+
+# Unit test for the Library system
+class TestLibrary(unittest.TestCase):
+
+	def test_adding_book_to_library(self):
+    	# Arrange
+		library = Library()
+		new_book = "Python Design Patterns"
+
+    	# Act
+    	library.add_book(new_book)
+
+    	# Assert
+    	self.assertTrue(library.has_book(new_book))
+
+# Running the test
+library_test_output = unittest.TextTestRunner().run(unittest.TestLoader().loadTestsFromTestCase(TestLibrary))
+print(library_test_output)
+```
+
+- Conjuntos de pruebas
+- Las pruebas pueden consumir mucho tiempo, pero existen maneras de optimizar el proceso.
+- Los siguientes métodos y módulos permiten definir instrucciones que se ejecutan antes y después de cada método de prueba:
+    - `setUp()` se puede llamar automáticamente con cada prueba para configurar el código.
+    - `tearDown()` ayuda a limpiar el código después de que se haya ejecutado la prueba.
+- Si `setUp()` genera una excepción durante la prueba, el framework unittest lo considera un error y el método de prueba no se ejecuta.
+- Si `setUp()` se ejecuta correctamente, `tearDown()` se ejecuta incluso si el método de prueba falla.
+- Puedes agregar estos métodos a tus pruebas unitarias, que luego puedes incluir en un conjunto de pruebas.
+- Los conjuntos de pruebas son colecciones de pruebas que deben ejecutarse juntas; por lo tanto, todos los temas tratados en esta lectura se pueden incluir en un conjunto de pruebas.
+```python
+import unittest
+import os
+import shutil
+
+# Function to test
+def simple_addition(a, b):
+	return a + b
+
+# Paths for file operations
+ORIGINAL_FILE_PATH = "/tmp/original_test_file.txt"
+COPIED_FILE_PATH = "/mnt/data/copied_test_file.txt"
+
+# Global counter
+COUNTER = 0
+
+# This method will be run once before any tests or test classes
+def setUpModule():
+	global COUNTER
+	COUNTER = 0
+    
+	# Create a file in /tmp
+	with open(ORIGINAL_FILE_PATH, 'w') as file:
+    	file.write("Test Results:\n")
+
+# This method will be run once after all tests and test classes
+def tearDownModule():
+	# Copy the file to another directory
+	shutil.copy2(ORIGINAL_FILE_PATH, COPIED_FILE_PATH)
+    
+	# Remove the original file
+	os.remove(ORIGINAL_FILE_PATH)
+
+class TestSimpleAddition(unittest.TestCase):
+
+	# This method will be run before each individual test
+	def setUp(self):
+    	global COUNTER
+    	COUNTER += 1
+
+	# This method will be run after each individual test
+	def tearDown(self):
+    	# Append the test result to the file
+    	with open(ORIGINAL_FILE_PATH, 'a') as file:
+        	result = "PASSED" if self._outcome.success else "FAILED"
+        	file.write(f"Test {COUNTER}: {result}\n")
+
+	def test_add_positive_numbers(self):
+    	self.assertEqual(simple_addition(3, 4), 7)
+
+	def test_add_negative_numbers(self):
+    	self.assertEqual(simple_addition(-3, -4), -7)
+
+# Running the tests
+suite = unittest.TestLoader().loadTestsFromTestCase(TestSimpleAddition)
+runner = unittest.TextTestRunner()
+runner.run(suite)
+
+# Read the copied file to show the results
+with open(COPIED_FILE_PATH, 'r') as result_file:
+	test_results = result_file.read()
+
+print(test_results)
+```
