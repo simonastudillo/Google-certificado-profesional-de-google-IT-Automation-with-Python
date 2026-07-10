@@ -219,3 +219,19 @@ def test_fruit_salad(fruit_bowl):
     - Dado que unittest está integrado en Python, estos conjuntos de pruebas se ejecutan con mayor facilidad.
     - Gracias a la compatibilidad con versiones anteriores, el framework unittest se puede ejecutar sin problemas utilizando el framework pytest sin grandes modificaciones.
     - Esto permite a los desarrolladores adoptar pytest gradualmente e integrarlo en su código.
+
+---
+
+## Revisión: Unit test
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+#!/usr/bin/env python3
+import re
+def rearrange_name(name):
+  result = re.search(r"^([\w .]*), ([\w .]*)$", name)
+  return "{} {}".format(result[2], result[1])
+from rearrange import rearrange_name
+
+
+rearrange_name("Lovelace, Ada")  
+```
