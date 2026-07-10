@@ -28,3 +28,21 @@
 - Debe verificar que se comporta de ​la manera en que espera que tenga ​tantos valores posibles conocidos como casos de prueba. 
 - Cuantos más casos de prueba incluya en su prueba, ​mejor se probará su código y más ​podrá garantizar que ​su código haga lo que espera que haga
 - Cuando por alguna razón ​los resultados no coinciden con las expectativas, ​el código generará un error, ​para que podamos verificar el código y averiguar qué está pasando
+
+---
+
+## Test your knowledge: Simple tests
+1. You can verify that software code behaves correctly using test ___.
+> Cases
+
+2. What is the most basic way of testing a script?
+> Different parameters with expected results.
+
+3. When a test is codified into its own software, what kind of test is it?
+> Automated test
+
+4. Using _____ simplifies the testing process, allowing us to verify the program's behavior repeatedly with many possible values.
+> test cases
+
+5. The more complex our code becomes, the more value the use of _____ provides in managing errors.
+> software testing
