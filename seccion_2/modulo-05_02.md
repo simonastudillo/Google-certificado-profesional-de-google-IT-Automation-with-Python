@@ -139,3 +139,65 @@ Ran 1 test in 0.002s
 OK
 <unittest.runner.TextTestResult run=1 errors=0 failures=0>
 ```
+
+---
+
+## pytest
+- Pytest es una potente herramienta de pruebas para Python que ayuda a los programadores a escribir programas más eficaces y estables.
+- Permite escribir diversos tipos de pruebas, como pruebas de integración, de extremo a extremo y funcionales.
+- Ofrece detección automática de pruebas y genera informes detallados.
+- Como escribir tests
+    - Las pruebas de Python se escriben con funciones que utilizan la operación `assert()`.
+    - `assert` es una herramienta de depuración común en Python que permite a los programadores incluir comprobaciones de integridad en su código.
+    - Estas comprobaciones garantizan que ciertas condiciones o suposiciones se cumplan durante la ejecución.
+    - Si la condición proporcionada a `assert()` resulta ser falsa, indica un error en el código, se genera una excepción y se detiene la ejecución del programa.
+    - Normalmente, el código proporciona una condición de `assert` seguida de un mensaje opcional. Un ejemplo es:
+```Python
+def divide(a, b):
+	assert b != 0, "Cannot divide by zero"
+	return a / b
+```
+- La aserción `assert b != 0` garantiza que el divisor `b` no sea cero antes de realizar la operación de división.
+- fixtures de Pytest
+    - Los fixtures se utilizan para separar partes del código que solo se ejecutan para las pruebas.
+    - Son fragmentos reutilizables de código de configuración y limpieza de pruebas que se comparten entre varias pruebas.
+    - Los fixtures benefician a los desarrolladores al ayudar a mantener sus pruebas limpias y evitar la duplicación de código.
+```Python
+import pytest
+class Fruit:
+    def __init__(self, name):
+        self.name = name
+        self.cubed = False
+
+
+    def cube(self):
+        self.cubed = True
+
+
+class FruitSalad:
+    def __init__(self, *fruit_bowl):
+        self.fruit = fruit_bowl
+        self._cube_fruit()
+
+
+    def _cube_fruit(self):
+        for fruit in self.fruit:
+            fruit.cube()
+
+
+# Arrange
+@pytest.fixture
+def fruit_bowl():
+    return [Fruit("apple"), Fruit("banana")]
+
+
+def test_fruit_salad(fruit_bowl):
+    # Act
+    fruit_salad = FruitSalad(*fruit_bowl)
+
+
+    # Assert
+    assert all(fruit.cubed for fruit in fruit_salad.fruit)
+```
+- En este ejemplo, `test_fruit_salad` solicita `fruit_bowl`.
+- Cuando pytest reconoce esto, ejecuta la función de prueba `fruit_bowl` y toma el objeto que devuelve como argumento `fruit_bowl` en `test_fruit_salad`.
