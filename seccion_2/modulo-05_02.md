@@ -242,3 +242,40 @@ rearrange_name("Lovelace, Ada")
 - Unit test (prueba unitaria): Se usan para verificar pequeñas y aisladas partes de código, como funciones o métodos, para asegurarse de que funcionan correctamente.
 - Una característica clave de las pruebas unitarias es que se centran en probar una unidad de código a la vez, lo que permite a los desarrolladores identificar y corregir errores de manera más eficiente.
 - nuestras pruebas ​nunca deben modificar el entorno de producción. ​Este es un entorno en vivo que ejecuta ​un software con el que los usuarios interactúan. ​Al desarrollar la prueba, si por ​alguna razón necesitamos ​interactuar con algún otro software, ​normalmente lo haremos en un entorno de prueba, ​donde tendremos control sobre cómo se comporta.
+
+---
+
+## Revisión: Escribiendo test unitarios en Python
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+#!/usr/bin/env python3
+
+import re
+
+def rearrange_name(name):
+  result = re.search(r"^([\w .]*), ([\w .]*)$", name)
+  return "{} {}".format(result[2], result[1])
+
+
+
+#!/usr/bin/env python3
+
+import unittest
+
+from rearrange import rearrange_name
+
+class TestRearrange(unittest.TestCase):
+    
+  def test_basic(self):
+    testcase = "Lovelace, Ada"
+    expected = "Ada Lovelace"
+    self.assertEqual(rearrange_name(testcase), expected)
+
+# Run the tests
+unittest.main()
+
+
+
+chmod +x rearrange_test.py 
+./rearrange_test.py 
+```
