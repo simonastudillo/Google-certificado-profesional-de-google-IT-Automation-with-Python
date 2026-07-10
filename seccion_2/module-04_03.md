@@ -95,3 +95,44 @@ print(show_time_of_pid("Jul 6 14:04:01 computer.name CRON[29440]: USER (naughty_
 
 print(show_time_of_pid("Jul 6 14:05:01 computer.name CRON[29440]: USER (naughty_user)")) # Jul 6 14:05:01 pid:29440
 ```
+
+---
+
+## Revisión: Dar sentido a los datos
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+usernames = {}
+name = "good_user"
+usernames[name] = usernames.get(name, 0) + 1
+print(usernames)
+usernames[name] = usernames.get(name, 0) + 1
+print(usernames)
+"""
+{'good_user': 1}
+{'good_user': 2}
+"""
+
+#!/bin/env/python3
+
+import re
+import sys
+
+logfile = sys.argv[1]
+usernames = {}
+with open(logfile) as f:
+  for line in f:
+    if "CRON" not in line:
+      continue
+    pattern = r"USER \((\w+)\)$"
+    result = re.search(pattern, line)
+
+    if result is None:
+      continue
+    name = result[1]
+    usernames[name] = usernames.get(name, 0) + 1
+
+print(usernames)
+```
+```bash
+./check_cron.py syslog
+```
