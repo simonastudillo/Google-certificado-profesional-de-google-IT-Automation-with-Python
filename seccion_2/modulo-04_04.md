@@ -252,3 +252,84 @@ sudo chmod +x find_error.py
 ```bash
 cat ~/data/errors_found.log
 ```
+
+---
+
+## Module 4 challenge: Working with log files
+
+1. Which term describes a program that provides a text-based interface for typing commands? 
+> A console # bad
+> a terminal ?
+
+1. What should Windows users do to connect to their VM in the provided lab environment?
+> Download the PPK key file from the Qwiklabs Start Lab page and use PuTTY for SSH connection.
+
+2. Which of the following does the sys module provide information about in the Python interpreter? Select all that apply.
+> Constants
+> Functions
+> Methods
+
+2. What is the primary purpose of the os module?
+> It provides a portable way of using operating system dependent functionality with Python.
+
+2. What is the primary purpose of the sys module in Python?
+> Provides functions and variables to interact with the Python interpreter and the runtime environment ? 
+
+3. In the lab's Python script, what is the primary role of the error_search function when working with regular expressions (RegEx)?
+> To create and search for RegEx patterns based on user input to identify errors in the log file
+
+3. What is the primary function of regular expressions (RegEx) in Python programming?
+> To define a sequence of characters that form a search pattern for text processing
+
+3. In the lab’s Python script, what is the role of the error_search function in relation to processing log files with regular expressions (RegEx)?
+> To interactively receive an error type from the user and use RegEx to find corresponding logs
+
+4. What is the purpose of the sys.exit(0) statement in the script, and how does it affect the execution of the Python script?
+> The sys.exit(0) statement is used to indicate successful termination of the script, and it has no impact on the script's execution.
+
+4. Which file did you use that contained the system log?
+> fishy.log
+
+5. What is the step-by-step process of how errors are searched for and processed in the script within the lab?
+> Set the log_file variable, call the error_search() function with the log_file parameter to search for errors, and store the matching errors in the returned_errors list.
+
+5. What role does the if __name__ == "__main__": block play in the execution of the lab’s script, and at what point in the script's execution does it come into play?
+> The if __name__ == "__main__": block serves as the main entry point of the script, and it is where the script's execution begins when run as the main program.
+
+5. In the lab’ script, what is the purpose of the if __name__ == "__main__": block, and why is it important for the execution of the script?
+> The if __name__ == "__main__": block is the main entry point of the script, where the script's execution begins when it is run as the main program.
+
+6. Which of the following statements is the best definition of a log file? Select the best answer. 
+> A file that keeps track of events in an operating system
+
+6. You are analyzing a log file. What would happen if you didn’t escape special characters in your regular expression? 
+> The regular expression would not match anything. #bad
+
+7. In the script's execution process described, what are the main functions called, and in what order?
+> error_search() and file_output() called in that order 
+
+7. What is the purpose of defining the main function in the script, and why is it significant for the script's execution?
+> The main function serves as the entry point of the script and is executed when the script is run as the main program.
+
+8. Which of the following statements about log files is true? Select all that apply.
+> They can be programmed to record specific events.
+> They can be used to monitor system performance.
+> They can help in identifying and fixing issues.
+
+8. In the lab’s Python script find_error.py, what happens when the script is executed with a log file like fishy.log?
+> The script prompts the user for a type of error, searches fishy.log for that error, and writes the found errors to errors_found.log.
+
+9. What is the primary function of the os module in Python?
+> For managing and manipulating file paths and directory structures
+
+9. What is the primary purpose of the re module in Python?
+> To provide support for working with Regular Expressions for pattern matching in strings
+
+10. Apply what you’ve learned from this lab to answer this question. What is the purpose of using regular expressions when you interact with log files in Python? 
+> To filter and extract information
+
+10. Apply what you’ve learned from this lab to answer this question. You are working on the find_error.py script to search for specific errors in the fishy.log file. If you need to find all instances of a network connection failure, which of the following steps would you take to modify the script accordingly?
+> Modify the user input line to specifically ask for "network connection failure" errors, then process fishy.log.
+
+10. Apply what you’ve learned from this lab to answer this question. You are tasked with enhancing the find_error.py script to also search for warning messages in addition to errors in the fishy.log file. How would you modify the script to accomplish this?
+> Modify the error_patterns list initialization to include both "error" and "WARN" as base patterns.
