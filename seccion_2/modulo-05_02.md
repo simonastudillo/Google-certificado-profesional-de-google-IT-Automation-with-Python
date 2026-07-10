@@ -555,3 +555,115 @@ print(test_results)
 - [Tutorial Jupyter Notebook](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook)
 - [Cómo usar Jupyter Notebook](https://www.codecademy.com/articles/how-to-use-jupyter-notebooks)
 - [Enseñar y aprender con Jupyter Notebook](https://jupyter4edu.github.io/jupyter-edu-book/)
+
+---
+
+## Practice Notebook: Unit Tests and Edge Cases
+1- 
+```Python
+import re 
+  
+my_txt = "An investment in knowledge pays the best interest."
+
+def LetterCompiler(txt):
+    result = re.findall(r'([a-c]).', txt)
+    return result
+
+print(LetterCompiler(my_txt))
+# ['a', 'b']
+```
+- Como se puede observar en la salida, la función `LetterCompiler()` encuentra todas las coincidencias de las letras de la a a la c en una cadena de entrada, siempre que vayan seguidas de otro carácter, y las devuelve como una lista de cadenas, donde cada cadena representa una coincidencia.
+- Pero, ¿podemos estar seguros de que esta función siempre hará lo que esperamos? Necesitamos escribir código que nos ayude a detectar errores y fallos.
+- Este código debería automatizar el proceso de comprobación de si el valor devuelto coincide con las expectativas, introduciendo casos de prueba de forma dinámica.
+- Dado que introducimos cadenas diferentes de forma dinámica, sería conveniente crear pruebas unitarias para nuestro código.
+- Podemos usar el módulo `unittest` para ello.
+- Completa los espacios en blanco a continuación para crear una prueba unitaria automática que verifique si las cadenas de entrada contienen la lista correcta de coincidencias.
+2-
+```Python
+import unittest
+
+class TestCompiler(unittest.TestCase):
+
+    def test_basic(self):
+        testcase = "The best preparation for tomorrow is doing your best today."
+        expected = ['b', 'a', 'a', 'b', 'a']
+        self.assertEqual(LetterCompiler(testcase), expected)
+```
+- Ahora que su prueba automática está codificada, debe llamar a la función unittest.main() para ejecutarla.
+- Es importante tener en cuenta que la configuración para ejecutar pruebas unitarias en Jupyter es diferente a la de ejecutarlas desde la línea de comandos.
+- Ejecutar unittest.main() en Jupyter generará un error.
+- Puede comprobarlo ejecutando la siguiente celda para ejecutar su prueba automática.
+```Python
+unittest.main()
+```
+```bash
+E
+======================================================================
+ERROR: /home/jovyan/ (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+AttributeError: module '__main__' has no attribute '/home/jovyan/'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+An exception has occurred, use %tb to see the full traceback.
+
+SystemExit: True
+```
+- ¡Vaya! `SystemExit: True` significa que se produjo un error, como era de esperar.
+- Esto se debe a que `unittest.main()` consulta `sys.argv`.
+- En Jupyter, por defecto, el primer parámetro de `sys.argv` es el que inicia el kernel de Jupyter, lo cual no ocurre al ejecutarlo desde la línea de comandos.
+- Este parámetro predeterminado se pasa a `unittest.main()` como atributo cuando no se especifican atributos, y es lo que provoca el error sobre el archivo de conexión del kernel, que no es un atributo válido.
+- Pasar una lista explícita a `unittest.main()` evita que consulte `sys.argv`.
+- Por ejemplo, pasemos la lista `['first-arg-is-ignored']`.
+- Además, pasaremos el parámetro `exit = False` para evitar que `unittest.main()` detenga el proceso del kernel.
+- Ejecute la siguiente celda con los parámetros `argv` y `exit` pasados ​​a `unittest.main()` para volver a ejecutar la prueba automática.
+```Python
+unittest.main(argv = ['first-arg-is-ignored'], exit = False)
+```
+```bash
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+<unittest.main.TestProgram at 0x79a1d866f358>
+```
+- ¿Tu prueba automática se ejecutó correctamente? ¿El resultado fue OK? Si no, revisa el código de tu prueba automática y asegúrate de haber completado correctamente los campos.
+- Si se ejecutó correctamente, ¡excelente! Has completado con éxito la información faltante para crear una prueba automática que verifica si las cadenas de entrada tienen la lista correcta de coincidencias.
+- Hasta ahora, todo va muy bien, pero tu prueba automática solo incluye un caso de prueba. Debes ampliarla.
+- Puedes ingresar más cadenas como casos de prueba para comprobar si tu código funciona en el caso general.
+- Pero también deberías ver qué sucede cuando le proporcionas una entrada que no esperarías encontrar en condiciones normales.
+- Los casos límite son entradas que producen resultados inesperados y se encuentran en los extremos del rango de entrada con el que solemos trabajar los programas.
+- ¿Puedes usar la celda de abajo para escribir algunos casos límite? ¡Ya hemos completado otro caso de prueba por ti!
+- Tal como está, esta prueba se ejecutará correctamente.
+- ¿Puedes pensar en al menos un caso de prueba que creas que podría generar un valor de retorno incorrecto? ¡No hay respuestas incorrectas! Siéntete libre de experimentar.
+```Python
+class TestCompiler2(unittest.TestCase):
+    
+    def test_two(self):
+        testcase = "A b c d e f g h i j k l m n o q r s t u v w x y z"
+        expected = ['b', 'c']
+        self.assertEqual(LetterCompiler(testcase), expected)
+
+# EDGE CASES HERE
+    def test_edge_case_1(self):
+        testcase = "1234567890!@#$%^&*()"
+        expected = []
+        self.assertEqual(LetterCompiler(testcase), expected)
+    
+    def test_edge_case_2(self):
+        testcase = "abcABC"
+        expected = ['a', 'c']
+        self.assertEqual(LetterCompiler(testcase), expected)
+
+unittest.main(argv = ['first-arg-is-ignored'], exit = False)
+```
+```bash
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK
+```
