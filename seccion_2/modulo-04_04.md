@@ -166,4 +166,89 @@ Define the main function and call both functions that we defined in the earlier 
 The variable log_file takes in the path to the log file passed as a parameter. In our case, the file is fishy.log. Call the first function i.e., error_search() and pass the variable log_file to the function. This function will search and return a list of errors that would be stored in the variable returned_errors. Call the second function file_output and pass the variable returned_errors as a parameter.
 
 sys.exit(0) is used to exit from Python, the optional argument passed can be an integer giving the exit status (defaulting to zero), or another type of object. If it is an integer, zero is considered "successful termination" and any nonzero value is considered an "abnormal termination" by shells.
+
+--- 
+
+## Ejemplo: Trabajar con archivos de registro
+- Tuviste que trabajar con un programa que generaba un error constantemente porque el código fuente era demasiado complejo para encontrarlo rápidamente.
+- ¡La buena noticia es que el programa genera un archivo de registro que puedes leer!
+- Vamos a repasar cómo escribir un script para buscar el error exacto en el archivo de registro y luego guardarlo en un archivo aparte para que puedas averiguar cuál es el problema.
+- Este ejemplo es una guía paso a paso de la actividad anterior de Qwiklab, con instrucciones detalladas y soluciones. Puedes usar este ejemplo si no pudiste completar el laboratorio o si necesitas ayuda adicional con otras tareas. También puedes consultarlo para prepararte para el cuestionario calificado de este módulo.
+- En el directorio `/data`, hay un archivo llamado `fishy.log`, que contiene el registro del sistema. Las entradas del registro se escriben en este formato:
+```log
+Month Day hour:minute:second mycomputername "process_name"["random 5 digit number"] "ERROR/INFO/WARN" "Error description"
+```
+- Para cada proceso, el registro de ejecución generado contiene una marca de tiempo y el mensaje correspondiente. Puede ver todos los registros con el siguiente comando:
+```bash
+cat ~/data/fishy.log
+```
+```log
+July 31 00:06:21 mycomputername kernel[96041]: WARN Failed to start network connection
+July 31 00:09:53 mycomputername updater[46711]: WARN Computer needs to be turned off and on again
+July 31 00:12:36 mycomputername kernel[48462]: INFO Successfully connected
+July 31 00:13:52 mycomputername updater[43530]: ERROR Error running Python2.exe: Segmentation Fault (core dumped)
+July 31 00:16:13 mycomputername NetworkManager[63902]: WARN Failed to start application install
+July 31 00:26:45 mycomputername CRON[83063]: INFO I'm sorry Dave. I'm afraid I can't do that
+July 31 00:27:56 mycomputername cacheclient[75746]: WARN PC Load Letter
+July 31 00:33:31 mycomputername system[25588]: ERROR Out of yellow ink, specifically, even though you want grayscale
+July 31 00:36:55 mycomputername updater[73786]: WARN Packet loss
+July 31 00:37:38 mycomputername dhcpclient[87602]: INFO Googling the answer
+July 31 00:37:48 mycomputername utility[21449]: ERROR The cake is a lie!
+July 31 00:44:50 mycomputername kernel[63793]: ERROR Failed process [13966]
+```
+- En este laboratorio, buscaremos el error CRON que impidió el inicio.
+- Para ello, utilizaremos un script de Python que buscará en los archivos de registro un tipo específico de error.
+- En este caso, buscaremos un error CRON en el archivo fishy.log que impidió el inicio, limitando la búsqueda a "CRON ERROR Failed to start".
+- Para empezar, crearemos un script de Python llamado find_error.py en el directorio scripts usando el editor nano.
+```bash
+cd ~/scripts
+nano find_error.py
+```
+- El código Python que escribiste está diseñado para buscar errores especificados por el usuario en un archivo de registro.
+- Solicita al usuario que ingrese el mensaje de error y luego recorre cada línea del archivo, buscando coincidencias con el patrón de error especificado.
+- Si encuentra una coincidencia, la línea se agrega a una lista de errores encontrados.
+- Una vez finalizada la búsqueda, los errores encontrados se escriben en un archivo de salida independiente para su posterior análisis.
+- El script utiliza expresiones regulares para la búsqueda de patrones y ofrece flexibilidad en la definición de patrones de error.
+```Python
+#!/usr/bin/env python3
+import sys
+import os
+import re
+
+
+def error_search(log_file):
+        error = input("What is the error?")
+        returned_errors = []
+        with open(log_file, mode='r',encoding='UTF-8') as file:
+                for log in file.readlines():
+                        error_patterns = ["error"]
+                for i in range(len(error.split(' '))):
+client_loop: send disconnect: I/O errorappend(r"{}".format(error.split(' ')[i].lower()))
+                if all(re.search(error_pattern, log.lower()) for error_pattern in error_patterns$
+                        returned_errors.append(log)
+        file.close()
+        return returned_errors
+
+
+def file_output(returned_errors):
+        with open(os.path.expanduser('~') + '/data/errors_found.log', 'w') as file:
+                for error in returned_errors:
+                        file.write(error)
+                file.close()
+if __name__ == "__main__":
+        log_file = sys.argv[1]
+        returned_errors = error_search(log_file)
+        file_output(returned_errors)
+        sys.exit(0)
+```
+- Guarda el archivo y cierra el editor nano.
+- Da los permisos de ejecución al script find_error.py y ejecútalo con el archivo fishy.log como argumento.
+```bash
+sudo chmod +x find_error.py
+./find_error.py ~/data/fishy.log
+```
+- Ingresa el mensaje de error que deseas buscar, en este caso: "CRON ERROR Failed to start".
+- Muestra la información del archivo errors_found.log para ver los resultados de la búsqueda.
+```bash
+cat ~/data/errors_found.log
 ```
