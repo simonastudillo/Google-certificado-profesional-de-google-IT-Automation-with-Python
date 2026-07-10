@@ -4,7 +4,7 @@
 - Módulo 2: Manejando archivo con Python
 - Módulo 3: Expresiones regulares
 - Módulo 4: Gestión de datos y procesos
-- Módulo 5:
+- Módulo 5: Testing en Python
 - Módulo 6:
 - Módulo 7:
 
