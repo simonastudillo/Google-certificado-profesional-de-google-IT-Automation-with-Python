@@ -61,3 +61,12 @@ with open(logfile) as f:
 chmod +x check_cron.py 
 ./check_cron.py syslog 
 ```
+
+---
+
+## Filtrando archivos log con expresiones regulares
+- La técnica habitual es llamar a ​la función `open()` que devuelve ​un objeto de archivo y luego iterar ​a través de cada una de sus líneas usando un for-loop.
+- ​Recuerde que, por razones de rendimiento, ​cuando los archivos son grandes, ​generalmente es una buena práctica leerlos línea por ​línea en lugar de cargar todo el contenido en la memoria.
+- Los trabajos de Cron se utilizan para ​programar scripts en sistemas operativos basados en UNIX
+- En un for loop podemos usar la instrucción `continue` para omitir líneas que no nos interesan y centrarnos en las que sí nos interesan.
+- Usamos expresiones regulares para obtener las lineas donde dice "USER" y extraer el nombre de usuario que se encuentra entre paréntesis.
