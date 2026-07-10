@@ -320,3 +320,49 @@ def rearrange_name(name):
 - `Edge cases` (casos límite): Entradas a nuestro código que produce resultados inesperados, se encuentran en los extremos de los rangos de entrada válidos y pueden causar errores o comportamientos inesperados.
 - Generalmente estos casos límite necesitan una validación adicional para asegurarse de que el código maneje correctamente estas situaciones.
 - A veces es bueno pecar de pesimista y asumir que el usuario puede ingresar cualquier cosa, incluso cosas que no esperamos.
+
+---
+
+## Revisión: Casos de prueba adicionales
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+from rearrange import rearrange_name
+import unittest
+
+class TestRearrange(unittest.TestCase):
+  
+  def test_basic(self):
+    testcase = "Lovelace, Ada"
+    expected = "Ada Lovelace"
+    self.assertEqual(rearrange_name(testcase), expected)
+
+  def test_empty(self):
+    testcase = ""
+    expected = ""
+    self.assertEqual(rearrange_name(testcase), expected)
+
+  def test_double_name(self):
+    testcase = "Hopper, Grace M."
+    expected = "Grace M. Hopper"
+    self.assertEqual(rearrange_name(testcase), expected)
+
+  def test_one_name(self):
+    testcase = "Voltaire"
+    expected = "Voltaire"
+    self.assertEqual(rearrange_name(testcase), expected)
+
+# Run the tests
+unittest.main()
+```
+```Python
+import re
+
+def rearrange_name(name):
+  result = re.search(r"^([\w .]*), ([\w .]*)$", name)
+  if result is None:
+    return name
+  return "{} {}".format(result[2], result[1])
+```
+```bash
+./rearrange_test.py 
+```
