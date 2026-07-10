@@ -548,3 +548,10 @@ with open(COPIED_FILE_PATH, 'r') as result_file:
 
 print(test_results)
 ```
+
+---
+
+## Ayuda con Jupyter Notebooks
+- [Tutorial Jupyter Notebook](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook)
+- [Cómo usar Jupyter Notebook](https://www.codecademy.com/articles/how-to-use-jupyter-notebooks)
+- [Enseñar y aprender con Jupyter Notebook](https://jupyter4edu.github.io/jupyter-edu-book/)
