@@ -279,3 +279,15 @@ unittest.main()
 chmod +x rearrange_test.py 
 ./rearrange_test.py 
 ```
+
+---
+
+## Escribiendo test unitarios en Python
+- Debemos escribir un código que ante una entrada específica, devuelva un resultado esperado.
+- Es una buena práctica generar un archivo de prueba separado para cada archivo de código que escribamos.
+- Usamos el mismo nombre de archivo que el archivo de código, pero agregamos `_test` al final del nombre del archivo.
+- En Python existe el módulo `unittest` que nos permite escribir pruebas unitarias para nuestro código.
+- Debemos generar una clase de prueba que herede de `unittest.TestCase` y dentro de esta clase, definimos métodos de prueba que comienzan con `test_`.
+- Luego usamos el método `assertEqual()` para comparar el resultado de la función con el resultado esperado.
+- Para ejecutar las pruebas, podemos usar `unittest.main()` al final del archivo de prueba.
+- Antes de ejecutar recuerda revisar los permisos, luego ejecuta el archivo de prueba desde la terminal.
