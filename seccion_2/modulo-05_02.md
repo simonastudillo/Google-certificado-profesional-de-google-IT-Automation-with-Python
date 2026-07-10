@@ -241,4 +241,4 @@ rearrange_name("Lovelace, Ada")
 ## Unit Test
 - Unit test (prueba unitaria): Se usan para verificar pequeñas y aisladas partes de código, como funciones o métodos, para asegurarse de que funcionan correctamente.
 - Una característica clave de las pruebas unitarias es que se centran en probar una unidad de código a la vez, lo que permite a los desarrolladores identificar y corregir errores de manera más eficiente.
-- nuestras pruebas ​nunca deben modificar el entorno de producción. ​Este es un entorno en vivo que ejecuta ​un software con el que los usuarios interactúan. ​Al desarrollar la prueba, si por ​alguna razón necesitamos ​interactuar con algún otro software, ​normalmente lo haremos en un entorno de prueba, ​donde tendremos control sobre cómo se comporta
+- nuestras pruebas ​nunca deben modificar el entorno de producción. ​Este es un entorno en vivo que ejecuta ​un software con el que los usuarios interactúan. ​Al desarrollar la prueba, si por ​alguna razón necesitamos ​interactuar con algún otro software, ​normalmente lo haremos en un entorno de prueba, ​donde tendremos control sobre cómo se comporta.
