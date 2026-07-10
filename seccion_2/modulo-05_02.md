@@ -312,3 +312,11 @@ def rearrange_name(name):
     return ""
   return "{} {}".format(result[2], result[1])
 ```
+
+---
+
+## Casos límite
+- Es importante considerar input no esperados, como cadenas vacías o caracteres especiales, al escribir pruebas unitarias.
+- `Edge cases` (casos límite): Entradas a nuestro código que produce resultados inesperados, se encuentran en los extremos de los rangos de entrada válidos y pueden causar errores o comportamientos inesperados.
+- Generalmente estos casos límite necesitan una validación adicional para asegurarse de que el código maneje correctamente estas situaciones.
+- A veces es bueno pecar de pesimista y asumir que el usuario puede ingresar cualquier cosa, incluso cosas que no esperamos.
