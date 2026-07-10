@@ -145,3 +145,10 @@ print(usernames)
 - `usernames[name] = usernames.get(name, 0) + 1` Modificamos el diccionario para que el valor de la clave `name` sea el valor actual más 1. Si la clave no existe, se devuelve 0 y se le suma 1.
 - Antes de agregar el nombre de usuario al diccionario, debemos asegurarnos de que la expresión regular haya encontrado un resultado.
 - Esto lo hacemos con un if verificando si es un `None` y si es así, usamos `continue` para pasar a la siguiente línea. 
+
+---
+
+## Test your knowledge: Processing log files
+
+1. You have created a Python script to read a log of users running CRON jobs. The script needs to accept a command line argument for the path to the log file. Which line of code accomplishes this?
+> syslog=sys.argv[1]
