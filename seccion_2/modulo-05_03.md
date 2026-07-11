@@ -22,3 +22,15 @@
 - `smoke test`: a veces llamada prueba de verificación de construcción, ​obtener su nombre de un concepto que proviene de la prueba de equipos de hardware. ​Conecte la pieza de hardware dada y vea si empieza a salir humo de ella. 
     - Generalmente responden a la pregunta de: "¿El software se inicia y funciona lo suficiente como para que podamos probarlo más a fondo?"
 - `load test`: Estas pruebas verifican que el sistema se comporta bien cuando está bajo una carga significativa, para realizar realmente estas pruebas tendrá que generar tráfico a nuestra aplicación ​simulando el uso típico del servicio
+
+---
+
+## Test Driven Development (TDD)
+- proceso llamado desarrollo basado en pruebas o ​TDD llama a crear la prueba antes de escribir el código
+- Esto puede parecer un poco contrario a la intuición, ​pero puede hacer que ​programas bien escritos más reflexivos. 
+- crear algunas pruebas primero ​asegúrese de haber pensado en el problema ​que está tratando de resolver y ​algunos enfoques diferentes ​que podría usar para lograrlo. 
+- Escribir primero una prueba también le ayuda a ​pensar en las formas en que su programa podría fallar ​y romper, lo que puede conducir a ​algunas ideas valiosas e incluso ​cambiar el enfoque que toma para mejor
+- Una vez que haya verificado que falla, ​escriba el código que satisfaga ​la prueba y luego ejecute las pruebas nuevamente. ​Si pasa, puede ​continuar con la siguiente parte de su programa
+- Recuerde que las buenas pruebas ayudan a que ​cualquier automatización y script que escriba sea más robusto ​, resistente y menos defectuoso. 
+- Muchas empresas llevan las pruebas un paso más allá y las combinan ​con nuestros sistemas de control de versiones ​y procesos de desarrollo. 
+- Cuando los ingenieros envían su código, ​se integra en el repositorio principal ​y las pruebas se ejecutan automáticamente ​contra él para detectar errores y errores en ​un proceso denominado Integración Continua (Continuous Integration - CI).
