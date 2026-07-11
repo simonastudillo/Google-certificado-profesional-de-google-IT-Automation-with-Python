@@ -95,3 +95,4 @@ validate_user([3], 1)
 - `assert`: Esta palabra clave intenta verificar que ​una expresión condicional es verdadera, ​y si es falsa, genera ​un error de aserción con el mensaje indicado.
 - Las aserciones son útiles para verificar que los valores de entrada a una función son válidos, y si no lo son, generan un error que puede ser capturado por un bloque try-except.
 - Las aserciones pueden estar en cualquier lugar de nuestro código, sirven además para validar que los valores a lo largo de nuestro código son válidos.
+- Como regla general, ​deberíamos usar `raise` ​para verificar las condiciones que esperamos que ocurran ​durante la ejecución normal de nuestro código y `assert` para ​verificar situaciones que no ​se esperan, pero que podrían causar que nuestro código se comporte mal.
