@@ -97,3 +97,33 @@ validate_user([3], 1)
 - Las aserciones pueden estar en cualquier lugar de nuestro código, sirven además para validar que los valores a lo largo de nuestro código son válidos.
 - Como regla general, ​deberíamos usar `raise` ​para verificar las condiciones que esperamos que ocurran ​durante la ejecución normal de nuestro código y `assert` para ​verificar situaciones que no ​se esperan, pero que podrían causar que nuestro código se comporte mal.
 
+---
+
+## Revisión: Testing para errores esperados
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+#!/usr/bin/env python3
+
+import unittest
+
+from validations import validate_user
+
+class TestValidateUser(unittest.TestCase):
+  def test_valid(self):
+    self.assertEqual(validate_user("validuser", 3), True)
+
+  def test_too_short(self):
+    self.assertEqual(validate_user("inv", 5), False)
+
+  def test_invalid_characters(self):
+    self.assertEqual(validate_user("invalid_user", 1), False)
+  def test_invalid_minlen(self):
+    self.assertRaises(ValueError, validate_user, "user", -1)
+
+
+# Run the tests
+unittest.main()
+```
+```bash
+./validations_test.py 
+```
