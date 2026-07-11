@@ -37,7 +37,7 @@ def character_frequency(filename):
 
 ---
 
-## Revisión: Errores de generación
+## Revisión: Generación de errores
 - Los siguientes bloques de código se usarán en el próximo video:
 ```Python
 #!/usr/bin/env python3
