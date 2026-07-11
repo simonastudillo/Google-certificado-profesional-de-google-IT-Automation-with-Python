@@ -34,3 +34,53 @@ def character_frequency(filename):
 - En este ejemplo, hemos puesto la llamada a ​la función open dentro de un bloque try-except
 - Lo que esto hace es primero intentar hacer la operación que ​queremos que en este caso es abrir el archivo. ​Si hay un error, entonces entra en la parte de aceptación ​del bloque que coincide con ​el error y hace cualquier limpieza que sea necesaria
 - El código en el bloque except se ejecutará solo si una de las instrucciones en el bloque try genera un error.
+
+---
+
+## Revisión: Errores de generación
+- Los siguientes bloques de código se usarán en el próximo video:
+```Python
+#!/usr/bin/env python3
+
+def validate_user(username, minlen):
+  if minlen < 1:
+    raise ValueError("minlen must be at least 1")
+
+  if len(username) < minlen:
+    return False
+  if not username.isalnum():
+    return False
+  return True
+
+from validations import validate_user
+validate_user("", -1)
+
+from validations import validate_user
+validate_user("", 1)
+validate_user("myuser", 1)
+
+from validations import validate_user
+validate_user(88, 1)
+
+from validations import validate_user
+validate_user([], 1)
+
+from validations import validate_user
+validate_user(["name"], 1)
+
+#!/usr/bin/env python3
+
+def validate_user(username, minlen):
+  assert type(username) == str, "username must be a string"
+  if minlen < 1:
+    raise ValueError("minlen must be at least 1")
+
+  if len(username) < minlen:
+    return False
+  if not username.isalnum():
+    return False
+  return True
+
+from validations import validate_user
+validate_user([3], 1)
+```
