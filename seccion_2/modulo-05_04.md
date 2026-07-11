@@ -127,3 +127,10 @@ unittest.main()
 ```bash
 ./validations_test.py 
 ```
+
+---
+
+## Testing para errores esperados
+- En el ejemplo anterior, hemos agregado un caso de prueba para verificar que la función `validate_user` genera un error de `ValueError` cuando se le pasa un valor de `minlen` inválido.
+- Para hacer esto, usamos el método `assertRaises` de la clase `unittest.TestCase`, que verifica que se genera un error del tipo especificado cuando se llama a la función con los argumentos proporcionados.
+- Esto nos permite asegurarnos de que nuestra función maneja correctamente los casos de error y genera los errores esperados cuando se le pasan valores inválidos.
