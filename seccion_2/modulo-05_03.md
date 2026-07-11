@@ -34,3 +34,13 @@
 - Recuerde que las buenas pruebas ayudan a que ​cualquier automatización y script que escriba sea más robusto ​, resistente y menos defectuoso. 
 - Muchas empresas llevan las pruebas un paso más allá y las combinan ​con nuestros sistemas de control de versiones ​y procesos de desarrollo. 
 - Cuando los ingenieros envían su código, ​se integra en el repositorio principal ​y las pruebas se ejecutan automáticamente ​contra él para detectar errores y errores en ​un proceso denominado Integración Continua (Continuous Integration - CI).
+
+---
+
+## Más información sobre testing
+- [https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/](https://landing.google.com/sre/sre-book/chapters/monitoring-distributed-systems/)
+- [https://landing.google.com/sre/sre-book/chapters/testing-reliability/](https://landing.google.com/sre/sre-book/chapters/testing-reliability/)
+- [https://testing.googleblog.com/2007/10/performance-testing.html](https://testing.googleblog.com/2007/10/performance-testing.html)
+- [https://www.guru99.com/smoke-testing.html](https://www.guru99.com/smoke-testing.html)
+- [https://www.guru99.com/exploratory-testing.html](https://www.guru99.com/exploratory-testing.html)
+- [https://testing.googleblog.com/2008/09/test-first-is-fun_08.html](https://testing.googleblog.com/2008/09/test-first-is-fun_08.html)
