@@ -5,7 +5,7 @@
 - Módulo 3: Expresiones regulares
 - Módulo 4: Gestión de datos y procesos
 - Módulo 5: Testing en Python
-- Módulo 6:
+- Módulo 6: Bash scripting
 - Módulo 7:
 
 ## Skills
