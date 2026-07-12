@@ -229,3 +229,19 @@ fg
 
 rtt min/avg/max/mdev = 93.587/93.668/93.719/0.149 ms
 ```
+
+---
+
+## Procesos de señalización
+- `Signals`: son tokens entregados a procesos en ejecución para indicar una acción deseada, podemos decirle a un programa que queremos que se detenga o termine
+- `ping`: es un comando que envía paquetes de datos a un host remoto y espera una respuesta, lo que nos permite medir la latencia y la conectividad de la red
+- El comando ping se ejecuta en un bucle infinito hasta que se le indique que se detenga, por lo que podemos usar señales para controlar su ejecución
+    - `ctrl + c`: envía la señal SIGINT al proceso de ping, lo que provoca que se detenga y muestre un resumen de estadísticas de la conexión
+    - `ctrl + z`: envía la señal SIGTSTP al proceso de ping, lo que provoca que se detenga temporalmente y se envíe a segundo plano. Podemos reanudar su ejecución con el comando `fg`, que trae el proceso de vuelta al primer plano.
+    - `fg`: trae un proceso detenido o en segundo plano al primer plano, permitiéndonos interactuar con él nuevamente.
+    - `kill`: es un comando que la señal SIGTERM a un proceso en ejecución, lo que provoca que se detenga de manera ordenada. 
+    -  Para usar el comando kill, necesitamos conocer el ID del proceso (PID) que queremos terminar. 
+- `ps`: es un comando que muestra información sobre los procesos en ejecución en el sistema, incluyendo su PID, estado, usuario y comando.
+- `ps ax`: muestra todos los procesos en ejecución en el sistema, incluyendo los de otros usuarios y los procesos del sistema.
+- `grep`: es un comando que busca un patrón en la entrada estándar o en un archivo, y muestra las líneas que coinciden con ese patrón.
+- `ps ax | grep ping`: combina los comandos ps y grep para buscar el proceso de ping en la lista de procesos en ejecución, mostrando su PID y otra información relevante.
