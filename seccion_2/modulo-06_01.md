@@ -125,3 +125,53 @@ echo "These are the contents of the file" > myamazingfile.txt
 cat myamazingfile.txt
 #Output: These are the contents of the file
 ```
+
+---
+
+## Revisión: Pipes y pipelines
+- Los siguientes bloques de código se usarán en el próximo video:
+```bash
+ls -l | less
+#(... A list of files appears...)
+cat spider.txt | tr ' ' '\n' | sort | uniq -c | sort -nr | head
+     # 7 the
+     # 3 up
+     # 3 spider
+     # 3 and
+     # 2 rain
+     # 2 itsy
+     # 2 climbed
+     # 2 came
+     # 2 bitsy
+     # 1 waterspout.
+```
+```bash
+cat capitalize.py
+#!/usr/bin/env python3
+
+import sys
+
+for line in sys.stdin:
+    print(line.strip().capitalize())
+```
+```bash
+cat haiku.txt 
+#advance your career,
+#automating with Python,
+#it's so fun to learn.
+
+```
+```bash
+cat haiku.txt | ./capitalize.py 
+#Advance your career,
+#Automating with python,
+#It's so fun to learn.
+
+```
+```bash
+./capitalize.py < haiku.txt
+#Advance your career,
+#Automating with python,
+#It's so fun to learn.
+
+```
