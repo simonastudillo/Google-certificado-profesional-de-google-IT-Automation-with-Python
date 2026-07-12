@@ -291,3 +291,56 @@ OK
 python3 emails.py Roy Cooper
 No email address found
 ```
+
+---
+
+## Module 5 challenge: Implementing Unit Testing
+
+1. What is the cause of an IndexError?
+> Attempting to access an index that's outside the bounds of a list.
+
+2. The function find_emails(argv) searches a dictionary using the employee’s first and last name, and then returns the matching email address. How does the script accept the input of the employee’s name? 
+> The script accepts the employee's first name and last name as command-line arguments.
+
+3. When you began working with the existing emails.py script, what mode did you need to open it in? 
+> Edit mode
+
+4. If a try clause is executed and an exception occurs, but there is no match for the exception in any of the except clauses, what happens?
+> It's an unhandled exception and the execution stops with an error message.
+
+5. What is the purpose of software testing? 
+> To prove that the software works correctly
+
+6. When referring to unit testing, what are “classes”? 
+> Classes are test cases that correct bugs.
+
+7. The following code will either return an email address for an employee or an error message if there is no employee matching the name entered. What would the error message be?
+```Python
+if email_dict.get(fullname.lower()):
+    return email_dict.get(fullname.lower())
+else:
+    return "No email"
+```
+> "No email"
+
+8. Which of the following commands represent the correct sequence for catching an exception for a division by zero error in Python? 
+> try: a/b except ZeroDivisionError: pass
+
+9. The following portion of code will return an error message if a user fails to enter the full name of the employee for a search. What will the error message be?
+```Python
+def find_email(argv):
+ """ Return an email address based on the username given."""
+ # Create the username based on the command line input.
+ try:
+   fullname = str(argv[1] + " " + argv[2])
+   # Preprocess the data
+   email_dict = populate_dictionary('/home/<username>/data/user_emails.csv')
+   # Find and print the email
+   return email_dict.get(fullname.lower())
+ except IndexError:
+   return "Missing name"
+```
+> "Missing name"
+
+10. When writing a try/except clause, how many except clauses can be included? 
+> As many except clauses are needed to specify handlers for different exceptions. 
