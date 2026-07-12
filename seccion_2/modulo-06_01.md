@@ -245,3 +245,34 @@ rtt min/avg/max/mdev = 93.587/93.668/93.719/0.149 ms
 - `ps ax`: muestra todos los procesos en ejecución en el sistema, incluyendo los de otros usuarios y los procesos del sistema.
 - `grep`: es un comando que busca un patrón en la entrada estándar o en un archivo, y muestra las líneas que coinciden con ese patrón.
 - `ps ax | grep ping`: combina los comandos ps y grep para buscar el proceso de ping en la lista de procesos en ejecución, mostrando su PID y otra información relevante.
+
+---
+
+## Guía de estudio: Comandos básicos de Linux
+- Gestión de archivos y directorios
+    - `mv` se utiliza para mover uno o más archivos a un directorio diferente, renombrar un archivo, o ambas cosas a la vez.
+        - `mv myfile.txt dir1/` Este comando mueve un archivo al directorio.
+        - `mv file1.txt file2.txt file3.txt dir1/` Este comando mueve múltiples archivos.
+    - `cp` se utiliza para copiar uno o más archivos.
+        - `cp myfile.txt dir1/` Este comando copia un archivo al directorio.
+        - `cp file1.txt file2.txt file3.txt dir1/` Este comando copia múltiples archivos.
+    - `chmod`/`chown`/`chgrp` se utilizan para hacer que un archivo sea legible para todos en el sistema antes de moverlo a un directorio público.
+        - `chmod +r file.html && mv file.html /var/www/html/index.html`: Este comando hace que el archivo sea legible para todos y luego lo mueve a un directorio público.
+- Operar con el contenido de los archivos
+    - `cut` es un comando que extrae campos de un archivo de datos
+        - `cut -f1 -d"," addressbook.csv` Este comando extrae el primer campo de un archivo .csv.
+        - `cut -c1-3,5-7,9-12 phones.txt` Este comando extrae los caracteres 1-3, 5-7 y 9-12 de un archivo .txt.
+    - `sort` es un comando que ordena el contenido de un archivo
+        - `sort names.txt` Este comando ordena las entradas alfabéticamente.
+        - `sort -r names.txt` Este comando ordena las entradas en orden alfabético inverso, empezando por la letra z.
+        - `sort -n numbers.txt` Este comando trata las entradas como números y luego las ordena numéricamente.
+        - `ls -l | cut -w -f5,9 | sort -rn | head -10` Este comando muestra los 10 archivos más grandes del directorio actual.
+        - `cut -f1-2 -d"," addressbook.csv | sort` Este comando extrae los nombres y apellidos de un archivo .csv y los ordena.
+- Comandos adicionales
+    - `id` es un comando que imprime información sobre el usuario actual. Este comando es útil si recibe un error de permisos denegados y cree que se le debería conceder acceso a un archivo.
+    - `free` es un comando que imprime información sobre la memoria en el sistema actual.
+    - `free -h` es un comando que imprime información sobre la memoria en el sistema actual en un formato legible para humanos.
+        
+
+>[!NOTE]
+> Linux distingue entre mayúsculas y minúsculas, por lo que mv también puede utilizarse para cambiar las mayúsculas de un nombre de archivo.
