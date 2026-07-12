@@ -295,3 +295,21 @@ rtt min/avg/max/mdev = 93.587/93.668/93.719/0.149 ms
     - `bg`: hace que un trabajo que estaba detenido pase a segundo plano
     - `jobs`: enumera los trabajos actualmente en ejecución o parados
     - `top`: muestra los procesos que actualmente utilizan más tiempo de CPU (pulse "q" para salir)  
+
+---
+
+## Test your knowledge: Interacting with the command line
+1. Which of the following commands will redirect errors in a script to a file?
+> user@ubuntu:~$ ./calculator.py 2> error_file.txt
+
+2. When running a kill command in a terminal, what type of signal is being sent to the process?
+> SIGTERM
+
+3. What is required in order to read from standard input using Python?
+> stdin file object from sys module
+
+4. _____ are tokens delivered to running processes to indicate a desired action
+> Signals
+
+5. In Linux, what command is used to display the contents of a directory?
+> ls
