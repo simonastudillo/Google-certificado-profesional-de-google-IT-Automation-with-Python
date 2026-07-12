@@ -19,3 +19,41 @@
 - `unittest` (unittest): Un conjunto de herramientas de Python para construir y ejecutar pruebas unitarias
 - `unit tests` (Pruebas unitarias): Prueba para verificar que pequeñas partes aisladas de un programa funcionan correctamente
 - `white box testing` (Prueba de caja blanca): Una prueba en la que el creador de la prueba sabe cómo funciona el código y puede escribir casos de prueba que utilizan la comprensión para asegurarse de que se realiza como se esperaba
+
+---
+
+## Evaluación de Qwiklabs: Implementación de pruebas unitarias
+Introducción
+Imagina que uno de tus compañeros informáticos se acaba de jubilar y te ha dejado una carpeta de scripts para que los utilices. Uno de los scripts, llamado emails.py, empareja a los usuarios con una dirección de correo electrónico y nos permite buscarlos fácilmente En la mayoría de los casos, el script funciona muy bien: se introduce el nombre de un empleado y su dirección de correo electrónico se imprime en la pantalla. Pero, en el caso de algunos empleados, el resultado no es del todo correcto. Tu trabajo es añadir una prueba para reproducir el error, hacer las correcciones necesarias y verificar que todas las pruebas pasan para asegurarte de que el script funciona Mucha suerte
+
+Lo que tienes que hacer: 
+    - Escribir una prueba simple para comprobar la funcionalidad básica
+    - Escribir una prueba para comprobar los casos extremos
+    - Corregir el código con una sentencia try/except
+
+Tenga en cuenta que después de este laboratorio hay un cuestionario con calificación. Debe completar el laboratorio antes de realizar el cuestionario. El cuestionario evaluará su comprensión de los conceptos y procedimientos clave tratados en el laboratorio.
+
+Esto es lo que puedes hacer para prepararte:
+    - Preste mucha atención a las instrucciones y explicaciones que se dan durante la sesión de laboratorio.
+    - Participa activamente en las actividades del laboratorio y toma notas.
+    - Repasa tus apuntes antes de realizar la prueba.
+```Python
+#!/usr/bin/env python3
+
+import unittest
+from emails import find_email
+
+class TestFile(unittest.TestCase):
+  def test_basic(self):
+    testcase = [None, "Bree", "Campbell"]
+    expected = "breee@abc.edu"
+    self.assertEqual(find_email(testcase), expected)
+
+  def test_one_name(self):
+    testcase = [None, "John"]
+    expected = "Missing parameters"
+    self.assertEqual(find_email(testcase), expected)
+
+if __name__ == '__main__':
+  unittest.main()
+```
