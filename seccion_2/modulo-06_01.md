@@ -276,3 +276,22 @@ rtt min/avg/max/mdev = 93.587/93.668/93.719/0.149 ms
 
 >[!NOTE]
 > Linux distingue entre mayúsculas y minúsculas, por lo que mv también puede utilizarse para cambiar las mayúsculas de un nombre de archivo.
+
+---
+
+## Redirecciones, tuberías y señales
+- Gestión de flujos
+    - `comando > archivo`: redirige la salida estándar, sobrescribe el archivo
+    - `comando >> archivo`: redirige la salida estándar, anexa al archivo
+    - `comando < archivo`: redirige la entrada estándar desde archivo
+    - `comando 2> archivo`: redirige el error estándar a archivo
+    - `comando1 | comando2`: conecta la salida del comando1 a la entrada del comando2
+- Operando con procesos
+    - `ps`: lista los procesos que se están ejecutando en el terminal actual para el usuario actual
+    - `ps ax`: lista todos los procesos que se están ejecutando actualmente para todos los usuarios  
+    - `ps e`: muestra el entorno de los procesos listados  
+    - `kill PID`: envía la señal SIGTERM al proceso identificado por PID
+    - `fg`: hace que un trabajo que estaba detenido o en segundo plano vuelva al primer plano
+    - `bg`: hace que un trabajo que estaba detenido pase a segundo plano
+    - `jobs`: enumera los trabajos actualmente en ejecución o parados
+    - `top`: muestra los procesos que actualmente utilizan más tiempo de CPU (pulse "q" para salir)  
