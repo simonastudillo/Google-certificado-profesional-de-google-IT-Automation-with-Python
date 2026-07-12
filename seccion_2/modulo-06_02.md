@@ -158,3 +158,16 @@ echo *
 echo ?????.py
 # Cuando escribimos cinco signos de interrogación punto py [?????.py], el intérprete de comandos lo convierte en una lista que contiene todos los nombres de archivo que tienen cinco caracteres y terminan en py en el directorio actual.
 ```
+
+---
+
+## Usando variables globales
+- establecemos ​estas variables usando el signo igual
+- Cuando queremos acceder al valor de una variable en bash, ​necesitamos prefijo el nombre de la ​variable con el signo de dólar.
+- ejemplo: `$example` devuelve el valor de la variable `example`.
+- No se puede dejar un espacio antes o después del signo igual cuando se establece una variable. Por ejemplo, `example = hello` no funcionará, pero `example=hello` sí funcionará.
+- En los script bash, tambien podemos definir variables globales que se pueden usar en cualquier parte del script.
+- Por ejemplo podemos crear la variable global `line` y usarla en varias partes del script para imprimir una línea de guiones. 
+- `globs` : es una forma de referirse a los patrones que se usan para hacer coincidir nombres de archivo. 
+    - `*`: coincide con cualquier número de caracteres, incluidos cero caracteres.
+    - `?`: coincide con un solo carácter.
