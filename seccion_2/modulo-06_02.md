@@ -88,3 +88,66 @@ Finishing at: Mon 13 May 2019 02:52:11 PM CEST
 - ​En su trabajo como especialista en TI, ​a veces necesita depurar un equipo que no se comporta correctamente. ​Hay muchos comandos que pueden decirle lo que está pasando allí para ​ayudarlo con su depuración
 - El comando `ps` puede ayudar a ver qué procesos se están ejecutando en un sistema. El comando `df` puede ayudarlo a ver cuánto espacio en disco queda en un sistema. El comando `uptime` puede ayudarlo a ver cuánto tiempo ha estado funcionando un sistema.
 - `$(date)` es un comando que devuelve la fecha y hora actuales, se pone dentro de `$()` para pasar el resultado de ese comando a la línea de comandos. En este caso, se pasa a `echo` para que se imprima en la pantalla.
+
+---
+
+## Revisión: Usando variables globales
+- Los siguientes bloques de código se usarán en el próximo video:
+```bash
+example=hello
+echo $example
+# example=hello
+```
+```bash
+#!/bin/bash
+
+line="-------------------------------------------------"
+
+echo "Starting at: $(date)"; echo $line
+
+echo "UPTIME"; uptime; echo $line
+
+echo "FREE"; free; echo $line
+
+echo "WHO"; who; echo $line
+
+echo "Finishing at: $(date)"
+```
+```bash
+./gather-information.sh
+Starting at: Mi 22. Mai 17:30:30 CEST 2019
+
+-------------------------------------------------
+
+UPTIME
+
+ 17:30:30 up 8 days,  1:51,  2 users,  load average: 0,00, 0,00, 0,00
+
+-------------------------------------------------
+
+FREE
+
+              total        used        free      shared  buff/cache   available
+
+Mem:        4037132      862132      444720       10032     2730280     2875336
+
+Swap:       2097148        6156     2090992
+
+-------------------------------------------------
+
+WHO
+
+user     :0           2019-05-14 15:39 (:0)
+
+user     pts/1        2019-05-14 15:40 (192.168.122.1)
+
+-------------------------------------------------
+
+Finishing at: Mi 22. Mai 17:30:30 CEST 2019
+```
+```bash
+echo *.py
+# Cuando escribimos asterisco punto py [*.py], el intérprete de comandos lo convierte en una lista que contiene todos los nombres de archivo que terminan en py en el directorio actual.
+
+echo c*
+# Cuando escribimos c asterisco [c*], el intérprete de comandos lo convierte en una lista que contiene todos los nombres de archivo que comienzan con c en el directorio actual.
