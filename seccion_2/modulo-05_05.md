@@ -299,8 +299,14 @@ No email address found
 1. What is the cause of an IndexError?
 > Attempting to access an index that's outside the bounds of a list.
 
+1. What output told you whether a test passed?
+> OK
+
 2. The function find_emails(argv) searches a dictionary using the employee’s first and last name, and then returns the matching email address. How does the script accept the input of the employee’s name? 
 > The script accepts the employee's first name and last name as command-line arguments.
+
+2. When you looked for the script emails.py in the scripts directory, what command did you use to navigate to the scripts directory? 
+> cd ~/scripts
 
 3. When you began working with the existing emails.py script, what mode did you need to open it in? 
 > Edit mode
@@ -308,11 +314,25 @@ No email address found
 4. If a try clause is executed and an exception occurs, but there is no match for the exception in any of the except clauses, what happens?
 > It's an unhandled exception and the execution stops with an error message.
 
+4. Your first test case was for missing parameters. What methods could you use to solve this issue? Select all that apply.
+> Use a try/except clause to handle IndexError
+> Check the length of input parameters before traversing the user_emails.csv file for the email address. 
+> 
+
 5. What is the purpose of software testing? 
-> To prove that the software works correctly
+> To prove that the software works correctly #bad
+> To determine whether the software meets the specified requirements ? 
+> To find all bugs in the software so they can be repaired. ?
+
+5. Before software can ship, you have been asked to test the software. What specifically should you be testing for? 
+> To make sure the software meets the specified requirements
 
 6. When referring to unit testing, what are “classes”? 
-> Classes are test cases that correct bugs.
+> Classes are test cases that correct bugs. #bad
+> Classes bundle data and functionality together.  ?
+
+6. When referring to unit testing, what is a “test runner”?
+> A test runner is a component that orchestrates the execution of tests and provides an outcome.
 
 7. The following code will either return an email address for an employee or an error message if there is no employee matching the name entered. What would the error message be?
 ```Python
@@ -322,6 +342,14 @@ else:
     return "No email"
 ```
 > "No email"
+
+7. Which of the following code blocks is an if-else loop which will return a valid email address or inform a user “No email address found”? 
+```Python
+if email_dict.get(fullname.lower()):
+    return email_dict.get(fullname.lower())
+else:
+    return "No email address found"
+```
 
 8. Which of the following commands represent the correct sequence for catching an exception for a division by zero error in Python? 
 > try: a/b except ZeroDivisionError: pass
@@ -342,5 +370,11 @@ def find_email(argv):
 ```
 > "Missing name"
 
+9. The following import statement allows a Python file to access the script from another Python file. What exactly will this statement cause to be imported? `from emails import find_email`
+> It imports the function find_email, which is defined in the script emails.py.
+
 10. When writing a try/except clause, how many except clauses can be included? 
 > As many except clauses are needed to specify handlers for different exceptions. 
+
+10. In the lab, you imported the unittest package, which you used to write test cases that correct bugs in the emails.py script. Which of the following does the unittest package support? 
+> Test automation, sharing setup and shutdown code for tests, and aggregation of tests into collections.
