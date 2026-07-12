@@ -194,3 +194,17 @@ fi
 ./check_localhost.sh 
 # 127.0.0.1	localhost
 ```
+
+---
+
+## Ejecutar condicionales en bash
+- La lógica de `exit status` de 0 y 1 de un comando es utilizada por el operador if en bash
+- Si el comando utilizado en el operador if devuelve un `exit status` de 0, entonces el bloque de código dentro del if se ejecutará.
+- Si el comando utilizado en el operador if devuelve un `exit status` de 1, entonces el bloque de código dentro del else se ejecutará.
+- En bash no es obligatorio usar sangría como en Python, sin embargo es una buena práctica usarla para mejorar la legibilidad del código.
+- En bash para ejecutar un bloque de código dentro de un if, else o elif, se debe usar la palabra clave `then` después de la condición.
+- Ejemplo: `if grep "127\.0\.0\.1" /etc/hosts; then` indica que si el comando `grep` devuelve un `exit status` de 0, entonces se ejecutará el bloque de código dentro del if.
+- Para finalizar un bloque de código dentro de un if, else o elif, se debe usar la palabra clave `fi` al final del bloque de código.
+- `test` es un comando que se puede usar para evaluar expresiones condicionales en bash.
+- Ejemplo: `test -f /etc/hosts` devuelve un `exit status` de 0 si el archivo `/etc/hosts` existe, y un `exit status` de 1 si no existe.
+- Ejemplo 2: Podemos usar `[]` en lugar de `test` para evaluar expresiones condicionales en bash. Por ejemplo, `[ -f /etc/hosts ]` devuelve un `exit status` de 0 si el archivo `/etc/hosts` existe, y un `exit status` de 1 si no existe.
