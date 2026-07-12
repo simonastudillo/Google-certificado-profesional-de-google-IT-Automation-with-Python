@@ -208,3 +208,10 @@ fi
 - `test` es un comando que se puede usar para evaluar expresiones condicionales en bash.
 - Ejemplo: `test -f /etc/hosts` devuelve un `exit status` de 0 si el archivo `/etc/hosts` existe, y un `exit status` de 1 si no existe.
 - Ejemplo 2: Podemos usar `[]` en lugar de `test` para evaluar expresiones condicionales en bash. Por ejemplo, `[ -f /etc/hosts ]` devuelve un `exit status` de 0 si el archivo `/etc/hosts` existe, y un `exit status` de 1 si no existe.
+
+---
+
+## Recursos para script bash
+- [https://ryanstutorials.net/bash-scripting-tutorial/](https://ryanstutorials.net/bash-scripting-tutorial/)
+- [https://linuxconfig.org/bash-scripting-tutorial-for-beginners](https://linuxconfig.org/bash-scripting-tutorial-for-beginners)
+- [https://www.shellscript.sh](https://www.shellscript.sh)
