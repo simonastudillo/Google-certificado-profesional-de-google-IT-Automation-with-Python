@@ -151,3 +151,10 @@ echo *.py
 
 echo c*
 # Cuando escribimos c asterisco [c*], el intérprete de comandos lo convierte en una lista que contiene todos los nombres de archivo que comienzan con c en el directorio actual.
+
+echo *
+# Cuando escribimos asterisco [*], el intérprete de comandos lo convierte en una lista que contiene todos los nombres de archivo en el directorio actual.
+
+echo ?????.py
+# Cuando escribimos cinco signos de interrogación punto py [?????.py], el intérprete de comandos lo convierte en una lista que contiene todos los nombres de archivo que tienen cinco caracteres y terminan en py en el directorio actual.
+```
