@@ -80,3 +80,11 @@ user    tty7         2019-04-29 12:19 (:0)
 
 Finishing at: Mon 13 May 2019 02:52:11 PM CEST
 ```
+
+---
+
+## Creando un script bash
+- bash no es un lenguaje de programación, pero es un lenguaje de scripting que nos permite automatizar tareas en el sistema operativo.
+- ​En su trabajo como especialista en TI, ​a veces necesita depurar un equipo que no se comporta correctamente. ​Hay muchos comandos que pueden decirle lo que está pasando allí para ​ayudarlo con su depuración
+- El comando `ps` puede ayudar a ver qué procesos se están ejecutando en un sistema. El comando `df` puede ayudarlo a ver cuánto espacio en disco queda en un sistema. El comando `uptime` puede ayudarlo a ver cuánto tiempo ha estado funcionando un sistema.
+- `$(date)` es un comando que devuelve la fecha y hora actuales, se pone dentro de `$()` para pasar el resultado de ese comando a la línea de comandos. En este caso, se pasa a `echo` para que se imprima en la pantalla.
