@@ -105,3 +105,23 @@ echo "These are the contents of the file" > myamazingfile.txt
 cat myamazingfile.txt 
 #These are the contents of the file
 ```
+
+---
+
+## Redirección de flujos
+- Por defecto, la entrada es proporcionada por el teclado en el terminal de texto y ​la salida y el error se muestran en la pantalla
+- Podemos cambiar este valor predeterminado utilizando el proceso llamado redirección
+- La ​redirección es un proceso de envío de una secuencia a un destino diferente
+- Este proceso es proporcionado por el sistema operativo y ​puede ser realmente útil cuando desea almacenar la salida de un comando en un archivo, en ​lugar de simplemente mirarlo en una pantalla. 
+- Si usamos un carácter mayor que (>) para redirigir la salida, en su lugar se creará un archivo con el contenido de la salida.
+- al igual que vimos antes con el modo de archivo w utilizado por la función abierta ​cada vez que realizamos de redirección de STD hacia fuera, el destino se sobrescribe
+- Para hacer un `append` a un archivo existente, podemos usar el doble carácter mayor que (>>) para redirigir la salida. Esto agregará la salida al final del archivo en lugar de sobrescribirlo.
+- ​En lugar de utilizar el teclado para enviar datos a un programa, ​podemos usar el símbolo menor que (<) para leer el contenido de un archivo
+- `2>` se utiliza para redirigir la salida de error a un archivo. Esto es útil cuando queremos capturar los errores generados por un programa en un archivo separado para su posterior análisis.
+- Ejemplo: `./streams_err.py < new_file.txt 2> error_file.txt` redirige la entrada desde `new_file.txt` y redirige la salida de error a `error_file.txt`.
+- Crear un archivo con echo: 
+```bash
+echo "These are the contents of the file" > myamazingfile.txt
+cat myamazingfile.txt
+#Output: These are the contents of the file
+```
