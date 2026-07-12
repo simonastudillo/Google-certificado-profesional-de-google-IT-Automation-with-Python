@@ -43,3 +43,24 @@ rmdir mynewdir/
 ls mynewdir
 #ls: cannot access 'mynewdir': No such file or directory
 ```
+
+---
+
+## Comandos básicos de linux
+- Muchos comandos en linux no imprimen nada en la salida estándar, solo lo hacen cuando fallan.
+- `echo`: imprime texto en la salida estándar
+- `cat`: imprime el contenido de un archivo en la salida estándar
+- `ls`: lista los archivos y directorios en el directorio actual
+- `chmod`: cambia los permisos de un archivo o directorio
+- `mkdir`: crea un nuevo directorio
+- `cd`: cambia el directorio actual
+- `pwd`: imprime el directorio de trabajo actual
+- `cp`: copia un archivo o directorio
+- `..`: Hace referencia al directorio padre del directorio actual
+- `.`: Hace referencia al directorio actual
+- `touch`: crea un archivo vacío
+- `ls -l`: lista los archivos y directorios en el directorio actual con información detallada (permisos, nodos, usuario y grupo, tamaño, fecha de modificación y nombre)
+- `ls -la`: lista los archivos y directorios en el directorio actual con información detallada, incluyendo archivos ocultos (aquellos que comienzan con un punto, tambien se muestra el directorio actual y el directorio padre)
+- `mv`: mueve un archivo o directorio a otro lugar
+- `rm`: elimina un archivo o directorio (para eliminar todos los archivos de un directorio, se puede usar `rm *`)
+- `rmdir`: elimina un directorio vacío
