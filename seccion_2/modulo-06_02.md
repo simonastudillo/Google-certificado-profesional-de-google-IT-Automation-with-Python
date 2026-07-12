@@ -171,3 +171,26 @@ echo ?????.py
 - `globs` : es una forma de referirse a los patrones que se usan para hacer coincidir nombres de archivo. 
     - `*`: coincide con cualquier número de caracteres, incluidos cero caracteres.
     - `?`: coincide con un solo carácter.
+
+---
+
+## Revisión: Ejecutar condicionales en bash
+- Los siguientes bloques de código se usarán en el próximo video:
+```bash
+cat check_localhost.sh 
+#!/bin/bash
+
+if grep "127\.0\.0\.1" /etc/hosts; then
+
+	echo "Everything ok"
+
+else
+
+	echo "ERROR! 127.0.0.1 is not in /etc/hosts"
+
+fi
+```
+```bash
+./check_localhost.sh 
+# 127.0.0.1	localhost
+```
