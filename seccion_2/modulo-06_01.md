@@ -195,3 +195,37 @@ cat haiku.txt | ./capitalize.py
 - Podemos unir comandos de Linux/unix con scripts de Python, ejemplo `cat haiku.txt | ./capitalize.py` o `./capitalize.py < haiku.txt`
 - En el primer ejemplo, la salida del comando `cat haiku.txt` se pasa como entrada al script `capitalize.py`, que capitaliza la primera letra de cada línea y muestra el resultado en la salida estándar.
 - En el segundo ejemplo, el script `capitalize.py` lee directamente desde el archivo `haiku.txt` utilizando la redirección de entrada, logrando el mismo resultado.
+
+---
+
+## Revisión: Procesos de señalización
+- Los siguientes bloques de código se usarán en el próximo video:
+```bash
+ping www.example.com
+#PING www.example.com(2606:2800:220:1:248:1893:25c8:1946 (2606:2800:220:1:248:1893:25c8:1946)) 56 data bytes
+```
+- Presiona ctrl + c para detener el proceso de ping y ver el resumen de estadísticas de la conexión.
+```bash
+--- www.example.com ping statistics ---
+
+9 packets transmitted, 9 received, 0% packet loss, time 8013ms
+
+rtt min/avg/max/mdev = 93.587/93.668/93.719/0.149 ms
+```
+```bash
+ping www.example.com
+#PING www.example.com(2606:2800:220:1:248:1893:25c8:1946 (2606:2800:220:1:248:1893:25c8:1946)) 56 data bytes
+```
+- Presiona ctrl + z para detener el proceso de ping y enviarlo a segundo plano.
+```bash
+fg
+#ping www.example.com
+#64 bytes from 2606:2800:220:1:248:1893:25c8:1946 (2606:2800:220:1:248:1893:25c8:1946): icmp_seq=5 ttl=51 time=93.6 ms
+```
+```bash
+--- www.example.com ping statistics ---
+
+9 packets transmitted, 9 received, 0% packet loss, time 8013ms
+
+rtt min/avg/max/mdev = 93.587/93.668/93.719/0.149 ms
+```
