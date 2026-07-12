@@ -175,3 +175,23 @@ cat haiku.txt | ./capitalize.py
 #It's so fun to learn.
 
 ```
+
+---
+
+## Pipes y pipelines
+- Mediante pipes, puede conectar varios scripts, comandos ​u otros programas ​en una canalización de procesamiento de datos
+- `Pipes`: Conectan la salida de ​un programa a la entrada de otro
+- Esto significa que podemos pasar datos entre programas, ​tomando la salida de uno y ​convirtiéndolo en la entrada del siguiente
+- `Pipe` esta representado por el símbolo de barra vertical (|) y se coloca entre los comandos que queremos conectar
+- Podemos conectar el comando `ls -l` con el comando `less` usando un pipe, lo que nos permite ver la salida de `ls -l` página por página
+- Esto nos muestra los resultados de `ls -l` en un formato más legible, permitiéndonos desplazarnos por la lista de archivos y directorios usando las teclas de dirección o la barra espaciadora, para salir podemos presionar la tecla `q`
+- Podemos usar pipes para procesar datos de manera más compleja, ejemplo `cat spider.txt | tr ' ' '\n' | sort | uniq -c | sort -nr | head` 
+    - `cat spider.txt`: muestra el contenido del archivo `spider.txt`
+    - `tr ' ' '\n'`: reemplaza los espacios por saltos de línea, lo que convierte cada palabra en una línea separada
+    - `sort`: ordena las palabras alfabéticamente
+    - `uniq -c`: cuenta las ocurrencias de cada palabra única
+    - `sort -nr`: ordena las palabras por frecuencia de aparición en orden descendente
+    - `head`: muestra las primeras 10 palabras más frecuentes
+- Podemos unir comandos de Linux/unix con scripts de Python, ejemplo `cat haiku.txt | ./capitalize.py` o `./capitalize.py < haiku.txt`
+- En el primer ejemplo, la salida del comando `cat haiku.txt` se pasa como entrada al script `capitalize.py`, que capitaliza la primera letra de cada línea y muestra el resultado en la salida estándar.
+- En el segundo ejemplo, el script `capitalize.py` lee directamente desde el archivo `haiku.txt` utilizando la redirección de entrada, logrando el mismo resultado.
