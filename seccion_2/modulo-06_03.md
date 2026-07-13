@@ -210,3 +210,11 @@ for line in sys.stdin:
     words = line.strip().split()
     print(" ".join([word.capitalize() for word in words]))
 ```
+
+---
+
+## Eligiendo entre bash y Python
+- Muchos comandos también admiten expresiones regulares, ​lo que nos permite hacer un procesamiento muy avanzado ​de los datos en nuestros archivos.
+- ​Cuando estos comandos se vinculan entre sí en ​una canalización de procesamiento de datos, ​pueden convertirse en una poderosa herramienta para procesar datos de texto. 
+- Se recomienda usar bash mientras el script sea relativamente simple y fácil de leer, de lo contrario podría ser mejor usar Python, que es un lenguaje de programación más completo y con una sintaxis más clara y legible.
+- otro punto a favor de Python es el sistema operativo, ten en cuenta que no todos los sistemas operativos tienen bash instalado por defecto y si lo tuvieran, no todos los comandos están disponibles o tienen el mismo nombre.
