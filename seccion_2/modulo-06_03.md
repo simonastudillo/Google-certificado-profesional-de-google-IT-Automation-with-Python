@@ -218,3 +218,23 @@ for line in sys.stdin:
 - ​Cuando estos comandos se vinculan entre sí en ​una canalización de procesamiento de datos, ​pueden convertirse en una poderosa herramienta para procesar datos de texto. 
 - Se recomienda usar bash mientras el script sea relativamente simple y fácil de leer, de lo contrario podría ser mejor usar Python, que es un lenguaje de programación más completo y con una sintaxis más clara y legible.
 - otro punto a favor de Python es el sistema operativo, ten en cuenta que no todos los sistemas operativos tienen bash instalado por defecto y si lo tuvieran, no todos los comandos están disponibles o tienen el mismo nombre.
+
+---
+
+## Test your knowledge: Advanced bash concepts
+1. Which command does the while loop initiate a task(s) after?
+> do
+
+2. Which line is correctly written to start a for loop with a sample.txt file?
+> for file in sample.txt; do
+
+3. Which of the following Bash lines contains the condition of taking an action when n is less than or equal to 9?
+> while [ $n -le 9 ]; do
+
+4. Which of the following statements are true regarding Bash and Python? [Check all that apply]
+> Complex scripts are better suited to Python.
+> Python can more easily operate on strings, lists, and dictionaries.
+> If a script requires testing, Python is preferable.
+
+5. The _____ command lets us take only bits of each line using a field delimiter.
+> cut
