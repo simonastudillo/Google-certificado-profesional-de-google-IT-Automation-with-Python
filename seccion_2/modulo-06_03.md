@@ -41,3 +41,16 @@ Returning: 1
 Retry #3
 Returning: 0
 ```
+
+---
+
+## While loops en script bash
+- En bash tambien se pueden crear `while loops` y `for loops`.
+- podemos usar operadores de comparación para evaluar condiciones, por ejemplo:
+  - `-eq` igual a
+  - `-ne` diferente de
+  - `-lt` menor que
+  - `-le` menor o igual que
+  - `-gt` mayor que
+  - `-ge` mayor o igual que
+- En bash usamos `$1` para acceder al primer argumento pasado a un script bash, `$2` para acceder al segundo argumento, y así sucesivamente.
