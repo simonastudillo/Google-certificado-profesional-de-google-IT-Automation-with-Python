@@ -54,3 +54,119 @@ Jun 1 11:06:48 ubutu.local ticky: ERROR: Connection to DB failed (username)
 - Una vez que tengamos los datos contados y ordenados, podemos escribirlos en archivos CSV usando el módulo `csv` de Python.
 - Luego tenemos que pasar esos archivos CSV al script `csv_to_html.py` para generar los archivos HTML.
 - Se recomienda hacer esta tarea con bash, ya que tiene una sintaxis simple y es muy útil para automatizar tareas en Linux como mover archivos.
+
+---
+
+## Evaluación de Qwiklabs: Análisis de registros mediante expresiones regulares
+- Imagine que su empresa utiliza un servidor que ejecuta un servicio llamadoticky, un sistema interno de tickets. El servicio registra eventos en syslog, tanto cuando se ejecuta correctamente como cuando encuentra errores.
+
+- Los desarrolladores del servicio necesitan su ayuda para obtener información de esos registros, de modo que puedan comprender mejor cómo se utiliza su software y cómo mejorarlo. Por lo tanto, para este laboratorio, usted escribirá algunos scripts de automatización que procesarán el registro del sistema y generarán informes basados en la información extraída de los archivos de registro.
+
+- Lo que harás
+    - Utilizar regex para analizar un Archivo de registro
+    - Añadir y modificar valores en un diccionario
+    - Escribir a un archivo en formato CSV
+    - Mover archivos al directorio apropiado para su uso con el conversor CSV->HTML
+
+```bash
+cat syslog.log
+# Jan 31 00:09:39 ubuntu.local ticky: INFO Created ticket [#4217] (mdouglas)
+# Jan 31 00:16:25 ubuntu.local ticky: INFO Closed ticket [#1754] (noel)
+# Jan 31 00:21:30 ubuntu.local ticky: ERROR The ticket was modified while updating (breee)
+# Jan 31 00:44:34 ubuntu.local ticky: ERROR Permission denied while closing ticket (ac)
+```
+
+1. Crear script de Python para analizar el archivo de registro y generar un informe de errores y cantidad de ocurrencias de cada error, ordenado de mayor a menor.
+```python
+#!/usr/bin/env python3
+import re
+import csv
+import sys
+
+error_dict = {}
+errorRegex = "ticky: ERROR ([\w ]*) "
+fileSyslog = sys.argv[1]
+
+def find_error(line, error_dict):
+    errorMatch = re.search(errorRegex, line)
+    if errorMatch:
+        errorMessage = errorMatch.group(1)
+        if errorMessage in error_dict:
+            error_dict[errorMessage] += 1
+        else:
+            error_dict[errorMessage] = 1
+    return error_dict
+
+def write_csv(list, head, filename):
+    with open(filename, 'w', newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        csvwriter.writerow(head)
+        csvwriter.writerows(list)
+
+with open(fileSyslog, 'r') as f:
+    for line in f:
+        error_dict = find_error(line, error_dict)
+error_list = sorted(error_dict.items(), key=lambda x: x[1], reverse=True)
+write_csv(error_list, ['Error', 'Count'], 'error_message.csv')
+```
+2. una estadística de uso para el servicio: Esto significa, una lista de todos los usuarios que han utilizado el sistema ​, incluyendo cuántos mensajes de información y ​cuántos mensajes de error han generado, este informe debe ordenarse por nombre de usuario.
+```python
+#!/usr/bin/env python3
+import re
+import csv
+import sys
+
+error_dict = {}
+user_dict = {}
+fileSyslog = sys.argv[1]
+
+def find_error(line, error_dict):
+    errorMatch = re.search("ticky: ERROR ([\w ]*) ", line)
+    if errorMatch:
+        errorMessage = errorMatch.group(1)
+        if errorMessage in error_dict:
+            error_dict[errorMessage] += 1
+        else:
+            error_dict[errorMessage] = 1
+    return error_dict
+
+def find_user(line, user_dict):
+    userMatch = re.search("ticky: (INFO|ERROR) .* \(([\w\.]+)\)", line)
+    if userMatch:
+        messageType = userMatch.group(1)
+        username = userMatch.group(2)
+        if username not in user_dict:
+            user_dict[username] = {'INFO': 0, 'ERROR': 0}
+        user_dict[username][messageType] += 1
+    return user_dict
+
+def write_csv(list, head, filename):
+    with open(filename, 'w', newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
+        csvwriter.writerow(head)
+        csvwriter.writerows(list)
+
+with open(fileSyslog, 'r') as f:
+    for line in f:
+        error_dict = find_error(line, error_dict)
+        user_dict = find_user(line, user_dict)
+
+user_list = sorted(user_dict.items())  # Ordenar por nombre de usuario
+user_list = [(user, stats['INFO'], stats['ERROR']) for user, stats in user_list]
+error_list = sorted(error_dict.items(), key=lambda x: x[1], reverse=True)
+write_csv(error_list, ['Error', 'Count'], 'error_message.csv')
+write_csv(user_list, ['Username', 'INFO', 'ERROR'], 'user_statistics.csv')
+```
+3. Crear archivo bash que ejecute el script de Python para generar los csv, luego ejecute el script csv_to_html.py para generar los archivos html
+```bash
+#!/bin/bash
+
+logFile=$1
+./ticky_check.py $logFile
+
+./csv_to_html.py /home/student/error_message.csv /home/student/error_message.html
+./csv_to_html.py /home/student/user_statistics.csv /home/student/user_statistics.html
+
+mv /home/student/error_message.html /var/www/html/
+mv /home/student/user_statistics.html /var/www/html/
+```
