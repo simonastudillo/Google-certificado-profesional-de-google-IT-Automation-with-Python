@@ -253,3 +253,36 @@ with open('error_message.csv', 'w', newline='') as error_csv:
     for key, value in errors_list:
         error_csv.write(str(key) + ',' + str(value)+'\n')
 ```
+
+---
+
+## Module 7 challenge: Log Analysis Using Regular Expressions
+1. Which task can you accomplish by using regular expressions in log analysis?
+> Parsing log entries to extract specific fields
+
+2. What will the following command return? `grep "ERROR" syslog.log`
+> All the ERROR logs in syslog
+
+3. FIll in the blank. The command python3 opens a Python shell, also known as _____.
+> Python interactive shell
+
+4. When sorting this dictionary: `fruit = {"oranges": 3, "apples": 5, "bananas": 7, "pears": 2}` What will the following line of code return? `sorted(fruit.items(), key=operator.itemgetter(1))`
+> [('pears', 2), ('oranges', 3), ('apples', 5), ('bananas', 7)]
+
+5. What is the primary advantage of using regular expressions when writing automation scripts to process a system log and generate reports from log files? 
+> Flexible pattern matching for extracting specific data from log entries
+
+6. Which of the following is true about using regular expressions? 
+> They can simplify complex string processing tasks
+
+7. What syntax would you use to enlist all the ERROR messages of a specific kind?
+> grep ERROR [message] [file-name]
+
+8. What is the Python module used to perform similar tasks to the Unix command grep for filtering log data?
+> re (Regular Expression) module
+
+9. How does the sorted() function sort items in a Python dictionary? 
+> Sorts dictionary items based on their keys in ascending order and returns a list of items
+
+10. If there is no csv file named user_emails.csv, what will the command nano user_emails.csv return? 
+> A new csv file named user_emails.csv
