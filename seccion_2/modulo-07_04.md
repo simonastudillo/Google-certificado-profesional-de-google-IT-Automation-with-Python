@@ -313,3 +313,36 @@ cd ~/data
 ls
 # janez_profile_11042019.doc  jdoe_profile_07272018.doc  kwood_profile_04022017.doc  pchow_pic_05162019.jpg jdoe_contact_07292018.csv   kwood_pic_04032017.jpg     list.txt
 ```
+
+---
+
+## Module 6 challenge: Edit Files Using Substrings
+1. In Linux, what does the cat command allow you to do?
+> Create single or multiple files, view the contents of a file, concatenate files, and redirect output in the terminal or other files.
+
+2. What is the Linux command you should use to extract certain specific information columns from a larger database? 
+> The cut command
+
+3. A colleague has asked you to analyze the line of code below because they do not know what -f does. What is the purpose of the -f option? `cut -f example.txt`
+> It specifies the field, a set of fields, or a range of fields to be extracted.
+
+4. A single greater than sign (>) or a double greater than sign (>>) can be used to redirect standard output. What do commands with a double greater than sign (>>) do with existing file content? 
+> Append the file content 
+
+5. The redirection commands cat > [file] and cat >> [file] are used to redirect standard output to a target file. What happens if that target file doesn’t exist?
+> A new file with the same name will be created.
+
+6. What will the command cd data do? 
+> Navigate to the data directory. 
+
+7. What is the difference between a command that begins grep 'jane' and a command that begins grep 'jane '?
+> The first will return all lines that include the text string “jane” and the second will return only lines with a space after “jane”. 
+
+8. You need to write a script that quickly checks the status of all running processes on a server. Which of the following languages would work best? Select the best answer. 
+> Bash
+
+9. You used the replace() function to replace the old substring "jane" with the new substring "jdoe". What is the syntax of that command?
+> string.replace(old_substring, new_substring)
+
+10. In Bash scripting, there are three primary iterative statements, commonly referred to as loops. Among these is the "until" loop. What is the purpose of the "until" loop?
+> The execution of a set of instructions as long as the control condition remains false.
