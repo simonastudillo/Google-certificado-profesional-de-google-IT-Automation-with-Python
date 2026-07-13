@@ -54,3 +54,65 @@ Returning: 0
   - `-gt` mayor que
   - `-ge` mayor o igual que
 - En bash usamos `$1` para acceder al primer argumento pasado a un script bash, `$2` para acceder al segundo argumento, y así sucesivamente.
+
+---
+
+## Revisión: For loops en script bash
+- Los siguientes bloques de código se usarán en el próximo video:
+```bash
+cat fruits.sh
+#!/bin/bash
+for fruit in peach orange pear; do
+    echo "I like $fruit!"
+done
+```
+```bash 
+./fruits.sh 
+I like peach!
+I like orange!
+I like pear!
+```
+- El código anterior itera sobre una lista de frutas y para cada fruta, imprime un mensaje indicando que le gusta esa fruta.
+```bash
+cd old_website/
+/old_website$ ls -l
+total 0
+-rw-r--r-- 1 user user 0 May 24 10:19 about.HTM
+-rw-r--r-- 1 user user 0 May 24 10:20 contact.HTM
+-rw-r--r-- 1 user user 0 May 24 10:20 footer.HTM
+-rw-r--r-- 1 user user 0 May 24 10:20 header.HTM
+-rw-r--r-- 1 user user 0 May 24 10:19 index.HTM
+```
+```bash
+/old_website$ basename index.HTM .HTM
+index
+```
+```bash
+#!/bin/bash
+
+for file in *.HTM; do
+        name=$(basename "$file" .HTM)
+        mv "$file" "$name.html" 
+done
+```
+- Este script itera sobre todos los archivos que terminan con `.HTM` en el directorio actual, y para cada archivo, obtiene el nombre base (sin la extensión `.HTM`) y luego renombra el archivo a tener la extensión `.html`.
+```bash
+/old_website$ chmod +x rename.sh
+/old_website$ ./rename.sh 
+mv about.HTM about.html
+mv contact.HTM contact.html
+mv footer.HTM footer.html
+mv header.HTM header.html
+mv index.HTM index.html
+```
+```bash
+/old_website$ ./rename.sh 
+/old_website$
+/old_website$ ls -l
+-rw-r--r-- 1 user user  0 May 24 10:19 about.html
+-rw-r--r-- 1 user user  0 May 24 10:20 contact.html
+-rw-r--r-- 1 user user  0 May 24 10:20 footer.html
+-rw-r--r-- 1 user user  0 May 24 10:20 header.html
+-rw-r--r-- 1 user user  0 May 24 10:19 index.html
+-rwxr-xr-x 1 user user 90 May 24 10:40 rename.sh
+```
