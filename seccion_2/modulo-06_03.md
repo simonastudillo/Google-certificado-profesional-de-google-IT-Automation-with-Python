@@ -116,3 +116,13 @@ mv index.HTM index.html
 -rw-r--r-- 1 user user  0 May 24 10:19 index.html
 -rwxr-xr-x 1 user user 90 May 24 10:40 rename.sh
 ```
+
+---
+
+## For loops en script bash
+- En bash enumeramos elementos de una lista usando `for loops`.
+- A diferencia de Python donde podemos iterar sobre una lista de elementos, en bash iteramos sobre una lista de palabras separadas por espacios.
+- `basename` es un comando que se usa para obtener el nombre base de un archivo, eliminando la ruta y la extensión del archivo.
+- la linea `name=$(basename "$file" .HTM)` obtiene el nombre base del archivo `$file` eliminando la extensión `.HTM`, y lo asigna a la variable `name`.
+- Es buena idea antes de ejecutar un script de cambio de nombre, permisos o similares, primero ejecutar el script con un `echo` en el comando que realiza la acción, para asegurarnos de que el script hace lo que esperamos.
+- Ejemplo `echo mv "$file" "$name.html"` en lugar de `mv "$file" "$name.html"` para ver qué archivos se renombrarán antes de ejecutar el script.
