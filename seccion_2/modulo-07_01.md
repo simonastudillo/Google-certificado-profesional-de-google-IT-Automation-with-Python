@@ -260,11 +260,17 @@ with open('error_message.csv', 'w', newline='') as error_csv:
 1. Which task can you accomplish by using regular expressions in log analysis?
 > Parsing log entries to extract specific fields
 
+1. What is the primary purpose of using regular expressions in log analysis? 
+> To extract specific patterns and information from unstructured log data
+
 2. What will the following command return? `grep "ERROR" syslog.log`
 > All the ERROR logs in syslog
 
 3. FIll in the blank. The command python3 opens a Python shell, also known as _____.
 > Python interactive shell
+
+3. Complete the sentence for the following Python regular expression: To match a string stored in a line variable, we use the search() method by defining a_____.
+> pattern
 
 4. When sorting this dictionary: `fruit = {"oranges": 3, "apples": 5, "bananas": 7, "pears": 2}` What will the following line of code return? `sorted(fruit.items(), key=operator.itemgetter(1))`
 > [('pears', 2), ('oranges', 3), ('apples', 5), ('bananas', 7)]
@@ -272,8 +278,14 @@ with open('error_message.csv', 'w', newline='') as error_csv:
 5. What is the primary advantage of using regular expressions when writing automation scripts to process a system log and generate reports from log files? 
 > Flexible pattern matching for extracting specific data from log entries
 
+5. Why do you need to know how to write automation scripts that process a system log and generate reports from the log files? 
+> To eliminate the need for manual log analysis, saving time, and improving efficiency
+
 6. Which of the following is true about using regular expressions? 
 > They can simplify complex string processing tasks
+
+6. Why are regular expressions useful? 
+> They allow us to search and manipulate text based on patterns
 
 7. What syntax would you use to enlist all the ERROR messages of a specific kind?
 > grep ERROR [message] [file-name]
@@ -281,9 +293,18 @@ with open('error_message.csv', 'w', newline='') as error_csv:
 8. What is the Python module used to perform similar tasks to the Unix command grep for filtering log data?
 > re (Regular Expression) module
 
+8. In Python, regular expressions are typically handled using which module? 
+> re
+
 9. How does the sorted() function sort items in a Python dictionary? 
 > Sorts dictionary items based on their keys in ascending order and returns a list of items #bad
 > Sorts dictionary items based on their values in ascending order and returns a list of items ?
 
+9. Evaluate the following problem statement: “I want to create a script to sort files.” What's missing?
+> The problem statement does not specify what files to sort.
+
 10. If there is no csv file named user_emails.csv, what will the command nano user_emails.csv return? 
 > A new csv file named user_emails.csv
+
+10. If there is no python script named ticky_check.py, what will the command nano ticky_check.py return?
+> A new python script named ticky_check.py
