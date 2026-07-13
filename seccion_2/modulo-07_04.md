@@ -346,3 +346,51 @@ ls
 
 10. In Bash scripting, there are three primary iterative statements, commonly referred to as loops. Among these is the "until" loop. What is the purpose of the "until" loop?
 > The execution of a set of instructions as long as the control condition remains false.
+
+---
+
+## Habilidades informáticas en acción (lectura)
+- Descargo de responsabilidad: El siguiente escenario se basa en una empresa ficticia llamada LogicLink Innovations.
+- El tiempo apremia
+Dakota es un programador bastante nuevo en su compañía. Acaba de ganarse un puesto en el proyecto de LogicLink Innovations. Se trata de una de las empresas más grandes y creíbles del sector, así que Dakota sabe que tiene que destacar en este proyecto para hacerse un nombre. LogicLink Innovations gestiona los datos de los clientes y tiene cientos de números de teléfono de clientes en su base de datos. Los números de teléfono tienen formatos incoherentes. Algunos están escritos con guiones, otros entre paréntesis con espacios y otros son sólo dígitos. Dakota se da cuenta:
+```txt
+123-456-7890
+
+(123) 456-7890
+
+1234567890
+```
+A Dakota se le asigna la tarea de tomar el conjunto de datos que contiene los números de teléfono y organizar el formato para que todos sean coherentes. Su jefe le dice que lo necesita para el fin de semana No hay forma de que Dakota pueda trabajar y editar cientos de números de teléfono. Tiene que haber otra manera.
+Buscar y reemplazar
+Dakota recuerda haber leído que otros programadores utilizan expresiones regulares para facilitar su trabajo. Sabe que tiene que haber una que pueda ayudarle con su dilema. No puede ser la primera vez que un programador necesita estandarizar números Decide crear una expresión regular que capture tres grupos de dígitos, cada uno de los cuales puede estar rodeado de caracteres que no sean dígitos.
+
+
+Utilizando una herramienta regex y los datos de muestra de arriba, acaba dando con una regex que coincide con las tres muestras:
+- `^\D*(\d{3})\D*(\d{3})\D*(\d{4})$`
+    - `^\D*` Esta parte del código coincide con cero o más caracteres no numéricos al principio de la cadena.
+    - `(\d{3})` Esta parte del código captura exactamente tres dígitos, que representan el código de área.
+    - `\D*` Esta parte del código coincide con cero o más caracteres no numéricos entre el prefijo y la centralita.
+    - `(\d{3} )` Esta parte del código captura el intercambio de tres dígitos.
+    - `\D*` Esta parte del código coincide con cero o más caracteres no numéricos entre la central y la línea.
+    - `(\d{4})` Esta parte del código captura exactamente cuatro dígitos al final de la cadena.
+
+Ahora tiene tres grupos de captura: prefijo, central y número. A continuación, sustituye esos grupos en una nueva cadena utilizando referencias retrospectivas: `(\1) \2-\3`
+- Esto pone todos los números de teléfono en un formato uniforme.
+- Esta expresión regular ayuda a Dakota buscando números de teléfono en diferentes formatos y sustituyéndolos para que coincidan con el formato que necesita el gestor de Dakota: (123) 456-7890. Dakota empieza a programar.
+- Escribe un sencillo script en Python para leer el conjunto de datos desde un archivo y generar los números de teléfono corregidos utilizando sus expresiones regulares:
+```python
+import re
+
+
+with open("data/phones.csv", "r") as phones:
+
+ for phone in phones:
+
+   new_phone = re.sub(r"^\D*(\d{3})\D*(\d{3})\D*(\d{4})$", r"(\1) \2-\3", phone)
+
+   print(new_phone)
+
+# (123) 456-7890
+# (123) 456-7890
+# (123) 456-7890
+```
