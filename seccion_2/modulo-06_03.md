@@ -194,4 +194,19 @@ Processing: /var/log/Xorg.0.log
     - `uniq -c` cuenta el número de ocurrencias de cada línea única.
     - `sort -nr` ordena las líneas numéricamente en orden descendente.
     - `head` muestra las primeras 10 líneas de la salida.
-    
+
+---
+
+## Revisión: Eligiendo entre bash y Python
+- Los siguientes bloques de código se usarán en el próximo video:
+```bash
+for i in $(cat story.txt); do B=`echo -n "${i:0:1}" | tr "[:lower:]" "[:upper:]"`; echo -n "${B}${i:1} "; done; echo -e "\n"
+```
+```python
+#!/usr/bin/env python3
+
+import sys
+for line in sys.stdin:
+    words = line.strip().split()
+    print(" ".join([word.capitalize() for word in words]))
+```
