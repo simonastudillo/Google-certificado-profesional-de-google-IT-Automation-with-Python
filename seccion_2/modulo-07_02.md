@@ -70,3 +70,8 @@
 - `Wildcard` (Comodín): Un carácter que puede coincidir con más de un carácter.
 - `Windows operating system` (Sistema operativo Windows): Sistema operativo desarrollado por Microsoft.
 - `Writer objects` (Objetos de escritura): La capacidad de escribir datos en un archivo CSV.
+
+---
+
+## Avance del próximo curso
+- En el próximo curso aprenderemos sobre como manejar versiones de código con Git
