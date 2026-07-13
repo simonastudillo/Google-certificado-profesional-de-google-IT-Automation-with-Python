@@ -282,7 +282,8 @@ with open('error_message.csv', 'w', newline='') as error_csv:
 > re (Regular Expression) module
 
 9. How does the sorted() function sort items in a Python dictionary? 
-> Sorts dictionary items based on their keys in ascending order and returns a list of items
+> Sorts dictionary items based on their keys in ascending order and returns a list of items #bad
+> Sorts dictionary items based on their values in ascending order and returns a list of items ?
 
 10. If there is no csv file named user_emails.csv, what will the command nano user_emails.csv return? 
 > A new csv file named user_emails.csv
