@@ -43,3 +43,14 @@ Jun 1 11:06:48 ubutu.local ticky: ERROR: Connection to DB failed (username)
 - A continuación, coloque los archivos en el directorio ​que utiliza el servidor web para mostrar las páginas web
 - El objetivo es tener un script que pueda ​hacer todo el trabajo necesario de forma automática, ​todos los días sin ninguna interacción del usuario
 - recomendamos dividir la tarea para ​que cada pieza pueda escribirse y probarse por separado
+
+---
+
+## Ayuda para la investigación y la planificación
+- Se recomienda usar expresiones regulares para extraer la información de los registros, ya que los registros siguen un patrón específico.
+- Podemos usar la web [gregx101.com](https://regex101.com/) para probar nuestras expresiones regulares y asegurarnos de que funcionan correctamente.
+- para contar y ordenar la información podemos usar diccionarios y listas en Python, y luego usar la función `sorted()` para ordenar los resultados.
+- Podemos tener 2 diccionarios: uno para los errores y otro para los usuarios, donde las claves serán los mensajes de error o los nombres de usuario, y los valores serán el número de ocurrencias.
+- Una vez que tengamos los datos contados y ordenados, podemos escribirlos en archivos CSV usando el módulo `csv` de Python.
+- Luego tenemos que pasar esos archivos CSV al script `csv_to_html.py` para generar los archivos HTML.
+- Se recomienda hacer esta tarea con bash, ya que tiene una sintaxis simple y es muy útil para automatizar tareas en Linux como mover archivos.
