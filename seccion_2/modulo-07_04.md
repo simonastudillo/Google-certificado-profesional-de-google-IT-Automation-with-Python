@@ -271,3 +271,45 @@ ls
 # janez_profile_11042019.doc  jdoe_profile_07272018.doc  kwood_profile_04022017.doc  pchow_pic_05162019.jpg
 # jdoe_contact_07292018.csv   kwood_pic_04032017.jpg     list.txt
 ```
+
+---
+
+## Ejemplo: Editar archivos usando subcadenas
+- En el ejercicio anterior usamos `grep " jane " ~/data/list.txt | cut -d ' ' -f 3` para obtener la lista de archivos que contienen el nombre de usuario "jane".
+- Creamos el script de Bash `findJane.sh` para guardar la lista de archivos en un archivo llamado `oldFiles.txt`.
+```bash
+#!/bin/bash
+> oldFiles.txt
+files=$(grep " jane " ../data/list.txt | cut -d ' ' -f 3);
+for file in $files; do
+    if test -e "..${file}"; then echo "..${file}" >> oldFiles.txt; fi
+done
+```
+- Le damos el permiso y lo ejecutamos
+```bash
+chmod +x findJane.sh
+./findJane.sh
+cat oldFiles.txt
+# /home/student/data/jane_profile_07272018.doc
+# /home/student/data/jane_contact_07292018.csv
+```
+- Luego generamos un script que cambie el nombre de los archivos de "jane" a "jdoe" usando Python. Creamos el script `changeJane.py` y lo ejecutamos.
+```python
+#!/usr/bin/env python3
+import sys
+import subprocess
+with open(sys.argv[1]) as file:
+    lines = file.readlines()
+    for line in lines:
+        oldvalue = line.strip()
+        newvalue = oldvalue.replace("jane", "jdoe")
+        subprocess.run(["mv", oldvalue, newvalue])
+file.close()
+```
+```bash
+chmod +x changeJane.py
+./changeJane.py oldFiles.txt
+cd ~/data
+ls
+# janez_profile_11042019.doc  jdoe_profile_07272018.doc  kwood_profile_04022017.doc  pchow_pic_05162019.jpg jdoe_contact_07292018.csv   kwood_pic_04032017.jpg     list.txt
+```
