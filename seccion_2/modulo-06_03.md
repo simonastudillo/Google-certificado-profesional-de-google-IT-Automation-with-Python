@@ -181,3 +181,17 @@ Processing: /var/log/Xorg.0.log
     78 vendor "AUO", prod id 5949
     78 DDC gathered Modelines:
 ```
+
+---
+
+## Interacción avanzada de comandos
+- Los archivos logs del sistema se encuentran en el directorio `/var/log/`.
+- Incluyen [fecha, hora, nombre del host, nombre del proceso y mensaje] en cada línea.
+- podemos usar `cut` para extraer campos específicos de cada línea, usando un delimitador específico (en este caso, un espacio).
+    - `-d' '` especifica que el delimitador es un espacio.
+    - `-f5-` especifica que queremos todos los campos desde el quinto campo hasta el final de la línea.
+    - `sort` ordena las líneas alfabéticamente.
+    - `uniq -c` cuenta el número de ocurrencias de cada línea única.
+    - `sort -nr` ordena las líneas numéricamente en orden descendente.
+    - `head` muestra las primeras 10 líneas de la salida.
+    
