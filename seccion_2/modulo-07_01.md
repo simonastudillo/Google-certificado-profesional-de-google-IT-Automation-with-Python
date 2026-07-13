@@ -18,3 +18,28 @@
 - Por último, debemos escribir el código y probarlo
 - Este paso incluye escribir el código, hacer pruebas manuales y automatizadas, depurar el código y refactorizarlo para mejorar la legibilidad y la eficiencia
 - Dentro de lo posible, debemos tambien agregar documentación y comentarios para que otros puedan entender nuestro código
+
+---
+
+## Planteamiento del problema del proyecto
+- uno de ​los servidores utilizados por su empresa ​ejecuta un servicio llamado ticky
+- Este servicio es un sistema interno de ticketing utilizado por ​muchos equipos diferentes de ​la empresa para gestionar su trabajo
+- El servicio registra un montón de eventos en syslog, ​tanto cuando se ejecuta correctamente como ​cuando encuentra errores
+- Los desarrolladores del servicio están pidiendo ​su ayuda para obtener ​información de esos registros, ​para comprender mejor cómo se está ​utilizando el software y cómo mejorarlo
+- Las líneas de registro siguen un patrón similar a esto
+```bash
+May 27 11:45:40 ubutu.local ticky: INFO: Created ticket [#1234] (username)
+Jun 1 11:06:48 ubutu.local ticky: ERROR: Connection to DB failed (username)
+```
+- Cuando el servicio se ejecuta correctamente, ​registra un mensaje de información en syslog, ​indicando lo que ha hecho, ​el nombre de usuario y el número de ticket relacionado con el evento
+- Si el servicio encuentra un problema, ​inicia sesión en el mensaje de error en el syslog, ​indicando qué estaba mal y el ​nombre de usuario que desencadenó la acción ​que causó el problema.
+- Se necesitan 2 reportes:
+
+1. una clasificación ​de errores generados por el sistema: una lista de todos los mensajes de error registrados ​y cuántas veces se encontró cada uno de ellos, ​sin tener en cuenta los usuarios involucrados, deben ordenarse por el error más común ​al error menos común
+2. una estadística de uso para el servicio: Esto significa, una lista de todos los usuarios que han utilizado el sistema ​, incluyendo cuántos mensajes de información y ​cuántos mensajes de error han generado, este informe debe ordenarse por nombre de usuario.
+
+- Para visualizar los datos de estos informes, ​desea generar un par de páginas web que ​serán servidas por un servidor web que se ejecute en el equipo. ​Para hacer esto, puede hacer uso de un script que ​ya está en el sistema llamado csv_ to_html.py
+- Este script convierte los datos de un archivo CSV ​en un archivo HTML que contiene una tabla con los datos
+- A continuación, coloque los archivos en el directorio ​que utiliza el servidor web para mostrar las páginas web
+- El objetivo es tener un script que pueda ​hacer todo el trabajo necesario de forma automática, ​todos los días sin ninguna interacción del usuario
+- recomendamos dividir la tarea para ​que cada pieza pueda escribirse y probarse por separado
