@@ -132,3 +132,42 @@ return True
 - `wdiff` es un comando que compara dos archivos palabra por palabra y muestra las diferencias entre ellos usando colores.
     - El comando `wdiff` acepta dos archivos como argumentos y produce una salida que indica qué palabras son diferentes.
     - Las palabras que se eliminan del primer archivo se muestran en rojo, mientras que las palabras que se agregan al segundo archivo se muestran en verde.
+
+---
+
+## Revisión: Aplicación de cambios
+- Esta lectura contiene el código utilizado en los vídeos siguientes:
+```bash
+cat cpu_usage.py 
+/usr/bin/env python3
+import psutil
+
+def comprobar_uso_cpu(porcentaje):
+    usage = psutil.cpu_percent()
+
+    return usage < porcentaje
+
+if not comprobar_uso_cpu(75):
+    print("¡ERROR! La CPU está sobrecargada")
+else:
+    print("Todo ok")
+```
+```bash
+cat cpu_usage.diff 
+```
+```diff
+--- cpu_usage.py 2019-06-23 08:16:04.666457429 -0700
++++ cpu_usage_fixed.py 2019-06-23 08:15:37.534370071 -0700
+
+@@ -2,7 +2,8 @@
+import psutil
+
+def comprobar_uso_cpu(porciento):
+-usage = psutil.cpu_percent()
+
++ usage = psutil.cpu_percent(1)
++ print("DEBUG: uso: {}".format(usage))
+    return usage < porciento
+
+if not comprobar_uso_cpu(75):
+```
