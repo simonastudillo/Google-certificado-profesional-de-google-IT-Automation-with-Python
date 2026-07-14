@@ -9,3 +9,13 @@
 - Pero es más habitual que ​los arreglos rápidos incluyan errores ​porque no nos tomamos el tiempo ​para probar el nuevo código correctamente
 - Podemos usar VCS para revertir el código a una versión anterior estable
 - Luego podemos arreglar el código y probarlo antes de enviarlo a las computadoras afectadas
+
+---
+
+## Conservación de copias históricas
+- Si sentías que algunas de las cosas que se eliminaron un día, ​podrían tener que añadirse más adelante. ​Así que cada vez que estabas a punto eliminar una parte significativa, ​hacías una copia de todo, por si acaso. 
+- Si algo de esto te suena familiar, ya has trabajado en la forma más primitiva ​de un control de versiones, manteniendo copias históricas.
+- Decimos que esto es primitivo, porque es muy manual y no muy detallado
+- Primero, necesitas recordar hacer la copia.
+- ​Segundo, generalmente haces una copia de todo el archivo, ​incluso si sólo estas cambiando una pequeña parte. 
+- Y tercero, incluso si envías los cambios por correo a tus colegas, ​puede ser difícil averiguar al final, quién hizo qué y, lo más importante, ​por qué lo hicieron. 
