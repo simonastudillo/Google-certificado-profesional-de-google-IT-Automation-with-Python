@@ -317,3 +317,14 @@ devuelve True
 patch disk_usage.py < disk_usage.diff 
 patching file disk_usage.py
 ```
+
+---
+
+## Aplicación práctica de diff y patch
+- Imaginemos que estamos corrigiendo un script
+- Generamos una copia añadiendo un sufijo `_fixed` al nombre del archivo
+- Ejecutamos el archivo para ver el error, luego corregimos el error y ejecutamos nuevamente para asegurarnos que el error se ha corregido
+- Iteramos este proceso hasta que el script funcione correctamente
+- Una vez que el script funciona correctamente, generamos un archivo de diferencias con el comando `diff -u` y lo guardamos en un archivo `.diff`
+- Finalmente, podemos enviar el archivo `.diff` para que aplique los cambios
+- El comando `patch` puede aplicar los cambios a un archivo de la siguiente manera: `patch file < change.diff`
