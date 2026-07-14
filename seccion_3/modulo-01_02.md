@@ -19,3 +19,99 @@
 - Primero, necesitas recordar hacer la copia.
 - ​Segundo, generalmente haces una copia de todo el archivo, ​incluso si sólo estas cambiando una pequeña parte. 
 - Y tercero, incluso si envías los cambios por correo a tus colegas, ​puede ser difícil averiguar al final, quién hizo qué y, lo más importante, ​por qué lo hicieron. 
+
+---
+
+## Reseña: Comparación de archivos
+- Esta lectura contiene el código utilizado en los vídeos siguientes:
+```bash
+cat rearrange1.py 
+/usr/bin/env python3
+import re
+def reordenar_nombre(nombre):
+    resultado = re.search(r"^([\w .]*), ([\w .]*)$", nombre)
+    if resultado == None:
+        return nombre
+    return "{} {}".format(resultado[2], resultado[1])
+```
+```bash
+cat rearrange2.py
+/usr/bin/env python3
+
+import re
+
+def reordenar_nombre(nombre):
+    resultado = re.search(r"^([\w .-]*), ([\w .-]*)$", nombre)
+    if resultado == None:
+        return nombre
+    return "{} {}".format(resultado[2], resultado[1])
+```
+```bash
+diff rearrange1.py rearrange2.py 
+6c6
+
+< resultado = re.search(r"^([\w .]*), ([\w .]*)$", nombre)
+
+---
+
+> resultado = re.search(r"^([\w .-]*), ([\w .-]*)$", nombre)
+```
+```bash
+diff validations1.py validations2.py 
+5c5,6
+
+< assert (type(nombredeusuario) == str), "nombredeusuario debe ser una cadena"
+
+--
+
+> if type(nombreusuario != str:
+
+> raise TypeError("el nombre de usuario debe ser una cadena")
+
+11a13,15
+
+> return False
+
+> # Los nombres de usuario no pueden empezar por un número
+
+> if nombredeusuario[0].isnumeric():
+```
+```bash
+diff -u validations1.py validations2.py 
+--- validaciones1.py 2019-06-06 14:28:49.639209499 +0200
+
++++ validaciones2.py 2019-06-06 14:30:48.019360890 +0200
+
+@@ -2,7 +2,8 @@
+
+
+
+def validar_usuario(nombre_usuario, minlen):
+
+-assert type(nombre_usuario) == str, "nombre_usuario debe ser una cadena"
+
++ if type(nombre_usuario) != str:
+
++ raise TypeError("el nombre de usuario debe ser una cadena")
+
+if minlen < 1:
+
+raise ValueError("minlen debe ser al menos 1")
+
+
+@@ -10,5 +11,8 @@
+
+return False
+
+if not nombredeusuario.isalnum():
+
+return False
+
++ # Los nombres de usuario no pueden empezar por un número
+
++ if nombreusuario[0].isnumeric():
+
++ return False
+
+return True
+```
