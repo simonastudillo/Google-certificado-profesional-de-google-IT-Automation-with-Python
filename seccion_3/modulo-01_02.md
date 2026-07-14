@@ -115,3 +115,20 @@ return False
 
 return True
 ```
+
+---
+
+## Comparar archivos
+- `diff` es un comando de Unix que compara dos archivos línea por línea y muestra las diferencias entre ellos.
+    - El comando `diff` acepta dos archivos como argumentos y produce una salida que indica qué líneas son diferentes.
+    - `<` indica que la línea proviene del primer archivo, mientras que `>` indica que la línea proviene del segundo archivo.
+    - Tambien puede indicar el número de línea donde se encuentra la diferencia y el contenido de las líneas que difieren.
+    - Ejemplo `5c5,6` significa que la línea 5 del primer archivo se reemplaza por las líneas 5 y 6 del segundo archivo.
+    - `c` significa "cambiar"
+    - `a` significa "añadir"
+    - `d` significa "eliminar"
+    - El comando `diff` tambien acepta el argumento `-u` para producir una salida unificada, que muestra las líneas que son iguales en ambos archivos, así como las líneas que difieren.
+        - `-` indica que la línea proviene del primer archivo, mientras que `+` indica que la línea proviene del segundo archivo.
+- `wdiff` es un comando que compara dos archivos palabra por palabra y muestra las diferencias entre ellos usando colores.
+    - El comando `wdiff` acepta dos archivos como argumentos y produce una salida que indica qué palabras son diferentes.
+    - Las palabras que se eliminan del primer archivo se muestran en rojo, mientras que las palabras que se agregan al segundo archivo se muestran en verde.
