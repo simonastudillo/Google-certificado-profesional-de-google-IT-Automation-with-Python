@@ -171,3 +171,14 @@ def comprobar_uso_cpu(porciento):
 
 if not comprobar_uso_cpu(75):
 ```
+
+---
+
+## Aplicar cambios
+- Para enviar los cambios a un archivo y revisar de mejor forma, podemos usar la redirección de flujo de salida de la siguiente manera:
+    - `diff -u old_file new_file > change.diff`
+- El comando `patch` puede aplicar los cambios a un archivo de la siguiente manera:
+    - `patch file < change.diff`
+- Por qué usar `patch` en lugar de simplemente reemplazar el archivo con la nueva versión?
+    - El comando `patch` solo aplicará los cambios que se especifican en el archivo de diferencias, dejando intactas las partes del archivo que no han cambiado.
+    - Por ejemplo si alguien nos envía un archivo de diferencias y nosotros ya aplicamos cambios al archivo original, el comando `patch` puede aplicar los cambios sin sobrescribir nuestras modificaciones.
