@@ -352,3 +352,4 @@ patching file disk_usage.py
 ## Guía de estúdio: diff y patch
 - El comando diff se utiliza para encontrar las diferencias entre dos archivos. Por sí solo, es un poco difícil de usar, en su lugar, utilice diff -u para encontrar las líneas que difieren en dos archivos
 - Utilice el comando diff -u para comparar dos ficheros, línea por línea, y tener las líneas que difieren comparadas una al lado de la otra en la misma salida
+- El comando patch es útil para aplicar diferencias entre ficheros. Vea el ejemplo siguiente, que compara dos archivos. La comparación se guarda como un archivo .diff, que luego se parchea con el archivo original
