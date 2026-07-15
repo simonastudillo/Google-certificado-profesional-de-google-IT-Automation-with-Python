@@ -59,3 +59,13 @@ git commit -m 'Add periods to the end of sentences.'
 
 git status
 ```
+
+---
+
+## Tracking files
+- `track file` significa que Git comenzará a rastrear los cambios en un archivo específico, cada vez que hagamos una modificación en ese archivo, Git lo registrará como un cambio en nuestro proyecto
+- `untracked file` significa que Git no está rastreando los cambios en un archivo específico, y cualquier modificación que hagamos en ese archivo no será registrada por Git
+- Los archivos tienen 3 estados en Git:
+    - Si un archivo está en el estado modificado, ​significa que hemos realizado cambios en él que aún no hemos cometido. ​Los cambios podrían ser agregar, modificar o eliminar el contenido del archivo. ​Git nota cada vez que modificamos nuestros archivos. ​Pero no almacenará ningún cambio hasta que los añadamos al `staging area`.
+    - Un archivo en el estado `staged` significa que los cambios en esos archivos están listos para ser comprometidos con el proyecto. ​Todos los archivos que se ponen en escena formarán parte de la próxima instantánea que tomemos
+    - `committed` significa que los cambios en esos archivos se han guardado en el repositorio de Git. ​Cada vez que confirmamos un cambio, Git toma una instantánea de todos los archivos en el área de preparación y almacena una referencia a esa instantánea en el historial del proyecto
