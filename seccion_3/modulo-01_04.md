@@ -1,0 +1,26 @@
+# Usando Git
+
+## Reseña: Primeros passo con Git
+- Esta lectura contiene el código utilizado en los vídeos siguientes:
+```bash
+git config --global user.email "me@example.com"
+git config --global user.name "My name"
+
+mkdir checks
+cd checks
+git init
+
+ls -la
+
+ls -l
+
+ls -l .git/
+
+cp ../disk_usage.py .
+ls -l
+
+git add disk_usage.py 
+git status
+
+git commit
+```
