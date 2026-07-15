@@ -71,6 +71,7 @@ git --version
 1. How can a VCS (Version Control System) come in handy when updating your software, even if you’re a solo programmer? Check all that apply.
 > Git allows you to review the history of your project.
 > If something breaks due to a change, you can fix the problem by reverting to a working version before the change.
+> Git retains local copies of repositories, resulting in fast operations.
 
 2. Who is the original creator and main developer of the VCS (Version Control System) tool Git
 > Linus Torvalds
