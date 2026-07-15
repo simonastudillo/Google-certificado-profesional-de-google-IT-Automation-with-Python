@@ -64,3 +64,22 @@ git --version
 
 ## Instalación de Git
 - El primer paso para usar Git es instalarlo Las instrucciones que se encuentran en la documentación de Git son bastante completas y útiles. Consúltalas para saber cuál es el mejor método para instalar Git en la plataforma que elijas.
+
+---
+
+## Test your knowledge: Version control systems
+1. How can a VCS (Version Control System) come in handy when updating your software, even if you’re a solo programmer? Check all that apply.
+> Git allows you to review the history of your project.
+> If something breaks due to a change, you can fix the problem by reverting to a working version before the change.
+
+2. Who is the original creator and main developer of the VCS (Version Control System) tool Git
+> Linus Torvalds
+
+3. _____ is a feature of a software management system that records changes to a file or set of files over time so that you can recall specific versions later.
+> Version control
+
+4. A _____ is a collection of edits which has been submitted to the version control system for safe keeping.
+> Commit
+
+5. Within a VCS, project files are organized in centralized locations called _____ where they can be called upon later.
+> Repositories
