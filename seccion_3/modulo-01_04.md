@@ -41,3 +41,21 @@ git config --global user.name "My name"
 - `Staging area` o `área de preparación` es donde preparamos los cambios que queremos confirmar en nuestro repositorio, y es donde usamos el comando `git add` para agregar archivos a la zona de preparación
 - `git status` nos permite ver el estado de nuestro repositorio, incluyendo los archivos que han sido modificados, los archivos que están en la zona de preparación y los archivos que no están siendo rastreados por Git
 - `git commit` nos permite confirmar los cambios que hemos preparado en la zona de preparación, y nos pedirá que ingresemos un mensaje de confirmación que describa los cambios realizados
+
+---
+
+## Reseña: Tracking files
+- Esta lectura contiene el código utilizado en los vídeos siguientes:
+```bash
+cd checks
+ls -l
+
+git status
+
+atom disk_usage.py 
+git status
+
+git commit -m 'Add periods to the end of sentences.'
+
+git status
+```
