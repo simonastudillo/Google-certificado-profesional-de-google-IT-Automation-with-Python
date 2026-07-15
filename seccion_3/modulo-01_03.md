@@ -35,3 +35,12 @@
 - [https://www.mercurial-scm.org/](https://www.mercurial-scm.org/)
 - [https://subversion.apache.org/](https://subversion.apache.org/)
 - [https://en.wikipedia.org/wiki/Version_control](https://en.wikipedia.org/wiki/Version_control)
+
+---
+
+## Instalación de Git
+- En la mayoría de los sistemas operativos, Git viene instalado, para saber si lo tienes instalado, abre una terminal y escribe el siguiente comando:
+```bash
+git --version
+```
+- En caso de que no lo tengas instalado, puedes descargarlo desde el sitio web oficial de Git: [https://git-scm.com/downloads](https://git-scm.com/downloads)
