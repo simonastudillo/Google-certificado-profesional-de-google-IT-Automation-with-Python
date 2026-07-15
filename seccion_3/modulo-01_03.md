@@ -44,3 +44,18 @@
 git --version
 ```
 - En caso de que no lo tengas instalado, puedes descargarlo desde el sitio web oficial de Git: [https://git-scm.com/downloads](https://git-scm.com/downloads)
+
+---
+
+## Instalación de Git en Windows (opcional)
+- Entramos a la página oficial de Git: [https://git-scm.com/downloads](https://git-scm.com/downloads)
+- Descargamos el instalador para Windows y lo ejecutamos
+- Aceptamos los términos, aceptamos la ubicación de instalación, luego habilitamos la opción de revisar a diario si hay actualizaciones y aceptamos
+- En la siguiente ventana, dejamos las opciones por defecto y aceptamos
+- Luego seleccionamos el editor de texto que queremos usar con Git, por ejemplo, Visual Studio Code y aceptamos
+- Seleccionamos la opción de usar Git desde la línea de comandos agregar al PATH y aceptamos
+- Seleccionamos la opción de usar OpenSSL y aceptamos
+- Seleccionamos la primera opción de configuración de line ending
+- Seleccionamos la opción por defecto del emulador de terminal
+- No seleccionamos ninguna opción de configuración adicional y aceptamos
+- Finalmente, hacemos clic en instalar y esperamos a que finalice la instalación
