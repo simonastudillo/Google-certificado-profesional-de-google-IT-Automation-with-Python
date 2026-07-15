@@ -59,3 +59,8 @@ git --version
 - Seleccionamos la opción por defecto del emulador de terminal
 - No seleccionamos ninguna opción de configuración adicional y aceptamos
 - Finalmente, hacemos clic en instalar y esperamos a que finalice la instalación
+
+---
+
+## Instalación de Git
+- El primer paso para usar Git es instalarlo Las instrucciones que se encuentran en la documentación de Git son bastante completas y útiles. Consúltalas para saber cuál es el mejor método para instalar Git en la plataforma que elijas.
