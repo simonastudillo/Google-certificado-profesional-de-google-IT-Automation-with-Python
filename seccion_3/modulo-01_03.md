@@ -27,3 +27,11 @@
 - Puedes usarlo para rastrear el trabajo privado que puedes guardar para ti mismo o puedes compartir ​tu trabajo con otros alojando un código en servidores públicos como Github, Gitlab u ​otros
 - Al buscar información en línea, puede notar que el sitio web oficial de Git ​se llama git-scm.com
 - `SCM` significa "gestión de código fuente", que es otro término para VCS.
+
+---
+
+## Más información sobre Git
+- [https://git-scm.com/doc](https://git-scm.com/doc)
+- [https://www.mercurial-scm.org/](https://www.mercurial-scm.org/)
+- [https://subversion.apache.org/](https://subversion.apache.org/)
+- [https://en.wikipedia.org/wiki/Version_control](https://en.wikipedia.org/wiki/Version_control)
