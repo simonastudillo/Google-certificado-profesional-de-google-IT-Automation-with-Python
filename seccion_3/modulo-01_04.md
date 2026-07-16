@@ -159,3 +159,22 @@ git log
 - `git add` se utiliza para agregar archivos a la zona de preparación, preparando los cambios para ser confirmados
 - `git status` se utiliza para ver el estado del repositorio, incluyendo los archivos modificados, los archivos en la zona de preparación y los archivos no rastreados
 - `git commit` se utiliza para confirmar los cambios en la zona de preparación, creando un nuevo commit en el historial del repositorio
+
+---
+
+## Test your knowledge: Using Git
+1. Before changes in new files can be added to the Git directory, what command will tell Git to track our file in the list of changes to be committed?
+> git add
+
+2. Which command would we use to review the commit history for our project?
+> git log
+
+3. What command would we use to make Git track our file?
+> git add
+
+4. Which command would we use to look at our config?
+> git config -l
+
+5. Question 5
+Which command would we use to view pending changes?
+> git status
