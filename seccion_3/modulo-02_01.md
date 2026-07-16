@@ -209,3 +209,13 @@ ls -la
 git add .gitignore 
 git commit -m 'Add a gitignore file, ignoring .DS_STORE files'
 ```
+
+---
+
+## Eliminar y renombrar archivos
+- Puedes eliminar archivos de tu repositorio con el comando git rm, ​que impedirá que ​git rastree el archivo y lo eliminará del directorio git
+- Tendrás que escribir un mensaje de confirmación explicando por qué los has eliminado (esto se hace agregando la eliminación del archivo a la zona de preparación y luego confirmando los cambios)
+- Podemos usar el comando `git mv` para renombrar un archivo, lo que moverá el archivo a un nuevo nombre y agregará el cambio a la zona de preparación
+- Podemos ignorar archivos específicos en nuestro repositorio creando un archivo llamado `.gitignore` 
+- Podemos agregar los nombres de los archivos o patrones de archivos que queremos ignorar en el archivo `.gitignore`, y Git no rastreará esos archivos en nuestro repositorio
+- El archivo `.gitignore` debe ser agregado al repositorio
