@@ -232,3 +232,21 @@ git commit -m 'Add a gitignore file, ignoring .DS_STORE files'
 - `git mv` nos permite renombrar un archivo, lo que moverá el archivo a un nuevo nombre y agregará el cambio a la zona de preparación
 - `git rm` nos permite eliminar archivos de nuestro repositorio, lo que impedirá que Git rastree el archivo y lo eliminará del directorio Git
 - `.gitignore files` nos permite ignorar archivos específicos en nuestro repositorio, lo que significa que Git no rastreará esos archivos en nuestro repositorio
+
+---
+
+## Test your knowledge: Advanced Git interaction
+1. Which of the following commands is NOT an example of a method for comparing or reviewing the changes made to a file?
+> git mv
+
+2. What is the gitignore file?
+> A file containing a list of files or filename patterns for Git to skip for the current repo.
+
+3. What kind of file will the command git commit -a not commit?
+> New files
+
+4. What does HEAD represent in Git?
+> The currently checked-out snapshot of your project
+
+5. If we want to show some stats about the changes in a commit, like which files were changed and how many lines were added or removed, what flag should we add to git log?
+> --stat
