@@ -183,3 +183,6 @@ git commit -m "This is my second commit."
 ```
 - El comando git log muestra el historial de confirmaciones del repositorio. Muestra todos los commits del repositorio representados por un único ID de commit en la parte superior de cada commit. También muestra el autor, fecha y hora y el mensaje de confirmación asociado a las confirmaciones.
 - También tiene varias opciones para limitar la salida de este comando. La salida puede filtrarse basándose en el último número de confirmaciones, autor, mensaje de confirmación, etc.
+
+>[!NOTE]
+> Se copió el contenido completo de este ejemplo de laboratorio de Qwiklabs ya que no se puedo realizar el laboratorio por problemas antes mencionados
