@@ -42,3 +42,6 @@
 2. Añadir archivos a este repositorio.
 3. Editar los archivos.
 4. Confirmar los cambios en el repositorio.
+
+>[!WARNING]
+> Debido a problemas con la plataforma Qwiklabs, no fue posible realizar laboratorio.
