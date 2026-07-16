@@ -173,3 +173,13 @@ git diff
 git diff --staged
 git commit -m 'Add a message when everything is ok'
 ```
+
+---
+
+## Obtener más información del usuario
+- Podemos usar el flag `-p` con el comando `git log` para ver los cambios realizados en cada `commit`
+- Para ver detalles de un `commit` específico, podemos usar el comando `git show <commit_id>` para ver los cambios realizados en ese `commit`
+- El flag `--stat` con el comando `git log` nos permite ver un resumen de los cambios realizados en cada `commit`, incluyendo el número de archivos modificados, el número de líneas agregadas y eliminadas, y un resumen de los cambios realizados en cada archivo
+- Podemo pasar el nombre de un archivo al comando `git diff` para ver los cambios realizados en ese archivo desde el último `commit`
+- Podemos usar el flag `-p` con el comando `git add` para agregar cambios específicos a la zona de preparación, lo que nos permite seleccionar qué cambios queremos confirmar en nuestro próximo `commit`
+- Podemos usar el comando `git diff --staged` para ver los cambios que hemos agregado a la zona de preparación antes de confirmar los cambios en nuestro próximo `commit`
