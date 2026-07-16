@@ -69,3 +69,49 @@ git status
     - Si un archivo está en el estado modificado, ​significa que hemos realizado cambios en él que aún no hemos cometido. ​Los cambios podrían ser agregar, modificar o eliminar el contenido del archivo. ​Git nota cada vez que modificamos nuestros archivos. ​Pero no almacenará ningún cambio hasta que los añadamos al `staging area`.
     - Un archivo en el estado `staged` significa que los cambios en esos archivos están listos para ser comprometidos con el proyecto. ​Todos los archivos que se ponen en escena formarán parte de la próxima instantánea que tomemos
     - `committed` significa que los cambios en esos archivos se han guardado en el repositorio de Git. ​Cada vez que confirmamos un cambio, Git toma una instantánea de todos los archivos en el área de preparación y almacena una referencia a esa instantánea en el historial del proyecto
+
+---
+
+## Reseña: El workflow básico de Git
+- Esta lectura contiene el código utilizado en los vídeos siguientes:
+```bash
+mkdir scripts
+cd scripts
+git init
+
+git config -l
+```
+```Python
+#!/usr/bin/env python3
+
+def main():
+    pass
+
+main()
+```
+```bash
+chmod +x all_checks.py
+git status
+git add all_checks.py
+git commit -m 'Create an empty all_checks.'
+```
+```Python
+#!/usr/bin/env python3
+
+import os
+
+def check_reboot():
+    """Returns True if the computer has a pending reboot."""
+    return os.path.exists("/run/reboot-required")	
+
+def main():
+    pass
+
+main()
+```
+```bash
+git status
+git add all_checks.py 
+git status
+git commit -m 'Add a check_reboot function'
+```
