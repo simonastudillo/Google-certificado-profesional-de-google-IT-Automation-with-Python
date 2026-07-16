@@ -24,3 +24,7 @@
 - `Tracked`: Se registran los cambios de un archivo
 - `Untracked`: Los cambios de un archivo no se registran
 - `Version Control Systems (VCS)`: Herramienta que permite probar el código de forma segura antes de publicarlo, permite que varias personas colaboren juntas en el mismo proyecto y almacena el historial del código y la configuración
+
+---
+
+## Qwiklabs guidelines and troubleshooting steps
