@@ -131,3 +131,13 @@ git commit -m 'Add a check_reboot function'
 - Usamos el comando `git status` nuevamente para ver el estado de nuestro repositorio, y veremos que el archivo `all_checks.py` está en el estado modificado
 - Usamos el comando `git add all_checks.py` nuevamente para agregar los cambios a la zona de preparación
 - Finalmente, usamos el comando `git commit -m 'Add a check_reboot function'` para confirmar los cambios en el archivo `all_checks.py` y agregar un mensaje de confirmación que describe los cambios realizados
+
+---
+
+## Reseña: Anatomía de un commit
+- Esta lectura contiene el código utilizado en los vídeos siguientes:
+```bash
+cat example_commit.txt 
+cd scripts
+git log
+```
