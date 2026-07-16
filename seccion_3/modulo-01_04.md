@@ -115,3 +115,19 @@ git add all_checks.py
 git status
 git commit -m 'Add a check_reboot function'
 ```
+
+---
+
+## El workflow básico de Git
+- Los archivos a rastrear con Git deben estar en un repositorio Git o una carpeta donde iniciar Git
+- Usamos el comando `git init` para inicializar un nuevo repositorio Git en la carpeta actual
+- Usamos el comando `git config -l` para listar la configuración de Git, incluyendo nuestro nombre y correo electrónico
+- Creamos un nuevo archivo llamado `all_checks.py` y le damos permisos de ejecución con el comando `chmod +x all_checks.py`
+- Usamos el comando `git status` para ver el estado de nuestro repositorio, nos muestra que el archivo `all_checks.py` es un archivo no rastreado
+- Usamos el comando `git add all_checks.py` para agregar el archivo a la zona de preparación (`stagging area`)
+- Si hacemos otro `git status`, veremos que el archivo `all_checks.py` ahora está en la zona de preparación y listo para ser confirmado
+- Usamos el comando `git commit -m 'Create an empty all_checks.'` para confirmar los cambios en el archivo `all_checks.py` y agregar un mensaje de confirmación que describe los cambios realizados
+- Luego modificamos el archivo `all_checks.py` para agregar una función llamada `check_reboot()` que verifica si la computadora tiene un reinicio pendiente
+- Usamos el comando `git status` nuevamente para ver el estado de nuestro repositorio, y veremos que el archivo `all_checks.py` está en el estado modificado
+- Usamos el comando `git add all_checks.py` nuevamente para agregar los cambios a la zona de preparación
+- Finalmente, usamos el comando `git commit -m 'Add a check_reboot function'` para confirmar los cambios en el archivo `all_checks.py` y agregar un mensaje de confirmación que describe los cambios realizados
