@@ -46,3 +46,130 @@ git log
 
 - Git usa el alias `HEAD` para representar el último commit en la rama actual, por lo que podemos usar `HEAD` para referirnos a la confirmación más reciente
 - El `HEAD` puede ser ​un commit en una rama diferente del proyecto
+
+---
+
+## Reseña: Obtener más información del usuario
+- Esta lectura contiene el código utilizado en los vídeos siguientes:
+```bash
+git log -p
+commit 033f27a8196987d61c4fd42930f2148b23434a03 (HEAD -> master)
+
+Author: My name <me@example.com>
+
+Date:   Mon Jul 15 14:39:18 2019 +0200
+
+    Call check_reboot from main, exit with 1 on error
+
+diff --git a/all_checks.py b/all_checks.py
+
+index 340f1f7..710266a 100644
+
+--- a/all_checks.py
+
++++ b/all_checks.py
+
+@@ -1,12 +1,15 @@
+
+ #!/usr/bin/env python3
+
+ 
+
+ import os
+
++import sys
+
+ 
+
+ def check_reboot():
+
+     """Returns True if the computer has a pending reboot."""
+
+     return os.path.exists("/run/reboot-required")
+
+(...)
+```
+```bash
+git log
+commit 033f27a8196987d61c4fd42930f2148b23434a03 (HEAD -> master)
+
+Author: My name <me@example.com>
+
+Date:   Mon Jul 15 14:39:18 2019 +0200
+
+    Call check_reboot from main, exit with 1 on error
+
+commit cc1acbf10fdea6cc07ebf827697666b6a35b0f36
+
+Author: My name <me@example.com>
+
+Date:   Thu Jul 11 17:19:32 2019 +0200
+
+    Add a check_reboot function
+
+(...)
+
+user@ubuntu:~/scripts$ git show cc1acbf10fdea6cc07ebf827697666b6a35b0f36
+
+commit cc1acbf10fdea6cc07ebf827697666b6a35b0f36
+
+Author: My name <me@example.com>
+
+Date:   Thu Jul 11 17:19:32 2019 +0200
+
+    Add a check_reboot function
+
+diff --git a/all_checks.py b/all_checks.py
+
+index c0d03b3..340f1f7 100644
+
+--- a/all_checks.py
+
++++ b/all_checks.py
+
+@@ -1,5 +1,11 @@
+
+ #!/usr/bin/env python3
+
+ 
+
++import os
+
++
+
++def check_reboot():
+
++    """Returns True if the computer has a pending reboot."""
+
++    return os.path.exists("/run/reboot-required")
+
++
+
+ def main():
+
+     Pass
+```
+```bash
+git log --stat
+commit 033f27a8196987d61c4fd42930f2148b23434a03 (HEAD -> master)
+
+Author: My name <me@example.com>
+
+Date:   Mon Jul 15 14:39:18 2019 +0200
+
+    Call check_reboot from main, exit with 1 on error
+
+ all_checks.py | 5 ++++-
+
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+(...)
+```
+```bash
+atom  all_checks.py
+git  add -p
+
+git diff
+git diff --staged
+git commit -m 'Add a message when everything is ok'
+```
