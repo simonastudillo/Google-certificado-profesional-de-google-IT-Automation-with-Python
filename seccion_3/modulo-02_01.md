@@ -189,3 +189,23 @@ git commit -m 'Add a message when everything is ok'
 ## Reseña: Eliminar y renombrar archivos
 - Esta lectura contiene el código utilizado en los vídeos siguientes:
 ```bash
+cd checks/
+ls -l
+
+git rm process.py
+ls -l 
+
+git status
+git commit -m 'Delete unneeded processes file'
+
+git mv disk_usage.py check_free_space.py
+git status
+
+git commit -m 'New name for disk_usage.py'
+
+echo .DS_STORE > gitignore
+ls -la
+
+git add .gitignore 
+git commit -m 'Add a gitignore file, ignoring .DS_STORE files'
+```
