@@ -150,3 +150,12 @@ git log
 - La primera línea es un breve resumen de ​la confirmación seguida de una línea en blanco (50 caracteres o menos)
 - Esto es seguido por una descripción completa de ​los cambios que detalla por qué son ​necesarios y cualquier cosa que pueda ser ​especialmente interesante sobre ellos ​o difícil de entender (cada linea de la descripción completa debe tener 72 caracteres o menos)
 - Un comando para ver el historial de commits es `git log`, que nos muestra una lista de todas las confirmaciones en el repositorio, incluyendo el hash de la confirmación, el autor, la fecha y el mensaje de commit
+
+---
+
+## Guía de estudio: Git
+- El comando `git config` se utiliza para configurar opciones de Git, como el nombre de usuario y el correo electrónico, ayudando a identificar quien realiza los cambios.
+- El comando `git init` se utiliza para inicializar un nuevo repositorio Git en el directorio actual
+- `git add` se utiliza para agregar archivos a la zona de preparación, preparando los cambios para ser confirmados
+- `git status` se utiliza para ver el estado del repositorio, incluyendo los archivos modificados, los archivos en la zona de preparación y los archivos no rastreados
+- `git commit` se utiliza para confirmar los cambios en la zona de preparación, creando un nuevo commit en el historial del repositorio
