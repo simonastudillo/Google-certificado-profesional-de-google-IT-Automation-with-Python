@@ -28,3 +28,17 @@
 ---
 
 ## Qwiklabs guidelines and troubleshooting steps
+
+---
+
+## Qwiklabs assessment: Introduction to Git
+- En este escenario, eres el líder de un proyecto en una empresa de TI. Tú y tu equipo trabajan en un proyecto enorme, compuesto por múltiples funcionalidades y módulos.
+- Este proyecto evoluciona constantemente, por lo que tu equipo prevé numerosas revisiones de código.
+- En este laboratorio, aprenderás a usar Git, un sistema de control de versiones distribuido.
+- También descubrirás cómo conectarte a una instancia de máquina virtual, instalar Git y configurar tu información de usuario.
+- A continuación, crearás un repositorio Git local, añadirás un archivo al repositorio y realizarás operaciones básicas como añadir y editar archivos, y confirmar cambios (commits).
+- Qué harás:
+1. Crear un repositorio Git.
+2. Añadir archivos a este repositorio.
+3. Editar los archivos.
+4. Confirmar los cambios en el repositorio.
