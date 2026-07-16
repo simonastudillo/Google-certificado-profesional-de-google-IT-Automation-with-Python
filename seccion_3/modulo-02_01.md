@@ -183,3 +183,9 @@ git commit -m 'Add a message when everything is ok'
 - Podemo pasar el nombre de un archivo al comando `git diff` para ver los cambios realizados en ese archivo desde el último `commit`
 - Podemos usar el flag `-p` con el comando `git add` para agregar cambios específicos a la zona de preparación, lo que nos permite seleccionar qué cambios queremos confirmar en nuestro próximo `commit`
 - Podemos usar el comando `git diff --staged` para ver los cambios que hemos agregado a la zona de preparación antes de confirmar los cambios en nuestro próximo `commit`
+
+---
+
+## Reseña: Eliminar y renombrar archivos
+- Esta lectura contiene el código utilizado en los vídeos siguientes:
+```bash
