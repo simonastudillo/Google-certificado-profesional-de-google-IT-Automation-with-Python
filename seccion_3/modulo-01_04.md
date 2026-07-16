@@ -141,3 +141,12 @@ cat example_commit.txt
 cd scripts
 git log
 ```
+
+---
+
+## Anatomía de un commit
+- es bueno usar algunas pautas generales para asegurarse ​de que sus mensajes de confirmación sean tan ​claros y útiles como sea posible
+- Un mensaje de commit es ​generalmente dividido en algunas secciones
+- La primera línea es un breve resumen de ​la confirmación seguida de una línea en blanco (50 caracteres o menos)
+- Esto es seguido por una descripción completa de ​los cambios que detalla por qué son ​necesarios y cualquier cosa que pueda ser ​especialmente interesante sobre ellos ​o difícil de entender (cada linea de la descripción completa debe tener 72 caracteres o menos)
+- Un comando para ver el historial de commits es `git log`, que nos muestra una lista de todas las confirmaciones en el repositorio, incluyendo el hash de la confirmación, el autor, la fecha y el mensaje de commit
