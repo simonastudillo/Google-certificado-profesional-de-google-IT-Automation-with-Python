@@ -186,3 +186,84 @@ git commit -m "This is my second commit."
 
 >[!NOTE]
 > Se copió el contenido completo de este ejemplo de laboratorio de Qwiklabs ya que no se puedo realizar el laboratorio por problemas antes mencionados
+
+---
+
+## Module 1 challenge: Introduction to Git
+1. What do you need to do before you install Git on your Linux VM?
+> Make sure that you have a fresh index of the packages available to you.
+
+1. Which of the following best describes Git? 
+> Version control system
+
+1. What is Git primarily used for? 
+> Version control
+
+2. What will the command mkdir my-git-repo return?
+> A directory named my-git-repo
+
+2. What is the first step to create a new repository in Git? 
+> Initialize a new repository using git init
+
+2. The git init command has several functions. Which of the following is one of them?
+> To convert an existing, unversioned project to a Git repository
+
+3. The git config command has several functions. Which of the following is one of them?
+> To change the user email associated with future Git commits
+
+3. What is the purpose of the git config command? 
+> To configure global or repository-specific settings
+
+3. What command will display changes that have been staged, changes that haven't been staged, and files that aren't tracked by Git? 
+> git status
+
+4. What does the git commit command do in Git?
+> Saves the staged changes to the local repository 
+
+4. What is the best description of a repository from the choices below? 
+> A repository is a location where all the files of a particular project are stored.
+
+5. What will the command nano README return?
+> A text file named README
+
+5. Which of the following is a way to verify that Git has been correctly installed on your machine?
+> Run git --version in the terminal
+
+6. When viewing the status of files of the project, where are the files listed that Git is not yet tracking? 
+> Under “Untracked files”
+
+6. What is the first step to install Git on a Linux machine? 
+> Run sudo apt install git in the terminal
+
+6. When viewing the status of files of the project, where are the files listed have been moved to the staging area using the git add command? 
+> Under “Changes to be committed”
+
+7. What effect does the git add command have on the repository?
+> It changes the status of the repository #bad
+
+7. What effect does the git add command have on the repository? 
+> No real effect
+
+7. What is the command for moving files to the staging area? 
+> git add
+
+8. What is the result of using the git commit command? Select all that apply
+> It changes the status of the repository. #bad
+> A snapshot is captured of the project's currently staged changes.
+> It stores the current contents of the index in a new commit along with the commit message.
+
+8. After you enter a commit message, how do you save that message?
+> Press Ctrl-o and Enter key. 
+
+9. What command would you use to add the commit message “Revisions complete” at the same time you enter a git commit command?
+> git commit -m "Revisions complete"
+
+9. After you have made a commit, what command can you use to look at the changes?
+> git diff
+
+10. What command will allow you to view all the commits?
+> git log
+
+10. When using the -m flag to add the commit message at the same time you enter a git commit command, what happens if multiple -m flags are given to the command?
+> The first commit message is saved. #bad
+> The commit message values are concatenated as separate paragraphs.
