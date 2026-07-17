@@ -64,3 +64,11 @@ git branch
 
 git branch -d even-better-feature 
 ```
+
+---
+
+## Trabajando con ramas (branches)
+- Recuarda que cambiar de rama cambia el contenido de tu directorio de trabajo para reflejar el estado de la rama a la que te has cambiado.
+- Los archivos se cambiarán a la versión que estaba en la rama, otros se crearan y otros se eliminarán según el estado de la rama a la que te has cambiado.
+- `git branch -d <branch-name>`: Elimina la rama especificada. Solo se puede eliminar una rama si no tiene cambios sin fusionar en otra rama-
+- Si la rama tiene cambios sin fusionar, Git mostrará un mensaje de error y no permitirá eliminar la rama. En ese caso, puedes usar `git branch -D <branch-name>` para forzar la eliminación de la rama, pero ten en cuenta que esto puede resultar en la pérdida de cambios no fusionados.
