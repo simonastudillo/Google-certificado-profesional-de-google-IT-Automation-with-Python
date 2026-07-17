@@ -39,3 +39,14 @@ git config --global credential.helper cache
 
 git pull
 ```
+
+---
+
+## Interacción básica con GitHub
+- creamos una cuenta, luego creamos un repositorio y lo clonamos en nuestra máquina local
+- Podemos dejarlo privado o publico, adicionalmente podemos seleccionar opciones como agregar un archivo README, un archivo .gitignore y una licencia
+- Usamos el comando `git clone` para crear una copia local del repositorio remoto, github solicitará nuestras credenciales de usuario y contraseña.
+- Una vez que tenemos una copia local, podemos hacer cambios en los archivos y luego usar `git commit` para guardar esos cambios en nuestra copia local
+- Para enviar esos cambios al repositorio remoto, usamos el comando `git push`
+- Para no tener que ingresar nuestras credenciales cada vez que hacemos un push, podemos crear una clave SSH y agregarla a nuestra cuenta de GitHub, de esta forma reconoce nuestra máquina y no nos pedirá credenciales cada vez que hagamos un push
+- otra opción es usar el comando `git config --global credential.helper cache` para almacenar nuestras credenciales en caché durante un tiempo determinado
