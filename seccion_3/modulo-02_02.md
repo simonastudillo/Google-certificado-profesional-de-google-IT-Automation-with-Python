@@ -1,7 +1,7 @@
 # Deshacer cosas
 
 ## Revisión: Cómo deshacer los cambios antes del commit
-- Los sigiuentes códigos se encuentran en el vídeo de la lección:
+- Los siguientes códigos se encuentran en el vídeo de la lección:
 ```bash
 cd scripts
 atom all_checks.py
@@ -34,3 +34,10 @@ git reset HEAD output.txt
 git status
 git commit -m "it should be os.path.exists"
 ```
+
+---
+
+## Cómo deshacer los cambios antes del commit
+- `git checkout <file>`: Deshace los cambios en un archivo específico antes de hacer commit.
+- `git checkout -p <file>`: Permite deshacer cambios de manera interactiva, seleccionando qué cambios específicos se quieren deshacer.
+- `git reset HEAD <file>`: Deshace los cambios en el área de preparación (staging area) para un archivo específico, pero mantiene los cambios en el directorio de trabajo.
