@@ -107,3 +107,11 @@ git revert HEAD
 
 git log -p -2
 ```
+
+---
+
+## Rollback
+- `git revert <commit>`: Git revert no solo significa deshacer. ​En su lugar, crea un commit que contiene el inverso de ​todos los cambios realizados en ​la confirmación incorrecta para cancelarlos.
+- Por ejemplo, ​si se agregó una línea en particular en el commit incorrecto, ​entonces en el commit revertido, ​se eliminará la misma línea. 
+- De esta manera obtienes el efecto de haber deshecho los cambios, ​pero el historial de los commits en el proyecto sigue siendo ​consistente dejando un registro de exactamente lo que sucedió
+- `git revert HEAD`: Revertir el último commit. Esto crea un nuevo commit que deshace los cambios del commit más reciente.
