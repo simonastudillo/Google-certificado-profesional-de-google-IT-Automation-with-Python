@@ -93,3 +93,30 @@ git log
 - Git tiene 2 formas de fusionar ramas: Fast-forward y Three-way merge.
 - `Fast-forward merge` ocurre cuando la rama que se está fusionando es una extensión directa de la rama actual. En este caso, Git simplemente mueve el puntero de la rama actual hacia adelante para incluir los cambios de la rama fusionada.
 - `Three-way merge` ocurre cuando las ramas han divergido y tienen cambios independientes. Tambien cuando se han realizado cambios en la rama actual que no están presentes en la rama que se está fusionando. En este caso, Git crea un nuevo commit de fusión que combina los cambios de ambas ramas.
+
+---
+
+## Revisión: Resolviendo conflictos (merge conflicts)
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+atom free_memory.py
+
+git commit -a -m 'Add comment to main()'
+
+git checkout even-better-feature 
+
+git commit -a -m 'Print everything ok'
+
+git checkout master
+
+git merge even-better-feature 
+
+git status
+
+git add free_memory.py
+git status
+
+git commit
+
+git log --graph --oneline
+```
