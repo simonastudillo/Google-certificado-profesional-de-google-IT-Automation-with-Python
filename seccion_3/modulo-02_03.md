@@ -141,3 +141,17 @@ git log --graph --oneline
 - `git log --graph --oneline`: Muestra un gráfico del historial de commits, lo que nos permite ver cómo se han fusionado las ramas y cómo se han resuelto los conflictos.
     - `--graph`: Muestra un gráfico ASCII del historial de commits, lo que nos permite ver cómo se han fusionado las ramas y cómo se han resuelto los conflictos.
     - `--oneline`: Muestra cada commit en una sola línea, lo que nos permite ver más commits en la pantalla y facilita la lectura del historial de commits.
+
+---
+
+## Guía de estudio: Ramas y fusiones de Git
+- `git branch`: Se puede utilizar para listar, crear o eliminar sucursales.
+- `git branch <name>`: Se puede utilizar para crear una nueva rama en su repositorio.
+- `git branch -d <nombre>`: Se puede usar para eliminar una rama del repositorio.
+- `git branch -D <nombre>`: Fuerce la eliminación de una rama.
+- `git checkout <rama>`: Cambia tu rama de trabajo actual.
+- `git checkout -b <nueva-rama>`: Crea una nueva rama y la convierte en tu rama de trabajo actual.
+- `git merge <rama>`: Combina los cambios de una rama con los de otra.
+- `git merge --abort`: Solo se puede usar después de conflictos de fusión. Este comando abortará la fusión e intentará volver al estado anterior.
+- `git log --graph`: Muestra un gráfico ASCII del historial de confirmaciones y fusiones.
+- `git log --oneline`: Muestra cada confirmación en una sola línea.
