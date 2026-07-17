@@ -173,4 +173,5 @@ git show 7d1de19
 > Overwrite the previous commit
 
 5. How can we easily view the log message and diff output the last commit if we don't know the commit ID?
-> git log
+> git log #bad
+> git show
