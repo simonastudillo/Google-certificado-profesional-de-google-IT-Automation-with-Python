@@ -51,3 +51,16 @@ git merge origin/master
 
 git log
 ```
+
+---
+
+## Trabajando con remotos
+- Siempre podríamos usar el sitio web de GitHub ​para navegar por los cambios que se enviaron
+- Sin embargo siempre es importante saber hacerlo desde la línea de comandos, de esta forma, no importa que plataforma usemos, siempre podremos trabajar con Git desde la línea de comandos.
+- `git remote show origin` nos muestra información detallada sobre el remoto origin, incluyendo las ramas remotas que está rastreando nuestra copia local.
+- `git fetch` descarga los cambios del remoto origin a nuestra copia local, pero no los fusiona con nuestra rama local.
+- `git log origin/master` nos permite ver los commits de la rama remota master del remoto origin.
+    - Aquí podemos ver `origin/master` indica el último commit al que apunta la rama remota master del remoto origin.
+    - `origin/HEAD` indica el último commit del remoto origin, y `HEAD` indica el último commit.
+    - `HEAD -> master` indica el último commit al que apunta nuestra rama local master.
+- `git merge origin/master` fusiona los cambios de la rama remota master del remoto origin con nuestra rama local master.
