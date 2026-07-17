@@ -32,3 +32,22 @@ git status
 - Cada vez que operamos con controles remotos, Git usa ramas remotas ​para mantener copias de los datos almacenados en el repositorio remoto
 - Podríamos echar un vistazo a las ramas remotas que ​nuestro repositorio de Git está rastreando actualmente ejecutando `git branch -r`. 
 - Si usamos `git status` aparece algo del estilo `origin/master` que indica que nuestra rama local master está rastreando la rama remota master del remoto origin.
+
+---
+
+## Revisión: Trabajando con remotos
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+cd health-checks/
+git remote show origin
+
+git fetch
+
+git log origin/master
+
+git status
+
+git merge origin/master
+
+git log
+```
