@@ -40,3 +40,27 @@ git checkout -b even-better-feature
 >[!NOTE]
 > Ya no se recomienda el uso de `git checkout` para cambiar de rama, ya que puede ser confuso.
 > En su lugar se recomienda usar `git switch <branch-name>` para cambiar de rama y `git switch -c <branch-name>` para crear y cambiar a una nueva rama.
+
+---
+
+## Revisión: Trabajando con ramas (branches)
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+cd checks
+git status
+
+ls -l
+
+git checkout master
+git log -2
+
+ls -l
+
+git branch
+
+git branch -d new-feature 
+
+git branch
+
+git branch -d even-better-feature 
+```
