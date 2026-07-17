@@ -84,3 +84,12 @@ git merge even-better-feature
 
 git log
 ```
+
+---
+
+## Fusionando ramas (merging branches)
+- `Merging` es el proceso de tomar los cambios de una rama y aplicarlos a otra. En Git, esto se hace mediante el comando `git merge`.
+- `git merge <branch-name>`: Fusiona la rama especificada en la rama actual. Esto aplica los cambios de la rama especificada a la rama actual, creando un nuevo commit de fusión si es necesario.
+- Git tiene 2 formas de fusionar ramas: Fast-forward y Three-way merge.
+- `Fast-forward merge` ocurre cuando la rama que se está fusionando es una extensión directa de la rama actual. En este caso, Git simplemente mueve el puntero de la rama actual hacia adelante para incluir los cambios de la rama fusionada.
+- `Three-way merge` ocurre cuando las ramas han divergido y tienen cambios independientes. Tambien cuando se han realizado cambios en la rama actual que no están presentes en la rama que se está fusionando. En este caso, Git crea un nuevo commit de fusión que combina los cambios de ambas ramas.
