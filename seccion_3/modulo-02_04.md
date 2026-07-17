@@ -44,3 +44,36 @@ Qué harás:
 - Ejecutamos el script `food_question.py` para verificar que el error se haya corregido
 - Finalmente, nos cambiamos a la rama `master` y fusionamos la rama `improve-output` con el comando `git merge improve-output` para integrar los cambios realizados en la rama de mejora al código principal del proyecto.
 - Verificamos con `git status` y `git log`
+
+---
+
+## Module 2 challenge: Merging Branches in Git
+1. What is the purpose of the "git commit" command, and how does it contribute to the version control process?
+> The "git commit" command is used to save the current state of changes in the local repository, creating a snapshot of the code at that point in time and enabling a detailed history of revisions.
+
+2. When you want to isolate and work on new features or changes without impacting the main branch, which Git command is typically used to create a new branch? 
+> git branch new-branch
+
+3. In a Git repository, what command would you use to create a new branch based on the current branch, and what command would you use to switch to that newly created branch?
+> To create a new branch, use git branch new-branch-name, and to switch to it, use git checkout new-branch-name
+
+4. In a scenario where you are collaborating with a team on a project using Git, what would be the role of a remote repository?
+> To act as a central repository where all team members can push and pull changes
+
+5. In the lab, after merging the "improve-output" branch into the "master" branch, what type of merge is indicated by the message "Fast-forward"?
+> It's a type of merge that combines the changes from both branches automatically.
+
+6. When working with Git, which command is used to add changes to the staging area when preparing for a commit? 
+> git add
+
+7. In a Git repository, what is the purpose of creating and using branches?
+> To isolate and work on new features, fixes, or experiments separately from the main codebase
+
+8. What does it mean when Git says there is a 'merge conflict'? 
+> Git can't automatically merge the changes and needs your help to resolve the conflict.
+
+9. What is the primary purpose of merging a branch back into the main branch in a Git repository?
+> To combine the changes from the branch into the main codebase
+
+10. What should you consider when deciding whether to create a new branch in Git? 
+> Whether the changes are significant or experimental
