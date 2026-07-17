@@ -96,3 +96,21 @@ git checkout experimental
 - `git remote update`: Obtiene actualizaciones para dispositivos remotos o grupos de dispositivos remotos.
 - `git fetch`: Puede descargar objetos y referencias desde un único repositorio, una única URL o desde varios repositorios a la vez.
 - `git branch -r`: Enumera las ramas remotas y se puede combinar con otros argumentos de rama para gestionar las ramas remotas.
+
+---
+
+## Test your knowledge: Using a remote repository
+1. In order to get the contents of a remote branch without automatically merging, which of these commands should we use?
+> git remote update
+
+2. If we need to find more information about a remote branch, which command will help us?
+> git remote show origin
+
+3. What command will download remote branches from remote repositories without merging the content with your current workspace automatically?
+> git fetch
+
+4. What type of merge creates a new merge commit?
+> Fast-forward merge
+
+5. What method of getting remote contents will automatically merge the remote branch with the current local branch?
+> git pull
