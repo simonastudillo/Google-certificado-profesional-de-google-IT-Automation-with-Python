@@ -86,3 +86,13 @@ git checkout experimental
 - `git pull` es equivalente a ejecutar `git fetch` seguido de `git merge`.
 - Si no hay conflictos, `git pull` fusionará automáticamente los cambios del remoto con nuestra rama local.
 - Hemos visto cómo comprobar su estado, cómo empujar y ​extraer cambios en repositorios, e incluso cómo sacar nuevos branches de ellos.
+
+---
+
+## Guía de estudio: Git remotos
+- `git remote`: Te permite gestionar el conjunto de repositorios o "remotos" cuyas ramas sigues.
+- `git remote -v`: es similar a `git remote`, pero al agregar -v se muestra más información, como la URL remota.
+- `git remote show <name>`: Muestra información sobre un único repositorio remoto.
+- `git remote update`: Obtiene actualizaciones para dispositivos remotos o grupos de dispositivos remotos.
+- `git fetch`: Puede descargar objetos y referencias desde un único repositorio, una única URL o desde varios repositorios a la vez.
+- `git branch -r`: Enumera las ramas remotas y se puede combinar con otros argumentos de rama para gestionar las ramas remotas.
