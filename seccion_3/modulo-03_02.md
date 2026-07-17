@@ -78,3 +78,11 @@ git remote show origin
 
 git checkout experimental 
 ```
+
+---
+
+## Actualizando el repositorio local
+- Dado que buscar y fusionar son tan comunes ​, Git nos da el comando `git pull` que hace ambos por nosotros.
+- `git pull` es equivalente a ejecutar `git fetch` seguido de `git merge`.
+- Si no hay conflictos, `git pull` fusionará automáticamente los cambios del remoto con nuestra rama local.
+- Hemos visto cómo comprobar su estado, cómo empujar y ​extraer cambios en repositorios, e incluso cómo sacar nuevos branches de ellos.
