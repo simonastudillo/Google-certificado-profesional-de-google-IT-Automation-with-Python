@@ -137,3 +137,12 @@ git revert 7d71
 
 git show 7d1de19
 ```
+
+---
+
+## Identificar un commit
+- Git usa un hash SHA-1 de 40 caracteres para identificar de manera única cada commit. Sin embargo, no es necesario escribir el hash completo para referirse a un commit específico. Git permite usar los primeros caracteres del hash siempre que sean suficientes para identificar de manera única el commit deseado.
+- `git log -1`: Muestra el último commit realizado en la rama actual.
+- `git log -2`: Muestra los dos últimos commits realizados en la rama actual.
+- `git show <commit>`: Muestra los detalles de un commit específico, incluyendo el mensaje del commit y los cambios realizados en los archivos, puedes pasar el hash completo o los primeros caracteres del hash para identificar el commit.
+- En caso de que pasos una cantidad de caracteres insuficiente para identificar un commit de forma única, Git te mostrará un mensaje de error indicando que el commit no se puede encontrar. 
