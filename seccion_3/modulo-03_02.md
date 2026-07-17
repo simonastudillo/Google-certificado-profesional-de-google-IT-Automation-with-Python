@@ -64,3 +64,17 @@ git log
     - `origin/HEAD` indica el último commit del remoto origin, y `HEAD` indica el último commit.
     - `HEAD -> master` indica el último commit al que apunta nuestra rama local master.
 - `git merge origin/master` fusiona los cambios de la rama remota master del remoto origin con nuestra rama local master.
+
+---
+
+## Revisión: Actualizando el repositorio local
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+git pull
+
+git -log -p -1
+
+git remote show origin
+
+git checkout experimental 
+```
