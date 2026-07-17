@@ -120,3 +120,24 @@ git commit
 
 git log --graph --oneline
 ```
+
+---
+
+## Resolviendo conflictos (merge conflicts)
+- De vez en cuando, ​podríamos encontrar que ambas ramas ​que estamos tratando de fusionar ​tienen ediciones en la misma parte del mismo archivo.
+- Esto dará como resultado algo llamado conflicto de fusión.
+- Cuando tenemos un conflicto de fusión, Git necesitará un poco de ayuda para averiguar qué hacer.
+- Al ocurrir un conflicto de fusión, Git marcará el archivo en conflicto y detendrá el proceso de fusión.
+- Mostrará un mensaje de error indicando que hay un conflicto de fusión y que debemos resolverlo antes de continuar.
+- Para resolver un conflicto de fusión, debemos abrir el archivo en conflicto y decidir qué cambios queremos conservar.
+- Los cambios en conflicto estarán marcados con `<<<<<<<` (cambios en la rama actual), `=======` y `>>>>>>>` (cambios en la rama que se está fusionando).
+- Luego agregar el archivo resuelto a la zona de preparación con `git add <archivo>` y confirmar los cambios con `git commit`.
+- Tambien puedes usar `git merge --abort` para abortar el proceso de fusión y volver al estado anterior a la fusión, si decides que no quieres continuar con la fusión.
+
+>[!NOTE]
+> Debes eliminar las marcas de conflicto y hacer los cambios necesarios para resolver el conflicto. 
+> Git no eliminará automáticamente las marcas de conflicto ni decidirá qué cambios conservar.
+
+- `git log --graph --oneline`: Muestra un gráfico del historial de commits, lo que nos permite ver cómo se han fusionado las ramas y cómo se han resuelto los conflictos.
+    - `--graph`: Muestra un gráfico ASCII del historial de commits, lo que nos permite ver cómo se han fusionado las ramas y cómo se han resuelto los conflictos.
+    - `--oneline`: Muestra cada commit en una sola línea, lo que nos permite ver más commits en la pantalla y facilita la lectura del historial de commits.
