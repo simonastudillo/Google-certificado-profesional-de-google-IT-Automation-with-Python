@@ -44,7 +44,7 @@ git commit -m "it should be os.path.exists"
 
 ---
 
-## Revisión: Modificar compromisos
+## Revisión: Modificar commits
 - Los siguientes códigos se encuentran en el vídeo de la lección:
 ```bash
 cd scripts/
@@ -58,3 +58,11 @@ git commit -m 'Add two new scripts'
 git add gather-information.sh
 git commit --amend
 ```
+
+---
+
+## Modificar commits
+- `git commit --amend`: Permite modificar el último commit, ya sea para cambiar el mensaje del commit o para agregar cambios adicionales al mismo. Si quieres agregar más archivos al último commit, primero debes agregarlos al área de preparación (staging area) con `git add` y luego ejecutar `git commit --amend`.
+
+>[!WARNING]
+> Evita tanto como sea posible modificar commits que ya han sido compartidos con otros colaboradores, ya que esto puede causar conflictos y confusión en el historial del proyecto.
