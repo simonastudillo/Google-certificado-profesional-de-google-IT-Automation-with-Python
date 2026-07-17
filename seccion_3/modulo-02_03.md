@@ -24,3 +24,19 @@ git checkout new-feature
 
 git checkout -b even-better-feature
 ```
+
+---
+
+## Creando nuevas ramas (branches)
+- Podemos usar el comando `git branch` para crear, editar, eliminar y listar ramas.
+- `git branch <branch-name>`: Crea una nueva rama con el nombre especificado.
+- `git branch`: Lista todas las ramas en el repositorio, con un asterisco (*) junto a la rama actual.
+- `git checkout <branch-name>`: Cambia a la rama especificada.
+- `git checkout -b <branch-name>`: Crea una nueva rama con el nombre especificado y cambia a ella inmediatamente.
+- `git switch <branch-name>`: Cambia a la rama especificada.
+- `git switch -c <branch-name>`: Crea una nueva rama con el nombre especificado y cambia a ella inmediatamente.
+- `git log -2`: Si estamos en otra rama, podemos ver el log y notar que el último commit es diferente al de la rama principal (main). Esto se debe a que cada rama tiene su propio historial de commits, lo que permite trabajar en diferentes características o correcciones de errores de manera independiente.
+
+>[!NOTE]
+> Ya no se recomienda el uso de `git checkout` para cambiar de rama, ya que puede ser confuso.
+> En su lugar se recomienda usar `git switch <branch-name>` para cambiar de rama y `git switch -c <branch-name>` para crear y cambiar a una nueva rama.
