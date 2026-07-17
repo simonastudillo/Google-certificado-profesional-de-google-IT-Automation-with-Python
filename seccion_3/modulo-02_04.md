@@ -57,11 +57,18 @@ Qué harás:
 3. In a Git repository, what command would you use to create a new branch based on the current branch, and what command would you use to switch to that newly created branch?
 > To create a new branch, use git branch new-branch-name, and to switch to it, use git checkout new-branch-name
 
+3. What command would you use to create a patch file that represents the changes between the current working directory and the latest commit? 
+> git diff > changes.patch
+
 4. In a scenario where you are collaborating with a team on a project using Git, what would be the role of a remote repository?
 > To act as a central repository where all team members can push and pull changes
 
+4. You and your colleagues are working on a software development project, and you've decided to use Git for version control and collaboration. What command do team members use to upload their local commits to the remote repository in the Git workflow described in the scenario?
+> git push
+
 5. In the lab, after merging the "improve-output" branch into the "master" branch, what type of merge is indicated by the message "Fast-forward"?
-> It's a type of merge that combines the changes from both branches automatically.
+> It's a type of merge that combines the changes from both branches automatically. #bad
+> It's a merge where the master branch moves forward to include the changes from the feature branch.
 
 6. When working with Git, which command is used to add changes to the staging area when preparing for a commit? 
 > git add
@@ -69,8 +76,14 @@ Qué harás:
 7. In a Git repository, what is the purpose of creating and using branches?
 > To isolate and work on new features, fixes, or experiments separately from the main codebase
 
+7. What command can you use in Git to view the commit history of a repository, including details such as the commit's SHA-1 checksum, author's name and email, date, and commit message?
+> git log
+
 8. What does it mean when Git says there is a 'merge conflict'? 
 > Git can't automatically merge the changes and needs your help to resolve the conflict.
+
+8. In the lab’s Git operation, what does the "git merge improve-output" command achieve?
+> It combines the changes from the improve-output branch into the master branch.
 
 9. What is the primary purpose of merging a branch back into the main branch in a Git repository?
 > To combine the changes from the branch into the main codebase
