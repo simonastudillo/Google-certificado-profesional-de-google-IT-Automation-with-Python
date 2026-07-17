@@ -50,3 +50,16 @@ git pull
 - Para enviar esos cambios al repositorio remoto, usamos el comando `git push`
 - Para no tener que ingresar nuestras credenciales cada vez que hacemos un push, podemos crear una clave SSH y agregarla a nuestra cuenta de GitHub, de esta forma reconoce nuestra máquina y no nos pedirá credenciales cada vez que hagamos un push
 - otra opción es usar el comando `git config --global credential.helper cache` para almacenar nuestras credenciales en caché durante un tiempo determinado
+
+---
+
+## Guía de estudio: Interacción básica con GitHub
+- Repositorios remotos:
+    - [github.com](https://github.com)
+    - [bitbucket.org](https://bitbucket.org)
+    - [gitlab.com](https://gitlab.com)
+- Comandos de Git para interactuar con repositorios remotos:
+    - `git clone <url>`: Clona un repositorio remoto en tu máquina local
+    - `git push`: Envía los cambios locales al repositorio remoto
+    - `git pull`: Trae los cambios del repositorio remoto a tu copia local
+    - `git config --global credential.helper cache`: Almacena tus credenciales en caché para no tener que ingresarlas cada vez que haces un push
