@@ -110,7 +110,8 @@ git checkout experimental
 > git fetch
 
 4. What type of merge creates a new merge commit?
-> Fast-forward merge
+> Fast-forward merge #bad
+> Explicit merge
 
 5. What method of getting remote contents will automatically merge the remote branch with the current local branch?
 > git pull
