@@ -20,3 +20,22 @@
 - Sin embargo, una palabra de precaución sobre cómo puede administrar estos repositorios. ​Si los hackers obtienen información sobre la infraestructura de TI de su organización, ​pueden usarla para intentar entrar en su red
 - Así que asegúrese de tratar esta información como confidencial
 - Para un trabajo real de configuración y desarrollo, debe usar un servidor Git seguro y ​privado, y limitar a las personas autorizadas a trabajar en él. 
+
+---
+
+## Revisión: Interacción básica con GitHub
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+git clone https://github.com/redquinoa/health-checks.git
+
+cd health-checks/
+ls -l
+
+git commit -a -m "Add one more line to README.md"
+
+git push
+
+git config --global credential.helper cache
+
+git pull
+```
