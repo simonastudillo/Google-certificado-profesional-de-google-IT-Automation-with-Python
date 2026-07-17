@@ -23,3 +23,12 @@ git branch -r
 
 git status
 ```
+
+---
+
+## Trabajando con remotos
+- Podemos usar el comando `git remote -v` para ver los remotos configurados en nuestro repositorio local, y el comando `git remote show <remote>` para ver información detallada sobre un remoto específico.
+- Por cada remoto veremos 2 URL, una para fetch y otra para push, la URL de fetch es la que se usa para traer cambios del remoto a nuestra copia local, y la URL de push es la que se usa para enviar cambios de nuestra copia local al remoto.
+- Cada vez que operamos con controles remotos, Git usa ramas remotas ​para mantener copias de los datos almacenados en el repositorio remoto
+- Podríamos echar un vistazo a las ramas remotas que ​nuestro repositorio de Git está rastreando actualmente ejecutando `git branch -r`. 
+- Si usamos `git status` aparece algo del estilo `origin/master` que indica que nuestra rama local master está rastreando la rama remota master del remoto origin.
