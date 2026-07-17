@@ -146,3 +146,13 @@ git show 7d1de19
 - `git log -2`: Muestra los dos últimos commits realizados en la rama actual.
 - `git show <commit>`: Muestra los detalles de un commit específico, incluyendo el mensaje del commit y los cambios realizados en los archivos, puedes pasar el hash completo o los primeros caracteres del hash para identificar el commit.
 - En caso de que pasos una cantidad de caracteres insuficiente para identificar un commit de forma única, Git te mostrará un mensaje de error indicando que el commit no se puede encontrar. 
+
+---
+
+## Guía de estudio: Git Revert
+- `git checkout`: Deshace los cambios en un archivo específico antes de hacer commit.
+- `git reset`: Deshace los cambios en el área de preparación (staging area) para un archivo específico, pero mantiene los cambios en el directorio de trabajo.
+- `git commit --amend`: Permite modificar el último commit, ya sea para cambiar el mensaje del commit o para agregar cambios adicionales al mismo.
+- `git revert`: Crea un commit que contiene el inverso de todos los cambios realizados en la confirmación incorrecta para cancelarlos, manteniendo el historial de commits consistente.
+- [documentación oficial de Git](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things)
+- [SHA1 Collision detection in Git](https://github.blog/news-insights/company-news/sha-1-collision-detection-on-github-com/)
