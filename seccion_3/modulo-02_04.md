@@ -29,3 +29,18 @@ Qué harás:
 3. Modificar el contenido de la rama
 4. Revertir los cambios
 5. Fusionar la rama
+
+---
+
+## Ejemplo: Fusión de ramas en Git
+- Ejemplo del laboratorio de Qwiklabs: Merge branches in Git
+- Se detecta error en el script `food_question.py`.
+- Usamos comando como `git log`, `git status` y `git branch` para conocer el estado del repositorio y la rama en la que estamos trabajando.
+- Antes de trabajar configuramos nuestro nombre de usuario y correo electrónico con los comandos `git config user.name "Your Name"` y `git config user.email "email"`
+- Creamos la rama `improve-output` y nos cambiamos a ella con el comando `git checkout -b improve-output`
+- Modificamos el script `food_count.py` para agregar un print adicional, lo ejecutamos para verificar su funcionamiento
+- Agregamos los cambios al área de preparación con `git add food_count.py` y realizamos un commit con `git commit -m `
+- Usamos `git log` para detectar en que commit se encuentra el error del archivo `food_question.py` y revertimos el commit con `git revert <commit-id>` para deshacer los cambios realizados en el commit incorrecto
+- Ejecutamos el script `food_question.py` para verificar que el error se haya corregido
+- Finalmente, nos cambiamos a la rama `master` y fusionamos la rama `improve-output` con el comando `git merge improve-output` para integrar los cambios realizados en la rama de mejora al código principal del proyecto.
+- Verificamos con `git status` y `git log`
