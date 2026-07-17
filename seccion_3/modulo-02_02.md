@@ -156,3 +156,21 @@ git show 7d1de19
 - `git revert`: Crea un commit que contiene el inverso de todos los cambios realizados en la confirmación incorrecta para cancelarlos, manteniendo el historial de commits consistente.
 - [documentación oficial de Git](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things)
 - [SHA1 Collision detection in Git](https://github.blog/news-insights/company-news/sha-1-collision-detection-on-github-com/)
+
+---
+
+## Test your knowledge: Undoing things
+1. Let's say we've made a mistake in our latest commit to a public branch. Which of the following commands is the best option for fixing our mistake?
+> git revert
+
+2. If we want to rollback a commit on a public branch that wasn't the most recent one using the revert command, what must we do?
+> use the commit ID at the end of the git revert command
+
+3. What does Git use cryptographic hash keys for?
+> To guarantee the consistency of our repository
+
+4. What does the command git commit --amend do?
+> Overwrite the previous commit
+
+5. How can we easily view the log message and diff output the last commit if we don't know the commit ID?
+> git log
