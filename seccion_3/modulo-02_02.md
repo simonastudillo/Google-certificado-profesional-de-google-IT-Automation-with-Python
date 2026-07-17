@@ -66,3 +66,44 @@ git commit --amend
 
 >[!WARNING]
 > Evita tanto como sea posible modificar commits que ya han sido compartidos con otros colaboradores, ya que esto puede causar conflictos y confusión en el historial del proyecto.
+
+---
+
+## Revisión: Rollback
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+cd scripts
+atom all_checks.py
+```
+```Python
+#!/usr/bin/env python3
+  
+import os
+import sys
+
+def check_reboot():
+    """Returns True if the computer has a pending reboot."""
+    return os.path.exists("/run/reboot-required")
+
+def main():
+    if check_reboot():
+        print("Pending Reboot.")
+        sys.exit(1)
+
+    if disk_full():
+        print("Disk Full.")
+        sys.exit(1)
+
+    print("Everything ok.")
+    sys.exit(0)
+
+main()
+```
+```bash
+./all_checks.py 
+
+git revert HEAD
+git revert HEAD
+
+git log -p -2
+```
