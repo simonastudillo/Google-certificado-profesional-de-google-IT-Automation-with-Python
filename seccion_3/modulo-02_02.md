@@ -115,3 +115,25 @@ git log -p -2
 - Por ejemplo, ​si se agregó una línea en particular en el commit incorrecto, ​entonces en el commit revertido, ​se eliminará la misma línea. 
 - De esta manera obtienes el efecto de haber deshecho los cambios, ​pero el historial de los commits en el proyecto sigue siendo ​consistente dejando un registro de exactamente lo que sucedió
 - `git revert HEAD`: Revertir el último commit. Esto crea un nuevo commit que deshace los cambios del commit más reciente.
+
+---
+
+## Revisión: Identificar un commit
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+cd checks
+git log -1
+
+git log -2
+git show 30e70712882267ca2dd749acfa02ea3aacfd0b24
+
+git show 30
+
+git show 30e7
+
+git revert 30e7
+
+git revert 7d71
+
+git show 7d1de19
+```
