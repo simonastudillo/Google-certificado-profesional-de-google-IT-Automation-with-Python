@@ -41,3 +41,20 @@ git commit -m "it should be os.path.exists"
 - `git checkout <file>`: Deshace los cambios en un archivo específico antes de hacer commit.
 - `git checkout -p <file>`: Permite deshacer cambios de manera interactiva, seleccionando qué cambios específicos se quieren deshacer.
 - `git reset HEAD <file>`: Deshace los cambios en el área de preparación (staging area) para un archivo específico, pero mantiene los cambios en el directorio de trabajo.
+
+---
+
+## Revisión: Modificar compromisos
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+cd scripts/
+touch auto-update.py
+touch gather-information.sh
+ls -l
+
+git add auto-update.py
+git commit -m 'Add two new scripts'
+
+git add gather-information.sh
+git commit --amend
+```
