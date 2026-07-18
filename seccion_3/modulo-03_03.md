@@ -41,3 +41,41 @@ Además de proporcionar una shell de inicio de sesión segura en un servidor rem
     - Reenvío de puertos de red del servidor al cliente, o "tunelización".
     - Reenviar su inicio de sesión a otro servidor detrás de un cortafuegos, a veces denominado «servidor intermedio» o «servidor bastión».
     - Ejecutar aplicaciones con interfaz gráfica de usuario (GUI) en un servidor, pero mostrarlas en un cliente local.
+
+---
+
+## Configurando SSH
+- Los puertos de computadora son puntos de inicio y fin de una conexión de red, definidos por software.
+- Al usar Secure Shell (SSH), el cliente se conecta al servidor a través del puerto 22 (por defecto).
+- Una vez establecida la conexión, el servidor envía su clave pública al cliente.
+- A continuación, el cliente y el servidor negocian un conjunto de reglas de cifrado, denominado algoritmo de cifrado, compatible con ambas máquinas.
+- Cuando ambas máquinas coinciden en el algoritmo de cifrado, el servidor inicia una sesión de inicio de sesión para el usuario.
+- Configuración de un cliente SSH
+    - Las instrucciones de configuración de SSH serán diferentes dependiendo de su sistema operativo y de la implementación de SSH
+- Generar su par de claves
+    - En primer lugar, necesitarás generar tu par de claves pública/privada
+    - La primera vez que se conecte a un servidor determinado utilizando SSH, el servidor almacenará una copia de su clave pública en su máquina
+    - Esto sólo debe hacerse una vez, ya que el mismo par de claves puede utilizarse para conectarse a cualquier número de hosts remotos.
+    - Podemos crear una ejecutando el comando `ssh-keygen -t rsa -b 2048` en la terminal de nuestro sistema operativo.
+        - `ssh-keygen` es la herramienta de línea de comandos que se utiliza para generar, administrar y convertir claves de autenticación para SSH.
+        - `-t rsa` especifica el tipo de clave a crear, en este caso RSA.
+        - `-b 2048` especifica el tamaño de la clave en bits, en este caso 2048 bits, que es un tamaño de clave seguro y ampliamente utilizado.
+- OpenSSH le preguntará WHERE para guardar las claves generadas. Tenga en cuenta que creará un directorio oculto llamado .ssh en su directorio personal. Aquí puede aceptar los valores predeterminados.
+- SSH también le pedirá una contraseña para proteger su clave
+- Mucha gente elige no usar una frase de contraseña porque si la introduce aquí, se le pedirá que la introduzca cada vez que se use su clave.
+- Sin embargo, si está en una máquina que no es segura, alguien que obtenga acceso a ese ordenador también tendrá acceso a todos los sistemas que utilicen esa clave.
+- Si añade una frase de contraseña a su clave SSH para mayor seguridad, puede guardarla en un agente SSH, que es un programa que gestiona claves SSH
+- Una vez que haya establecido su frase de contraseña o rechazado la opción, OpenSSH generará un par de claves públicas/privadas aleatorias y las guardará
+- Conexión por primera vez
+    - Ahora que tienes un par de claves, puedes conectarte a un host. La forma más básica del comando para conectarse es `ssh <usuario>@<host>`:
+        - `<usuario>` es el nombre de usuario en el host remoto al que desea conectarse.
+        - `<host>` es la dirección IP o el nombre de dominio del host remoto al que desea conectarse.
+    - Cuando se conecta a un servidor por primera vez, SSH imprimirá la huella digital de la clave del servidor remoto y confirmará que realmente desea conectarse.
+    - Es posible que se le pida que introduzca la contraseña de la cuenta en el host remoto. Una vez hecho esto, se almacenará una copia de tu clave pública en el host y no tendrás que volver a introducir la contraseña
+- Configuración de un servidor SSH
+    - El componente del servidor SSH, llamado "demonio", suele estar instalado por defecto en Linux y Unix
+    - En Linux, el archivo de configuración del servidor suele estar en /etc/ssh/sshd_config y rara vez es necesario modificarlo.
+    - Las versiones posteriores de MacOS también tienen un cliente SSH de línea de comandos ya instalado. Para una implementación gratuita de SSH para Windows, Mac y Unix, consulte [Putty](https://www.putty.org/).
+
+>[!TIP]
+> Puedes utilizar el mismo par de claves privada/pública en todas las máquinas que controles. Así, si tienes dos portátiles y una tableta, puedes copiar tu par de claves en todos ellos. Esto puede ahorrarte algunos pasos al iniciar sesión desde otros dispositivos.
