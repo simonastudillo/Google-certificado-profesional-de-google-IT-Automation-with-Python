@@ -18,3 +18,19 @@ git commit
 git push
 git log --graph --oneline
 ```
+
+---
+
+## El flujo de trabajo «Pull-Merge-Push»
+- ¿y si cuando vamos a impulsar nuestros cambios, ​hay nuevos cambios en el repositorio remoto?
+    - `git add -p` nos permite añadir cambios de manera interactiva, es decir, podemos elegir qué cambios añadir y cuáles no.
+    - `git commit -m ''` nos permite añadir un mensaje de commit a nuestros cambios.
+    - `git push` En este caso falla porque hay cambios en el remoto que no tenemos en nuestra copia local. Aparece un mensaje tipo `Updates were rejected because the remote contains work that you do not have locally...`
+    - `git pull` nos permite traer los cambios del remoto a nuestra copia local y fusionarlos con nuestra rama local. En este caso no fue posible hacer un auto-merge, por lo que Git nos indica que debemos resolver los conflictos de manera manual.
+    - `git log --graph --oneline --all` nos permite ver un gráfico de los commits de todas las ramas, incluyendo las ramas remotas.
+    - `git log -p origin/master` nos permite ver los cambios de la rama remota master del remoto origin.
+    - Editamos el archivo `all_checks.py` para resolver los conflictos, recuerda eliminar las marcas de conflicto `<<<<<<<`, `=======` y `>>>>>>>`.
+    - `git add all_checks.py` nos permite añadir el archivo modificado a nuestro área de preparación.
+    - `git commit` nos permite crear un nuevo commit con los cambios que hemos añadido al área de preparación.
+    - `git push` nos permite enviar nuestros cambios al remoto.
+    - `git log --graph --oneline` nos permite ver un gráfico de los commits de nuestra rama local, incluyendo los commits que hemos traído del remoto y los commits que hemos hecho nosotros. Ahora deberíamos ver que nuestra rama local y la rama remota están sincronizadas, es decir, apuntan al mismo commit.
