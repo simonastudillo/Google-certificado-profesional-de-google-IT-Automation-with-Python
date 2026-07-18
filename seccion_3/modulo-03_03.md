@@ -79,3 +79,19 @@ Además de proporcionar una shell de inicio de sesión segura en un servidor rem
 
 >[!TIP]
 > Puedes utilizar el mismo par de claves privada/pública en todas las máquinas que controles. Así, si tienes dos portátiles y una tableta, puedes copiar tu par de claves en todos ellos. Esto puede ahorrarte algunos pasos al iniciar sesión desde otros dispositivos.
+
+---
+
+## Claves API
+- Una clave de Interfaz de programación de aplicaciones (API) es un token de autenticación que permite llamar a una API
+- Una aplicación pasa una clave API a la API, que luego es llamada para identificar a la persona, el programador o el programa que intenta acceder a un sitio web
+- La clave API suele ser generada aleatoriamente por la aplicación y debe enviarse en cada llamada a la API. Sirve como identificador distintivo y ofrece un token seguro para la autenticación.
+- Autenticación y autorización
+    - Las claves API pueden utilizarse tanto para la autenticación, asegurándose de que usted es quien dice ser, como para la autorización, decidiendo a qué API se le permite llamar.
+    - Con la autenticación de proyectos (autenticación de aplicaciones o sitios), las claves API ayudan a identificar el proyecto o la aplicación que realiza la llamada
+    - Al autorizar con claves de API, también se está asegurando de que la llamada a la API es correcta. La autorización también comprobará que la clave de API que se está utilizando en el proyecto está disponible.
+- Cómo se utilizan
+    - El uso de las API depende de cada una de ellas. Con la mayoría de las API, es necesario enviar la clave API con cada solicitud. Puede enviarse de varias formas:
+    - tipo GET: `GET https://myapp.com/api/users/list?apikey=12345678`
+    - Encabeza GET: `GET https://myapp.com/api/users/listX-API-Key: 12345678`
+    - POST: `POST https://myapp.com/api/auth{ “token”: “12345678” }`
