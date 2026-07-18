@@ -90,4 +90,31 @@ git checkout master
 git merge refactor
 
 git push --delete origin refactor
+
+git branch -d refactor
+
+git push
 ```
+
+---
+
+## Reorganizar los cambios
+- Rebasing significa cambiar la confirmación base que se usa para nuestra rama.
+- Si sólo una de las ramas tiene nuevos cambios cuando tratamos de fusionarlos, ​Git será capaz de avanzar rápidamente y aplicar los cambios.
+- Pero si ambas ramas tienen nuevos cambios cuando tratamos de fusionar, ​Git creará una nueva confirmación de fusión para la fusión de tres vías.
+- El problema con las fusiones de tres vías es que debido al historial dividido, ​es difícil para nosotros depurar cuando se encuentra un problema en nuestro código, y ​necesitamos entender dónde se introdujo el problema
+- Al cambiar la base donde nuestros commits se dividen del historial de `branch`, ​podemos repetir los nuevos commits encima de la nueva base
+- Esto permite a Git hacer una fusión rápida y mantener la historia lineal. 
+- Cuando hagamos esto, ​Git intentará repetir nuestros commits después de la última confirmación en esa rama
+- Esto funcionará automáticamente si los cambios se realizan en diferentes partes ​de los archivos, pero ​requerirá intervención manual si los cambios se realizaron en otros archivos
+- `git checkout master` nos permite cambiar a la rama master.
+- `git pull` nos permite traer los cambios del remoto a nuestra copia local y fusionarlos con nuestra rama local.
+- `git log --graph --oneline --all` nos permite ver un gráfico de los commits de todas las ramas, incluyendo las ramas remotas.
+- `git checkout refactor` nos permite cambiar a la rama refactor.
+- `git rebase master` nos permite rebasar la rama actual sobre la rama master.
+- `git log --graph --oneline` nos permite ver un gráfico de los commits de nuestra rama local, incluyendo los commits que hemos traído del remoto y los commits que hemos hecho nosotros.
+- `git checkout master` nos permite cambiar a la rama master.
+- `git merge refactor` nos permite fusionar la rama refactor con la rama master (introducir los cambios de la rama refactor en la rama master).
+- `git push --delete origin refactor` nos permite eliminar la rama remota refactor del remoto origin.
+- `git branch -d refactor` nos permite eliminar la rama local refactor.
+- `git push` nos permite enviar nuestros cambios al remoto.
