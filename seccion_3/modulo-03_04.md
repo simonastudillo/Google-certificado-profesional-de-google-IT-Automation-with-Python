@@ -54,3 +54,16 @@ git commit -a -m 'Iterate over a list of checks and messages to avoid code dupli
 git commit -a -m 'Allow printing more than one error message'
 git push -u origin refactor
 ```
+
+---
+
+## Envío de ramas remotas
+- Siempre es recomendado crear una nueva rama para trabajar en un nuevo feature o bugfix, de esta forma podemos mantener nuestra rama master limpia y estable.
+- `git checkout -b refactor` crea una nueva rama llamada refactor y nos cambia a esa rama.
+- `atom all_checks.py` abre el archivo all_checks.py en el editor de texto Atom
+- `git commit -a -m ''` nos permite añadir todos los cambios en los archivos rastreados y crear un nuevo commit con un mensaje.
+- `git push -u origin refactor` nos permite enviar nuestra rama local refactor al remoto origin y establecer un seguimiento entre nuestra rama local y la rama remota.
+    - `git push` envía los cambios de nuestra rama local al remoto.
+    - `-u` establece un seguimiento entre nuestra rama local y la rama remota, de esta forma podemos usar `git push` y `git pull` sin especificar el remoto y la rama.
+    - `origin` es el nombre del remoto al que estamos enviando nuestros cambios.
+    - `refactor` es el nombre de la rama remota a la que estamos enviando nuestros cambios.
