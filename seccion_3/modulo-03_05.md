@@ -58,3 +58,83 @@ Este ejemplo es un recorrido por la actividad anterior de Qwiklab, incluyendo in
 - Se hace un `git pull origin main` para traer los cambios del repositorio remoto a la copia local
 - Como hay conflictos de fusión, se resuelven los conflictos y se hace un commit de la resolución de los conflictos
 - Luego se hace un `push origin main` para enviar los cambios de la copia local al repositorio remoto en GitHub
+
+---
+
+## Module 3 challenge: Introduction to GitHub
+1. Which of the following steps are involved in creating a Github account? Select all that apply
+> Providing a valid email address
+> Choosing a password
+> Choosing a username
+
+1. What command is used to clone a Git repository onto your local machine?
+> git clone
+
+2. If you create a private repository on Github, what will you need to clone the repo via HTTPS?
+> Your Github username and your password #bad
+> Your Github username and your personal access token
+
+2. When creating a new repository on Github, what will selecting private repository access allow others to do?
+> Choosing private means you choose who can see and commit to the repository. 
+
+3. What happens when the git clone command is used? Select all that apply. 
+> It initializes a .git directory. 
+> It creates a new directory with the same name as the repository.
+> It creates a working copy of the latest version. 
+
+3. How can you create a Personal Access Token? 
+> In the Developer settings of your Github account
+
+4. What does the command git add do? 
+> Adds content from the working directory into the staging area for the next commit
+
+4. After you have created a local repository and a remote repository, which one should you use first for adding new content?
+> Either repository #bad
+> The local repository ?
+
+4. After you set a Github username, any future commits you push to GitHub from the command line will be represented by this name. What happens if you change the name associated with your Git commits?
+> This will only affect future commits and won't change the name used for past commits.
+
+5. Which of the following commands will clone a repository named 'project' from a remote server named 'server'.?
+> git clone server/project
+
+5. What will the command git status show?
+> The different states of files in your working directory and staging area
+
+6. Git uses the term “commit”. In more common terms, how would you describe a commit?
+> Git commit is like making a copy of your work. #bad
+> Git commit is like saving your work. ?
+
+6. Every commit has an associated commit message. What is a commit message?
+> A log message from the user describing the changes
+
+7. What does the command git commit do? Select all that apply.
+> It stores the current contents of the index in a new commit. 
+> It captures a snapshot of the project's currently staged changes. 
+> It stores the commit message for this new commit.
+
+7. Which of the following commands will create a snapshot of the current state of the repository in Git?
+> git commit
+
+8. After you have committed changes, you can push the committed changes from your local repository to a remote repository on the main branch by using which of the following commands? 
+> git push origin main
+
+8. You have added files on a remote repository, which aren’t yet present on your local repository. You need to fetch and download content from the remote repository and update the local repository to match that content. What is the command you will use?
+> git pull origin main
+
+9. Recently, you added files on a remote repository, but those files aren’t yet present on your local repository. What will happen if you try to push something from the local repository to the remote repository?
+> Your attempt will return an error.
+
+9. Recently, you added files to a remote repository, but not the local repository. Now you want to push changes from the local repository to the remote one. What do you need to do?
+> Pull the current snapshot/commit in the remote repository to the local repository, update the local repository from the remote repository, then push the changes from the local repository to the remote one. 
+
+9. Recently, you added files to a remote repository, but not the local repository. Now you want to pull these changes from the remote repository to the local one. What command do you use to pull the current snapshot/commit in the remote repository to the local repository? 
+> git pull origin main
+
+10. You can check the changes made to the local README.md file on the remote repository on 
+Github . What should you select for more details related to a commit?
+> The commit message. #bad
+> The commit ID ?
+
+10. What is the git pull command used for? 
+> To fetch and download content from a remote repository and update the local repository to match that content.
