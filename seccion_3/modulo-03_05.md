@@ -24,3 +24,16 @@
 - `SSH key` (Clave SSH): Una credencial de acceso
 - `SSH protocol` (Protocolo SSH): Estándar utilizado habitualmente para acceder a servidores de forma remota según el principio de cifrado de clave pública
 - `SSH server` (Servidor SSH): Establece conexiones de red seguras, se somete a autenticación mutua e inicia sesiones de inicio de sesión o transferencias de archivos cifradas
+
+---
+
+## Qwiklabs assessment: Introduction to Github
+En este laboratorio, practicarás los conceptos básicos de la interacción con GitHub. Practicarás cómo configurar una cuenta, iniciar sesión, crear un repositorio, realizar cambios en tu máquina local y enviarlos al repositorio remoto. Usaremos estas operaciones de Git para compartir cambios entre el repositorio remoto y el local, y viceversa.
+
+Qué harás:
+1. Crear una cuenta de GitHub
+2. Crear un repositorio de Git
+3. Clonar el repositorio para crear una copia local en tu máquina
+4. Añadir un archivo al repositorio
+5. Crear una o varias instantáneas del repositorio local
+6. Enviar las instantáneas a la rama principal (master)
