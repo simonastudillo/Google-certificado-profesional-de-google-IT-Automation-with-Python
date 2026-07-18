@@ -152,3 +152,27 @@ git push
 - `git rebase --continue` nos permite continuar con el rebasamiento después de resolver los conflictos.
 - `git log --graph --oneline` nos permite ver un gráfico de los commits de nuestra rama local, incluyendo los commits que hemos traído del remoto y los commits que hemos hecho nosotros.
 - `git push` nos permite enviar nuestros cambios al remoto.
+
+---
+
+## Buenas prácticas para la colaboración
+- Sincroniza siempre las ramas antes de comenzar cualquier trabajo
+    - Antes de crear una nueva rama, asegúrate de que tu rama local esté actualizada con la rama remota correspondiente.
+    - Una vez la rama este actualizada, puedes crear una nueva rama para trabajar en tu feature o bugfix.
+- Evita hacer cambios muy grandes en una sola rama
+    - Si estás trabajando en un feature o bugfix que requiere muchos cambios, considera dividirlo en varias ramas más pequeñas.
+    - Esto facilita la revisión de código y reduce la probabilidad de conflictos al fusionar.
+- Evita mezclar cambios no relacionados en un commit
+    - Cada commit debe representar un cambio lógico y coherente en el código.
+    - Esto facilita la revisión de código y la identificación de problemas en el futuro.
+- Si tenemos una rama para features o bugfixes, actualiza de forma constante tu rama con los cambios de la rama master
+    - Esto reduce la probabilidad de conflictos al fusionar y mantiene tu rama actualizada con los últimos cambios.
+- Si necesitas tener más de 1 versión activa de tu proyecto, considera usar ramas para cada versión
+    - La rama principal para el desarrollo activo, y ramas separadas para cada versión estable.
+- No uses rebase en ramas compartidas con otros colaboradores
+    - El rebase reescribe el historial de commits, lo que puede causar problemas si otros colaboradores están trabajando en la misma rama.
+    - Si necesitas rebasar, hazlo en tu rama local antes de compartirla con otros colaboradores.
+- Escriba buenos mensajes de commit
+    - Los mensajes de commit deben ser claros y descriptivos, indicando qué cambios se realizaron y por qué.
+    - Esto facilita la revisión de código y la identificación de problemas en el futuro.
+    - Recuerda que puedes agregar un parrafo adicional en el mensaje de commit para explicar más a fondo los cambios realizados.
