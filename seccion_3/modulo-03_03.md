@@ -109,3 +109,23 @@ Además de proporcionar una shell de inicio de sesión segura en un servidor rem
     - Identificar usuarios individuales: Las claves API no identifican usuarios individuales; identifican proyectos enteros.
     - Autorización segura: Sólo deben utilizarse para identificar y controlar el acceso a una API.
     - Identificar a los creadores de un proyecto: la infraestructura de servicios no proporciona un método para buscar proyectos directamente a partir de claves de API.
+
+---
+
+## Claves públicas frente a claves privadas
+- En un mundo tecnológico en rápida evolución, es más importante que nunca establecer políticas de seguridad en toda la organización que salvaguarden la valiosa información y los activos de datos
+- La criptografía asimétrica se basa en claves públicas y privadas para mantener la seguridad y confidencialidad de los datos frente a los peligros.
+- ¿Qué es una clave pública?
+    - Una clave pública se emplea con frecuencia para establecer una comunicación segura mediante el cifrado de datos o para validar la autenticidad de una firma digital
+    - La seguridad está garantizada porque la clave pública procede de una autoridad certificadora de confianza, que expide certificados digitales que verifican la identidad y la clave del propietario
+- ¿Qué es una clave privada?
+    - Una clave privada es una clave secreta y segura que debe mantenerse confidencial y protegida
+    - Su función consiste en descifrar y crear firmas digitales que garanticen la integridad y autenticidad de los datos.
+    - Es la contrapartida de la clave pública y se comparte para descifrar la información codificada.
+- ¿Cómo funcionan juntas las claves pública y privada?
+    - Las claves públicas y privadas trabajan juntas para garantizar que la comunicación segura, el cifrado de datos, las firmas digitales y los intercambios de claves tengan lugar de forma segura a través de diversos canales de comunicación. Este proceso abarca:
+        1. Generación de claves
+        2. Intercambio de claves
+        3. Cifrado de datos
+        4. Transmisión de datos
+        5. Descifrado de datos
