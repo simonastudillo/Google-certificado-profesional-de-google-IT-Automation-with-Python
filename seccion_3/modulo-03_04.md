@@ -176,3 +176,14 @@ git push
     - Los mensajes de commit deben ser claros y descriptivos, indicando qué cambios se realizaron y por qué.
     - Esto facilita la revisión de código y la identificación de problemas en el futuro.
     - Recuerda que puedes agregar un parrafo adicional en el mensaje de commit para explicar más a fondo los cambios realizados.
+
+---
+
+## Guía de estudio: Resolución de conflictos
+- En Git, los conflictos de fusión, o conflictos que se producen cuando las ramas fusionadas tienen commits que compiten entre sí, no son infrecuentes cuando se trabaja con un equipo de desarrolladores o cuando se trabaja con software de código abierto
+- Consejos para resolver conflictos de fusión
+    - Tras ejecutar Git merge, aparecerá un mensaje informando de que se ha producido un conflicto en el archivo.
+    - Lee los mensajes de error que implican que no puedes enviar tus cambios locales a GitHub, especialmente los cambios remotos con Git pull.
+    - Utiliza la línea de comandos o GitHub Desktop para empujar el cambio a tu rama en GitHub después de hacer un clon local del repositorio para todos los demás tipos de conflictos de fusión.
+    - Antes de fusionar cualquier commit a la rama maestra, envíalo a un repositorio remoto para que los colaboradores puedan ver el código, probarlo e informarte de que está listo para fusionarse.
+    - Utiliza el comando Git rebase para reproducir los nuevos commits sobre la nueva base y, a continuación, fusiona de nuevo la rama de características con la principal.
