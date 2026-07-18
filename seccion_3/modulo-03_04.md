@@ -138,3 +138,17 @@ git log --graph --oneline
 
 git push
 ```
+
+---
+
+## Otro ejemplo de rebasamiento
+- Un ejemplo común es ​rebasar los cambios en la rama maestra ​cuando alguien más también hizo ​cambios y queremos mantener la historia lineal.
+- Esta es una ocurrencia bastante común ​cuando estás trabajando en un cambio que es pequeño ​lo suficientemente como para no necesitar una rama separada y ​tus colaboradores acaban de suceder ​para hacer un `commit` al mismo tiempo.
+- `atom all_checks.py` abre el archivo all_checks.py en el editor de texto Atom.
+- `git commit -a -m ''` nos permite añadir todos los cambios en los archivos rastreados y crear un nuevo commit con un mensaje.
+- `git fetch` nos permite traer los cambios del remoto a nuestra copia local, pero no los fusiona con nuestra rama local.
+- `git rebase origin/master` nos permite rebasar la rama actual sobre la rama master del remoto origin. En este caso, Git nos indica que hay conflictos que debemos resolver de manera manual.
+- `git add health_checks.py` nos permite añadir el archivo modificado a nuestro área de preparación.
+- `git rebase --continue` nos permite continuar con el rebasamiento después de resolver los conflictos.
+- `git log --graph --oneline` nos permite ver un gráfico de los commits de nuestra rama local, incluyendo los commits que hemos traído del remoto y los commits que hemos hecho nosotros.
+- `git push` nos permite enviar nuestros cambios al remoto.
