@@ -34,3 +34,23 @@ git log --graph --oneline
     - `git commit` nos permite crear un nuevo commit con los cambios que hemos añadido al área de preparación.
     - `git push` nos permite enviar nuestros cambios al remoto.
     - `git log --graph --oneline` nos permite ver un gráfico de los commits de nuestra rama local, incluyendo los commits que hemos traído del remoto y los commits que hemos hecho nosotros. Ahora deberíamos ver que nuestra rama local y la rama remota están sincronizadas, es decir, apuntan al mismo commit.
+
+---
+
+## Reseña: Envío de ramas remotas
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+git checkout -b refactor
+
+atom all_checks.py
+./all_checks.py 
+
+git commit -a -m 'Create wrapper function for check_disk_full'
+./all_checks.py 
+
+git commit -a -m 'Iterate over a list of checks and messages to avoid code duplication'
+./all_checks.py 
+
+git commit -a -m 'Allow printing more than one error message'
+git push -u origin refactor
+```
