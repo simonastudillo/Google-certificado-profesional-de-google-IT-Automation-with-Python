@@ -95,3 +95,17 @@ Además de proporcionar una shell de inicio de sesión segura en un servidor rem
     - tipo GET: `GET https://myapp.com/api/users/list?apikey=12345678`
     - Encabeza GET: `GET https://myapp.com/api/users/listX-API-Key: 12345678`
     - POST: `POST https://myapp.com/api/auth{ “token”: “12345678” }`
+
+---
+
+## Cuándo utilizar claves API
+- La gestión del acceso y la salvaguarda de los recursos es donde entran en juego las claves API
+- Para qué se pueden utilizar las claves API
+    - Para bloquear el tráfico anónimo: Puede ayudar a proteger su API de abusos y garantizar que sólo los usuarios autorizados puedan acceder a ella.
+    - Para controlar el número de llamadas realizadas a su API: Puede ayudar a evitar que su API se sobrecargue y garantizar que esté disponible para todos los usuarios autorizados.
+    - Para identificar patrones de uso: Puede utilizarse para mejorar su API y asegurarse de que satisface las necesidades de sus usuarios.
+    - Para filtrar los registros por clave de API: Puede ayudarle a solucionar problemas con su API y a identificar qué usuarios utilizan más su API.
+- Para qué no puede utilizar claves de API
+    - Identificar usuarios individuales: Las claves API no identifican usuarios individuales; identifican proyectos enteros.
+    - Autorización segura: Sólo deben utilizarse para identificar y controlar el acceso a una API.
+    - Identificar a los creadores de un proyecto: la infraestructura de servicios no proporciona un método para buscar proyectos directamente a partir de claves de API.
