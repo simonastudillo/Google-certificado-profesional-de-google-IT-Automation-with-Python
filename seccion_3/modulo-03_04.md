@@ -118,3 +118,23 @@ git push
 - `git push --delete origin refactor` nos permite eliminar la rama remota refactor del remoto origin.
 - `git branch -d refactor` nos permite eliminar la rama local refactor.
 - `git push` nos permite enviar nuestros cambios al remoto.
+
+---
+
+## Reseña: Otro ejemplo de rebasamiento
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+atom all_checks.py
+git commit -a -m 'Add a simple network connectivity check'
+
+git fetch
+git rebase origin/master
+
+git rebase origin/master
+git add health_checks.py 
+
+git rebase --continue
+git log --graph --oneline
+
+git push
+```
