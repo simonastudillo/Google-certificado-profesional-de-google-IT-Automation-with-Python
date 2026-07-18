@@ -37,3 +37,24 @@ Qué harás:
 4. Añadir un archivo al repositorio
 5. Crear una o varias instantáneas del repositorio local
 6. Enviar las instantáneas a la rama principal (master)
+
+---
+
+## Ejemplar: Introducción a GitHub
+En el laboratorio anterior, practicaste los conceptos básicos de la interacción con GitHub. Practicaste la configuración de una cuenta, el inicio de sesión, la creación de un repositorio, la realización de cambios en el equipo local, y el envío de cambios al repositorio remoto. Hemos utilizado estas operaciones Git para compartir los cambios desde el repositorio remoto al repositorio local y viceversa.
+
+Este ejemplo es un recorrido por la actividad anterior de Qwiklab, incluyendo instrucciones detalladas y soluciones. Puede utilizar este ejemplo si no pudo completar el laboratorio o si necesita orientación adicional para realizar las tareas del laboratorio. También puede consultar este ejemplo para prepararse para el cuestionario calificado de este módulo.
+
+- Creamos un repositorio en Git con nuestra cuenta de GitHub y lo clonamos en la máquina del laboratorio.
+- En mi caso primero creé una clave SSH para poder conectarme a GitHub desde la máquina del laboratorio
+- Añadí la clave pública a mi cuenta de GitHub y la clave privada la dejé en la máquina del laboratorio
+- Luego hice un git clone del repositorio que creé en GitHub para tener una copia local en la máquina del laboratorio
+- Se edita archivo README.md y se hace un commit con los cambios realizados
+- Se hace un push de los cambios al repositorio remoto en GitHub
+- En la segunda parte se crea un archivo llamado `example.py`
+- Se guarda y se crea el commit respectivo
+- Luego se crea un archivo en GitHub llamado `test.py` y se hace un commit de este archivo
+- Se intenta hacer un `push origin main` desde la máquina del laboratorio, pero no se puede porque el repositorio remoto tiene cambios que no están en la copia local
+- Se hace un `git pull origin main` para traer los cambios del repositorio remoto a la copia local
+- Como hay conflictos de fusión, se resuelven los conflictos y se hace un commit de la resolución de los conflictos
+- Luego se hace un `push origin main` para enviar los cambios de la copia local al repositorio remoto en GitHub
