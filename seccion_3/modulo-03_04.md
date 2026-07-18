@@ -67,3 +67,27 @@ git push -u origin refactor
     - `-u` establece un seguimiento entre nuestra rama local y la rama remota, de esta forma podemos usar `git push` y `git pull` sin especificar el remoto y la rama.
     - `origin` es el nombre del remoto al que estamos enviando nuestros cambios.
     - `refactor` es el nombre de la rama remota a la que estamos enviando nuestros cambios.
+
+---
+
+## Revisión: Reorganizar los cambios
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+git checkout master
+
+git pull
+
+git log --graph --oneline --all
+
+git checkout refactor
+
+git rebase master
+
+git log --graph --oneline
+
+git checkout master
+
+git merge refactor
+
+git push --delete origin refactor
+```
