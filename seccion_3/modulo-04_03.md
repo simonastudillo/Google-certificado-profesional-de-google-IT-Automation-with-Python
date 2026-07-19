@@ -47,3 +47,27 @@ git push
 - De esta manera, si hay ​algún tipo de compromiso en el pipeline, ​su servidor de producción no se ve afectado.
 - En segundo lugar, siempre tenga un plan para recuperar ​su acceso en caso de que su pipeline se vea comprometida
 - Estas configuraciones se suelen escribir en un archivo de configuración de tipo YAML, que describe los pasos que se deben ejecutar y las condiciones para cada paso.
+
+---
+
+## Integración de Git y GitHub
+- Git es una aplicación cliente/servidor desconectada.
+- Esto significa que los repositorios se mantienen en un servidor y se copian a tu máquina local
+- Algunas operaciones de Git, como git push o git pull, sincronizarán tu copia con el repositorio remoto.
+- Integración de Git y GitHub
+    - Puedes utilizar HTTPS o SSH con el cliente Git de línea de comandos para interactuar con GitHub
+    - Los métodos de autenticación difieren dependiendo de si estás utilizando HTTPS o SSH.
+- Autenticación HTTPS
+    - Línea de comandos con HTTPS
+        - Cuando hagas push a un repositorio de GitHub sobre HTTPS, o clones un repositorio privado, Git te pedirá tu nombre de usuario y contraseña de GitHub.
+        - Si no quieres introducir tu nombre de usuario y contraseña cada vez, puedes almacenarlos en un archivo llamado .netrc en tu directorio home
+        - Asegúrate de que el archivo no es legible por nadie más, o Git podría ignorarlo.
+    - Línea de comandos HTTPS con token
+        - En lugar de almacenar tu contraseña en texto plano en el archivo .netrc, puedes generar un token de acceso personal y utilizarlo en lugar de tu contraseña
+        - Consulta [Gestión de tus credenciales](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+    - Gestor de credenciales Git
+        - Git Credential Manager (GCM) es una herramienta que almacena de forma segura tus contraseñas y las suministra a Git sin tu intervención
+        - Funciona en Linux, macOS y Windows, y también admite la autenticación de múltiples factores.
+    - Autenticación SSH
+        - Para utilizar SSH con GitHub, primero debes generar un par de claves SSH en tu máquina local y agregar la clave pública a tu cuenta de GitHub
+        - Una vez que hayas agregado la clave pública a tu cuenta de GitHub, puedes utilizar la clave privada para autenticarte con GitHub sin necesidad de introducir tu nombre de usuario y contraseña cada vez que hagas push o pull.
