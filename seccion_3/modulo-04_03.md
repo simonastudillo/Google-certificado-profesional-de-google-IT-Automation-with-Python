@@ -88,3 +88,15 @@ git push
 - Gestión de proyectos tradicional
     - También puedes ver las incidencias abiertas en un formato de gestión de proyectos más tradicional, con estado, asignados, estimaciones y mucho más
     - Esto se hace desde la misma pestaña de proyectos, puedes generar nuevas pestañas con diferentes formatos de visualización, como por ejemplo un tablero Kanban, que te permite ver el estado de las incidencias y su progreso a lo largo del tiempo.
+
+---
+
+## Herramientas adicionales
+- [Ética del bricolaje en código abierto](https://arp242.net/diy.html)
+- [Vincular una pull request a una incidencia](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)
+- [Establecer directrices para los colaboradores del repositorio](https://help.github.com/en/articles/setting-guidelines-for-repository-contributors)
+- [¿Qué es CI/CD? Explicación de la integración continua y la entrega continua](https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html)
+- [¿Qué es CICD? Qué es importante y cómo hacerlo bien](https://stackify.com/what-is-cicd-whats-important-and-how-to-get-it-right/)
+- [Tutorial de Travis CI](https://docs.travis-ci.com/user/tutorial/)
+- [Etapas de construcción](https://docs.travis-ci.com/user/build-stages/)
+ 
