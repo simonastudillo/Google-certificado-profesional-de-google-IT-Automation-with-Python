@@ -21,3 +21,13 @@ git commit -a
 
 git push
 ```
+
+---
+
+## Problemas de seguimiento
+- Los `issues trackers` son una herramienta de gestión de proyectos que nos permite crear y asignar tareas, hacer un seguimiento de los errores y las solicitudes de funciones, y mantenernos organizados.
+- `Bugzilla` es un ejemplo de un `issue tracker` que se utiliza para realizar un seguimiento de los errores y las solicitudes de funciones en proyectos de software.
+- `GitHub Issues` es otro ejemplo de un `issue tracker` que se utiliza para realizar un seguimiento de los errores y las solicitudes de funciones en proyectos de software.
+- Se pueden crear desde la página del mismo repositorio, es importante que envíes todal información que tienes sobre como se generó el problema, incluso un paso a paso de como reproducirlo, esto ayudará a los desarrolladores a entender el problema y a encontrar una solución más rápidamente.
+- `GitHub Issues` usa ids únicos para issues y pull requests, lo que permite a los desarrolladores referirse a ellos fácilmente en el código y en la documentación. Puedes indicar que un issue está relacionado con un pull request usando palabras clave como `fixes #123` o `closes #456`, lo que cerrará automáticamente el issue cuando se fusione el pull request.
+- También se pueden cerrar issues desde comentarios en commit usando palabras clave como `fixes #123` o `closes #456`.
