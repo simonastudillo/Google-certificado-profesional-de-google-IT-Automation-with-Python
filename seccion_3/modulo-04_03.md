@@ -31,3 +31,19 @@ git push
 - Se pueden crear desde la página del mismo repositorio, es importante que envíes todal información que tienes sobre como se generó el problema, incluso un paso a paso de como reproducirlo, esto ayudará a los desarrolladores a entender el problema y a encontrar una solución más rápidamente.
 - `GitHub Issues` usa ids únicos para issues y pull requests, lo que permite a los desarrolladores referirse a ellos fácilmente en el código y en la documentación. Puedes indicar que un issue está relacionado con un pull request usando palabras clave como `fixes #123` o `closes #456`, lo que cerrará automáticamente el issue cuando se fusione el pull request.
 - También se pueden cerrar issues desde comentarios en commit usando palabras clave como `fixes #123` o `closes #456`.
+
+---
+
+## Integración continua
+- `Continuous Integration system (CI)` consiste en un conjunto de prácticas de desarrollo de software que requieren que los desarrolladores integren su código en un repositorio en pequeños incrementos de manera frecuente, lo que permite detectar errores rápidamente y mejorar la calidad del software. Tambien es necesaria la implementación de pruebas automatizadas para garantizar que el código funciona correctamente y no introduce errores en el sistema.
+- ​Una vez que tengamos nuestro código automáticamente construido y probado, ​el siguiente paso de automatización es la `implementación continua` (`continuous deployment` o `CD`) ​que a veces se llama entrega continua.
+- La implementación continua significa ​el nuevo código se implementa a menudo. ​El objetivo es evitar los lanzamientos ​con muchos cambios entre dos versiones de ​un proyecto y en su lugar hacer ​actualizaciones incrementales con solo unos pocos cambios a la vez.
+- `Jenkins` es un ejemplo de una herramienta de integración continua que se utiliza para automatizar la construcción, prueba y despliegue de aplicaciones de software.
+- Permite a los desarrolladores integrar su código en un repositorio compartido y ejecutar pruebas automatizadas para detectar errores rápidamente.
+- `Github Actions` es otro ejemplo de una herramienta de integración continua que se utiliza para automatizar la construcción, prueba y despliegue de aplicaciones de software.
+- `Pipelines` especifican los pasos que ​debe ejecutar para obtener el resultado que desea. Esto puede ser tan simple como ejecutar un script de prueba o tan complejo como compilar, probar y desplegar un proyecto completo.
+- `artofacts` utilizado para describir ​cualquier archivo que se genere como parte de la canalización. Esto normalmente incluye las versiones compiladas ​del código, pero puede incluir ​otros archivos generados como PDF para ​la documentación o paquetes específicos del sistema operativo ​para una fácil instalación. 
+- Así que dos cosas a recordar, primero, ​asegúrese de que las entidades autorizadas ​para los servidores de prueba no son ​las mismas entidades autorizadas ​para implementar en los servidores de producción. 
+- De esta manera, si hay ​algún tipo de compromiso en el pipeline, ​su servidor de producción no se ve afectado.
+- En segundo lugar, siempre tenga un plan para recuperar ​su acceso en caso de que su pipeline se vea comprometida
+- Estas configuraciones se suelen escribir en un archivo de configuración de tipo YAML, que describe los pasos que se deben ejecutar y las condiciones para cada paso.
