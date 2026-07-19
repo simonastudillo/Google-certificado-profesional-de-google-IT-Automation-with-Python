@@ -16,3 +16,20 @@
 
 ## Reseña: El flujo de trabajo típico de las solicitudes de incorporación de cambios en GitHub
 - A continuación se muestra el código utilizado en los vídeos instructivos siguientes
+```bash
+git clone https://github.com/redquinoa/rearrange.git
+
+cd rearrange
+ls -l
+
+git log
+
+git checkout -b add-readme
+git atom README.md 
+
+git add README.md
+git commit -m 'Add a simple README.md file'
+
+git push -u origin add-readme
+```
+
