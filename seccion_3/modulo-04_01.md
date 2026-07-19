@@ -41,3 +41,15 @@ git push -u origin add-readme
 - Luego hacemo un `git clone` de nuestra copia del repositorio en nuestra computadora. Esto nos permite trabajar en el proyecto localmente.
 - Después de hacer cambios en nuestra copia local del proyecto, podemos enviar esos cambios a nuestra copia del repositorio en GitHub usando `git push`.
 - Luego en GitHub, podemos crear una `pull request` para solicitar que el propietario del repositorio original revise y considere los cambios que hemos hecho en nuestra copia del proyecto. Si el propietario acepta los cambios, estos se incorporan al proyecto original.
+
+---
+
+## Revisión: Actualización de una solicitud de incorporación de cambios existente
+- A continuación se muestra el código utilizado en los vídeos instructivos siguientes
+```bash
+atom README.md
+
+git commit -a -m 'Add more information to the README'
+
+git push
+```
