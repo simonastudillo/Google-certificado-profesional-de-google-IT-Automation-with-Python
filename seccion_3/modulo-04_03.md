@@ -71,3 +71,20 @@ git push
     - Autenticación SSH
         - Para utilizar SSH con GitHub, primero debes generar un par de claves SSH en tu máquina local y agregar la clave pública a tu cuenta de GitHub
         - Una vez que hayas agregado la clave pública a tu cuenta de GitHub, puedes utilizar la clave privada para autenticarte con GitHub sin necesidad de introducir tu nombre de usuario y contraseña cada vez que hagas push o pull.
+
+---
+
+## Herramientas de gestión de proyectos de GitHub
+- Además de servir como repositorio de tu código y de realizar un seguimiento de los cambios que se producen en él a lo largo del tiempo, GitHub también incluye herramientas que te ayudarán a gestionar tu proyecto de software.
+- Proyectos de GitHub
+    - GitHub Projects es una herramienta flexible para el seguimiento y la gestión del trabajo en GitHub
+    - Puedes utilizar Proyectos para crear una hoja de cálculo adaptable, un tablero de tareas y una hoja de ruta que se integre con tus incidencias y pull requests
+    - Con los proyectos de GitHub, puedes filtrar, ordenar y agrupar tus incidencias y pull requests, y personalizarlos para adaptarlos al flujo de trabajo de tu equipo
+    - Los proyectos se pueden crear en un repositorio, y luego se les pueden añadir incidencias.
+- Incidencias de GitHub
+    - GitHub Issues es una parte de GitHub Projects, y proporciona una manera de realizar un seguimiento de las tareas que tienes que completar.
+    - Una incidencia puede ser un error, una petición de funcionalidad o una tarea de mantenimiento (como actualizar una biblioteca a la última versión).
+    - Las incidencias pueden ir acompañadas de descripciones y textos detallados, así como de capturas de pantalla y fragmentos de código. Las incidencias pueden discutirse, comentarse, asignarse a personas y etiquetarse.
+- Gestión de proyectos tradicional
+    - También puedes ver las incidencias abiertas en un formato de gestión de proyectos más tradicional, con estado, asignados, estimaciones y mucho más
+    - Esto se hace desde la misma pestaña de proyectos, puedes generar nuevas pestañas con diferentes formatos de visualización, como por ejemplo un tablero Kanban, que te permite ver el estado de las incidencias y su progreso a lo largo del tiempo.
