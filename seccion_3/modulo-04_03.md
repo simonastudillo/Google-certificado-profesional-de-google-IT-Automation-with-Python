@@ -8,3 +8,16 @@
 - Si eres un mantenedor de un proyecto, es importante que entiendas cada código que se envía a tu proyecto.
 - Esto es por seguridad y por facilidad de mantenimiento. Si no entiendes el código, no podrás mantenerlo ni arreglarlo si algo sale mal.
 - Una herramienta útil para esto son las `issues track`.
+
+---
+
+## Revisión: Problemas de seguimiento
+- A continuación se muestra el código utilizado en los vídeos instructivos siguientes
+```bash
+cd health-checks/
+atom README.md
+
+git commit -a
+
+git push
+```
