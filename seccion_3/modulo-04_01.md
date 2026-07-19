@@ -77,3 +77,20 @@ git push
 git push -f
 git log --graph --oneline --all -4
 ```
+
+---
+
+## Confirmación de cambios
+- no deberías reescribir el historial ​cuando se hayan publicado las confirmaciones. ​Eso se debe a que alguien más ya puede haber sincronizado ​ese repositorio con esos contenidos.
+- Esta regla no se aplica con solicitudes de forks, ​ya que normalmente solo tú has clonado tu bifurcación del repositorio
+- Cuando llamamos a una rebase interactiva, ​se abre un editor de texto con una lista de ​todos los commits seleccionados ​desde el más antiguo hasta el más reciente. 
+- Cambiando la primera palabra de cada línea, ​podemos seleccionar lo que queremos hacer con los commits.
+- ​Tenemos dos opciones para combinar commits, ​squash y fix up.
+- ​En ambos casos, el contenido del `commit` seleccionado se fusiona ​en la confirmación anterior de la lista.
+- ​La diferencia es lo que sucede con los mensajes de `commit`.
+- ​Cuando elegimos squash, ​los mensajes de `commit` se agregan juntos y un editor ​se abre para permitirnos hacer los cambios necesarios.
+- ​Cuando elegimos fix up, ​se descarta el mensaje de `commit` para esa confirmación.
+- ​Después de guardar y cerrar el editor, ​Git reescribirá el historial de confirmaciones y nos permitirá continuar con la rebase.
+- ​Si no hay conflictos, ​la rebase se completará y podremos enviar los cambios a nuestra bifurcación del repositorio en GitHub.
+- Al intentar hacer un `push` después de una rebase, es posible que recibamos un error que nos indique que nuestro historial local está detrás del remoto. 
+- En este caso, debemos usar la opción `-f` para forzar el `push` y sobrescribir el historial remoto con nuestro historial local reescrito.
