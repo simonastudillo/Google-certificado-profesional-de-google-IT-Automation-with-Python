@@ -94,3 +94,17 @@ git log --graph --oneline --all -4
 - ​Si no hay conflictos, ​la rebase se completará y podremos enviar los cambios a nuestra bifurcación del repositorio en GitHub.
 - Al intentar hacer un `push` después de una rebase, es posible que recibamos un error que nos indique que nuestro historial local está detrás del remoto. 
 - En este caso, debemos usar la opción `-f` para forzar el `push` y sobrescribir el historial remoto con nuestro historial local reescrito.
+
+---
+
+## Guía de estudio: bifurcaciones y solicitudes de incorporación de cambios en Git
+- GitHub es una plataforma de código abierto para la colaboración y el intercambio de conocimientos, que permite a los usuarios explorar el código creado por otros. 
+- Las pull requests permiten informar a otros colaboradores de los cambios realizados en una rama de Git
+- Al hacer pull requests, puedes discutir y evaluar los cambios propuestos antes de implementarlos en la rama principal.
+- es importante tener en cuenta que antes de realizar cualquier cambio en el código original, GitHub crea una bifurcación (o una copia del proyecto), lo que permite que los cambios sean confirmados a la copia de la bifurcación, incluso si los cambios no pueden ser enviados a la otra repositorio. 
+- Puede fusionar pull requests conservando las confirmaciones. A continuación se muestra una lista de opciones de fusión de pull requests que puede utilizar al fusionar pull requests.
+    - Fusionar commits. Todas las confirmaciones de la rama de características se añaden a la rama base en una confirmación de fusión utilizando la opción -- no-ff.
+    - Aplastar y combinar confirmaciones. Múltiples confirmaciones de una pull request son aplastadas, o combinadas en una sola confirmación, usando la opción fast-forward. Se recomienda que cuando se fusionen dos ramas, los pull requests se aplasten y fusionen para evitar la probabilidad de conflictos debido a la redundancia.
+    - Mensaje de fusión para una fusión squash. GitHub genera un mensaje de confirmación por defecto, que puedes editar. Este mensaje puede incluir el título de la solicitud, su descripción o información sobre las confirmaciones.
+    - Rebase y fusión de confirmaciones. Todas las confirmaciones de la rama temática se añaden a la rama base individualmente sin una confirmación de fusión.
+    - Fusiones indirectas. GitHub puede fusionar una pull request automáticamente si la rama principal se fusiona directa o indirectamente en la rama base de forma externa.
