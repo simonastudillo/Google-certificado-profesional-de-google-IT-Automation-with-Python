@@ -62,3 +62,18 @@ git push
 - Cada vez que miramos el diff ​generado por un commit o una cadena de commits, ​GitHub mostrará un color ​diff para los cambios que hemos realizado. ​Usará verde para ​nuevas líneas y rojo para las líneas que se eliminaron. 
 - ​Si sólo una parte de la línea cambia, ​resaltará esa parte específica de la línea. ​En este caso, es un nuevo archivo, ​por lo que todas las líneas son adiciones.
 - Debes revisar si el proyecto tiene un archivo CONTRIBUTING.md. Este archivo contiene información sobre cómo contribuir al proyecto, incluyendo las reglas de estilo de código, las pautas para enviar solicitudes de incorporación de cambios y cualquier otra información relevante para los colaboradores.
+
+---
+
+## Revisión: Aprobación de cambios
+- A continuación se muestra el código utilizado en los vídeos instructivos siguientes
+```bash
+git rebase -i master
+
+git show
+git status
+git log --graph --oneline --all -4
+git push
+git push -f
+git log --graph --oneline --all -4
+```
