@@ -53,3 +53,12 @@ git commit -a -m 'Add more information to the README'
 
 git push
 ```
+
+---
+
+## Actualización de una solicitud de incorporación de cambios existente
+- Cuando enviamos una solicitud de extracción, ​es bastante común recibir algunos comentarios de ​los encargados del proyecto pidiendo algunas mejoras
+- Para actualizar nuestra solicitud de incorporación de cambios, simplemente hacemos los cambios solicitados en nuestra copia local del proyecto y luego enviamos esos cambios a nuestra copia del repositorio en GitHub usando `git push`. Esto actualizará automáticamente la solicitud de incorporación de cambios existente con los nuevos cambios.
+- Cada vez que miramos el diff ​generado por un commit o una cadena de commits, ​GitHub mostrará un color ​diff para los cambios que hemos realizado. ​Usará verde para ​nuevas líneas y rojo para las líneas que se eliminaron. 
+- ​Si sólo una parte de la línea cambia, ​resaltará esa parte específica de la línea. ​En este caso, es un nuevo archivo, ​por lo que todas las líneas son adiciones.
+- Debes revisar si el proyecto tiene un archivo CONTRIBUTING.md. Este archivo contiene información sobre cómo contribuir al proyecto, incluyendo las reglas de estilo de código, las pautas para enviar solicitudes de incorporación de cambios y cualquier otra información relevante para los colaboradores.
