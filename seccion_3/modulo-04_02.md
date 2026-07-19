@@ -35,3 +35,11 @@ git status
 
 git push -f
 ```
+
+---
+
+## Cómo realizar revisiones de código
+- Basado en el mismo ejemplo del módulo anterior, se nos pide cambiar el archivo README.md para agregar más información sobre el proyecto.
+- Se solicita agregar más ejemplos y cambiar de tamaño el título usando `##` en lugar de `#`.
+- Recuerda que el comando `git commit -a --amend` nos permite modificar el último commit, agregando los cambios que hemos hecho en el archivo README.md.
+- Después de hacer los cambios, podemos usar `git push -f` para forzar la actualización de nuestra solicitud de incorporación de cambios existente con los nuevos cambios. Esto actualizará automáticamente la solicitud de incorporación de cambios existente con los nuevos cambios.
