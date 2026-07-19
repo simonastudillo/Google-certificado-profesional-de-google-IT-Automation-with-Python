@@ -21,3 +21,17 @@
 - Si hay algo que no estamos seguros de cómo hacer o ​creemos que un enfoque diferente podría ser mejor, podemos responder al comentario y ​pedir a nuestro revisor más información sin marcar el comentario como resuelto.
 - ​Una vez que todos los comentarios hayan sido resueltos y nuestro espectador esté satisfecho con los resultados, ​aprobarán el cambio y podremos fusionarlo
 - Es común que las revisiones de código ​incluyan varios comentarios sobre el estilo del código. ​Para evitar un montón de ida y vuelta, es una buena idea referirse a una guía de estilo que ​explica el estilo de codificación preferido para el proyecto
+
+---
+
+## Reseña: Cómo realizar revisiones de código
+- A continuación se muestra el código utilizado en los vídeos instructivos siguientes
+```bash
+atom README.md
+
+git commit -a --amend
+
+git status
+
+git push -f
+```
