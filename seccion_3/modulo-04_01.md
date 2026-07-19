@@ -108,3 +108,21 @@ git log --graph --oneline --all -4
     - Mensaje de fusión para una fusión squash. GitHub genera un mensaje de confirmación por defecto, que puedes editar. Este mensaje puede incluir el título de la solicitud, su descripción o información sobre las confirmaciones.
     - Rebase y fusión de confirmaciones. Todas las confirmaciones de la rama temática se añaden a la rama base individualmente sin una confirmación de fusión.
     - Fusiones indirectas. GitHub puede fusionar una pull request automáticamente si la rama principal se fusiona directa o indirectamente en la rama base de forma externa.
+
+---
+
+## Test your knowledge: Pull requests
+1. What is the difference between using squash and fixup when rebasing?
+> Squash combines the commit messages into one. Fixup discards the new commit message.
+
+2. What is a pull request?
+> A request sent to the owner and collaborators of the target repository to pull your recent changes.
+
+3. Under what circumstances is a new fork created?
+> When you want to experiment with changes without affecting the main repository.
+
+4. What combination of command and flags will force Git to push the current snapshot to the repo as it is, possibly resulting in permanent data loss?
+> git push -f
+
+5. When using interactive rebase, which option is the default, and takes the commits and rebases them against the branch we selected?
+> pick
