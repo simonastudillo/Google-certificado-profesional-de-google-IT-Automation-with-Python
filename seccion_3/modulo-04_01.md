@@ -33,3 +33,11 @@ git commit -m 'Add a simple README.md file'
 git push -u origin add-readme
 ```
 
+---
+
+## El flujo de trabajo habitual de las solicitudes de incorporación de cambios en GitHub
+- normalmente tendremos una copia local del repositorio ​en nuestra computadora y trabajaremos ​con el repositorio bifurcado como un control remoto
+- Lo primero es hacer un `fork` del repositorio original en nuestra cuenta de GitHub. Esto nos permite hacer cambios en el proyecto sin afectar el repositorio original.
+- Luego hacemo un `git clone` de nuestra copia del repositorio en nuestra computadora. Esto nos permite trabajar en el proyecto localmente.
+- Después de hacer cambios en nuestra copia local del proyecto, podemos enviar esos cambios a nuestra copia del repositorio en GitHub usando `git push`.
+- Luego en GitHub, podemos crear una `pull request` para solicitar que el propietario del repositorio original revise y considere los cambios que hemos hecho en nuestra copia del proyecto. Si el propietario acepta los cambios, estos se incorporan al proyecto original.
