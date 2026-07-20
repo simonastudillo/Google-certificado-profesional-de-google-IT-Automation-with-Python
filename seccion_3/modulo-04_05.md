@@ -64,3 +64,11 @@
 - Tracked: A file’s changes are recorded
 - Untracked: A file’s changes are not recorded
 - Version control systems (VCS): A tool to safely test code before releasing it, allow multiple people collaborate on the same coding projects together, and stores the history of that code and configuration
+
+---
+
+## Avance del próximo curso
+- Aprenderémos como encontrar la causa raíz de los problemas y averiguar como solucionarlos.
+- Aprenderemos cómo encontrar un caso de reproducción, ​cómo reducir el alcance de un problema para que sea más fácil de entender y depurar
+- Qué hacer cuando nuestras computadoras se están quedando sin recursos como memoria o ​espacio en disco
+- Y también cómo lidiar con programas que se ejecutan lentamente
