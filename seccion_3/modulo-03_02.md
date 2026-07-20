@@ -1,0 +1,117 @@
+# Usando un repositorio remoto
+
+## Que es un remote
+- Un remote es un repositorio remoto hace referencia a un repositorio que no se encuentra en nuestra máquina local, sino en un servidor remoto.
+- Puede ser en GitHub, Bitbucket, GitLab o un servidor privado.
+- Un servidor Git alojado localmente puede ejecutarse en ​casi cualquier plataforma, incluyendo Linux, ​Mac OS o Windows.
+- Junto con las ramas de desarrollo locales como master, ​Git mantiene copias de los commits que se han enviado ​al repositorio remoto y branches separadas
+- Si alguien ha actualizado un repositorio desde ​la última vez que sincronices tu copia local, ​Git te dirá que es hora de hacer una actualización
+- Si tiene sus propios cambios locales ​cuando extrae el código del repositorio remoto, ​es posible que necesite corregir los conflictos de fusión ​antes de poder empujar sus propios cambios. 
+- Git admite una variedad de formas ​de conectarse a un repositorio remoto. ​Algunos de los más comunes son el uso de los protocolos HTTP, ​HTTPS y SSH y sus correspondientes URL. 
+- HTTP se utiliza generalmente ​para permitir el acceso de sólo lectura a un repositorio. ​En otras palabras, permite a las personas clonar el contenido de ​su repositorio sin dejar que le empujen nuevos contenidos. ​Por el contrario, HTTPS y SSH, ​proporcionan métodos para autenticar a los usuarios ​para que pueda controlar quién obtiene permiso para presionar.
+
+---
+
+## Revisión: Trabajando con remotos
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+cd health-checks/
+git remote -v
+
+git remote show origin
+git branch -r
+
+git status
+```
+
+---
+
+## Trabajando con remotos
+- Podemos usar el comando `git remote -v` para ver los remotos configurados en nuestro repositorio local, y el comando `git remote show <remote>` para ver información detallada sobre un remoto específico.
+- Por cada remoto veremos 2 URL, una para fetch y otra para push, la URL de fetch es la que se usa para traer cambios del remoto a nuestra copia local, y la URL de push es la que se usa para enviar cambios de nuestra copia local al remoto.
+- Cada vez que operamos con controles remotos, Git usa ramas remotas ​para mantener copias de los datos almacenados en el repositorio remoto
+- Podríamos echar un vistazo a las ramas remotas que ​nuestro repositorio de Git está rastreando actualmente ejecutando `git branch -r`. 
+- Si usamos `git status` aparece algo del estilo `origin/master` que indica que nuestra rama local master está rastreando la rama remota master del remoto origin.
+
+---
+
+## Revisión: Trabajando con remotos
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+cd health-checks/
+git remote show origin
+
+git fetch
+
+git log origin/master
+
+git status
+
+git merge origin/master
+
+git log
+```
+
+---
+
+## Trabajando con remotos
+- Siempre podríamos usar el sitio web de GitHub ​para navegar por los cambios que se enviaron
+- Sin embargo siempre es importante saber hacerlo desde la línea de comandos, de esta forma, no importa que plataforma usemos, siempre podremos trabajar con Git desde la línea de comandos.
+- `git remote show origin` nos muestra información detallada sobre el remoto origin, incluyendo las ramas remotas que está rastreando nuestra copia local.
+- `git fetch` descarga los cambios del remoto origin a nuestra copia local, pero no los fusiona con nuestra rama local.
+- `git log origin/master` nos permite ver los commits de la rama remota master del remoto origin.
+    - Aquí podemos ver `origin/master` indica el último commit al que apunta la rama remota master del remoto origin.
+    - `origin/HEAD` indica el último commit del remoto origin, y `HEAD` indica el último commit.
+    - `HEAD -> master` indica el último commit al que apunta nuestra rama local master.
+- `git merge origin/master` fusiona los cambios de la rama remota master del remoto origin con nuestra rama local master.
+
+---
+
+## Revisión: Actualizando el repositorio local
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+git pull
+
+git -log -p -1
+
+git remote show origin
+
+git checkout experimental 
+```
+
+---
+
+## Actualizando el repositorio local
+- Dado que buscar y fusionar son tan comunes ​, Git nos da el comando `git pull` que hace ambos por nosotros.
+- `git pull` es equivalente a ejecutar `git fetch` seguido de `git merge`.
+- Si no hay conflictos, `git pull` fusionará automáticamente los cambios del remoto con nuestra rama local.
+- Hemos visto cómo comprobar su estado, cómo empujar y ​extraer cambios en repositorios, e incluso cómo sacar nuevos branches de ellos.
+
+---
+
+## Guía de estudio: Git remotos
+- `git remote`: Te permite gestionar el conjunto de repositorios o "remotos" cuyas ramas sigues.
+- `git remote -v`: es similar a `git remote`, pero al agregar -v se muestra más información, como la URL remota.
+- `git remote show <name>`: Muestra información sobre un único repositorio remoto.
+- `git remote update`: Obtiene actualizaciones para dispositivos remotos o grupos de dispositivos remotos.
+- `git fetch`: Puede descargar objetos y referencias desde un único repositorio, una única URL o desde varios repositorios a la vez.
+- `git branch -r`: Enumera las ramas remotas y se puede combinar con otros argumentos de rama para gestionar las ramas remotas.
+
+---
+
+## Test your knowledge: Using a remote repository
+1. In order to get the contents of a remote branch without automatically merging, which of these commands should we use?
+> git remote update
+
+2. If we need to find more information about a remote branch, which command will help us?
+> git remote show origin
+
+3. What command will download remote branches from remote repositories without merging the content with your current workspace automatically?
+> git fetch
+
+4. What type of merge creates a new merge commit?
+> Fast-forward merge #bad
+> Explicit merge
+
+5. What method of getting remote contents will automatically merge the remote branch with the current local branch?
+> git pull
