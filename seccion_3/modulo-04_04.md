@@ -49,3 +49,41 @@ Lo que harás
 ---
 
 ## Diálogo de Coach: Colaboración con Git y GitHub
+
+---
+
+## Module 4 challenge: Push local commits to Github
+1. Why is it important to push your local changes to the main project? Select all that apply.
+> It allows you to coordinate work with teammates.
+> It helps you avoid tracking divergent lines of development.
+
+2. Why is git status the first command in the process to commit your changes? 
+> It shows the states of the files in your working directory and staging area.
+
+3. What are the best practices for writing a commit message? Select all that apply.
+> Include an appended line that tells GitHub which issue to close.
+> Describe what the commit does and why it was made. 
+
+4. Which of the following can be achieved using GitHub's Pull Request feature? Select all that apply.
+> Propose changes to someone else's code
+> Request reviews from your peers
+> Merge changes from another branch
+> Preview changes before merging them
+
+5. What is the purpose of the "Merge" button in a Git pull request on platforms like GitHub or GitLab?
+> To finalize the pull request, merge the changes into the target branch, and close the pull request.
+
+6. What is the main benefit of using pull requests in Git? 
+> To propose changes, facilitate code review, and ensure quality before merging them into the target branch.
+
+7. What does a code review in GitHub involve? 
+> Evaluating the quality of the code and suggesting improvements
+
+8. You're reviewing a colleague's code on GitHub and you find a significant issue. What is the best way to provide feedback? 
+> Leave a comment on the code with a respectful, constructive suggestion
+
+9. Which of the following statements are true about the 'Request changes' option in GitHub code reviews?
+> It allows you to suggest specific changes to the code
+
+10. What happens when you fork a repository?
+> A duplicate of the original repository is created in your GitHub account.
