@@ -20,3 +20,14 @@
 - `Pipelines` (Canalizaciones): Los pasos específicos que deben ejecutarse para obtener el resultado deseado
 - `Pull request` (Solicitud de extracción): Procedimiento por el que se examina el código nuevo antes de fusionarlo para crear una rama o rama maestra.
 - `Squash commits` (Combinar commits): La decisión de añadir mensajes de confirmación juntos y un editor se abre para hacer los cambios necesarios
+
+---
+
+## Evaluación de Qwiklabs: Enviar commits locales a GitHub
+Para este proyecto, necesitarás hacer un fork de un repositorio existente, corregir un error en un script, enviar tu commit a GitHub, y crear un pull request con tu commit.
+
+Lo que harás
+1. Crear otro repositorio
+2. Confirmar los cambios en tu propia bifurcación y crear pull requests al repositorio original
+3. Familiarízate con las revisiones de código y asegúrate de que tu corrección funciona correctamente en tu sistema antes de crear el pull request
+4. Describa su pull request
