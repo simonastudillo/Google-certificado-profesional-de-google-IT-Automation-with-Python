@@ -1,12 +1,41 @@
 # Uso de Python para interactuar con el sistema operativo
 
 - Módulo 1: Poniendo en marcha tu Python
-- Módulo 2: Manejando archivo con Python
+1. [Poniendo en marcha tu Python](modulo-01_01.md)
+2. [Preparándonos para Python](modulo-01_02.md)
+3. [Ejecutando Python localmente](modulo-01_03.md)
+4. [Tareas automáticas a través de la programación](modulo-01_04.md)
+5. [Resumen del módulo](modulo-01_05.md)
+- Módulo 2: Manejando archivos con Python
+1. [Escribiendo y leyendo archivos](modulo-02_01.md)
+2. [Rutas de archivo](modulo-02_02.md)
+3. [Gestión de archivos y directorios](modulo-02_03.md)
+4. [Leyendo y escribiendo archivos CSV](modulo-02_04.md)
+5. [Revisión del módulo](modulo-02_05.md)
 - Módulo 3: Expresiones regulares
+1. [Expresiones regulares](modulo-03_01.md)
+2. [Expresiones regulares básicas](modulo-03_02.md)
+3. [Expresiones regulares avanzadas](modulo-03_03.md)
+4. [Repaso del módulo](modulo-03_04.md)
 - Módulo 4: Gestión de datos y procesos
+1. [Flujos de datos](modulo-04_01.md)
+2. [Subprocesos de Python](modulo-04_02.md)
+3. [Procesando archivos log](modulo-04_03.md)
+4. [Revisión del módulo](modulo-04_04.md)
 - Módulo 5: Testing en Python
+1. [Test simples](modulo-05_01.md)
+2. [Test unitarios](modulo-05_02.md)
+3. [Otros conceptos de Test](modulo-05_03.md)
+4. [Errores y excepciones](modulo-05_04.md)
+5. [Revisión de módulo](modulo-05_05.md)
 - Módulo 6: Bash scripting
+1. [Interactuando con la linea de comandos de Bash](modulo-06_01.md)
+2. [Scripting bash](modulo-06_02.md)
+3. [Conceptos avanzados de bash](modulo-06_03.md)
+4. [Repaso del módulo](modulo-06_04.md)
 - Módulo 7: Proyecto final
+1. [Prepararse para el proyecto final](modulo-07_01.md)
+2. [Resumen del curso](modulo-07_02.md)
 
 ## Skills
 - File I/O
@@ -34,8 +63,6 @@
 
 Esta sección cubre **7 módulos** del curso *Google IT Automation with Python* (Curso 2). A continuación un desglose detallado de cada módulo con los puntos clave y lo más difícil de cada uno.
 
----
-
 ### Módulo 1: Poniendo en marcha tu Python (5 archivos)
 
 **Temas:** Sistema operativo (Kernel vs User Space), diferencia entre Windows/macOS/Linux, instalación de Python, uso de `pip`, intérprete vs compilado, shebang (`#!/usr/bin/env python3`), módulos y paquetes (`__init__.py`), IDEs, entornos virtuales (`venv`), automatización, fórmula `time_to_automate < (time_to_perform * amount_of_times_done)`, Principio de Pareto (80/20), bit-rot, módulos `shutil` y `psutil`.
@@ -50,8 +77,6 @@ Esta sección cubre **7 módulos** del curso *Google IT Automation with Python* 
 **Lo más difícil:**
 - Aplicar la fórmula de automatización y entender el ROI blando.
 
----
-
 ### Módulo 2: Manejando archivos con Python (5 archivos)
 
 **Temas:** File descriptors, modos de apertura (`r`, `w`, `a`, `r+`), `with` para manejo automático de cierre, `readline()`, `read()`, `readlines()`, `strip()`, rutas absolutas vs relativas, `os.getcwd()`, `os.listdir()`, `os.remove()`, `os.rename()`, `os.path.exists()`, `os.path.getsize()`, `os.path.getmtime()`, `os.mkdir()`, `os.chdir()`, `os.rmdir()`, `os.path.join()`, archivos CSV con `csv.reader()`, `csv.writer()`, `csv.DictReader()`, `csv.DictWriter()`, dialectos CSV.
@@ -65,8 +90,6 @@ Esta sección cubre **7 módulos** del curso *Google IT Automation with Python* 
 
 **Lo más difícil:**
 - Manejar dialectos CSV personalizados (espacios iniciales, comillas).
-
----
 
 ### Módulo 3: Expresiones regulares (4 archivos)
 
@@ -86,8 +109,6 @@ Esta sección cubre **7 módulos** del curso *Google IT Automation with Python* 
 - Diferencia entre `re.match()` (solo al inicio) y `re.search()` (en toda la cadena).
 - Lookahead `(?=...)` para coincidencias condicionales.
 
----
-
 ### Módulo 4: Gestión de datos y procesos (4 archivos)
 
 **Temas:** `input()`, flujos STDIN/STDOUT/STDERR, variables de entorno (`os.environ`), `PATH`, `sys.argv`, exit status (`echo $?`), `sys.exit()`, módulo `subprocess` (`run()`, `capture_output=True`, `Popen()`), `CompletedProcess`, `stdout.decode()`, codificación UTF-8, procesamiento de logs con `open()` + regex, diccionarios para conteo (`dict.get(key, 0) + 1`).
@@ -105,8 +126,6 @@ Esta sección cubre **7 módulos** del curso *Google IT Automation with Python* 
 - `subprocess.Popen()` vs `subprocess.run()` vs `subprocess.call()`.
 - Decodificar bytes a string con `decode()` y entender codificaciones (UTF-8).
 - Procesar archivos de log con regex + condicionales + diccionarios anidados.
-
----
 
 ### Módulo 5: Testing en Python (5 archivos)
 
@@ -126,8 +145,6 @@ Esta sección cubre **7 módulos** del curso *Google IT Automation with Python* 
 - Usar `try`/`except` correctamente sin silenciar errores importantes.
 - Entender el ciclo TDD: escribir prueba → verificar que falla → escribir código → verificar que pasa → refactorizar.
 
----
-
 ### Módulo 6: Bash scripting (4 archivos)
 
 **Temas:** Comandos Linux (`ls`, `cd`, `mkdir`, `cp`, `mv`, `rm`, `rmdir`, `touch`, `cat`, `echo`, `chmod`, `pwd`), redirección (`>`, `>>`, `<`, `2>`), pipes (`|`), señales (`SIGINT`, `SIGTERM`, `SIGTSTP`), `ping`, `ps`, `kill`, `grep`, `cut`, `sort`, `uniq`, `head`, `basename`, scripting bash (shebang `#!/bin/bash`, variables `$var`, `$1`, `$?`), condicionales (`if`/`then`/`else`/`fi`), test (`[ condición ]`), while/for loops, comparación bash vs Python.
@@ -146,8 +163,6 @@ Esta sección cubre **7 módulos** del curso *Google IT Automation with Python* 
 - Los operadores de comparación (`-eq`, `-ne`, `-lt`, `-le`, `-gt`, `-ge`).
 - Decidir cuándo usar bash vs Python: bash para scripts simples de manipulación de archivos/comandos; Python para lógica compleja, estructuras de datos y tests.
 - Señales de procesos (`Ctrl+C` = SIGINT, `Ctrl+Z` = SIGTSTP, `kill` = SIGTERM).
-
----
 
 ### Módulo 7: Proyecto final (2 archivos)
 
