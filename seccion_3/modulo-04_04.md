@@ -31,3 +31,17 @@ Lo que harás
 2. Confirmar los cambios en tu propia bifurcación y crear pull requests al repositorio original
 3. Familiarízate con las revisiones de código y asegúrate de que tu corrección funciona correctamente en tu sistema antes de crear el pull request
 4. Describa su pull request
+
+---
+
+## Ejemplo: Enviar commits locales a GitHub
+- En el laboratorio anterior hicimos un fork del repositorio de [google](https://github.com/google/it-cert-automation-practice)
+- Configuramos git con nuestro nombre de usuario y correo electrónico, además en mi caso agregue mi clave SSH a mi cuenta de GitHub
+- Luego clonamos el repositorio a nuestra máquina local y creamos una rama improve-username-behavior
+- Modificamos el script `/Course3/Lab4/validations.py`
+- En primera instancia se pide agregar pruebas al script
+- Se hace la modificación, se cambian los permisos al script y se ejecuta para verificar que funciona correctamente
+- Falla según lo esperado, por lo que se agrega una nueva validación para que el nombre el usuario no comience con puntos ni guiones bajos
+- Se ejecuta nuevamente el script y ahora funciona correctamente
+- Se genera un commit indicando que se cierra el issue #1 y se hace push a la rama improve-username-behavior
+- Luego en github se crea un pull request para que el propietario del repositorio original pueda revisar los cambios y fusionarlos en la rama principal
