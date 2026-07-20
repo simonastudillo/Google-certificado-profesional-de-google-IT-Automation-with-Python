@@ -45,3 +45,7 @@ Lo que harás
 - Se ejecuta nuevamente el script y ahora funciona correctamente
 - Se genera un commit indicando que se cierra el issue #1 y se hace push a la rama improve-username-behavior
 - Luego en github se crea un pull request para que el propietario del repositorio original pueda revisar los cambios y fusionarlos en la rama principal
+
+---
+
+## Diálogo de Coach: Colaboración con Git y GitHub
