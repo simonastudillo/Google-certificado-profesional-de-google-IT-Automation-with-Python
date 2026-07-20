@@ -105,3 +105,33 @@ Lo que harás
 
 10. When forking a repository, what does the phrase “upstream repository” mean? 
 > The original repository from which the fork was created
+
+---
+
+## IT skills in action
+- vamos a poner en práctica tus conocimientos en un escenario real que engloba las lecciones que has aprendido.
+- Imagina que formas parte de un equipo de TI responsable de desarrollar y gestionar un proyecto de software
+- Tu equipo está utilizando Git para el control de versiones, colaborando en las tareas de codificación y asegurando el éxito del proyecto. Recorramos el proceso paso a paso.
+- Pasos del proyecto
+1. Antes del Control de versión: Antes de sumergirte en el código, asegúrate de que tu equipo está alineado con el alcance, los objetivos y las responsabilidades del proyecto.
+2. Sistemas de control de versiones: Elija Github como su sistema de control de versiones para realizar un seguimiento de los cambios, colaborar de manera efectiva y mantener un historial de su proyecto.
+3. Uso de Git: Comience por iniciar un repositorio de Github, confirmando su código inicial, y utilizando git status y git log para gestionar y realizar un seguimiento de los cambios.
+4. Interacción avanzada con Git: Utiliza comandos avanzados como git diff para visualizar los cambios, git stash para ocultar temporalmente los cambios y git tag para marcar hitos significativos.
+5. Deshacer cosas: Utiliza git reset y git revert para deshacer cambios y corregir errores de forma controlada.
+6. Crear ramas y fusionarlas: Crea ramas para el desarrollo de características con git branch, cambia de rama con git checkout y fusiona los cambios con git merge.
+7. Secure Shell y claves API: Garantizar la seguridad mediante el uso de claves SSH y la gestión de datos sensibles como claves API correctamente.
+8. Resolver conflictos: Resuelve los conflictos que surgen al fusionar ramas usando git merge o pull requests.
+9. Pull requests: Abre pull requests para proponer cambios, revisar código y discutir modificaciones con tu equipo.
+10. Revisiones de código: Participar en revisiones de código para mantener la calidad del código, identificar mejoras y garantizar las mejores prácticas.
+11. Gestión de proyectos: Organiza tu proyecto utilizando tableros de proyecto, hitos y problemas para seguir el progreso y priorizar las tareas.
+
+- Ponerlo todo junto: Imagina que tienes que añadir una nueva funcionalidad a tu proyecto: un sistema de autenticación de usuarios. Así es como aplicarías tus habilidades:
+1. Antes del control de versiones: En colaboración con el equipo de desarrollo y las partes interesadas, define el alcance y las prioridades de la función. FROM the business requirements you develop user stories from which the team can build out tasks. Revise las tareas creadas por su equipo y discuta los resultados esperados.
+2. Sistemas de control de versiones: Se crea una rama para el sistema de autenticación en el repositorio existente de la aplicación, que ya se encuentra en Github. Su equipo utiliza esta nueva rama para empezar a trabajar en las tareas asociadas a la solicitud de funcionalidad. Todo el progreso se controla en tiempo real y se documenta con comentarios en Github.
+3. Interacción avanzada con Git: Se utiliza Git diff para ver y comparar los cambios de código y mirar hacia atrás en la historia de los cambios. Cuando sea necesario se puede utilizar git diff para comparar ramas enteras como la característica se hace más robusto. A medida que te acercas a completar la característica, creas etiquetas para marcar los hitos del desarrollo. Cuando se acerque el lanzamiento de la característica, puedes utilizar un hito para compartir el progreso con las partes interesadas.
+4. Deshacer cosas: A medida que te encuentras con problemas, tienes hitos estables que sabes que puedes restaurar. Puedes guardar los cambios pendientes o deshacerlos de forma segura utilizando los comandos de Git. utiliza el comando `git stash` para guardar temporalmente los cambios que aún no están listos para ser confirmados. Utiliza `git stash pop` para recuperar los cambios guardados cuando estés listo para continuar trabajando en ellos. 
+5. Bifurcación  y fusión:  Tu equipo se asegura de seguir el ritmo de la bifurcación y la fusión de cambios. El equipo prueba sus cambios en la rama de características para evitar introducir problemas o errores en la rama principal.
+6. Resolución de conflictos: Así surgen conflictos de código durante la fusión, se intenta automatizarla. Cuando surgen conflictos más profundos, se reúne al equipo y se abordan en colaboración.
+7. Pull requests y revisiones de código: Uno de los miembros del equipo abre una solicitud de extracción para su rama de características. Por fin ha llegado el momento de fusionar nuestra función con la rama principal. Se ejecutan pruebas automatizadas con el código en cuestión y su equipo programa una revisión del código. Usted se prepara para recopilar y hacer un seguimiento de los comentarios.
+8. Revisión del código: Todas las partes interesadas participan en las revisiones del código. Miembros del equipo se dirigen al grupo y revisan sus aportaciones al código. También se revisan las pruebas y las métricas. El equipo colabora para abordar los comentarios y garantizar un código de alta calidad.
+9. Gestión de proyectos: A lo largo del proyecto, e incluso después de que hayan concluido los esfuerzos de desarrollo, se sigue haciendo un seguimiento del progreso de la función mediante tableros de proyecto, hitos y problemas. El desarrollo es iterativo y su equipo seguirá trabajando en las funciones a medida que reciba comentarios y solicitudes de las partes interesadas.
