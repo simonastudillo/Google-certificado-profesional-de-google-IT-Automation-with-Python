@@ -57,6 +57,9 @@ Lo que harás
 > It allows you to coordinate work with teammates.
 > It helps you avoid tracking divergent lines of development.
 
+1. Consider you have made some changes to your local copy of a Git repository. What happens to the remote repository? 
+> The remote repository remains unchanged until you push your changes
+
 2. Why is git status the first command in the process to commit your changes? 
 > It shows the states of the files in your working directory and staging area.
 
@@ -64,17 +67,26 @@ Lo que harás
 > Include an appended line that tells GitHub which issue to close.
 > Describe what the commit does and why it was made. 
 
+3. Why is it important to include a descriptive message with each commit to a Version Control System? 
+> To help other developers understand the changes
+
 4. Which of the following can be achieved using GitHub's Pull Request feature? Select all that apply.
 > Propose changes to someone else's code
 > Request reviews from your peers
 > Merge changes from another branch
 > Preview changes before merging them
 
+4. What is the primary purpose of a pull request in Git?
+> To propose changes and initiate a discussion before merging them into a branch.
+
 5. What is the purpose of the "Merge" button in a Git pull request on platforms like GitHub or GitLab?
 > To finalize the pull request, merge the changes into the target branch, and close the pull request.
 
 6. What is the main benefit of using pull requests in Git? 
 > To propose changes, facilitate code review, and ensure quality before merging them into the target branch.
+
+6. You have received feedback on a pull request you created and need to make changes. What is the correct method to update your pull request? 
+> Push the changes to your branch and they will automatically update the pull request
 
 7. What does a code review in GitHub involve? 
 > Evaluating the quality of the code and suggesting improvements
@@ -85,5 +97,11 @@ Lo que harás
 9. Which of the following statements are true about the 'Request changes' option in GitHub code reviews?
 > It allows you to suggest specific changes to the code
 
+9. Why is it important to review code before merging it into the master branch?
+> To find and fix potential bugs and ensure the code aligns with the project's standards
+
 10. What happens when you fork a repository?
 > A duplicate of the original repository is created in your GitHub account.
+
+10. When forking a repository, what does the phrase “upstream repository” mean? 
+> The original repository from which the fork was created
