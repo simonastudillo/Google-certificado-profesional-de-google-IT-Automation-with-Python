@@ -30,3 +30,26 @@
 
 - Es común que al ir adentrandonos en la resolución de problemas, tengamos que volver a los pasos anteriores para obtener más información, reproducir el problema de una manera diferente o encontrar una nueva causa raíz.
 - Es importante documentar todo el proceso de resolución de problemas, para que podamos aprender de nuestros errores y mejorar nuestras habilidades de depuración.
+
+---
+
+## Aplicación que se bloquea silenciosamente
+- Supongamos que un usuario se pone en contacto con nosotros para informarnos de que una determinada aplicación no se ​abre.
+1. Obtener información: Debemos averiguar las condiciones que causaron la falla, cuál es el error que está recibiendo el usuario y reproducir el problema en nuestro propio entorno.
+    1. Al solcitar la información se detecta que hubo una actualización recientemente
+    2. Podemos reproducir el error ejecutando la aplicación Python `./archivo.py`
+    3. Obtenemos más información ejecutando `strace ./archivo.py`
+    4. Podemos guardar el log de strace añadiendo el flag `-o`: `strace -o log.txt ./archivo.py`
+    5. Al leer el log se detecta error al abrir un directorio usando `openat(AT_FDCWD, "directorio", O_RDONLY|O_NONBLOCK|O_CLOEXEC) = -1 ENOENT (No such file or directory)`
+        1. El indicador de directorio 0 nos indica que el programa está intentando ​abrir esta ruta como un directorio.
+        2. El número después del signo igual nos muestra el código de retorno de la llamada al sistema.
+        3. ​En este caso es negativo.
+        4. Así que el programa está intentando abrir este directorio y resulta que no ​existe. Dado que esto ocurre poco antes de que finalice el programa, ​es probable que sea la causa principal del problema.
+2. Reproducir el problema: Ya hemos reproducido el problema en nuestro propio entorno, así que podemos pasar al siguiente paso.
+3. Creemos que la causa raíz del problema es que el programa está intentando abrir un directorio que no existe. Esto se puede solucionar creando el directorio, podemos hacer una prueba para ver si eso resuelve el problema. Al crear el directorio y ejecutar de nuevo el programa, vemos que ahora funciona correctamente.
+4. Podemos decirle al usuario que cree el directorio que falta y que vuelva a ejecutar la aplicación, tambien podemos hablar con los desarrolladores para que modifiquen el programa para que cree el directorio si no existe, o para que muestre un mensaje de error más útil.
+5. Documentamos el proceso de resolución de problemas, incluyendo la información que obtuvimos, cómo reproducimos el problema, cuál fue la causa raíz y cómo lo solucionamos, de esta forma los demás usuarios podrán aprender de nuestra experiencia y evitar problemas similares en el futuro.
+
+
+>[!INFO]
+> System calls: Son las llamadas que los programas que se ejecutan en nuestro ordenador hacen al núcleo en ejecución.
