@@ -36,3 +36,4 @@ Repositorio de apuntes del Certificado Profesional de Google IT Automation with 
 - Sección 1: [Curso intensivo de Python](./seccion_1/README.md)
 - Sección 2: [Usando Python para interactuar con el Sistema Operativo](./seccion_2/README.md)
 - Sección 3: [Introducción a Git y GitHub](./seccion_3/README.md)
+- Sección 4: [Técnicas de resolución de problemas y depuración](./seccion_4/README.md)
