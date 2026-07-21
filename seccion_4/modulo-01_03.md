@@ -23,3 +23,17 @@
     - MacOS: /Library/Logs/
     - Windows: Event Viewer
 - Muchas veces los logs contienen información útil sobre el problema, como mensajes de error, advertencias o información sobre el estado del sistema en el momento en que ocurrió el problema.
+
+---
+
+## Encontrar la causa
+- Entender la causa raíz del problema es escencial para poder encontrar una solución efectiva de largo plazo.
+- Debemos generar una teoría sobre lo que podría estar causando el problema y luego probar esa teoría para ver si es correcta.
+- En caso de que la teoría no sea correcta, debemos generar una nueva teoría y probarla nuevamente.
+- Siempre que sea posible, debemos probar nuestras teorías en un entorno de prueba antes de aplicarlas en el entorno de producción, para evitar causar más problemas.
+- `iotop`: Es una herramienta de depuración de procesos y memoria que permite ver qué procesos están utilizando más recursos del sistema, como CPU, memoria o disco. Esto puede ayudarnos a identificar procesos que podrían estar causando problemas de rendimiento o bloqueos en el sistema.
+- `iostat`: Es una herramienta de depuración de procesos y memoria que permite ver qué procesos están utilizando más recursos del sistema, como CPU, memoria o disco. Esto puede ayudarnos a identificar procesos que podrían estar causando problemas de rendimiento o bloqueos en el sistema.
+- `vmstat`: Es una herramienta de depuración de procesos y memoria que permite ver qué procesos están utilizando más recursos del sistema, como CPU, memoria o disco. Esto puede ayudarnos a identificar procesos que podrían estar causando problemas de rendimiento o bloqueos en el sistema.
+- `iftop`: Es una herramienta de depuración de red que permite ver qué procesos están utilizando más ancho de banda de red. Esto puede ayudarnos a identificar procesos que podrían estar causando problemas de rendimiento o bloqueos en la red.
+- `rsync`: Es una herramienta para sincronizar archivos y directorios entre dos ubicaciones. Podemos usar el flag `-bwlimit` para limitar el ancho de banda utilizado por `rsync`, lo que puede ayudarnos a evitar problemas de rendimiento o bloqueos en la red.
+- `nice`: Es una herramienta que permite cambiar la prioridad de un proceso en ejecución. Podemos usar `nice` para aumentar o disminuir la prioridad de un proceso, lo que puede ayudarnos a evitar problemas de rendimiento o bloqueos en el sistema.
