@@ -46,3 +46,57 @@
     - Por ejemplo podemos agregar que información se envía a un archivo de registro, o que información se imprime en la consola.
 - `Haisenbug`: Es un tipo de error que desaparece o se comporta de manera diferente cuando se intenta depurarlo. Esto puede ocurrir debido a la naturaleza del error, como errores de sincronización en programas multihilo, o debido a la forma en que se está depurando el programa, como agregar instrucciones de depuración que cambian el comportamiento del programa. Este nombre proviene de la palabra "Heisenberg", en referencia al principio de incertidumbre de Heisenberg, que establece que no se puede conocer con precisión tanto la posición como la velocidad de una partícula al mismo tiempo. De manera similar, un Haisenbug puede cambiar su comportamiento cuando se intenta observarlo o depurarlo.
 - Es cierto que muchas veces podemos resolver los problemas intermitentes simplemente reiniciando el sistema, pero esto no nos ayuda a entender la causa raíz del problema y puede llevar a que el problema vuelva a ocurrir en el futuro.
+
+---
+
+## Revisión: Guión intermitentemente fallido
+- Los siguientes códigos se encuentran en el vídeo de la lección:
+```bash
+/meeting_reminder$ ./meeting_reminder.sh
+```
+```python
+#!/bin/bash
+
+meeting_info=$(zenity --forms \
+    --title 'Meeting' --text 'Reminder information' \
+    --add-calendar 'Date' --add-entry 'Title' \
+    --add-entry 'Emails' \
+    2>/dev/null)
+if [[ -n "$meeting_info" ]]; then
+    python3 send_reminders.py "$meeting_info"
+fi
+```
+```python
+def main():
+    if len(sys.argv) < 2:
+        return usage()
+
+    try:
+        date, title, emails = sys.argv[1].split('|')
+        message = message_template(date, title)
+        send_message(message, emails)
+        print("Successfully sent reminders to:", emails)
+    except Exception as e:
+        print("Failure to send email", file=sys.stderr)
+    except Exception as e:
+       print("Failure to send email: {}".format(e), file=sys.stderr)
+```
+```python
+#!/bin/bash
+
+meeting_info=$(zenity --forms \
+    --title 'Meeting' --text 'Reminder information' \
+    --add-calendar 'Date' --add-entry 'Title' \
+    --add-entry 'Emails' \
+    --forms-date-format='%Y-%m-%d' \
+    2>/dev/null)
+echo $meeting_info
+if [[ -n "$meeting_info" ]]; then
+    python3 send_reminders.py "$meeting_info"
+fi
+```
+```python
+def dow(date):
+    dateobj = datetime.datetime.strptime(date, r"%Y-%m-%d")
+    return dateobj.strftime("%A")
+```
