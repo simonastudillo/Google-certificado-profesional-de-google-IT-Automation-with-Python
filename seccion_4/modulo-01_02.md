@@ -19,3 +19,14 @@
 - `Debuggers` son herramientas de depuración de programas que permiten ejecutar un programa paso a paso y ver qué está haciendo en cada momento. 
 - Si podemos modificar el código fuente de un programa, podemos agregar instrucciones de depuración para imprimir información sobre lo que está haciendo el programa en un momento dado. Esto puede ayudarnos a encontrar errores en el código.
 - Generalmente, descubrir el problema y su solución requiere algo de creatividad. ​Tenemos que idear nuevas ideas sobre lo que podría estar fallando, y ​maneras de comprobarlo. ​Y una vez que sepamos lo que está fallando, tenemos que imaginar cómo resolverlo.
+
+---
+
+## Pasos para la resolución de problemas
+1. Obtener información: Esto significa reunir toda la información ​que necesitamos sobre el estado actual de las cosas, ​cuál es el problema, cuándo ocurre ​y cuáles son las consecuencias. Esto puede ser documentación interna, registros de errores, mensajes de error, capturas de pantalla, etc.
+2. Reproducir el problema: Esto significa intentar hacer que el problema ocurra de nuevo, para que podamos observarlo y entenderlo mejor.
+3. Encontrar la raíz del problema: Entender que causa el problema y como podemos cambiar eso.
+4. Corrección del problema: Esto puede ser una solución inmediata para que el sistema vuelva a funcionar, una correción a medio o largo plazo para que el problema no vuelva a ocurrir, o una combinación de ambas.
+
+- Es común que al ir adentrandonos en la resolución de problemas, tengamos que volver a los pasos anteriores para obtener más información, reproducir el problema de una manera diferente o encontrar una nueva causa raíz.
+- Es importante documentar todo el proceso de resolución de problemas, para que podamos aprender de nuestros errores y mejorar nuestras habilidades de depuración.
