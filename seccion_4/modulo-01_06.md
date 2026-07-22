@@ -39,8 +39,16 @@ print("hello " + name + ", your random number is " + str(number))
 ```
 > The purpose is to ensure the print statement correctly concatenates the name and random number with the appropriate data types.
 
+3. Why is it important to reproduce an error when debugging scripts? Select all that apply
+> To isolate the variables and conditions contributing to the error
+> To document the problem for future reference
+> To confirm that the issue is real and not a one-time occurrence
+
 4. In the lab, what is the main issue with the script involving concatenating two different data points?
 > The script uses incompatible data types for concatenation
+
+4. Which of the following statements are true about adding two different data types directly in Python? 
+> In Python, you cannot add two different data types directly.
 
 5. What does the error message TypeError: Can't convert 'int' object to str implicitly tell you? 
 > Something in the code is trying to concatenate a string and an integer
@@ -48,14 +56,26 @@ print("hello " + name + ", your random number is " + str(number))
 6. Question: In Python, what issue arises when trying to concatenate two different data types, such as a string and an integer, as seen in the provided code snippet?
 > TypeError
 
+6. You receive the following error message (TypeError: Can't convert 'int' object to str implicitly). What do you need to do to resolve this error? 
+> Change the number into a string.
+
 7. In the lab, you encountered an error message that indicates a problem with concatenating a string and an integer. To figure out the root cause of this bug, what step did you take next in the lab after successfully reproducing the error?
 > Examined the code within the script
 
+7. When you find an error, what should you do before trying to debug it? 
+> Try and reproduce the error
+
 8. When a bug is found in a software program during testing, what should you do?
+> Document it and notify relevant team members
+
+8. When a bug is found in a software program during testing, what is the best way to communicate it to the right individuals(s)? 
 > Document it and notify relevant team members
 
 9. Complete this sentence. In troubleshooting and debugging, a(n) ______________ type of problem is reproducible under the same set of conditions. 
 > recurring
 
 10. After a system update, a recurring error in the software you’re testing is no longer reproducible? What does this tell you? 
-> The problem was a software issue.
+> The problem was a software issue. #bad
+
+10. What can you infer if a recurring problem goes away when you change the system settings? 
+> Something in the system settings was causing the problem.
