@@ -52,3 +52,44 @@ def binary_search(list, key):
     - Repetimos este proceso hasta que encontramos el archivo de configuración que causa el problema.
     - Por último podríamos copiar parte del archivo de configuración que causa el problema y ejecutar el programa nuevamente para ver si podemos encontrar la línea específica que causa el problema.
 - Git tambien tiene una herramienta de `bisecting` que nos permite encontrar el commit que introdujo un error en el código fuente de un proyecto.
+
+---
+
+## Revisión: Encontrar datos no válidos
+- Esta lectura contiene el código utilizado en los vídeos sigueintes
+```bash
+/import_data$ cat contacts.csv | ./import.py --server test
+
+
+
+/import_data$ wc -l contacts.csv 
+
+
+
+/import_data$ head -15 contacts.csv 
+
+
+
+/import_data$ tail -20 contacts.csv 
+
+
+/import_data$ head -50 contacts.csv | ./import.py --server test
+
+
+/import_data$ head -50 contacts.csv | head -25 | ./import.py --server test
+
+
+/import_data$ head -50 contacts.csv | tail -25 | ./import.py --server test
+
+
+/import_data$ head -50 contacts.csv | tail -25 | head -13 | ./import.py --server test
+
+
+/import_data$ head -50 contacts.csv | tail -25 | tail -12 | head -6 | ./import.py --server test
+
+
+/import_data$ head -50 contacts.csv | tail -25 | tail -12 | head -6 | head -3 
+
+
+/import_data$ cat contacts.csv | ./import.py --server test
+```
