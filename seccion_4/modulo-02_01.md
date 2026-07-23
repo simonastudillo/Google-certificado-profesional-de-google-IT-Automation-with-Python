@@ -46,3 +46,20 @@
 - Segundo, si la memoria disponible es ​demasiado pequeña para la cantidad que utiliza el equipo, ​agregue más RAM al equipo
 - Tercero, uno de ​los programas en ejecución puede tener una pérdida de memoria, ​lo que hace que tome toda la memoria disponible. 
 - Una pérdida de memoria significa que la memoria que ​ya no se necesita no se libera. 
+
+---
+
+## Posibles causas de la lentitud
+- Primero buscamos ​las explicaciones más simples que sean las más fáciles de verificar.
+- después de eliminar una posible causa raíz, ​volvemos al problema y encontramos la siguiente causa posible para verificar.
+- Por lo tanto, al tratar de averiguar qué está haciendo que una computadora sea lenta, ​el primer paso es examinar cuándo la computadora es lenta. 
+- Si es lento al iniciar, probablemente sea una señal de que hay ​demasiadas aplicaciones configuradas para iniciarse en el arranque. ​En este caso, solucionar el problema es solo una cuestión de revisar la lista de ​programas que se inician automáticamente y deshabilitar los que realmente no son necesarios
+- Si en su lugar el equipo se vuelve lento después de días de funcionar bien, y ​el problema desaparece con un reinicio, significa que hay un programa que ​mantiene algún estado mientras se ejecuta que está haciendo que el equipo se ralentice.
+- Si no tiene acceso al código, otra opción es programar un ​reinicio regular para mitigar tanto el programa lento como el equipo que se queda sin RAM.
+- Un problema similar que puede desencadenarse después de mucho tiempo usando una aplicación, ​y que no se resuelve mediante un reinicio, ​es que los archivos que una aplicación está manejando han crecido demasiado. ​
+- Si el archivo es un archivo de registro, puede usar un programa como logrotate para hacer esto por usted.
+- `Logrotate` es un programa que puede rotar, comprimir y eliminar archivos de registro automáticamente. ​
+- Si el disco duro tiene errores, es posible que el equipo pueda aplicar la ​corrección de errores para obtener los datos que necesita, ​pero afectará al rendimiento general. 
+- ​Otra fuente de lentitud es el software malicioso. ​
+- siempre queremos mantener su equipo limpio de cualquier software malicioso, ​pero podemos sentir los efectos del software malicioso incluso si no está instalado. ​
+- Por ejemplo, podría haber encontrado un sitio web que incluye scripts, ​ya sea en el contenido del sitio web o en ​los anuncios mostrados, que utilizan nuestro procesador para extraer criptomonedas. ​
