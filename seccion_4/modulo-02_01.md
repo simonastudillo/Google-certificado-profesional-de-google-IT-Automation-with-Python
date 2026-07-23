@@ -25,3 +25,24 @@
 - En linux podemos usar el comando `top` para ver qué procesos están usando más recursos de CPU y memoria.
 - En MacOS podemos usar el Monitor de Actividad para ver qué procesos están usando más recursos de CPU y memoria.
 - En Windows podemos usar el Administrador de tareas para ver qué procesos están usando más recursos de CPU y memoria.
+
+---
+
+## Cómo utilizan los ordenadores los recursos
+- cuando se piensa en hacer las cosas más rápidas, ​es importante comprender ​las diferentes velocidades de las piezas involucradas. ​
+- Cuando una aplicación está accediendo a algunos datos, ​el tiempo dedicado a recuperar ​esos datos dependerá de dónde se encuentren.
+- Si se trata de una variable que ​se está utilizando actualmente en una función, ​los datos estarán en la memoria interna de la CPU, ​y nuestro programa lo recuperará muy rápido. ​
+- Si los datos están relacionados con un programa en ejecución, ​pero tal vez no con la función que se está ejecutando actualmente, ​es probable que esté en RAM, ​y nuestro programa todavía llegará a un bastante rápido.
+- ​Si los datos están en un archivo, ​nuestro programa tendrá que leerlo desde el disco, ​que es mucho más lento que leerlo desde la RAM, ​y peor que leer desde el disco, ​es leer información desde la red. ​
+- En este caso, tenemos una velocidad de transmisión más baja, ​y también necesitamos establecer la conexión con ​el otro punto final para hacer posible la transmisión, ​lo que aumenta el tiempo total necesario para llegar a los datos.
+- una caché almacena datos en un formulario que es ​más rápido de acceder que su forma original.
+- ecimos que estos contenidos se almacenan en caché en la memoria. ​Lo llamamos que si los datos ​son parte de un programa que ​se está ejecutando actualmente, estarán en RAM.
+- Pero la RAM es limitada. ​Si ejecuta suficientes programas al mismo tiempo, ​lo llenará y se quedará sin espacio. ​
+- ¿ Qué sucede cuando te quedas sin RAM? ​Al principio, el sistema operativo simplemente ​eliminará de la RAM todo lo que esté almacenado en caché, ​pero no estrictamente necesario. ​Si todavía no hay suficiente RAM después de eso, ​el sistema operativo pondrá ​las partes de la memoria que no están ​en uso actualmente en ​el disco duro en un espacio llamado swap. 
+- Leer y escribir desde el disco es ​mucho más lento que leer y escribir desde la RAM. ​Por lo tanto, cuando ​una aplicación solicita la memoria intercambiada, ​tardará un tiempo en cargarla de nuevo. ​
+- La información que no se necesita en este momento se ​elimina de la RAM y se coloca en el disco, ​mientras que la información que se necesita ahora se coloca en la RAM. 
+- ¿qué haces si encuentras que tu máquina es ​lenta porque está pasando mucho tiempo intercambiando?
+- Primero, si hay ​demasiadas aplicaciones abiertas y algunas se pueden ​cerrar, cierre las que no sean necesarias.
+- Segundo, si la memoria disponible es ​demasiado pequeña para la cantidad que utiliza el equipo, ​agregue más RAM al equipo
+- Tercero, uno de ​los programas en ejecución puede tener una pérdida de memoria, ​lo que hace que tome toda la memoria disponible. 
+- Una pérdida de memoria significa que la memoria que ​ya no se necesita no se libera. 
