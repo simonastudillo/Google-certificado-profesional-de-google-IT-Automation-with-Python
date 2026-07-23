@@ -63,3 +63,60 @@
 - ​Otra fuente de lentitud es el software malicioso. ​
 - siempre queremos mantener su equipo limpio de cualquier software malicioso, ​pero podemos sentir los efectos del software malicioso incluso si no está instalado. ​
 - Por ejemplo, podría haber encontrado un sitio web que incluye scripts, ​ya sea en el contenido del sitio web o en ​los anuncios mostrados, que utilizan nuestro procesador para extraer criptomonedas. ​
+
+---
+
+## Servidor web lento
+- Comencemos navegando ​al sitio web y cargando la página.
+- Parece ser un poco lento ​, pero es difícil medir esto por nuestra cuenta
+- Vamos a utilizar una herramienta llamada ab que significa ​herramienta Apache Benchmark para averiguar lo lento que es. 
+- Ejecutaremos `ab -n ​500 <site>` para obtener el tiempo promedio de 500 solicitudes, ​y luego pasaremos nuestro sitio.example.com para la medición. 
+- Esta herramienta es muy útil para comprobar si ​un sitio web se comporta como se esperaba o no.
+- Hará un montón de solicitudes ​y resumirá los resultados una vez que esté hecho.
+- Vemos que el tiempo medio por ​solicitudes fue de 155 milisegundos.
+- Si bien este no es un número súper enorme, ​definitivamente es más de lo que ​esperaríamos para un sitio web tan simple.
+- Parece que algo está pasando con ​el servidor web y tenemos que investigar más a fondo. 
+- Empezaremos por mirar la salida de ​top y ver si hay algo sospechoso allí.
+- Vemos que hay un montón de procesos `ffmpeg` en ejecución, ​que básicamente están usando toda la CPU disponible.
+- Recuerde que el promedio de carga en ​Linux muestra cuánto tiempo está ​ocupado el procesador en un minuto determinado, ​lo que significa que estuvo ocupado durante todo el minuto
+- Este equipo tiene dos procesadores. ​Así que cualquier número por encima de dos significa que está sobrecargado. ​
+- Este programa ffmpeg se utiliza para la ​transcodificación de vídeo, lo que significa ​convertir archivos de un formato de vídeo a otro.
+- Una cosa que podemos intentar es cambiar las ​prioridades de los procesos para que el servidor web tenga prioridad.
+- Las prioridades del proceso en Linux ​son para que cuanto menor sea el número, ​mayor será la prioridad. ​Los números típicos van de 0 a 19
+- vamos a utilizar el comando pidof que recibe ​el nombre del proceso y devuelve ​todos los ID de proceso que tienen ese nombre. ​Vamos a iterar sobre la salida del comando pidof con un ​bucle for y luego llamar a ​renice para cada uno de los ID de proceso. ​Renice toma la nueva prioridad como primer argumento, ​y el ID de proceso para cambiar como el segundo. 
+```bash
+for pid in $(pidof ffmpeg); do renice 19 $pid; done
+```
+- Esto cambiará la prioridad de todos los procesos ffmpeg a 19, lo que significa que tendrán la prioridad más baja posible. ​
+- Esta vez, mientras tanto es de 153 milisegundos. ​No parece que nuestro Renice haya ayudado. ​Aparentemente, el sistema operativo todavía está dando a ​estos procesos ffmpeg demasiado tiempo del procesador.
+- Así que una cosa que podríamos hacer es ​modificar lo que sea que los esté activando para ejecutarlos ​uno tras otro en lugar de todo al mismo tiempo. ​Para hacer eso, necesitaremos ​averiguar cómo se iniciaron estos procesos. 
+- Primero, veremos la salida ​del comando `ps` para obtener ​más información sobre los procesos.
+- ​Llamaremos a `ps ax` que ​nos muestra todos los procesos en ejecución en el ordenador, ​y conectaremos la salida del comando con `less`, ​para poder desplazarnos por él:
+```bash
+ps ax | less
+```
+- Luego podemos buscar ffmpeg escribiendo `/ffmpeg` y presionando enter. ​Esto nos llevará a la primera línea que contiene ffmpeg. ​
+- Vemos que hay un montón ​de procesos ffmpeg que ​están convirtiendo videos ​del formato webm al formato mp4. 
+- No sabemos dónde están estos videos en el disco duro. ​Podemos intentar usar ​el comando de `locate` para ver si podemos encontrarlos
+```bash
+locate static/001.webm
+```
+- Luego podemos usar el comando `grep ffmpeg *` para ver si podemos encontrar el archivo de registro que contiene la salida de ffmpeg. ​ 
+- Vemos que este script está iniciando ​los procesos ffmpeg en paralelo ​usando una herramienta llamada Daemonize que ​ejecuta cada programa por separado como si fuera un demonio. 
+- Esto podría estar bien si solo ​necesitamos convertir un par de videos, pero ​lanzar un proceso separado para cada uno de los ​videos en el directorio estático ​está sobrecargando nuestro servidor.
+- Por lo tanto, queremos cambiar esto para ejecutar ​solo un proceso de conversión de vídeo a la vez
+- Lo haremos simplemente eliminando ​la parte daemonizada y manteniendo ​la parte que llama ffmpeg
+- Pero esto no cambiará los ​procesos que ya se están ejecutando. 
+- Queremos detener estos procesos ​pero no cancelarlos por completo, ​ya que hacerlo significaría que los vídeos que se están ​convirtiendo en este momento estarán incompletos.
+- Así que usaremos el comando killall con ​el indicador -STOP que envía ​una señal de parada pero no mata los procesos por completo.
+```bash
+killall -STOP ffmpeg
+```
+- Ahora queremos ejecutar estos procesos ​uno a la vez. ¿Cómo podemos hacer eso? ​Podríamos enviar la señal CONT a uno de ellos, ​esperar hasta que esté hecho, ​y luego enviarla a la siguiente. ​Pero eso es mucho trabajo manual. ​¿ Se puede automatizar? Sí. Pero es un poco complicado. 
+- Podemos iterar a través de la lista de procesos usando el ​mismo bucle for con el pit ​of command que usamos anteriormente.
+- Dentro del bucle for, ​queremos enviar la señal cont y ​luego esperar hasta que finalice el proceso. 
+- Desafortunadamente, no hay ningún comando ​que esperar hasta que finalice el proceso. ​Pero podemos crear un bucle while que ​envíe la señal cont al proceso. ​Esto tendrá éxito mientras el proceso exista, ​y falla una vez que el proceso desaparezca. ​Dentro de este bucle while, ​simplemente agregaremos una llamada para dormir una, ​para esperar un segundo hasta la siguiente comprobación. 
+```bash
+for pid in $(pidof ffmpeg); do while kill -CONT $pid; do sleep 1; done; done
+```
+- El tiempo medio es ahora de 33 milisegundos. ​Eso es mucho más bajo que antes.
