@@ -120,3 +120,54 @@ killall -STOP ffmpeg
 for pid in $(pidof ffmpeg); do while kill -CONT $pid; do sleep 1; done; done
 ```
 - El tiempo medio es ahora de 33 milisegundos. ​Eso es mucho más bajo que antes.
+
+---
+
+## Herramientas de control
+- Dispone de sólidas herramientas para encontrar y diagnosticar los cuellos de botella en el rendimiento de los sistemas informáticos. Esto garantiza una experiencia operativa fluida y refinada. Windows, Linux y macOS ofrecen una amplia gama de metodologías y herramientas para supervisar y ajustar el rendimiento del sistema.
+
+- Windows
+    - Procesos
+        - Windows Process Monitor, también conocido como Sysinternals
+        - Proporciona información en tiempo real sobre diversos aspectos del sistema, como las operaciones del sistema de archivos, los cambios en el registro, los procesos y los subprocesos
+        - Puede utilizar Process Monitor para localizar errores, detectar cambios no autorizados en el Registro e investigar caídas del sistema, lo que la convierte en una herramienta indispensable para la solución de problemas del sistema. 
+        - Cuando se combina con herramientas de registro, generación de informes y supervisión, Process Monitor puede mejorar la eficacia del diagnóstico y la resolución de problemas complejos.
+        - Puedes revisar más información [aquí](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon)
+    - Rendimiento
+        - El Monitor de Rendimiento es una herramienta versátil y personalizable que analiza el rendimiento de su sistema.
+        - Disponer de datos en tiempo real sobre la memoria, la red, los discos y los procesadores le permite supervisar los componentes clave y resolver rápidamente los problemas. 
+        - Puede configurar contadores, establecer recopiladores de datos y analizar informes para optimizar su sistema.
+        - Más información [aquí](https://www.windowscentral.com/how-use-performance-monitor-windows-10)
+    - Recursos
+        - Para obtener información en tiempo real sobre el uso de los recursos de su ordenador en Windows, utilice la herramienta Monitor de recursos (resmon.exe)
+        - Ayuda a identificar las causas de las ralentizaciones, como problemas de hardware, aplicaciones mal diseñadas y malware.
+        - Accede a ella buscando "resmon" o "Resource Monitor" Navega entre las secciones Memoria, Disco y Red para un análisis más profundo
+        - Más información [aquí](https://www.digitalcitizen.life/how-use-resource-monitor-windows-7/)
+    - Procesos
+        - El software Process Explorer v17.05 se utiliza principalmente para la monitorización de archivos y el análisis de procesos en ordenadores Windows.
+        - Los procesos y sus cuentas se muestran en la ventana superior, mientras que los manejadores y DLL se muestran en la ventana inferior. 
+        - Además de solucionar problemas de DLL, también ayuda a detectar fugas y problemas, proporcionando información valiosa sobre el funcionamiento del sistema.
+        - Más información [aquí](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer)
+- Linux
+    - Rendimiento
+        - Para mejorar el rendimiento de su sistema Linux, puede utilizar herramientas especializadas como Perf-tools, bcc/BPF y bpftrace que ofrecen información en tiempo real sobre la CPU, la memoria, la E/S del disco y la actividad de la red para detectar rápidamente los cuellos de botella en el rendimiento.
+        - El uso de herramientas de evaluación comparativa también puede ser útil para evaluar el rendimiento de su sistema bajo diferentes cargas de trabajo y revelar áreas que pueden necesitar mejoras.
+        - Personalizar su sistema Linux utilizando utilidades de ajuste es una estrategia poderosa para adaptar la configuración y lograr una configuración más rápida y con mayor capacidad de respuesta
+        - Por ejemplo, el SAR (System Activity Reporter) es especialmente útil para analizar tendencias de rendimiento e identificar problemas recurrentes a lo largo del tiempo.
+        - Más información [aquí](https://www.brendangregg.com/linuxperf.html)
+    - método USE
+        - El método USE es esencial para optimizar el rendimiento del sistema y solucionar problemas de los servidores. 
+        - Ayuda a identificar cuellos de botella en los recursos y problemas de rendimiento mediante el análisis de Utilización, Saturación y Errores.
+        - Para detectar problemas y relaciones, el método USE sugiere crear una lista de recursos y un diagrama de bloques funcionales. 
+        - Este método es adaptable a entornos de computación en la nube para evaluar cómo afectan al rendimiento los controles de los recursos de software
+        - Más información [aquí](https://brendangregg.com/usemethod.html)
+    - Autoagrupación
+        - la autoagrupación optimiza el rendimiento del escritorio durante las cargas de trabajo intensivas de CPU agrupando los procesos y garantizando una distribución equitativa de los ciclos de CPU
+        - El autoagrupamiento indica al componente planificador de procesos de Linux que actúe basándose en el "nivel agradable" configurado de un grupo en lugar de en los procesos individuales
+        - Sin embargo, la autoagrupación puede interferir con los procesos tradicionales
+        - Cuando está activado, el valor "nice" afecta principalmente a la prioridad dentro del grupo, reduciendo la efectividad de los comandos "nice" y "renice". Incluso los programas que establecen sus propios niveles "nice" pueden seguir recibiendo una parte "justa" del tiempo de CPU.
+- macOS
+    - Monitor de actividad
+        - El Monitor de actividad de macOS le permite supervisar y gestionar el rendimiento del sistema fácilmente.
+        - El Monitor de Actividad identifica las aplicaciones o procesos que no responden, supervisa el uso de energía, realiza un seguimiento del impacto energético global y muestra el estado del sistema en tiempo real.
+        - Más información [aquí](https://support.apple.com/guide/activity-monitor/welcome/mac)
