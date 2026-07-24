@@ -12,3 +12,17 @@
 - `gprof` es un ejemplo de `Profiler` que nos permite ​ver qué partes de nuestro código ​están consumiendo más tiempo y recursos.
 - `cProfile` es otro ejemplo de `Profiler` que nos permite ​ver qué partes de nuestro código ​están consumiendo más tiempo y recursos para programas escritos en Python.
 - `Expensive actions` son aquellas que consumen mucho tiempo y recursos, como acceder a un disco duro o a través de la red.
+
+---
+
+## Utilizar las estructuras de datos adecuadas
+- Tener una buena comprensión de ​las estructuras de datos disponibles para nosotros puede ayudarnos a ​evitar operaciones costosas innecesarias ​y a crear scripts eficientes.
+- Las listas son secuencias de elementos. ​Podemos añadir, eliminar ​o modificar los elementos en ellos. ​Podemos iterar a través ​de toda la lista para operar en cada uno de los elementos
+- Las listas son una estructura de datos que es ​rápida para agregar o eliminar elementos al final. ​Pero agregar o eliminar elementos en el medio puede ser ​lento porque todos los elementos ​que siguen deben reposicionarse.
+- En los diccionarios ​agregamos datos asociando un valor a una clave. ​Luego, recuperamos un valor buscando una clave específica.
+- La parte del mapa en esos nombres proviene de ​cómo estamos creando un mapeo entre una clave y un valor. 
+- La parte Hash proviene ​del hecho de que para hacer que la estructura sea eficiente, ​se usa ​internamente una función hash para decidir cómo se almacenarán los elementos.
+- La característica principal de esta estructura ​es que es súper rápida para buscar llaves. ​Una vez que tenemos nuestros datos almacenados en un diccionario, ​podemos encontrar el valor asociado a ​una clave en una sola operación. 
+- ​Entonces, como regla general, ​si necesita acceder a los elementos por posición ​o siempre iterará a través de todos los elementos, ​use una lista para almacenarlos. ​
+- si necesitamos ​buscar los elementos usando una clave, ​usaremos un diccionario.
+- Otra cosa que podríamos evitar es ​crear copias de las estructuras que tenemos en la memoria, es decir generar más de una variable con el mismo valor. ​Si estas estructuras son grandes ​, puede ser bastante caro crear esas copias. ​Por lo tanto, deberíamos verificar si la copia ​es realmente necesaria. 
