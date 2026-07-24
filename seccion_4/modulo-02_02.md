@@ -99,3 +99,18 @@
     - ​Para cada línea almacenará el correo electrónico como ​la clave y los nombres como los valores. ​
     - Ahora tenemos que cambiar la forma en que se ​llama a esto en la función de enviar mensaje. ​Vemos que la función get name ​se llama una vez por correo electrónico.
     - ​Para aplicar nuestro cambio debemos llamar a ​la función de nombres de lectura antes del ​bucle for para que lo hagamos solo una vez. 
+
+---
+
+## Más sobre la mejora de nuestro código
+- El desarrollo de software es un componente clave de las tecnologías de la información, ya que implica la creación y el mantenimiento de aplicaciones que permiten a los usuarios de ordenadores resolver problemas y realizar tareas. 
+- La comprensión del desarrollo de software le permitirá identificar y abordar los problemas con rapidez, idear soluciones eficaces y establecerse como un socio de confianza en su organización
+- Perfiles
+    - La creación de perfiles de software es una técnica de diagnóstico utilizada para analizar en tiempo real la utilización de los recursos de las aplicaciones y supervisarlas.
+    - Este proceso implica examinar métricas de rendimiento clave como la utilización de la CPU, el consumo de memoria y el uso de espacio en disco
+    - Esto se hace evaluando el tiempo y los recursos que consume. Permite medir la velocidad del código en comparación con una línea de base e incluso con software o productos de la competencia.
+    - En Python, el benchmark se realiza a través del módulo Timeit. Éste mide el tiempo de ejecución de tus segmentos de código, ayudándote a identificar posibles cuellos de botella mediante la realización de mini pruebas comparativas para funciones individuales. De este modo, puedes mejorar la eficiencia de tu aplicación y optimizar el código.
+    - Las herramientas de perfilado, como Flat, Call-graph y Input-sensitive, forman parte integral de la depuración
+    - La importancia de la creación de perfiles va más allá del desarrollo de software. También es útil en el desarrollo de arquitectura informática y compiladores
+    - Los perfiles desempeñan un papel esencial no sólo en el desarrollo de software, sino también en el panorama informático más amplio
+    - La creación de perfiles ayuda a los ingenieros de software a diseñar aplicaciones eficientes y eficaces mediante la supervisión y el análisis del uso de recursos en tiempo real.
