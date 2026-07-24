@@ -99,3 +99,21 @@
     - A diferencia de los hilos, este enfoque ligero evita que las tareas de larga ejecución bloqueen la aplicación principal.
     - Con Asyncio, puede gestionar eficazmente pequeñas tareas, como el envío de correos electrónicos o notificaciones, sin crear muchos hilos, lo que se traduce en respuestas de notificación más rápidas.
     - Cuando se combina con aiohttp, asyncio gestiona eficazmente múltiples llamadas a la API de forma concurrente. Asyncio ofrece una forma eficaz de gestionar las tareas de entrada/salida de datos, lo que permite a los desarrolladores crear aplicaciones de alto rendimiento mediante la ejecución simultánea de tareas.
+
+---
+
+## Test your knowledge: When slowness problems get complex
+1. Which of the following can cache database queries in memory for faster processing of automated tasks?
+> Memcached
+
+2. What module specifies parts of a code to run in separate asynchronous events?
+> Asyncio
+
+3. Which of the following allows our program to run multiple instructions in parallel?
+> Threading
+
+4. What is the name of the field of study in computer science that concerns itself with writing programs and operations that run in parallel efficiently?
+> Concurrency
+
+5. What would we call a program that often leaves our CPU with little to do as it waits on data from a local disk and the Internet?
+> 
