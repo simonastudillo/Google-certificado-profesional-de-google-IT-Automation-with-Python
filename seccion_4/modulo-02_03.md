@@ -40,3 +40,23 @@
 ## Sistemas complejos y lentos
 - En sistemas grandes y complejos, las tareas suelen estar separadas en diferentes procesos y servicios, que se comunican entre sí a través de la red.
 - Por ejemplo un e-commerce tiene un servicio web, otro servidor para la base de datos, otro para reportes, backup, etc.
+- Por eso siempre es importante detectar los cuellos de botella y optimizar el sistema para que funcione de manera eficiente.
+
+---
+
+## Utilizar hilos para acelerar las cosas
+- Ejemplo
+    - Debemos procesar cientos de imagenes para generar miniaturas y guardarlas en un disco.
+    - Usando el comando `time` podemos medir el tiempo que tarda en procesar todas las imágenes.
+    - Se detecta un tiempo de 2s, lo cual es demasiado lento.
+    - Usaremos el módulo `concurrent.futures` para crear un `ThreadPoolExecutor` y procesar las imágenes en paralelo. 
+    - `Executor` es una clase que nos permite ejecutar tareas en paralelo utilizando hilos o procesos.
+    - `Futures modules` es un módulo que nos permite ejecutar tareas en paralelo y obtener los resultados de manera asíncrona.
+    - Debemos crear un executor `executor = ThreadPoolExecutor()` 
+    - Luego le indicamos que proceso enviar al thread pool con los parámetros que necesite `executor.submit(process_file, root, basename)`
+    - Finalmente usamos `executor.shutdown(wait=True)` para esperar a que todos los hilos terminen antes de continuar con el script.
+    - Ejecutamos una prueba con time y el script ahora demora 1.2s, lo cual es mucho mejor que los 2s iniciales.
+    - Otra forma es usar `ProcessPool` esto nos permite ejecutar tareas en paralelo utilizando procesos en lugar de hilos, lo cual es útil cuando tenemos tareas que consumen mucha CPU.
+    - Debemos crear un executor `executor = ProcessPoolExecutor()`, el resto del código es igual al ejemplo anterior.
+    - Ejecutamos una prueba con time y el script ahora demora 0.9s, lo cual es mucho mejor que los 2s iniciales.
+    - La diferencia es causada por la forma en que los hilos y procesos funcionan en Python. Los ​subprocesos usan un montón de características de seguridad para evitar tener dos hilos que intentan ​escribir en la misma variable. ​Y esto significa que al usar hilos, pueden terminar esperando ​su turno para escribir en variables durante unos milisegundos, lo ​que suma la pequeña diferencia entre los dos enfoques.
