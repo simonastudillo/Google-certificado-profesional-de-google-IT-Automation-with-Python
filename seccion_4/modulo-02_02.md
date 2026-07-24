@@ -39,3 +39,23 @@
 - Incluso si las operaciones realizadas ​dentro del bucle no son especialmente caras, ​si estamos revisando ​una lista de mil elementos y solo necesitamos cinco de ellos, ​estamos perdiendo tiempo en elementos que no necesitamos.
 - Otra cosa que debe recordar sobre los bucles es ​salir del bucle ​una vez que encuentre lo que estaba buscando.
 - `Break` es una palabra clave que nos permite salir de un bucle antes de que termine. ​Si estamos buscando un elemento en una lista, ​una vez que lo encontramos, podemos salir del bucle y ahorrar tiempo.
+
+---
+
+## Mantener los resultados locales
+- Pero, ¿y si analizar el archivo lleva mucho ​tiempo incluso cuando se hace fuera del bucle? ​Recuerde que para que ​nuestros scripts lleguen a su objetivo más rápido, ​necesitamos evitar que nuestro ordenador haga un trabajo innecesario.
+- Si el script se ejecuta con bastante regularidad, ​es común crear una caché local. 
+- Así que si estamos analizando un archivo grande y ​guardando solo algunas piezas clave de información de él, ​podemos crear una caché para almacenar solo esa información, ​o si obtenemos alguna información a través de la red, ​podemos mantener una copia local del archivo ​para evitar descargarlo una y otra vez. 
+- Tenemos que pensar en la frecuencia con la que vamos a actualizar ​la caché y qué sucede ​si los datos en la caché están desactualizados
+- Si estamos buscando algunas estadísticas a largo plazo, ​podemos generar el caché una vez al día, ​y no será un problema. 
+- Por ejemplo, si nuestra caché se basa en un archivo, ​podríamos almacenar la fecha de modificación de ​ese archivo cuando calculáramos la caché. ​Entonces solo vuelva a calcular la caché si ​la fecha de modificación del archivo ​es más reciente que la que habíamos almacenado. 
+- ​Tenga en cuenta que las cachés no ​siempre necesitan ser estructuras elaboradas, ​almacenando mucha información con una lógica de tiempo de espera compleja. 
+- ​A veces, pueden ser tan ​simples como tener una variable que almacena un ​resultado temporal en lugar de ​calcular este resultado cada vez que lo necesitamos. ​
+- Ejemplo
+    - supongamos que está generando un informe que imprime ​cuántos usuarios hay en ​cada uno de los diferentes grupos de la red.
+    - ​Ahora, algunos de estos grupos pueden contener otros grupos en ​ellos y algunos grupos pueden incluso formar parte de varios grupos. 
+    - Por ejemplo, el grupo de ingenieros de versiones de Java ​formaría parte del grupo de ingenieros de versiones ​y del grupo de desarrolladores de Java.
+    - ​¿ Cómo podemos evitar contar usuarios únicos ​más de una vez si aparecen en varios grupos?
+    - ​Podemos tener un diccionario con el grupo como ​la clave y la cantidad de usuarios como el valor.
+    - ​De esta forma, solo necesitamos ​contar los miembros de un grupo una vez, ​y después de eso, simplemente usar el valor en el diccionario. 
+- recuerde que querrá buscar ​estrategias que le permitan evitar realizar operaciones costosas. ​Primero, verifique si estas operaciones son necesarias en absoluto. ​Si lo son, vea si puede almacenar ​los resultados intermedios para evitar ​repetir la operación costosa más de lo necesario
