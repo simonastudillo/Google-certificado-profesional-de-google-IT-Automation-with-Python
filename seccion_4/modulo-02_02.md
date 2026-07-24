@@ -26,3 +26,16 @@
 - ​Entonces, como regla general, ​si necesita acceder a los elementos por posición ​o siempre iterará a través de todos los elementos, ​use una lista para almacenarlos. ​
 - si necesitamos ​buscar los elementos usando una clave, ​usaremos un diccionario.
 - Otra cosa que podríamos evitar es ​crear copias de las estructuras que tenemos en la memoria, es decir generar más de una variable con el mismo valor. ​Si estas estructuras son grandes ​, puede ser bastante caro crear esas copias. ​Por lo tanto, deberíamos verificar si la copia ​es realmente necesaria. 
+
+---
+
+## Bucles caros
+- Los bucles son los que hacen que nuestras computadoras hagan las cosas repetidamente. ​Son una herramienta extremadamente útil ​y evitemos el trabajo repetitivo, ​pero tenemos que utilizarlos con precaución.
+- En particular, tenemos que pensar en ​qué acciones vamos a hacer dentro del bucle, ​y cuando sea posible, evitar hacer acciones costosas.
+- ​Si realiza una operación costosa dentro de un bucle, ​multiplica el tiempo que tarda en hacer ​la operación costosa por ​la cantidad de veces que repite el bucle.
+- Siempre que tenga un bucle en su código, ​asegúrese de verificar qué acciones está haciendo ​y vea si hay operaciones que puede ​sacar del bucle para hacerlas solo una vez.
+- ​En lugar de hacer una llamada de red para cada elemento, ​haga una llamada antes del bucle.
+- ​En lugar de leer desde el disco para cada elemento, ​lea todo antes del bucle. 
+- Incluso si las operaciones realizadas ​dentro del bucle no son especialmente caras, ​si estamos revisando ​una lista de mil elementos y solo necesitamos cinco de ellos, ​estamos perdiendo tiempo en elementos que no necesitamos.
+- Otra cosa que debe recordar sobre los bucles es ​salir del bucle ​una vez que encuentre lo que estaba buscando.
+- `Break` es una palabra clave que nos permite salir de un bucle antes de que termine. ​Si estamos buscando un elemento en una lista, ​una vez que lo encontramos, podemos salir del bucle y ahorrar tiempo.
