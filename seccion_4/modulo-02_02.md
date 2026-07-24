@@ -114,3 +114,23 @@
     - La importancia de la creación de perfiles va más allá del desarrollo de software. También es útil en el desarrollo de arquitectura informática y compiladores
     - Los perfiles desempeñan un papel esencial no sólo en el desarrollo de software, sino también en el panorama informático más amplio
     - La creación de perfiles ayuda a los ingenieros de software a diseñar aplicaciones eficientes y eficaces mediante la supervisión y el análisis del uso de recursos en tiempo real.
+
+---
+
+## Test your knowledge: Slow code
+1. Which of the following is NOT considered an expensive operation?
+> Using a dictionary
+
+2. Which of the following may be the most expensive to carry out in most automation tasks in a script?
+> Loops
+
+3. Which of the following statements represents the most sound advice when writing scripts?
+> Start by writing clear code, then speed it up only if necessary
+
+4. In Python, what is a data structure that stores multiple pieces of data, in order, which can be changed later?
+> List
+
+5. What command, keyword, module, or tool can be used to measure the amount of time it takes for an operation or program to execute? (Check all that apply)
+> time
+> cProfile
+> kcachegrind
