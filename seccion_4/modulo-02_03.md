@@ -60,3 +60,42 @@
     - Debemos crear un executor `executor = ProcessPoolExecutor()`, el resto del código es igual al ejemplo anterior.
     - Ejecutamos una prueba con time y el script ahora demora 0.9s, lo cual es mucho mejor que los 2s iniciales.
     - La diferencia es causada por la forma en que los hilos y procesos funcionan en Python. Los ​subprocesos usan un montón de características de seguridad para evitar tener dos hilos que intentan ​escribir en la misma variable. ​Y esto significa que al usar hilos, pueden terminar esperando ​su turno para escribir en variables durante unos milisegundos, lo ​que suma la pequeña diferencia entre los dos enfoques.
+
+---
+
+## Más sobre sistemas complejos lentos
+- Concurrencia
+    - En Python, puedes utilizar la concurrencia para permitir que varias tareas progresen al mismo tiempo, incluso si no se ejecutan simultáneamente
+    - Esto es útil especialmente para las tareas de E/S.
+    - La concurrencia te permite gestionar eficientemente estas tareas, asegurando que pueden avanzar sin problemas y sin ser frenadas por otras tareas.
+- Paralelismo
+    - Implica ejecutar múltiples procesadores o núcleos de CPU al mismo tiempo
+    - Esto es ideal para tareas que hacen un uso intensivo de la CPU
+    - Al dividir el trabajo entre varios núcleos, el paralelismo puede acelerar significativamente estas tareas y reducir el tiempo de procesamiento.
+- Concurrencia para tareas de E/S
+    - Python tiene dos enfoques principales para implementar la concurrencia: threading y asyncio.
+    1. Threading es un método eficiente para solapar tiempos de espera. Es adecuado para tareas que implican muchas operaciones de E/S, como la E/S de archivos o las operaciones de red que pasan mucho tiempo esperando, hay algunas limitaciones con el threading en Python debido al Global Interpreter Lock (GIL), que puede limitar la utilización de múltiples núcleos.
+    2. Asyncio proporciona un mayor grado de control, escalabilidad y potencia que los hilos para tareas vinculadas a E/S. Cualquier aplicación que implique la lectura y escritura de datos puede beneficiarse de ello, ya que acelera los programas basados en E/S. Además, asyncio opera de forma cooperativa y evita las limitaciones de GIL, lo que permite un mejor rendimiento para las tareas de E/S.
+- Paralelismo para tareas vinculadas a la CPU
+    - Es especialmente útil para tareas ligadas a la CPU como cálculos, simulaciones y procesamiento de datos.
+    - En lugar de intercalar y ejecutar tareas de forma concurrente, el paralelismo permite que varias tareas se ejecuten simultáneamente en varios núcleos de la CPU. 
+    - Garantiza el rendimiento proporcionando a cada proceso su propio intérprete de Python y espacio de memoria.
+    - Permite a los programas Python vinculados a la CPU procesar datos de forma más eficiente al dar a cada proceso su propio intérprete Python y espacio de memoria; esto elimina conflictos y ralentizaciones causadas por compartir recursos.
+    - Dicho esto, también debes recordar que cuando se ejecutan varias tareas simultáneamente, es necesario gestionar los recursos con cuidado.
+- Combinar concurrencia y paralelismo
+    - La combinación de concurrencia y paralelismo puede mejorar el rendimiento. En ciertas aplicaciones complejas con tareas tanto de E/S como de CPU, puedes utilizar asyncio para la concurrencia y multiprocesamiento para el paralelismo.
+    - Con asyncio, las tareas de E/S son más eficientes, ya que el programa puede hacer otras cosas mientras espera las operaciones de archivo.
+    - Por otro lado, el multiprocesamiento permite distribuir los cálculos ligados a la CPU, como los cálculos pesados, entre varios procesadores para una ejecución más rápida.
+    - Combinando estas técnicas, puedes crear un programa bien optimizado y con capacidad de respuesta. Las tareas de E/S se benefician de la concurrencia, mientras que las de CPU aprovechan el paralelismo.
+- Selección del enfoque adecuado
+    - Antes de desarrollar su programa, es esencial determinar si desea incorporar la concurrencia, ya que generalmente es más fácil añadirla posteriormente que eliminarla.
+    - Para tomar esta decisión, debe comprender las tareas que debe realizar su aplicación. Su enfoque dependerá de si su programa está ligado a la CPU (procesamiento) o a la E/S (comunicación).
+    - Cuando necesites esperar por recursos externos, la concurrencia con asyncio o threading sería más apropiada. Aprovechar los tiempos muertos durante las operaciones de E/S permite a tu programa manejar múltiples tareas concurrentemente.
+    - Por otro lado, si se trata de tareas que requieren un uso intensivo de la CPU, como la compresión, la renderización de vídeos de alta definición o la ejecución de simulaciones complejas, el multiprocesamiento es una buena opción. 
+- Eventos asyncio y bucles de tareas
+    - La librería asyncio de Python permite la ejecución concurrente de múltiples tareas a través de operaciones asíncronas utilizando bucles de eventos y coroutines
+    - Una coroutine puede pausar la ejecución mientras espera una operación específica, como leer o guardar datos
+    - Los bucles de eventos son esenciales para programar y gestionar tareas, permitiendo una ejecución fluida y reduciendo los tiempos de ejecución.
+    - A diferencia de los hilos, este enfoque ligero evita que las tareas de larga ejecución bloqueen la aplicación principal.
+    - Con Asyncio, puede gestionar eficazmente pequeñas tareas, como el envío de correos electrónicos o notificaciones, sin crear muchos hilos, lo que se traduce en respuestas de notificación más rápidas.
+    - Cuando se combina con aiohttp, asyncio gestiona eficazmente múltiples llamadas a la API de forma concurrente. Asyncio ofrece una forma eficaz de gestionar las tareas de entrada/salida de datos, lo que permite a los desarrolladores crear aplicaciones de alto rendimiento mediante la ejecución simultánea de tareas.
