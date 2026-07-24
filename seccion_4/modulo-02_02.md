@@ -59,3 +59,43 @@
     - ​Podemos tener un diccionario con el grupo como ​la clave y la cantidad de usuarios como el valor.
     - ​De esta forma, solo necesitamos ​contar los miembros de un grupo una vez, ​y después de eso, simplemente usar el valor en el diccionario. 
 - recuerde que querrá buscar ​estrategias que le permitan evitar realizar operaciones costosas. ​Primero, verifique si estas operaciones son necesarias en absoluto. ​Si lo son, vea si puede almacenar ​los resultados intermedios para evitar ​repetir la operación costosa más de lo necesario
+
+---
+
+## Script lento con bucle costoso
+- Ejemplo:
+    - Script de ejemplos pasados que tenía problemas con fecha.
+    - Los desarrolladores están pidiendo ​nuestra ayuda para averiguar cómo ​podemos hacer que el programa sea más rápido
+    - ​Primero, necesitaremos reproducir ​el problema y averiguar qué significa lento en este caso. 
+    - Un usuario nos dijo que el problema es ​visible cuando la lista de destinatarios es larga.
+    - Es posible que recuerde que la aplicación tiene dos partes.
+    - ​Un script de shell que aparece ​una ventana donde podemos introducir los datos ​del recordatorio y un script de Python ​que prepara el correo electrónico y lo envía. 
+    - La parte que es lenta es el envío de los correos electrónicos. ​Así que no interactuaremos con la ventana emergente en absoluto.
+    - Mediremos la velocidad del script usando el comando time.
+    - `time ./send_reminders.py "2020-01-13|Example|test1"
+    - Cuando llamamos a time, ejecuta el comando que ​le pasamos e imprime el tiempo que tardó ejecutarlo.
+    - ​Hay tres valores diferentes. ​Real, usuario y sys.
+        - ​Real es la cantidad de tiempo real ​que tardó en ejecutar el comando. Este valor a veces se denomina ​hora del reloj de pared porque es ​cuánto tiempo ​mediría un reloj colgado en la pared sin importar lo que esté haciendo el equipo
+        - Usuario es el tiempo dedicado a realizar ​operaciones en el espacio de usuario
+        - Sys es el tiempo dedicado a realizar operaciones a nivel de sistema.
+    - Muy bien. Vemos que ​esta vez con 9 correos tardó 0.296 segundos en enviar el correo electrónico.
+    - ​Eso todavía no es mucho, pero ​parece que está tomando más tiempo con una lista más larga de correos electrónicos.
+    - Siempre podríamos mirar el código y ver ​si encontramos operaciones costosas que podamos mejorar. ​Pero en este caso queremos usar un generador de perfiles para ​obtener algunos datos sobre lo que está pasando.
+    - Usaremos `pprofile3` para generar un perfil de nuestro script. ​Este generador de perfiles imprimirá un informe ​que nos mostrará qué funciones ​están consumiendo más tiempo y recursos.
+    - `pprofile3 -f callgrind -o profile.out ./send_reminders.py "2020-01-13|Example|test1,test2,test3,test4,test5,test6,test7,test8,test9"`
+        - ​El parámetro -f le dice al generador de perfiles que genere un informe en formato callgrind, que es un formato que podemos usar con herramientas de visualización como KCachegrind o QCachegrind.
+        - El parámetro -o le dice al generador de perfiles que guarde el informe en un archivo llamado profile.out.
+    - usaremos KCachegrind para ver el informe `kcachegrind profile.out`
+    - En la mitad inferior derecha vemos un gráfico de llamadas, ​que nos dice que la función principal es ​llamar a la función de envío de mensajes una vez. 
+    - Esta función llama a la función de plantilla de mensaje, ​la función get name ​y la función send message nueve veces cada una.
+    - El gráfico también nos indica ​cuántos microsegundos se gastan en cada una de estas llamadas. 
+    - Podemos ver que la mayor parte del tiempo ​se gasta en la función get name
+    - Así que vemos que la función get name abre ​un archivo CSV y luego pasa por todo el archivo comprobando si ​el primer campo de la línea coincide con el nombre del correo electrónico ​y cuando ese es el caso ​establece el valor de la variable de nombre.
+    - Hay un par de cosas que ​están mal con esta función. 
+    - Primero, una vez que encuentra el elemento en ​la lista, debe salir inmediatamente del bucle. 
+    - Pero incluso si arreglamos que todavía abriría ​el archivo y lo leería para cada dirección de correo electrónico. ​Esto puede ser muy lento si el archivo tiene muchas líneas.
+    - Podemos leer el archivo una vez ​y almacenar los valores que nos importan en ​un diccionario y luego usar ​ese diccionario para las búsquedas
+    - Cambiaremos la función get name ​y la convertiremos en una función de lectura de nombres ​que procesará el archivo CSV y ​almacenará los valores que queremos en el diccionario de nombres.
+    - ​Para cada línea almacenará el correo electrónico como ​la clave y los nombres como los valores. ​
+    - Ahora tenemos que cambiar la forma en que se ​llama a esto en la función de enviar mensaje. ​Vemos que la función get name ​se llama una vez por correo electrónico.
+    - ​Para aplicar nuestro cambio debemos llamar a ​la función de nombres de lectura antes del ​bucle for para que lo hagamos solo una vez. 
