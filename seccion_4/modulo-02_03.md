@@ -22,3 +22,15 @@
 - Si estamos tratando de leer un montón de archivos del ​disco y hacer demasiadas operaciones en paralelo, ​el disco podría terminar gastando más tiempo pasando de ​una posición a ​otra y recuperando realmente los datos.
 - O si estamos haciendo un montón de ​operaciones que usan mucha CPU, ​el sistema operativo podría pasar más tiempo cambiando entre ellos ​que progresando ​en los cálculos que estamos tratando de hacer.
 - ​Por lo tanto, al realizar operaciones en paralelo, ​necesitamos encontrar el equilibrio adecuado de ​acciones simultáneas que permitan que ​nuestros ordenadores permanezcan ocupados ​sin privar de recursos a nuestro sistema
+
+---
+
+## Crece lentamente en complejidad
+- Es importante saber que tecnología es la mejor para el caso que necesitamos
+- Por ejemplo si almacenamos datos de usuarios en un CSV, a medida que crece la cantidad de usuarios, el tiempo de búsqueda de un usuario específico crecerá linealmente.
+- En estos casos podría ser mejor usar una base de datos como SQLite.
+- Y a medida que crece, podría ser necesario usar una base de datos más robusta como PostgreSQL o MySQL.
+- Incluso si tenemos una base de datos, a medida que crece la cantidad de usuarios, el tiempo de búsqueda de un usuario específico crecerá linealmente.
+- En esos casos podemos evaluar el uso de caché, como Redis o Memcached, para almacenar los datos más utilizados y así reducir el tiempo de búsqueda.
+- Por muy tentador que pueda ser, no debemos intentar usar una solución para miles de usuarios si actualmente solo tenemos unos pocos cientos.
+- A medida que nuestro software crece, debemos evaluar si necesitamos cambiar la tecnología que estamos usando para manejar la carga de trabajo.
