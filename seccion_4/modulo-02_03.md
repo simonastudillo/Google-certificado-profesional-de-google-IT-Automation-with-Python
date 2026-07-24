@@ -34,3 +34,9 @@
 - En esos casos podemos evaluar el uso de caché, como Redis o Memcached, para almacenar los datos más utilizados y así reducir el tiempo de búsqueda.
 - Por muy tentador que pueda ser, no debemos intentar usar una solución para miles de usuarios si actualmente solo tenemos unos pocos cientos.
 - A medida que nuestro software crece, debemos evaluar si necesitamos cambiar la tecnología que estamos usando para manejar la carga de trabajo.
+
+---
+
+## Sistemas complejos y lentos
+- En sistemas grandes y complejos, las tareas suelen estar separadas en diferentes procesos y servicios, que se comunican entre sí a través de la red.
+- Por ejemplo un e-commerce tiene un servicio web, otro servidor para la base de datos, otro para reportes, backup, etc.
